@@ -1,0 +1,23 @@
+% ===========================================================================
+% Código Sintético — página de portada para el PDF de lectura (6 x 9 pulg.)
+% La marca @COVER@ la sustituye tools/build_editions.sh por la ruta del PNG.
+% La imagen se ajusta SIEMPRE respetando su proporción (no se deforma):
+% si su proporción no es 2:3, se centra sobre fondo blanco.
+% ===========================================================================
+\documentclass{article}
+\usepackage[paperwidth=6in, paperheight=9in, margin=0pt]{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\vbox to \paperheight{%
+  \vfil
+  \hbox to \paperwidth{%
+    \hfil
+    \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio]{@COVER@}%
+    \hfil
+  }%
+  \vfil
+}
+\end{document}

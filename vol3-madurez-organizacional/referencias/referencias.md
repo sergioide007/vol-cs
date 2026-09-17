@@ -74,7 +74,7 @@
 
 ### {#ref-fowler2003}
 
-**Fowler, Martin, title = Patterns of Enterprise Application Architecture** (2003). *Patterns of Enterprise Application Architecture*. Addison-Wesley}, year = {2003.
+**Fowler, Martin** (2003). *Patterns of Enterprise Application Architecture*. Addison-Wesley.
 
 ### {#ref-gartner2024}
 

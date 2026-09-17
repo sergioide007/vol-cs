@@ -44,7 +44,7 @@ Una recalibración práctica consiste en descomponer el story point en dos compo
 
 **2. El Definition of Done debe incluir criterios de verificación de salida generada.** Un incremento producido con asistencia de IA no está "hecho" hasta que ha pasado por un conjunto de verificaciones explícitas que van más allá de "compila y pasan los tests existentes". El DoD agéntico incluye: pruebas de comportamiento en los casos límite identificados, revisión de seguridad del código generado, validación de consistencia con el contexto del sistema y evaluación de la deuda técnica introducida.
 
-**3. La retrospectiva debe rastrear el ratio generación/verificación.** El indicador más útil para calibrar la adopción de IA en un equipo ágil es el tiempo dedicado a verificar por cada hora de generación asistida. Un ratio mayor de 3:1 sugiere que la especificación de las tareas al agente es deficiente; un ratio menor de 0.5:1 sugiere que la verificación es insuficiente y la deuda se acumula silenciosamente.
+**3. La retrospectiva debe rastrear la proporción entre generación y verificación.** El indicador más útil para calibrar la adopción de IA en un equipo ágil es el tiempo dedicado a verificar por cada hora de generación asistida. Un ratio mayor de 3:1 sugiere que la especificación de las tareas al agente es deficiente; un ratio menor de 0.5:1 sugiere que la verificación es insuficiente y la deuda se acumula silenciosamente.
 
 ## El pipeline CI/CD para código generado por IA: qué añadir
 

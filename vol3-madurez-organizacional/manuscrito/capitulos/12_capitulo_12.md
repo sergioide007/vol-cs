@@ -86,7 +86,7 @@ La excepción son los modelos especializados en dominio: en salud, derecho, fina
 
 ## Lo esencial del capítulo 12
 
-- La función de calidad sistémica es min(Q_modelo, Q_arquitectura, Q_contexto, Q_herramientas, Q_contención); cualquier componente en 0 hace el sistema inútil independientemente del modelo.
+- La calidad sistémica es el mínimo de las calidades del modelo, la arquitectura, el contexto, las herramientas y la contención; cualquier componente en 0 hace el sistema inútil independientemente del modelo.
 - AgentBench ([Liu et al., 2024](#ref-liu2024)): el mismo modelo (GPT-4) varía un 105% en tasa de éxito dependiendo solo del entorno de orquestación.
 - MetaGPT ([Hong et al., 2024](#ref-hong2024)): la asignación explícita de roles profesionales aumenta la tasa de completación en 184% con el mismo modelo base.
 - SWE-bench ([Jimenez et al., 2024](#ref-jimenez2024)): el mejor modelo en HumanEval no es el que más issues reales de GitHub resuelve; los benchmarks estáticos engañan.

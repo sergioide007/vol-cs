@@ -8,7 +8,7 @@ rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
 publisher: "Sergio Perez Ruiz"
 identifier:
   - scheme: UUID
-    text: "PENDIENTE-ISBN-VOL1-ES"
+    text: "urn:uuid:08f0a901-dcdc-5bed-9534-42cf25dc6b20"
 description: >
   Volumen 1 de la serie Código Sintético. Los cimientos: agentes, arquitectura,
   comunicación, memoria, herramientas y principios que siguen vigentes en la

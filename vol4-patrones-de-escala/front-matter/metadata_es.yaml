@@ -8,7 +8,7 @@ rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
 publisher: "Sergio Perez Ruiz"
 identifier:
   - scheme: UUID
-    text: "PENDIENTE-ISBN-VOL4-ES"
+    text: "urn:uuid:9f44d007-da83-514c-a3ff-33769d087e65"
 description: >
   Volumen 4 de la serie Código Sintético. Patrones de escalabilidad,
   resiliencia, pipelines event-driven, autocorrección, costes y operación en

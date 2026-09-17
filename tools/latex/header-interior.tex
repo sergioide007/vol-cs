@@ -1,0 +1,109 @@
+% ===========================================================================
+% Código Sintético — cabecera LaTeX del INTERIOR IMPRESO
+% Formato: 6 x 9 pulgadas (15,24 x 22,86 cm), márgenes espejados
+% Uso: pandoc --include-in-header=tools/latex/header-interior.tex
+% La marca @RUNNING-TITLE@ la sustituye tools/build_editions.sh por el
+% título de la serie/volumen que aparece en las páginas pares (verso).
+% ===========================================================================
+
+% --- Imágenes: solo se reducen, nunca desbordan la caja de texto -----------
+% (adjustbox aporta la clave "max width", que actúa únicamente si la imagen
+%  excede la medida; evita ampliar diagramas pequeños.)
+\usepackage[export]{adjustbox}
+\let\interiorincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+  \adjustbox{max width=\linewidth,max totalheight=0.88\textheight}{%
+    \interiorincludegraphics[#1]{#2}}}
+
+% --- Raíz de los recursos gráficos del manuscrito --------------------------
+% Los capítulos referencian las imágenes como "imagenes/..."; se declara la
+% raíz para que LaTeX las encuentre desde el directorio de compilación.
+\graphicspath{{@GRAPHICSPATH@}}
+
+% --- Símbolos: tipografía de respaldo para signos fuera de Pagella ---------
+% Comprobado con una compilación de prueba: TeX Gyre Pagella sí tiene → ■ ▼ ✓
+% – — … € ≈ ≥ ≤ ≠ ⊂ ⌊ ⌋ − y griego; pero NO tiene subíndices, ► ni ✗.
+% Sin este respaldo, esos signos saldrían en blanco en el papel.
+% Evita el conflicto entre las tablas de protrusión y caracteres activos.
+\microtypesetup{protrusion=false}
+\usepackage{newunicodechar}
+\usepackage{fontspec}
+\newfontfamily\symfont{DejaVu Sans}
+\newcommand{\sym}[1]{{\symfont #1}}
+% Subíndices (CO₂, R², aₙ, xᵢ, S₋₁…)
+\newunicodechar{₀}{\sym{₀}}
+\newunicodechar{₁}{\sym{₁}}
+\newunicodechar{₂}{\sym{₂}}
+\newunicodechar{₃}{\sym{₃}}
+\newunicodechar{₄}{\sym{₄}}
+\newunicodechar{₅}{\sym{₅}}
+\newunicodechar{₆}{\sym{₆}}
+\newunicodechar{₇}{\sym{₇}}
+\newunicodechar{₈}{\sym{₈}}
+\newunicodechar{₉}{\sym{₉}}
+\newunicodechar{₋}{\sym{₋}}
+\newunicodechar{ₙ}{\sym{ₙ}}
+\newunicodechar{ᵢ}{\sym{ᵢ}}
+% Señalética de los capítulos
+\newunicodechar{►}{\sym{►}}
+\newunicodechar{✗}{\sym{✗}}
+% Equivalentes de impresión; el EPUB conserva los caracteres originales.
+\newunicodechar{～}{\textasciitilde}
+\newunicodechar{👍}{aprobación}
+\newunicodechar{👎}{desaprobación}
+
+% --- Código: cuerpo menor y líneas partidas --------------------------------
+% Pandoc define el entorno `Highlighting` sobre fancyvrb SIN ajuste de línea;
+% en una caja de 4,5" eso desbordaría la mancha y la guillotina cortaría el
+% código. Se recarga con fvextra y se activa el corte (incluso a mitad de
+% palabra), que es lo correcto para bloques de código en formato de libro.
+\usepackage{fvextra}
+\fvset{breaklines=true, breakanywhere=true, fontsize=\footnotesize,
+       breaksymbolleft={}, breaksymbolright={}}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\}}
+% Pandoc usa verbatim para bloques sin lenguaje; también deben partir líneas.
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{breaklines,breakanywhere,fontsize=\footnotesize}
+% Identificadores largos en \texttt: punto de corte tras cada guion bajo.
+% (pandoc escapa "_" como "\_".) seqsplit se descarta: rompe con comandos
+% dentro de \texttt (\^{}, \textbackslash...), comprobado en vol3 cap. 23.
+\let\interiortexttt\texttt
+\renewcommand{\texttt}[1]{\begingroup
+  \def\_{\char`\_\allowbreak}%
+  \interiortexttt{#1}\endgroup}
+
+% --- Tablas: cuerpo menor y separación silábica en columnas estrechas -----
+\usepackage{ragged2e}
+\let\raggedright\RaggedRight
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\LTcapwidth}{\linewidth}
+\renewcommand{\arraystretch}{1.15}
+\AtBeginEnvironment{longtable}{\small\setlength{\tabcolsep}{3pt}}
+
+% --- Cabeceras y pies profesionales: folio al margen exterior -------------
+\usepackage{fancyhdr}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\itshape @RUNNING-TITLE@}
+\fancyhead[RO]{\small\itshape\leftmark}
+\fancyfoot[LE,RO]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+% Páginas de apertura de capítulo: folio abajo, sin filete ni cabecera
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[LE,RO]{\small\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+\fancypagestyle{empty}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% --- Control de viudas y huérfanas -----------------------------------------
+% (microtype ya lo carga la plantilla de pandoc: no se repite aquí.)
+\widowpenalty=1000
+\clubpenalty=1000
+\displaywidowpenalty=1000
+\raggedbottom

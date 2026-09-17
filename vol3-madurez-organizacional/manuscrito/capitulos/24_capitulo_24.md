@@ -62,7 +62,7 @@ La interfaz estrecha no es restricción: es eficiencia. Definir exactamente qué
 
 **Formulación agéntica**: los agentes deben depender de contratos de protocolo (como MCP), no de implementaciones concretas de modelos o herramientas.
 
-Un agente que llama directamente a `anthropic.messages.create()` está acoplado a Anthropic, a la API específica, a la versión del endpoint. Un agente que llama a `LLMPort.complete(prompt, config)` (donde LLMPort es una abstracción implementada por adaptadores para distintos proveedores) puede cambiar de modelo, de proveedor o de modo de ejecución sin modificar su lógica de negocio.
+La llamada `anthropic.messages.create()` acopla al agente a Anthropic, a la API específica y a la versión del endpoint. Un agente que llama a `LLMPort.complete(prompt, config)` (donde LLMPort es una abstracción implementada por adaptadores para distintos proveedores) puede cambiar de modelo, de proveedor o de modo de ejecución sin modificar su lógica de negocio.
 
 DIP es, en última instancia, lo que hace posible la arquitectura de puertos y adaptadores (Hexagonal Architecture) en enjambres: el agente define lo que necesita a través de un puerto; la infraestructura decide cómo proveerlo a través de un adaptador.
 

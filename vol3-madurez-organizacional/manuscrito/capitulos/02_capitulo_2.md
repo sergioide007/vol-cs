@@ -28,15 +28,6 @@ La evidencia disponible apunta a una transformación del rol antes que a una sus
 4. **Seguridad y gobierno por construcción.** Mínimo privilegio, auditoría, supervisión humana (capítulos 14 y 19) como reflejos, no como apéndices.
 5. **Traducción negocio-máquina.** El lenguaje ubicuo del dominio (capítulo 6) convertido en contexto operativo de los agentes. Es la competencia más antigua de la lista: entender el problema antes que la solución, y la que ningún salto de abstracción ha automatizado jamás.
 
-## Lo esencial del capítulo 2
-
-- La evidencia apunta a transformación del rol, no a sustitución: la IA amplifica ([Peng et al., 2023](#ref-peng2023); [Ziegler et al., 2024](#ref-ziegler2024)) pero la autonomía completa sigue lejos en los problemas reales ([Jimenez et al., 2024](#ref-jimenez2024)).
-- Cada salto de abstracción multiplicó a los programadores, y eliminó la ventaja de las destrezas que automatizó.
-- Cinco competencias del Ingeniero Orquestador: arquitectura de sistemas cognitivos, economía del token, ingeniería de evaluación, seguridad por construcción, traducción negocio-máquina.
-- La inteligencia se volvió abundante; el criterio sigue siendo escaso, y tiene métodos, métricas y disciplina propios.
-- La frontera va de reaccionar a anticipar: agentes proactivos/ambientales ([Chase, 2025](#ref-chase2025)) montados sobre el log de eventos (capítulo 17). Más proactividad es más control cedido y más riesgo ([Mitchell et al., 2025](#ref-mitchell2025)); la respuesta es proactividad acotada, no autonomía total.
-- Agente proactivo + IoT + drones = ingeniería al servicio de la sociedad (alerta temprana, rescate, ayuda humanitaria), con el patrón CDC → agente enriquecedor → consumidores (capítulo 17) y columna determinista (capítulo 15). Evaluar la proactividad y su economía «siempre encendida» son las vetas de investigación abiertas.
-
 ## El horizonte proactivo: de agentes que responden a agentes que anticipan
 
 Ahora bien, si el lector retiene una sola dirección de futuro de este libro, que sea esta: la línea de avance de los sistemas agénticos va **de reaccionar a anticipar**. Casi todo lo construido en estos capítulos asume un agente reactivo, espera un *prompt*, una incidencia, un evento, y entonces actúa. La frontera, en cambio, son los agentes **proactivos**: los que observan de forma continua, infieren una necesidad latente antes de que nadie la formule y proponen (o ejecutan, bajo guardia) la acción que la atiende. La industria ya les puso nombre comercial: los **agentes ambientales** que corren en segundo plano y reclaman al humano solo cuando detectan algo digno de su atención ([Chase, 2025](#ref-chase2025)), y de los que las grandes plataformas hacen su apuesta declarada para la segunda mitad de esta década. La capacidad técnica que lo hace posible no es nueva: es la arquitectura orientada a eventos del capítulo 17, un agente proactivo bien construido *es* un consumidor del log, disparado por hechos, no por personas.
@@ -47,7 +38,7 @@ Y aquí la frontera se vuelve concreta, y socialmente útil. Júntese el agente 
 
 Esta dirección abre (deliberadamente) más preguntas de las que cierra, y ese es su valor como programa de investigación. ¿Cómo se *evalúa* la proactividad, cuando el éxito es una interrupción oportuna y el fracaso, una intromisión molesta? La medición rigurosa de agentes proactivos es un campo que apenas nació (las primeras suites de evaluación específicas son de 2025) y que hereda, agravado, el problema del capítulo 13. ¿Cuál es la **economía** de un agente *siempre encendido*? Un consumidor proactivo sin presupuesto ni *backpressure* (capítulos 11 y 17) es Token-Burn permanente por diseño; la frontera proactiva no deroga la del token, la tensa. Y ¿cómo se gobierna la *confianza* en un sistema que actúa antes de que se lo pidan? Estas son las vetas que la próxima década tendrá que excavar, y este libro las deja señaladas a propósito: no como humo, sino como mapa. Donde otros prometen agentes que lo harán todo, nosotros dejamos escrito el método para construir los que harán *algo* (bien, barato y bajo control), que es la única forma honesta de llegar primero.
 
-## Epílogo: el arte de dirigir la orquesta
+## Cierre del volumen: el arte de dirigir la orquesta
 
 Cuando empecé a escribir estas páginas, el debate sobre los agentes de IA se dividía en dos campos: los que prometían que el código se escribiría solo y los que argumentaban que todo era humo y marketing. Ninguno tenía razón, pero el primero vendía más.
 
@@ -64,3 +55,12 @@ El resto depende de ti. Los mejores sistemas agénticos que existan en cinco añ
 **La inteligencia se volvió abundante; el criterio sigue siendo escaso.** El Ingeniero Orquestador que domine esas disciplinas en esta década estará donde el desarrollador web que dominó JavaScript y las APIs REST estuvo en 2010: en la cresta de una ola que elevará a todos los que decidan surfearla con seriedad.
 
 La orquesta ya está afinando. La batuta es suya.
+
+## Lo esencial del capítulo 2
+
+- La evidencia apunta a transformación del rol, no a sustitución: la IA amplifica ([Peng et al., 2023](#ref-peng2023); [Ziegler et al., 2024](#ref-ziegler2024)) pero la autonomía completa sigue lejos en los problemas reales ([Jimenez et al., 2024](#ref-jimenez2024)).
+- Cada salto de abstracción multiplicó a los programadores, y eliminó la ventaja de las destrezas que automatizó.
+- Cinco competencias del Ingeniero Orquestador: arquitectura de sistemas cognitivos, economía del token, ingeniería de evaluación, seguridad por construcción, traducción negocio-máquina.
+- La inteligencia se volvió abundante; el criterio sigue siendo escaso, y tiene métodos, métricas y disciplina propios.
+- La frontera va de reaccionar a anticipar: agentes proactivos/ambientales ([Chase, 2025](#ref-chase2025)) montados sobre el log de eventos (capítulo 17). Más proactividad es más control cedido y más riesgo ([Mitchell et al., 2025](#ref-mitchell2025)); la respuesta es proactividad acotada, no autonomía total.
+- Agente proactivo + IoT + drones = ingeniería al servicio de la sociedad (alerta temprana, rescate, ayuda humanitaria), con el patrón CDC → agente enriquecedor → consumidores (capítulo 17) y columna determinista (capítulo 15). Evaluar la proactividad y su economía «siempre encendida» son las vetas de investigación abiertas.

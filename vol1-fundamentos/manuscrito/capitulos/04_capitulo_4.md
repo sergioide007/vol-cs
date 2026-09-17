@@ -244,7 +244,7 @@ Un SLA de disponibilidad (expresado como porcentaje de *uptime*) resulta necesar
 
 Un comité ejecutivo que adopta agentes sin definir previamente estas cuatro dimensiones está adoptando tecnología sin criterio de éxito. Lo que no se define, no se mide; lo que no se mide, no mejora.
 
-## Ejercicio resuelto 4.2: diseñe el arnés de producción
+## Ejercicio resuelto 4.1: diseñe el arnés de producción
 
 **Enunciado.** Un agente de revisión de contratos lleva tres semanas en producción con un promedio de 2,3 ciclos por contrato. El equipo detecta que ciertos contratos producen 15+ ciclos antes de agotar el presupuesto sin respuesta útil. Diseñe las tres modificaciones al arnés que diagnosticarían y resolverían el problema.
 
@@ -297,7 +297,7 @@ Cerrando la rueda, las **preguntas de mejora general** que el cuestionario añad
 
 El valor de formular SOLID como interrogatorio es doble. Para el humano, convierte un principio abstracto en una acción concreta durante la revisión. Para el agente, **las preguntas son directamente el prompt**: un skill `revision-de-diseno` que recorre la rueda sobre el diff produce hallazgos accionables en lugar de la felicitación genérica («el código se ve bien») que es el modo de fallo por defecto de un revisor automático sin criterio. La disciplina del refactoring de Fowler (2018), pasos pequeños y comportamiento verificado por la suite de evals antes y después, gobierna la aplicación: el agente *propone* la refactorización; el humano la aprueba; los evals certifican que el comportamiento no cambió.
 
-## Ejercicio resuelto 4.1: dos herramientas, un presupuesto y un error bien diseñado
+## Ejercicio resuelto 4.2: dos herramientas, un presupuesto y un error bien diseñado
 
 **Enunciado.** Extienda el bucle agéntico mínimo (ejemplo 4.1) con: (a) una segunda herramienta `convertir_temperatura`, (b) manejo de errores accionables con `is_error`, y (c) verifique que el presupuesto de iteraciones se respeta.
 

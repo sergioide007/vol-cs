@@ -413,7 +413,7 @@ El equipo que domina estos cuatro niveles corre 10× más eficiente y está prep
 
 ---
 
-## Lo Esencial del Capítulo 9
+## Lo esencial del capítulo 10
 
 - **RAG** resuelve acceso a datos actualizado; es lectura pura. Costo oculto: mantenimiento perpetuo.
 - **MCP** añade acceso seguro a herramientas. El modelo no maneja credenciales; el protocolo interpone guardianes.

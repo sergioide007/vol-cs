@@ -235,13 +235,13 @@ La pregunta de discusión con la que suele cerrarse esta conversación (¿con qu
 | Trazabilidad | Sin registro | Log propio no estandarizado | Traza compatible con el esquema OpenTelemetry (Vol. 4, capítulo 11) |
 | Plan de degradación | Sin plan | Solo falla dura | Modo degradado documentado y probado en stage (Vol. 4, caso 8) |
 
-**Umbrales de decisión:** 7 a 10 puntos admite el servidor sin reservas; 4 a 6 lo admite únicamente en modo *shadow* de solo lectura en QA (la misma tabla de entornos del Vol. 4, caso 8) hasta elevar el puntaje; menos de 4 no se admite al catálogo, sin excepción de urgencia, la excepción de urgencia es, precisamente, cómo se acumula la deuda de gobernanza que el capítulo 1 (Vol. 4) (Vol. 3) mide en dólares.
+**Umbrales de decisión:** 7 a 10 puntos admite el servidor sin reservas; 4 a 6 lo admite únicamente en modo *shadow* de solo lectura en QA (la misma tabla de entornos del Vol. 4, caso 8) hasta elevar el puntaje; menos de 4 no se admite al catálogo, sin excepción de urgencia, la excepción de urgencia es, precisamente, cómo se acumula la deuda de gobernanza que el capítulo 1 (Vol. 3) mide en dólares.
 
 **Versionado del contrato, en concreto.** Un esquema de versionado semántico específico para herramientas MCP evita la ambigüedad de «actualizamos el servidor» sin más contexto: **MAJOR** cuando se elimina una herramienta o se rompe su `inputSchema` (exige mínimo 90 días con ambas versiones activas en paralelo); **MINOR** cuando se añade una herramienta o un campo opcional (retrocompatible, sin ventana obligatoria); **PATCH** cuando solo cambia la redacción de una descripción para mejorar la invocación del modelo (capítulo 2, prompt de la herramienta). El equipo consumidor, no el equipo dueño del servidor, decide cuándo migrar de una versión MAJOR a la siguiente, el mismo principio de autonomía del consumidor que sostienen los contratos dirigidos por el consumidor.
 
 Un catálogo que aplica este protocolo de forma consistente convierte «¿integramos la IA con el sistema X?» en un número reproducible, no en una negociación distinta cada vez que un equipo lo pregunta.
 
-
+## Lo esencial del capítulo 9
 
 - MCP reduce la integración de M×N a M+N: cada aplicación y cada sistema implementan el protocolo una vez [Anthropic, 2024b](#ref-anthropic2024).
 - Tres primitivas: tools (acciones), resources (lecturas), prompts (plantillas), sobre JSON-RPC 2.0.

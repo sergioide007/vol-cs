@@ -4,6 +4,16 @@
 
 _Nota editorial: los números de página se asignarán en la maquetación final de cada formato (EPUB/PDF) y no se incluyen en este índice de manuscrito._
 
+**Guía de lectura y mapa de prerrequisitos**
+
+**Nota sobre vigencia tecnológica**
+
+**Cuaderno de lectura crítica: cómo evaluar, discutir y reseñar este volumen**
+
+**Glosario operativo**
+
+**Índice de consulta rápida: problema → dónde acudir**
+
 **Capítulo 1: Seguridad para tus Agentes de IA y Multiagentes Seguros**
   - Sección 1: El Cambio de Paradigma: La Amenaza Interna Probabilística
   - Sección 2: OWASP LLM Top 10: El Marco de Referencia de la Industria
@@ -168,6 +178,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Los chips Huawei Ascend: la respuesta a las sanciones de semiconductores
   - La dimensión ejecutiva: evaluación de riesgo geopolítico para equipos de arquitectura
   - MAZU: alerta temprana como arquitectura, no como modelo
+  - Lo esencial del capítulo 17
 
 **Capítulo 18: USA en agentes de IA: donde nace la arquitectura del futuro y se fijan las reglas del juego**
   - El liderazgo en primitivas: MCP, ReAct y la economía de los estándares

@@ -12,7 +12,7 @@ Este capítulo es el diario de esa semana: todos los comandos, todos los prompts
 
 > **Una nota sobre costos antes de empezar:** los precios de la API son los vigentes al cierre de edición (Opus 4.8: $5/$25 MTok; Sonnet 4.6: $3/$15 MTok; Haiku 4.5: $1/$5 MTok). Consúlte el apéndice B para las cifras actualizadas y los índices de cache (capítulo 11). Los cálculos de esta semana también aplican para Claude Pro ($20/mes en suscripción), que en lugar de pagar por token ofrece un techo mensual: conveniente para el trabajo diario, pero sin la granularidad de saber exactamente qué gastaste en qué.
 
-## 21.1 Antes de genernar un solo test: leer el terreno
+## 9.1 Antes de generar un solo test: leer el terreno
 
 El primer error que comete la mayoría de los equipos cuando la IA entra en escena es usarla inmediatamente, sin entender el problema. El modelo no sabe nada de tu proyecto; lo que no le das en contexto, lo inventa. Y un test inventado que pasa no es un test: es una deuda técnica disfrazada de métrica verde.
 
@@ -41,7 +41,7 @@ Con el reporte en mano, la imagen era clara: el paquete `application/` (servicio
 
 La distribución del problema determina la distribución del esfuerzo.
 
-## 21.2 El CLAUDE.md del proyecto: el ancla que lo hace posible
+## 9.2 El CLAUDE.md del proyecto: el ancla que lo hace posible
 
 El capítulo 6 explicó que el CLAUDE.md es el equivalente operativo del contexto estable de tu agente: lo que no tienes que repetir en cada prompt porque el modelo ya lo sabe. Para una semana de trabajo intenso, ese archivo no es una comodidad; es la diferencia entre tests que encajan en tu arquitectura y tests que hay que tirar porque usaron las dependencias equivocadas.
 
@@ -89,7 +89,7 @@ ng test --include='**/pago*' --watch=false  # ejecuta specs de Angular filtradas
 
 Con ese archivo en el repositorio, cada interacción con Claude Code hereda automáticamente las convenciones. Si mandas un prompt sin mencionar Mockito ni AssertJ, el modelo los usa de todas formas porque el CLAUDE.md ya los estableció como estándar del proyecto.
 
-## 21.3 La estrategia económica: el modelo correcto para cada tarea
+## 9.3 La estrategia económica: el modelo correcto para cada tarea
 
 Uno de los errores más costosos que puedo cometer en una semana de trabajo intenso con IA es usar el modelo más caro para todo. Opus razona como un arquitecto senior, pero si lo uso para generar el test de un getter, estoy pagando $25/MTok por algo que Haiku resuelve igual de bien a $5/MTok. La diferencia no es solo de precio: es de velocidad y de dónde conviene invertir la atención cognitiva del modelo.
 
@@ -110,7 +110,7 @@ La semana entera, con 180 tests generados, costó $4.07 en la API. La alternativ
 
 ![Diagrama 9.1: Flujo de decisión semanal por modelo, del diagnóstico al PR](imagenes/uml/c21_1_activity_sprint_es.png)
 
-## 21.4 Lunes y martes: mapeo y diseño con Sonnet
+## 9.4 Lunes y martes: mapeo y diseño con Sonnet
 
 El lunes no escribí un solo test. Lo invertí en entender el problema y construir el plan con Sonnet.
 
@@ -145,7 +145,7 @@ El plan resultante:
 
 Dieciséis puntos porcentuales ya los tenía el martes antes de escribir una línea de código, porque el plan estaba bien fundamentado.
 
-## 21.5 Miércoles: los casos difíciles con Opus
+## 9.5 Miércoles: los casos difíciles con Opus
 
 La mayoría de los 180 tests de la semana los generé con Haiku. Pero había tres servicios que no podía dar a Haiku sin haber tomado primero una decisión arquitectónica:
 
@@ -274,7 +274,7 @@ class PagoServiceKafkaIT {
 
 Ese código semilla fue el molde. Haiku lo extendió con doce variantes más durante el miércoles por la tarde, porque el patrón ya estaba establecido.
 
-## 21.6 Jueves y viernes: ejecución masiva con Haiku
+## 9.6 Jueves y viernes: ejecución masiva con Haiku
 
 Con el plan de Sonnet y los moldes de Opus, el jueves fue puro volumen. Haiku es rápido, económico y, cuando tiene un buen CLAUDE.md y un ejemplo de referencia en el prompt, produce tests que pasan sin modificación en la mayoría de los casos.
 
@@ -394,7 +394,7 @@ Ese archivo llegó listo. Lo único que ajusté fue el nombre del atributo `data
 
 ![Diagrama 9.2: Arquitectura del toolkit, VS Code, Alpaquitay AI, modelos cloud y LM Studio local](imagenes/uml/c21_2_component_toolkit_es.png)
 
-## 21.7 Alpaquitay AI: el copiloto sin factura de API
+## 9.7 Alpaquitay AI: el copiloto sin factura de API
 
 A lo largo de la semana, todos los prompts que mandé a Claude los hice a través de **Alpaquitay AI**, la extensión de VS Code disponible en el Marketplace. La razón es simple: en lugar de alternar entre el IDE y el navegador (o la CLI), el contexto del archivo que tenía abierto se enviaba directamente como parte del prompt. Seleccionaba la clase de servicio, abría el panel de Alpaquitay y escribía el prompt; la extensión adjuntaba el archivo activo al contexto automáticamente.
 
@@ -437,7 +437,7 @@ curl http://localhost:1234/v1/models | jq '.data[].id'
 # del modelo local, no "claude-*".
 ```
 
-## 21.8 Manan-Kanchu: el guardián del código generado
+## 9.8 Manan-Kanchu: el guardián del código generado
 
 Generar 180 tests con IA en cuatro días levanta una pregunta legítima: ¿cómo sé que el código generado es seguro y cumple las políticas del proyecto? Un test que introduce una vulnerabilidad es peor que no tener test.
 
@@ -484,7 +484,7 @@ El indicador `ai_detected: 42` no es una alarma: el código es del autor aunque 
 
 ![Diagrama 9.3: Secuencia de selección de modelo, del análisis de lunes al PR del viernes](imagenes/uml/c21_3_sequence_model_es.png)
 
-## 21.9 Los cinco antipatrones que casi me cuestan la semana
+## 9.9 Los cinco antipatrones que casi me cuestan la semana
 
 Esta semana no fue lineal. Cometí errores; algunos me costaron horas. Los anoto con precisión para que no los repitas.
 
@@ -508,7 +508,7 @@ Intenté pedirle a Haiku directamente los tests de `PagoService` sin pasar prime
 
 El primer día lo salté por confianza. El segundo día, el scan encontró las dos violaciones de política que detallé antes. Si ese código hubiera llegado al historial de Git, la limpieza habría requerido un `git rebase` con reescritura de historia. Una práctica simple previene un incidente de seguridad.
 
-## 21.10 El viernes por la tarde: métricas finales
+## 9.10 El viernes por la tarde: métricas finales
 
 A las 16:30 del viernes ejecuté `mvn clean verify` por última vez:
 
@@ -563,14 +563,14 @@ Lo que sí cambia con la IA es la proporción: antes, el cuello de botella era e
 
 ---
 
-## Ejercicio
+## Ejercicio resuelto 9.1: replique la semana del coverage en dos horas
 
 Toma un proyecto propio (Spring Boot o cualquier backend con Java/Python) y aplica el flujo de esta semana en miniatura: una sesión de dos horas.
 
 1. Genera el reporte de cobertura actual (`mvn jacoco:report` o el equivalente de tu stack).
 2. Crea un `CLAUDE.md` con: stack, convenciones de test, comandos de build, dos antipatrones prohibidos.
-3. Manda el reporte a Sonnet con el prompt de la sección 21.4 y pídele el plan de ataque.
-4. Elige el servicio con mayor impacto en coverage según el plan y mándaselo a Haiku con el prompt de la sección 21.6.
+3. Manda el reporte a Sonnet con el prompt de la sección 9.4 y pídele el plan de ataque.
+4. Elige el servicio con mayor impacto en coverage según el plan y mándaselo a Haiku con el prompt de la sección 9.6.
 5. Ejecuta el test generado. Si falla, pídele a Haiku que corrija el error adjuntando el stack trace.
 6. Registra: ¿cuántos tokens consumiste? ¿cuánto movió la aguja de coverage? ¿cuántos minutos de revisión necesitó cada test?
 

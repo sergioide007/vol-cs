@@ -67,7 +67,7 @@ Para un arquitecto de software senior o un Product Owner que evalúa si incorpor
 - ¿Los términos de servicio implican almacenamiento de datos en servidores sujetos a la jurisdicción de la PIPL china?
 - ¿Existe alternativa de código abierto (LLaMA, Mistral, DeepSeek open weights) que mitigue el riesgo de acceso?
 
-La última pregunta merece énfasis especial: DeepSeek R1 fue lanzado con pesos abiertos bajo licencia MIT, lo que significa que puede desplegarse en infraestructura americana o europea sin dependencia de servidores chinos. Esto es una decisión estratégica de Bytedance/DeepSeek que desacoplada el acceso al modelo de la infraestructura de datos, y que paradójicamente erosiona la ventaja geopolítica china al democratizar la tecnología.
+La última pregunta merece énfasis especial: DeepSeek R1 fue lanzado con pesos abiertos bajo licencia MIT, lo que significa que puede desplegarse en infraestructura americana o europea sin dependencia de servidores chinos. Esto es una decisión estratégica de Bytedance/DeepSeek que desacopla el acceso al modelo de la infraestructura de datos, y que paradójicamente erosiona la ventaja geopolítica china al democratizar la tecnología.
 
 > **Visión general:** La estrategia china de inteligencia artificial agéntica exhibe una estructura de dos niveles que operan en temporalidades distintas pero complementarias. En el nivel de corto plazo, la ventaja se obtiene mediante la explotación de datos longitudinales masivos acumulados en ecosistemas de plataforma integrados verticalmente (Bytedance, Alibaba, Tencent), cuya densidad informacional y ciclo de retroalimentación agéntico no son replicables por actores occidentales sujetos a marcos regulatorios de protección de datos. En el nivel de mediano plazo, la evidencia producida por el caso DeepSeek R1 (2025, arXiv:2501.12948) sugiere que las restricciones de exportación sobre semiconductores de alta densidad de cómputo no constituyen un freno definitivo al desarrollo de modelos de frontera, toda vez que innovaciones en arquitecturas de mezcla de expertos (MoE), mecanismos de atención comprimida (MLA) y algoritmos de optimización de políticas sin supervisión directa (GRPO) pueden reducir los requerimientos de cómputo en un orden de magnitud, democratizando el acceso al entrenamiento de modelos de alto desempeño a actores con presupuestos inferiores en dos órdenes de magnitud.
 
@@ -81,7 +81,7 @@ La respuesta técnica es MAZU (*Multi-hazard, Alert, Zero-gap and Universal*), l
 
 **La lectura arquitectónica para un equipo que evalúa tecnología china de gestión de desastres** es la misma regla del capítulo 3 de este volumen, aplicada a un dominio nuevo: el chip meteorológico que integra nowcasting y modelos de IA es, de por sí, una separación explícita entre el hardware de observación (reemplazable con esfuerzo) y el modelo que interpreta esa observación (reemplazable con un cambio de contenedor). Un equipo que construya sobre MAZU u ofertas equivalentes hereda esa misma disciplina de Backend Agnóstico si diseña su integración para consumir la alerta como una interfaz estable, no como una llamada acoplada a un proveedor específico de modelo.
 
-
+## Lo esencial del capítulo 17
 
 - La estrategia china prioriza aplicaciones a escala sobre investigación de modelos fundacionales, con un diferencial de crecimiento del 35 % vs. 25 % CAGR frente a occidente.
 - DeepSeek R1 (2025) reconfiguró el tablero: rendimiento equivalente a GPT-4o a $5.6 M de coste de entrenamiento mediante MoE optimizado, MLA y GRPO sin SFT.

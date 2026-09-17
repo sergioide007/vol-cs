@@ -71,7 +71,9 @@ La mayoría de organizaciones que despliegan enjambres en 2024-2025 operan en el
 
 Los niveles de autonomía del capítulo 1 (Vol. 1) son cualitativos: dicen si un sistema opera en Nivel 0 a 4, no cuánta autonomía real ejerce dentro de ese nivel. Para que un comité de arquitectura pueda fijar un umbral objetivo (y no una impresión) este libro propone el **Índice de Autonomía Operativa (IAO)**, ponderado por el riesgo de cada acción según la escala verde/amarillo/rojo ya introducida:
 
-$$\text{IAO} = \frac{\sum (\text{acciones autónomas} \times \text{peso de riesgo})}{\sum (\text{acciones totales} \times \text{peso de riesgo})} \quad \text{con pesos } 1 / 3 / 10 \text{ para verde/amarillo/rojo}$$
+$$\text{IAO} = \frac{\sum (\text{acciones autónomas} \times \text{peso de riesgo})}{\sum (\text{acciones totales} \times \text{peso de riesgo})}$$
+
+donde los pesos $1 / 3 / 10$ corresponden a los niveles verde/amarillo/rojo.
 
 Ponderar por riesgo, y no solo contar acciones, evita el falso positivo más común de este tipo de métricas: un agente que ejecuta miles de acciones verdes sin supervisión pero jamás toca una acción roja sin aprobación puede reportar un 95 % de "autonomía" que no dice nada sobre lo que de verdad importa. El IAO exige que la autonomía se demuestre donde el daño potencial es alto, no donde es barato.
 

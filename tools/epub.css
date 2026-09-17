@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* ==========================================================================
+   Código Sintético — hoja de estilo de lectura para EPUB
+   Objetivo: legibilidad en lectores de tinta electrónica y en móvil,
+   sin depender de fuentes incrustadas (los lectores usan su propia
+   tipografía o la que el usuario elija).
+   ========================================================================== */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Georgia", "TeX Gyre Pagella", "Palatino Linotype", Palatino, serif;
+  line-height: 1.55;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin: 0 4%;
+  widows: 2;
+  orphans: 2;
+}
+
+/* --- Títulos: apertura de capítulo en página nueva ---------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.22;
+  text-align: left;
+  -webkit-hyphens: none;
+  hyphens: none;
+  page-break-after: avoid;
+  break-after: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+h1 {
+  font-size: 1.75em;
+  margin: 1.4em 0 1em;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid #444;
+  page-break-before: always;
+  break-before: page;
+}
+
+h2 {
+  font-size: 1.35em;
+  margin: 1.6em 0 0.6em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #999;
+}
+
+h3 {
+  font-size: 1.12em;
+  margin: 1.3em 0 0.5em;
+}
+
+h4, h5, h6 {
+  font-size: 1em;
+  margin: 1.1em 0 0.4em;
+}
+
+/* --- Párrafos: sin sangría tras un título, con sangría en el cuerpo ------ */
+p {
+  margin: 0;
+  text-indent: 1.35em;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p,
+blockquote + p, ul + p, ol + p, table + p,
+figure + p, pre + p, div + p {
+  text-indent: 0;
+}
+
+/* --- Listas ------------------------------------------------------------- */
+ul, ol {
+  margin: 0.7em 0 0.9em 1.4em;
+  padding-left: 0.6em;
+}
+
+li {
+  margin: 0.3em 0;
+}
+
+li p {
+  text-indent: 0;
+}
+
+/* Listas de verificación (checklists del volumen) */
+ul.task-list {
+  list-style: none;
+  margin-left: 0.4em;
+}
+
+ul.task-list li {
+  text-indent: 0;
+}
+
+/* --- Citas -------------------------------------------------------------- */
+blockquote {
+  margin: 1em 1.6em;
+  font-size: 0.97em;
+  font-style: italic;
+  color: #333;
+}
+
+blockquote p {
+  text-indent: 0;
+}
+
+/* --- Código: nunca desborda la pantalla --------------------------------- */
+pre, code, kbd, samp {
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+code {
+  font-size: 0.86em;
+}
+
+pre {
+  font-size: 0.8em;
+  line-height: 1.35;
+  margin: 1em 0;
+  padding: 0.7em 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f7f7f7;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* --- Tablas: se ajustan al ancho de pantalla ----------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85em;
+  margin: 1.1em 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+table caption {
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.95em;
+  margin-bottom: 0.4em;
+}
+
+th, td {
+  border: 1px solid #bbb;
+  padding: 0.35em 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #eee;
+  font-weight: bold;
+}
+
+/* --- Imágenes y diagramas ---------------------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+figure {
+  margin: 1.2em 0;
+  text-align: center;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+figcaption {
+  font-size: 0.88em;
+  font-style: italic;
+  text-align: left;
+  margin-top: 0.4em;
+}
+
+/* --- Reglas horizontales y notas --------------------------------------- */
+hr {
+  border: 0;
+  border-top: 1px solid #999;
+  margin: 1.6em 2em;
+}
+
+a {
+  color: #1a4a7a;
+  text-decoration: none;
+}

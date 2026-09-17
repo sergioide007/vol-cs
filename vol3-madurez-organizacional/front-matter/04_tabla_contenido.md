@@ -4,6 +4,16 @@
 
 _Nota editorial: los números de página se asignarán en la maquetación final de cada formato (EPUB/PDF) y no se incluyen en este índice de manuscrito._
 
+**Guía de lectura y mapa de prerrequisitos**
+
+**Nota sobre vigencia tecnológica**
+
+**Cuaderno de lectura crítica: cómo evaluar, discutir y reseñar este volumen**
+
+**Glosario operativo**
+
+**Índice de consulta rápida: problema → dónde acudir**
+
 **Capítulo 1: Ética y alineación en producción**
   - El problema de la alineación a escala
   - El contexto regulatorio: de virtud a obligación
@@ -16,9 +26,9 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
 **Capítulo 2: El futuro, el Ingeniero Orquestador**
   - El nuevo contrato social de la ingeniería de software
   - Las cinco competencias del Ingeniero Orquestador
-  - Lo esencial del capítulo 2
   - El horizonte proactivo: de agentes que responden a agentes que anticipan
-  - Epílogo: el arte de dirigir la orquesta
+  - Cierre del volumen: el arte de dirigir la orquesta
+  - Lo esencial del capítulo 2
 
 **Capítulo 3: Multiagentes de IA ante El Niño**
   - Sección 1: La Anatomía del Problema: Más Allá de la Meteorología
@@ -59,7 +69,6 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Sección 5: Del POI al ROI: El Cuadro que los Ejecutivos Esperan
   - Lo esencial del capítulo 6
   - Ejercicio resuelto 6.1: Diseña el Quarterly Closing del enjambre
-  - Q1 2025: Quarterly Closing: Resumen Ejecutivo
 
 **Capítulo 7: El Ecosistema del Desarrollo Moderno Equiparado con el del Negocio: y Cómo Atenderlo en el Preciso Momento, Aplicado a los Multiagentes**
   - Sección 1: La Brecha de Velocidades: Un Problema Estructural, No de Actitud
@@ -179,11 +188,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - El mapa de capas como antídoto al vértigo
   - La disciplina de no adoptar: el filtro más valioso
   - Perspectiva técnica avanzada
-  - Estado: Aceptado: 2025-03-15
-  - Contexto
-  - Opciones consideradas
-  - Decisión
-  - Consecuencias
+  - Plantilla de ADR aplicada al ecosistema agéntico (estado, contexto, opciones, decisión y consecuencias)
   - Perspectiva ejecutiva
   - Versión académica alternativa (mayor densidad formal)
   - Lo esencial del capítulo 18

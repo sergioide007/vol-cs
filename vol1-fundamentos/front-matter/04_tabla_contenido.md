@@ -8,6 +8,12 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
 
 **Nota sobre vigencia tecnológica**
 
+**Cuaderno de lectura crítica: cómo evaluar, discutir y reseñar este volumen**
+
+**Glosario operativo**
+
+**Índice de consulta rápida: problema → dónde acudir**
+
 **Capítulo 1: El despertar agéntico**
   - La transición del desarrollador tradicional al orquestador de agentes
   - Qué es, formalmente, un agente
@@ -37,10 +43,10 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - La ventana de contexto no es memoria
   - Razonamiento extendido: la nueva frontera del agente deliberativo
   - Resiliencia en agentes de producción: el arnés como sistema de control
-  - Ejercicio resuelto 4.2: diseñe el arnés de producción
+  - Ejercicio resuelto 4.1: diseñe el arnés de producción
   - El Código Limpio Sintético: los principios que perduran
   - SOLID como interrogatorio: las preguntas que refactorizan
-  - Ejercicio resuelto 4.1: dos herramientas, un presupuesto y un error bien diseñado
+  - Ejercicio resuelto 4.2: dos herramientas, un presupuesto y un error bien diseñado
   - Lo esencial del capítulo 4
 
 **Capítulo 5: La Empresa Sintética**
@@ -59,17 +65,9 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
 
 **Capítulo 7: Creación de skills, enseñar procedimientos a los agentes**
   - Skills: el conocimiento procedimental del agente
-  - Objetivo
-  - Protocolo de Ejecución
   - Los cinco patrones de skill más valiosos
-  - Objetivo
-  - Proceso
-  - Tabla de precios
   - Skills limpios: plantillas y la checklist de revisión
   - Ejercicio resuelto 7.1: un skill de validación pre-deploy
-  - Objetivo
-  - Protocolo
-  - Reporte (formato fijo, evaluable)
   - Lo esencial del capítulo 7
 
 **Capítulo 8: Patrones de orquestación multi-agente**
@@ -87,6 +85,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Herramientas MCP limpias
   - Ejercicio resuelto 9.1: añada la cuarta herramienta
   - El protocolo de admisión al catálogo
+  - Lo esencial del capítulo 9
   - Preguntas para discusión
 
 **Capítulo 10: La Arquitectura del Contexto**

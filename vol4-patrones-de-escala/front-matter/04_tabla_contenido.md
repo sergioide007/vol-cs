@@ -4,6 +4,16 @@
 
 _Nota editorial: los números de página se asignarán en la maquetación final de cada formato (EPUB/PDF) y no se incluyen en este índice de manuscrito._
 
+**Guía de lectura y mapa de prerrequisitos**
+
+**Nota sobre vigencia tecnológica**
+
+**Cuaderno de lectura crítica: cómo evaluar, discutir y reseñar este volumen**
+
+**Glosario operativo**
+
+**Índice de consulta rápida: problema → dónde acudir**
+
 **Capítulo 1: El silencioso Token-Burn**
   - La deuda que no aparece en el balance
   - La métrica CIU: Costo por Iteración Útil
@@ -33,7 +43,6 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Caso 1: Sistema de code review continuo
   - Caso 2: Asistente de onboarding técnico
   - Caso 3: Documentación técnica que no se desactualiza
-  - Proceso
   - Caso 4: Soporte al cliente con escalamiento honesto
   - Caso 5: El agente de investigación con citas o silencio
   - Caso 6: La plataforma empresarial de agentes
@@ -67,23 +76,18 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
 
 **Capítulo 9: La semana del coverage, Trabajar con Claude en un proyecto real**
   - El punto de partida: un martes con fecha límite
-  - 21.1 Antes de genernar un solo test: leer el terreno
-  - 21.2 El CLAUDE.md del proyecto: el ancla que lo hace posible
-  - Stack técnico
-  - Estructura de paquetes (backend)
-  - Convenciones de test que DEBES respetar
-  - Antipatrones prohibidos
-  - Comandos clave
-  - 21.3 La estrategia económica: el modelo correcto para cada tarea
-  - 21.4 Lunes y martes: mapeo y diseño con Sonnet
-  - 21.5 Miércoles: los casos difíciles con Opus
-  - 21.6 Jueves y viernes: ejecución masiva con Haiku
-  - 21.7 Alpaquitay AI: el copiloto sin factura de API
-  - 21.8 Manan-Kanchu: el guardián del código generado
-  - 21.9 Los cinco antipatrones que casi me cuestan la semana
-  - 21.10 El viernes por la tarde: métricas finales
+  - 9.1 Antes de generar un solo test: leer el terreno
+  - 9.2 El CLAUDE.md del proyecto: el ancla que lo hace posible
+  - 9.3 La estrategia económica: el modelo correcto para cada tarea
+  - 9.4 Lunes y martes: mapeo y diseño con Sonnet
+  - 9.5 Miércoles: los casos difíciles con Opus
+  - 9.6 Jueves y viernes: ejecución masiva con Haiku
+  - 9.7 Alpaquitay AI: el copiloto sin factura de API
+  - 9.8 Manan-Kanchu: el guardián del código generado
+  - 9.9 Los cinco antipatrones que casi me cuestan la semana
+  - 9.10 El viernes por la tarde: métricas finales
   - Lo esencial del capítulo 9
-  - Ejercicio
+  - Ejercicio resuelto 9.1: replique la semana del coverage en dos horas
 
 **Capítulo 10: La evolución de las arquitecturas: del contexto al enjambre**
   - Sección 1: La Línea del Tiempo: Cómo Llegamos Aquí
@@ -91,7 +95,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Sección 3: De MCP a Orquestaciones: La Capa de Coordinación
   - Sección 4: Sistemas Multiagentes y el Horizonte Disruptivo
   - Sección 5: Usar Modelos como Experto: Ecosistema, Arquitectura y Computación Cuántica
-  - Lo Esencial del Capítulo 9
+  - Lo esencial del capítulo 10
   - Ejercicio Resuelto 10.1: Rediseña tu Sistema (de RAG a Orquestación)
   - Ejercicio Resuelto 10.2: Integrar Quantum Hoy (Graceful Degradation)
 

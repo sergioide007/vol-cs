@@ -1,0 +1,32 @@
+---
+title: "Código Sintético"
+subtitle: "Fundamentos — Arquitectura, economía y ética de los sistemas multi-agente en producción"
+author: "Sergio Perez Ruiz"
+lang: "es"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "PENDIENTE-ISBN-VOL1-ES"
+description: >
+  Volumen 1 de la serie Código Sintético. Los cimientos: agentes, arquitectura,
+  comunicación, memoria, herramientas y principios que siguen vigentes en la
+  era agéntica.
+subject:
+  - Inteligencia artificial
+  - Ingeniería de software
+  - Sistemas multi-agente
+keywords:
+  - "inteligencia artificial"
+  - "agentes de IA"
+  - "arquitectura de software"
+  - "sistemas multi-agente"
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

@@ -1,0 +1,226 @@
+# Referencias
+
+### {#ref-anthropic2024}
+
+**Anthropic** (2024). *Model Context Protocol and related technical documentation*. _As cited in the manuscript; multiple 2024 documents (a/b/c)._
+
+### {#ref-bender2021}
+
+**Bender, Emily M.; Gebru, Timnit; McMillan-Major, Angelina; Shmitchell, Shmargaret** (2021). *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?*. Proceedings of the ACM Conference on Fairness, Accountability, and Transparency (FAccT).
+
+### {#ref-bommasani2021}
+
+**Bommasani, Rishi; Hudson, Drew A.; Adeli, Ehsan; others** (2021). *On the Opportunities and Risks of Foundation Models*. Stanford Center for Research on Foundation Models (CRFM).
+
+### {#ref-brown2020}
+
+**Brown, Tom B.; Mann, Benjamin; Ryder, Nick; Subbiah, Melanie; others** (2020). *Language Models Are Few-Shot Learners*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-chase2025}
+
+**Chase, Harrison** (2025). *As cited in the manuscript (LangChain)*.
+
+### {#ref-chen2021}
+
+**Chen, Mark; Tworek, Jerry; Jun, Heewoo; Yuan, Qiming; others** (2021). *Evaluating Large Language Models Trained on Code*. _arXiv preprint (Codex)._
+
+### {#ref-conway1968}
+
+**Conway, Melvin E.** (1968). *How Do Committees Invent?*. Datamation.
+
+### {#ref-du2023}
+
+**Du, Yilun; Li, Shuang; Torralba, Antonio; Tenenbaum, Joshua B.; Mordatch, Igor** (2023). *Improving Factuality and Reasoning in Language Models through Multiagent Debate*. _arXiv preprint._
+
+### {#ref-evans2003}
+
+**Evans, Eric** (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley.
+
+### {#ref-ferber1999}
+
+**Ferber, Jacques** (1999). *Multi-Agent Systems: An Introduction to Distributed Artificial Intelligence*. Addison-Wesley.
+
+### {#ref-fowler2018}
+
+**Fowler, Martin** (2018). *Refactoring: Improving the Design of Existing Code*. (2nd ed.) Addison-Wesley.
+
+### {#ref-greshake2023}
+
+**Greshake, Kai; Abdelnabi, Sahar; Mishra, Shailesh; Endres, Christoph; Holz, Thorsten; Fritz, Mario** (2023). *Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection*. _arXiv preprint._
+
+### {#ref-hong2024}
+
+**Hong, Sirui; Zheng, Xiawu; Chen, Jonathan; Cheng, Yuheng; others** (2024). *MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework*. _ICLR._
+
+### {#ref-ji2023}
+
+**Ji, Ziwei; Lee, Nayeon; Frieske, Rita; others** (2023). *Survey of Hallucination in Natural Language Generation*. ACM Computing Surveys.
+
+### {#ref-jimenez2024}
+
+**Jimenez, Carlos E.; Yang, John; Wettig, Alexander; others** (2024). *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*. _ICLR._
+
+### {#ref-kapoor2024}
+
+**Kapoor, Sayash; Stroebl, Benedikt; Siegel, Zachary S.; Nadgir, Arvind; Narayanan, Arvind** (2024). *AI Agents That Matter*. _arXiv preprint._
+
+### {#ref-khattab2024}
+
+**Khattab, Omar; Singhvi, Arnav; Maheshwari, Paridhi; others** (2024). *DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines*. International Conference on Learning Representations (ICLR).
+
+### {#ref-lewis2020}
+
+**Lewis, Patrick; Perez, Ethan; Piktus, Aleksandra; Petroni, Fabio; others** (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-liu2024}
+
+**Liu, Nelson F.; Lin, Kevin; Hewitt, John; Paranjape, Ashwin; Bevilacqua, Michele; Petroni, Fabio; Liang, Percy** (2024). *Lost in the Middle: How Language Models Use Long Contexts*. Transactions of the Association for Computational Linguistics (TACL).
+
+### {#ref-madaan2023}
+
+**Madaan, Aman; Tandon, Niket; Gupta, Prakhar; Hallinan, Skyler; others** (2023). *Self-Refine: Iterative Refinement with Self-Feedback*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-martin2009}
+
+**Martin, Robert C.** (2009). *Clean Code: A Handbook of Agile Software Craftsmanship*. Prentice Hall.
+
+### {#ref-martin2017}
+
+**Martin, Robert C.** (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall.
+
+### {#ref-mitchell2025}
+
+**Mitchell, Melanie; others** (2025). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+### {#ref-nist2023}
+
+**NIST** (2023). *AI Risk Management Framework 1.0*. National Institute of Standards and Technology.
+
+### {#ref-openai2024}
+
+**OpenAI** (2024). *Technical documentation, as cited in the manuscript*.
+
+### {#ref-ouyang2022}
+
+**Ouyang, Long; Wu, Jeffrey; Jiang, Xu; Almeida, Diogo; others** (2022). *Training Language Models to Follow Instructions with Human Feedback*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-packer2024}
+
+**Packer, Charles; Fang, Vivian; Patil, Shishir G.; Lin, Kevin; Wooders, Sarah; Gonzalez, Joseph E.** (2024). *MemGPT: Towards LLMs as Operating Systems*. _arXiv preprint._
+
+### {#ref-park2023}
+
+**Park, Joon Sung; O'Brien, Joseph C.; Cai, Carrie J.; Morris, Meredith Ringel; Liang, Percy; Bernstein, Michael S.** (2023). *Generative Agents: Interactive Simulacra of Human Behavior*. _arXiv preprint._
+
+### {#ref-parnas1972}
+
+**Parnas, David L.** (1972). *On the Criteria To Be Used in Decomposing Systems into Modules*. Communications of the ACM.
+
+### {#ref-peng2023}
+
+**Peng, Baolin; others** (2023). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+### {#ref-qian2024}
+
+**Qian, Chen; Cong, Xin; Yang, Cheng; others** (2024). *ChatDev: Communicative Agents for Software Development*.
+
+### {#ref-russellnorvig2020}
+
+**Russell, Stuart; Norvig, Peter** (2020). *Artificial Intelligence: A Modern Approach*. (4th ed.) Pearson.
+
+### {#ref-schick2023}
+
+**Schick, Timo; Dwivedi-Yu, Jane; Dess\`i, Roberto; Raileanu, Roberta; others** (2023). *Toolformer: Language Models Can Teach Themselves to Use Tools*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-shinn2023}
+
+**Shinn, Noah; Cassano, Federico; Berman, Edward; Gopinath, Ashwin; Narasimhan, Karthik; Yao, Shunyu** (2023). *Reflexion: Language Agents with Verbal Reinforcement Learning*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-skeltonpais2019}
+
+**Skelton, Matthew; Pais, Manuel** (2019). *Team Topologies: Organizing Business and Technology Teams for Fast Flow*. IT Revolution Press.
+
+### {#ref-snell2024}
+
+**Snell, Charlie; Lee, Jaehoon; Xu, Kelvin; Kumar, Aviral** (2024). *Scaling LLM Test-Time Compute Optimally Can Be More Effective Than Scaling Model Parameters*. _arXiv preprint._
+
+### {#ref-eu2024}
+
+**Uni\'on Europea** (2024). *Reglamento (UE) de Inteligencia Artificial (EU AI Act)*.
+
+### {#ref-vaswani2017}
+
+**Vaswani, Ashish; Shazeer, Noam; Parmar, Niki; Uszkoreit, Jakob; Jones, Llion; Gomez, Aidan N.; Kaiser, Lukasz; Polosukhin, Illia** (2017). *Attention Is All You Need*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-wang2023aieng}
+
+**Wang, Shawn** (2023). *The Rise of the AI Engineer*. _Latent Space (blog), as cited in the manuscript._
+
+### {#ref-wei2022}
+
+**Wei, Jason; Wang, Xuezhi; Schuurmans, Dale; Bosma, Maarten; Ichter, Brian; Xia, Fei; Chi, Ed; Le, Quoc; Zhou, Denny** (2022). *Chain-of-Thought Prompting Elicits Reasoning in Large Language Models*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-wooldridge2009}
+
+**Wooldridge, Michael** (2009). *An Introduction to MultiAgent Systems*. (2nd ed.) Wiley.
+
+### {#ref-wu2024}
+
+**Wu, Qingyun; others** (2024). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+### {#ref-yaotot2023}
+
+**Yao, Shunyu; Yu, Dian; Zhao, Jeffrey; Shafran, Izhak; Griffiths, Thomas L.; Cao, Yuan; Narasimhan, Karthik** (2023). *Tree of Thoughts: Deliberate Problem Solving with Large Language Models*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-yaoreact2023}
+
+**Yao, Shunyu; Zhao, Jeffrey; Yu, Dian; Du, Nan; Shafran, Izhak; Narasimhan, Karthik; Cao, Yuan** (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. International Conference on Learning Representations (ICLR).
+
+### {#ref-zheng2023}
+
+**Zheng, Lianmin; Chiang, Wei-Lin; Sheng, Ying; Zhuang, Siyuan; others** (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*. Advances in Neural Information Processing Systems (NeurIPS).
+
+### {#ref-ziegler2024}
+
+**Ziegler, Daniel M.; others** (2024). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+### {#ref-ferino2025}
+
+Ferino, S., Hoda, R., Grundy, J., & Treude, C. (2025). Novice developers' perspectives on adopting LLMs for software development: A systematic literature review. *arXiv preprint*.
+
+### {#ref-he2025}
+
+He, J., Treude, C., & Lo, D. (2025). LLM-based multi-agent systems for software engineering: Literature review, vision, and the road ahead. *ACM Transactions on Software Engineering and Methodology*, 34(5).
+
+### {#ref-hou2024}
+
+Hou, X., Zhao, Y., Liu, Y., Yang, Z., Wang, K., Li, L., Luo, X., Lo, D., Grundy, J., & Wang, H. (2024). Large language models for software engineering: A systematic literature review. *ACM Transactions on Software Engineering and Methodology*, 33(8), 1–79.
+
+### {#ref-kitchenham2009}
+
+Kitchenham, B., Brereton, O. P., Budgen, D., Turner, M., Bailey, J., & Linkman, S. (2009). Systematic literature reviews in software engineering, A systematic literature review. *Information and Software Technology*, 51(1), 7–15.
+
+### {#ref-mohamed2025}
+
+Mohamed, A., Assi, M., & Guizani, M. (2025). The impact of LLM-assistants on software developer productivity: A systematic literature review. *arXiv preprint*.
+
+### {#ref-ramírez-rueda2024}
+
+Ramírez-Rueda, R., Benítez-Guerrero, E., Mezura-Godoy, C., & Bárcenas, E. (2024). Transforming software development: A study on the integration of multi-agent systems and large language models for automatic code generation. *12th International Conference in Software Engineering Research and Innovation (CONISOFT)*, 11–20.
+
+### {#ref-rasheed2023}
+
+Rasheed, Z., Waseem, M., Kemell, K.-K., Xiaofeng, W., Duc, A. N., Systä, K., & Abrahamsson, P. (2023). Autonomous agents in software development: A vision paper. *arXiv preprint arXiv:2311.18440*.
+
+### {#ref-sasaki2024}
+
+Sasaki, Y., Washizaki, H., Li, J., Sander, D., Yoshioka, N., & Fukazawa, Y. (2024). Systematic literature review of prompt engineering patterns in software engineering. *IEEE 48th Annual Computers, Software, and Applications Conference (COMPSAC)*, 670–675.
+
+### {#ref-shi2025}
+
+Shi, J., Yang, Z., & Lo, D. (2025). Efficient and green large language models for software engineering: Literature review, vision, and the road ahead. *ACM Transactions on Software Engineering and Methodology*, 34(5), 1–22.
+
+### {#ref-yao2023}
+
+Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023). Tree of thoughts: Deliberate problem solving with large language models. *NeurIPS*.
+

@@ -1,0 +1,27 @@
+---
+title: "Código Sintético"
+subtitle: "Patrones de Escala — Orquestación, resiliencia y coste en sistemas multi-agente de producción"
+author: "Sergio Perez Ruiz"
+lang: "es"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "PENDIENTE-ISBN-VOL4-ES"
+description: >
+  Volumen 4 de la serie Código Sintético. Patrones de escalabilidad,
+  resiliencia, pipelines event-driven, autocorrección, costes y operación en
+  entornos reales con tráfico y fallos.
+subject:
+  - Inteligencia artificial
+  - Arquitectura de sistemas distribuidos
+  - Ingeniería de software
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

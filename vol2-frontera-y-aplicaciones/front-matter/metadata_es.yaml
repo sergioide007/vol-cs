@@ -1,0 +1,27 @@
+---
+title: "Código Sintético"
+subtitle: "Frontera y Aplicaciones — Geopolítica, industrias y el ecosistema de IDEs y herramientas"
+author: "Sergio Perez Ruiz"
+lang: "es"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "PENDIENTE-ISBN-VOL2-ES"
+description: >
+  Volumen 2 de la serie Código Sintético. Casos en industrias críticas,
+  geopolítica de la IA agéntica, regulación y el ecosistema de IDEs que
+  redefine cómo se desarrolla software.
+subject:
+  - Inteligencia artificial
+  - Geopolítica tecnológica
+  - Ingeniería de software
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

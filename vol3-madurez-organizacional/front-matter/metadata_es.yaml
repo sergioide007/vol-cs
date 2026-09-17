@@ -1,0 +1,27 @@
+---
+title: "Código Sintético"
+subtitle: "Madurez Organizacional — Gobernanza, autonomía y calidad en equipos de agentes"
+author: "Sergio Perez Ruiz"
+lang: "es"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "PENDIENTE-ISBN-VOL3-ES"
+description: >
+  Volumen 3 de la serie Código Sintético. Gobernanza, roles y RACI, medición de
+  autonomía, auditorías agnósticas, procesos humanos y cultura para
+  organizaciones que operan con agentes.
+subject:
+  - Inteligencia artificial
+  - Gobernanza de TI
+  - Gestión de proyectos
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

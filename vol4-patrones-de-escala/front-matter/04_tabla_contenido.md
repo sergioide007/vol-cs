@@ -136,4 +136,4 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Perspectiva ejecutiva
   - Lo esencial del capítulo 13
 
-**Epílogo de la serie** (cierre no numerado, común a los 4 volúmenes de la colección)
+**Epílogo de la serie** (cierre no numerado; se imprime en este volumen y presupone los cuatro tomos de la colección)

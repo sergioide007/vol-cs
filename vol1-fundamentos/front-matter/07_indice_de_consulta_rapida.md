@@ -37,4 +37,4 @@ _Sección de apoyo. Cuando el lector no busca leer de corrido sino resolver algo
 
 ## 3. Qué hacer si no encuentra la respuesta aquí
 
-Este volumen cubre fundamentos y arquitectura. Si su problema es de **escala y operación** (costo por iteración, testing, DR, métricas), consulte el Vol. 4. Si es de **seguridad, industria o geopolítica**, el Vol. 2. Si es de **organización, ética, equipos y gobierno**, el Vol. 3. El «Mapa de prerrequisitos» de la Guía de lectura indica el orden en que conviene cruzarlos.
+Este volumen cubre fundamentos y arquitectura. Si su problema es de **escala y operación** (costo por iteración, testing, DR, métricas), consulte el Vol. 4. Si es de **seguridad, industria o geopolítica**, el Vol. 2. Si es de **organización, ética, equipos y gobierno**, el Vol. 3. El «Mapa de la serie» de la Guía de lectura indica en qué dirección dependen los tomos entre sí, qué aporta cada uno a este volumen y por qué este no exige ninguno de los otros.

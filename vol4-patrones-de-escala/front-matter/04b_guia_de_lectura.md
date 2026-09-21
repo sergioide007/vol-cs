@@ -42,4 +42,4 @@ Tres de sus capítulos funcionan como referencia permanente, no como lectura de 
 
 ## 5. Nota sobre el Epílogo de la serie
 
-El **Epílogo** es común a los cuatro volúmenes y no añade teoría: sintetiza, cierra y agradece. Se puede leer en cualquier momento, pero su lectura completa solo rinde después del capítulo 13 de este volumen. Contiene «Lo esencial del recorrido completo», útil como repaso final de toda la serie.
+El **Epílogo** cierra la serie completa y se imprime en este volumen, no en los tres anteriores: no añade teoría, sintetiza, cierra y agradece. Se puede leer en cualquier momento, pero su lectura completa solo rinde después del capítulo 13 de este volumen. Contiene «Lo esencial del recorrido completo», útil como repaso final de toda la serie.

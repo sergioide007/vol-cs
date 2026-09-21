@@ -1,6 +1,6 @@
 {
   "vol1-fundamentos": {
-    "pages": 160,
+    "pages": 166,
     "size_6x9": true,
     "fonts_embedded": true,
     "empty_toc_entries": [],
@@ -43,7 +43,7 @@
     "fonts_embedded": true,
     "empty_toc_entries": [],
     "horizontal_text_violations": [],
-    "overfull_hbox": 3,
+    "overfull_hbox": 2,
     "missing_glyphs": [],
     "epubs": {
       "vol3-madurez-organizacional--epub--con-portada.epub": {

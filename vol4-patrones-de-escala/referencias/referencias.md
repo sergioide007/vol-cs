@@ -6,43 +6,43 @@
 
 ### {#ref-clineanthropic2024}
 
-**Anthropic, title = Cline / Task tool documentation, as cited in the manuscript, year = 2024** (2024). *Cline / Task tool documentation, as cited in the manuscript, year = 2024*.
+**Anthropic, Cline / Task tool documentation** (2024). *Cline / Task tool documentation, as cited in the manuscript*.
 
 ### {#ref-aspuru2024}
 
-**Aspuru-Guzik lab, title = As cited in the manuscript, year = 2024** (2024). *As cited in the manuscript, year = 2024*.
+**Aspuru-Guzik lab** (2024). *As cited in the manuscript*.
 
 ### {#ref-beyer2016}
 
-**Beyer, Betsy; Jones, Chris; Petoff, Jennifer; Murphy, Niall Richard** (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media}, year = {2016.
+**Beyer, Betsy; Jones, Chris; Petoff, Jennifer; Murphy, Niall Richard** (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media.
 
 ### {#ref-bloomberg2025}
 
-**Bloomberg, title = News report, as cited in the manuscript, January, year = 2025** (2025). *News report, as cited in the manuscript, January, year = 2025*.
+**Bloomberg** (2025). *News report, as cited in the manuscript, January*.
 
 ### {#ref-boehm1981}
 
-**Boehm, Barry W., title = Software Engineering Economics** (1981). *Software Engineering Economics*. Prentice Hall}, year = {1981.
+**Boehm, Barry W.** (1981). *Software Engineering Economics*. Prentice Hall.
 
 ### {#ref-boner2014}
 
-**Bon\'er, Jonas; Farley, Dave; Kuhn, Roland; Thompson, Martin** (2014). *The Reactive Manifesto*.
+**Bonér, Jonas; Farley, Dave; Kuhn, Roland; Thompson, Martin** (2014). *The Reactive Manifesto*.
 
 ### {#ref-breck2017}
 
-**Breck, Eric; Cai, Shanqing; Nielsen, Eric; Salib, Michael; Sculley, D.** (2017}, note = {IEEE Big Data). *The ML Test Score: A Rubric for ML Production Readiness, year = 2017, note = IEEE Big Data*. _IEEE Big Data._
+**Breck, Eric; Cai, Shanqing; Nielsen, Eric; Salib, Michael; Sculley, D.** (2017). *The ML Test Score: A Rubric for ML Production Readiness, 2017*. _IEEE Big Data._
 
 ### {#ref-brewer2000}
 
-**Brewer, Eric A.** (2000). *Towards Robust Distributed Systems (CAP Theorem)*. ACM PODC}, year = {2000.
+**Brewer, Eric A.** (2000). *Towards Robust Distributed Systems (CAP Theorem)*. ACM PODC, 2000.
 
 ### {#ref-brooks1975}
 
-**Brooks, Frederick P., title = The Mythical Man-Month: Essays on Software Engineering** (1975). *The Mythical Man-Month: Essays on Software Engineering*. Addison-Wesley}, year = {1975.
+**Brooks, Frederick P., The Mythical Man-Month: Essays on Software Engineering** (1975). *The Mythical Man-Month: Essays on Software Engineering*. Addison-Wesley, 1975.
 
 ### {#ref-cncf2024}
 
-**CNCF, title = OpenTelemetry specification, as cited in the manuscript, year = 2024** (2024). *OpenTelemetry specification, as cited in the manuscript, year = 2024*.
+**CNCF, OpenTelemetry specification, as cited in the manuscript, 2024** (2024). *OpenTelemetry specification, as cited in the manuscript, 2024*.
 
 ### {#ref-evans2003}
 
@@ -58,7 +58,7 @@
 
 ### {#ref-kaplan2020}
 
-**Kaplan, Jared; McCandlish, Sam; Henighan, Tom; others** (2020}, note = {arXiv preprint). *Scaling Laws for Neural Language Models, year = 2020, note = arXiv preprint*. _arXiv preprint._
+**Kaplan, Jared; McCandlish, Sam; Henighan, Tom; others** (2020). *Scaling Laws for Neural Language Models, 2020*. _arXiv preprint._
 
 ### {#ref-kapoor2024}
 
@@ -66,15 +66,15 @@
 
 ### {#ref-kleppmann2017}
 
-**Kleppmann, Martin** (2017). *Designing Data-Intensive Applications*. O'Reilly Media}, year = {2017.
+**Kleppmann, Martin** (2017). *Designing Data-Intensive Applications*. O'Reilly Media, 2017.
 
 ### {#ref-langchain2024}
 
-**LangChain, title = As cited in the manuscript, year = 2024** (2024). *As cited in the manuscript, year = 2024*.
+**LangChain, As cited in the manuscript, 2024** (2024). *As cited in the manuscript, 2024*.
 
 ### {#ref-lis2025}
 
-**Learning; Intelligent Systems group, title = As cited in the manuscript, year = 2025** (2025). *As cited in the manuscript, year = 2025*.
+**Learning; Intelligent Systems group, As cited in the manuscript, 2025** (2025). *As cited in the manuscript, 2025*.
 
 ### {#ref-lewis2020}
 
@@ -90,7 +90,7 @@
 
 ### {#ref-newman2021}
 
-**Newman, Sam, title = Building Microservices** (2021). *Building Microservices*. (2nd}, publisher = {O'Reilly Media}, year = {2021 ed.) O'Reilly Media}, year = {2021.
+**Newman, Sam, Building Microservices** (2021). *Building Microservices*. (2nd, O'Reilly Media, 2021 ed.) O'Reilly Media, 2021.
 
 ### {#ref-nist2023}
 
@@ -98,19 +98,19 @@
 
 ### {#ref-nvidia2024}
 
-**NVIDIA, title = As cited in the manuscript, year = 2024** (2024). *As cited in the manuscript, year = 2024*.
+**NVIDIA, As cited in the manuscript, 2024** (2024). *As cited in the manuscript, 2024*.
 
 ### {#ref-openai2026sept}
 
-**OpenAI, title = GPT-6 Astra announcement, September, year = 2026** (2026). *GPT-6 Astra announcement, September, year = 2026*.
+**OpenAI, GPT-6 Astra announcement, September, 2026** (2026). *GPT-6 Astra announcement, September, 2026*.
 
 ### {#ref-owasp2025}
 
-**OWASP Foundation, title = As cited in the manuscript, year = 2025** (2025). *As cited in the manuscript, year = 2025*.
+**OWASP Foundation, As cited in the manuscript, 2025** (2025). *As cited in the manuscript, 2025*.
 
 ### {#ref-patterson2021}
 
-**Patterson, David; Gonzalez, Joseph; Le, Quoc; others** (2021). *Carbon Emissions and Large Neural Network Training, year = 2021*.
+**Patterson, David; Gonzalez, Joseph; Le, Quoc; others** (2021). *Carbon Emissions and Large Neural Network Training, 2021*.
 
 ### {#ref-peng2023}
 
@@ -118,11 +118,11 @@
 
 ### {#ref-schwartz2020}
 
-**Schwartz, Roy; Dodge, Jesse; Smith, Noah A.; Etzioni, Oren** (2020}, note = {Communications of the ACM). *Green AI, year = 2020, note = Communications of the ACM*. _Communications of the ACM._
+**Schwartz, Roy; Dodge, Jesse; Smith, Noah A.; Etzioni, Oren** (2020). *Green AI, 2020*. _Communications of the ACM._
 
 ### {#ref-sculley2015}
 
-**Sculley, D.; Holt, Gary; Golovin, Daniel; others** (2015}, note = {NeurIPS). *Hidden Technical Debt in Machine Learning Systems, year = 2015, note = NeurIPS*. _NeurIPS._
+**Sculley, D.; Holt, Gary; Golovin, Daniel; others** (2015). *Hidden Technical Debt in Machine Learning Systems, 2015*. _NeurIPS._
 
 ### {#ref-skeltonpais2019}
 
@@ -130,11 +130,11 @@
 
 ### {#ref-syssec2025}
 
-**Systems Security group, title = As cited in the manuscript, year = 2025** (2025). *As cited in the manuscript, year = 2025*.
+**Systems Security group, As cited in the manuscript, 2025** (2025). *As cited in the manuscript, 2025*.
 
 ### {#ref-aiact2024}
 
-**Uni\'on Europea, title = Reglamento de Inteligencia Artificial (EU AI Act), year = 2024** (2024). *Reglamento de Inteligencia Artificial (EU AI Act), year = 2024*.
+**Unión Europea, Reglamento de Inteligencia Artificial (EU AI Act), 2024** (2024). *Reglamento de Inteligencia Artificial (EU AI Act), 2024*.
 
 ### {#ref-zheng2023}
 

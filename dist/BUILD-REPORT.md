@@ -1,6 +1,6 @@
 # Informe de construcción — Serie «Código Sintético»
 
-Generado: 2026-09-17 21:05 UTC
+Generado: 2026-09-21 10:06 UTC
 
 ## Parámetros de imprenta aplicados (6 × 9 pulgadas)
 
@@ -26,12 +26,12 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 | Dato | Valor |
 |---|---|
-| Páginas del interior | 160 |
+| Páginas del interior | 166 |
 | Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
 | Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 160 págs. | 0.875 in / 0.5 in |
+| Lomo aplicado / mínimo KDP para 166 págs. | 0.875 in / 0.5 in |
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.360 in / 0.400 in |
+| Lomo de cubierta (papel blanco / crema) | 0.374 in / 0.415 in |
 | Fuentes incrustadas | 12/12 |
 | Líneas desbordadas (Overfull hbox) | 0 |
 | Recursos no encontrados | 0 |
@@ -43,7 +43,7 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 - `vol1-fundamentos--epub--sin-portada--epubcheck.log` (4.0K)
 - `vol1-fundamentos--epub--sin-portada.epub` (1.4M)
 - `vol1-fundamentos--interior-6x9--sin-caratula.pdf` (1.9M)
-- `vol1-fundamentos--lectura-6x9--con-portada.pdf` (3.3M)
+- `vol1-fundamentos--lectura-6x9--con-portada.pdf` (3.4M)
 
 ### vol2-frontera-y-aplicaciones
 
@@ -79,7 +79,7 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
 | Lomo de cubierta (papel blanco / crema) | 0.658 in / 0.730 in |
 | Fuentes incrustadas | 11/11 |
-| Líneas desbordadas (Overfull hbox) | 3 |
+| Líneas desbordadas (Overfull hbox) | 2 |
 | Recursos no encontrados | 0 |
 
 **Archivos generados**

@@ -1,5 +1,7 @@
 # Capítulo 8: Patrones de orquestación multi-agente
 
+> **Antes de empezar: este es el segundo capítulo más denso del volumen y el que más código concentra** (Python, TypeScript y Java). Los cinco patrones canónicos se leen mejor como catálogo que como lectura lineal: si viene de los capítulos anteriores y nota el salto entre la teoría de la coordinación y la implementación, lea primero los encabezados de los cinco patrones, identifique el que su sistema necesita y lea esa sección completa; el resto del código queda como material de referencia. Véase «Cómo leer el código de este volumen», en la *Guía de lectura* de las páginas preliminares.
+
 ## La arquitectura de la inteligencia distribuida
 
 El sistema multi-agente es la culminación de todo lo anterior: múltiples agentes especializados, coordinados por un orquestador, producen resultados que ninguno podría producir individualmente. Wooldridge (2009) identifica las propiedades emergentes de los sistemas multi-agente: comportamientos que surgen de la interacción y que no estaban programados explícitamente en ningún agente individual. En ingeniería de software, las propiedades emergentes que buscamos son calidad, resiliencia y cobertura de perspectivas; las que debemos evitar son los bucles de acuerdo mutuo, la amplificación de errores y el costo descontrolado.

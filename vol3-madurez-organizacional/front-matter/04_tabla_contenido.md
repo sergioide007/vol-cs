@@ -6,6 +6,8 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
 
 **Dedicatoria**
 
+**Sinopsis**
+
 **Prólogo**
 
 **Guía de lectura y mapa de prerrequisitos**

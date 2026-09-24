@@ -17,7 +17,25 @@ Por cada volumen crea cuatro archivos en `dist/<volumen>/`:
 Además escribe `dist/BUILD-REPORT.md` con paginación, tamaño de página, lomo,
 fuentes incrustadas y avisos de desbordes.
 
-## 2. Ejecución
+## 2. Páginas preliminares de cada volumen
+
+Cada volumen incluye, en este orden:
+
+| Pieza | Archivo fuente | Dónde aparece |
+|---|---|---|
+| Portada (cubierta delantera) | `front-matter/01_cubierta_delantera.png` | PDF de lectura (p. 1) y cubierta embebida del EPUB con portada |
+| Portadilla (página de título interior) | generada desde `metadata_es.yaml` | PDF interior (p. 1), sin numerar |
+| Hoja de créditos | `front-matter/03_hoja_creditos.md` | tras la portadilla, sin numerar |
+| Dedicatoria | `front-matter/02b_dedicatoria.md` | tras los créditos, sin numerar |
+| Sinopsis (texto de contracubierta y ficha de tienda) | `front-matter/01b_sinopsis.md` + campo `description` de `metadata_es.yaml` | interior (tras la dedicatoria) y metadatos del EPUB |
+| Prólogo | `front-matter/02c_prologo.md` | tras la sinopsis, sin numerar |
+| Guía de lectura, nota de vigencia, cuaderno crítico, glosario, índice rápido | `04b/04c/05/06/07` | cuerpo preliminar, con folios en el índice |
+| Índice generado por el compositor | automático (`--toc`) | con folios reales |
+
+`02_portadilla.md` y `04_tabla_contenido.md` son índices de trabajo del
+manuscrito y **no se componen** (evitan duplicar la portadilla y el índice).
+
+## 3. Ejecución
 
 ```bash
 bash tools/build_editions.sh                 # los cuatro volúmenes

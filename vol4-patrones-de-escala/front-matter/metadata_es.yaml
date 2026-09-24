@@ -10,9 +10,10 @@ identifier:
   - scheme: UUID
     text: "urn:uuid:9f44d007-da83-514c-a3ff-33769d087e65"
 description: >
-  Volumen 4 de la serie Código Sintético. Patrones de escalabilidad,
-  resiliencia, pipelines event-driven, autocorrección, costes y operación en
-  entornos reales con tráfico y fallos.
+  Volumen 4 y cierre de la serie Código Sintético: Token-Burn y métrica CIU,
+  testing agéntico, playbook del orquestador, arquitectura limpia y
+  event-driven, observabilidad, DR y la crónica real de «la semana del
+  coverage», más el Epílogo de la serie.
 subject:
   - Inteligencia artificial
   - Arquitectura de sistemas distribuidos

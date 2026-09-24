@@ -1,13 +1,13 @@
-Título: Código sintético, Fundamentos: Arquitectura, economía y ética de los sistemas multi-agente en producción
+# Hoja de créditos
 
-Serie: Código Sintético (Volumen 1 de 4)
+Título: Código sintético, Fundamentos: Arquitectura, economía y ética de los sistemas multi-agente en producción.
 
-Autor: Sergio Perez Ruiz
+Serie: Código Sintético (Volumen 1 de 4).
 
-Editor:
-Sergio Perez Ruiz
-Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú
+Autor: Sergio Perez Ruiz.
 
+Editor: Sergio Perez Ruiz.
+Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú.
 Primera edición digital, 2026
 
 ISBN (edición digital / EPUB): [ISBN PENDIENTE]

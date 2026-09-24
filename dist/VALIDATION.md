@@ -1,16 +1,19 @@
-# Validación de las ediciones — 17 de septiembre de 2026 (2.ª pasada)
+# Validación de las ediciones — 23 de septiembre de 2026 (3.ª pasada)
 
 Estado: **construcción completa y validada por herramientas; pendiente de
 aprobación editorial (revisión visual) y de datos de publicación (ISBN, cubierta)**.
+
+Esta pasada incorpora las **páginas preliminares de cada volumen**: portadilla
+(desde metadatos), hoja de créditos, dedicatoria, sinopsis y prólogo.
 
 Resultados de `tools/validate_editions.py` (detalle en `dist/PREFLIGHT.json`):
 
 | Volumen | Páginas | 6×9 | Fuentes | EPUBCheck | Glifos ausentes | Texto fuera de caja | Overfull hbox |
 |---|---:|:-:|:-:|:-:|:-:|:-:|---:|
-| 1 — Fundamentos | 164 | ✔ | ✔ | 2/2 | 0 | 0 | 0 |
-| 2 — Frontera y aplicaciones | 342 | ✔ | ✔ | 2/2 | 0 | 0 | 2 |
-| 3 — Madurez organizacional | 300 | ✔ | ✔ | 2/2 | 0 | 0 | 2 |
-| 4 — Patrones de escala | 264 | ✔ | ✔ | 2/2 | 0 | 0 | 1 |
+| 1 — Fundamentos | 172 | ✔ | ✔ | 2/2 | 0 | 0 | 0 |
+| 2 — Frontera y aplicaciones | 340 | ✔ | ✔ | 2/2 | 0 | 0 | 2 |
+| 3 — Madurez organizacional | 298 | ✔ | ✔ | 2/2 | 0 | 0 | 2 |
+| 4 — Patrones de escala | 266 | ✔ | ✔ | 2/2 | 0 | 0 | 1 |
 
 - EPUBCheck 4.2.6: los **8 EPUB** pasan con 0 errores, 0 avisos (3.2). El error
   inicial RSC-005 (el `id` de la portada derivaba de `01_cubierta_delantera.png`

@@ -4,6 +4,10 @@
 
 _Nota editorial: los números de página se asignarán en la maquetación final de cada formato (EPUB/PDF) y no se incluyen en este índice de manuscrito._
 
+**Dedicatoria**
+
+**Prólogo**
+
 **Guía de lectura y mapa de prerrequisitos**
 
 **Nota sobre vigencia tecnológica**

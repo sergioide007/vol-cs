@@ -1,13 +1,13 @@
-Título: Código sintético, Frontera y Aplicaciones: Geopolítica, industrias y el ecosistema de IDEs y herramientas
+# Hoja de créditos
 
-Serie: Código Sintético (Volumen 2 de 4)
+Título: Código sintético, Frontera y Aplicaciones: Geopolítica, industrias y el ecosistema de IDEs y herramientas.
 
-Autor: Sergio Perez Ruiz
+Serie: Código Sintético (Volumen 2 de 4).
 
-Editor:
-Sergio Perez Ruiz
-Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú
+Autor: Sergio Perez Ruiz.
 
+Editor: Sergio Perez Ruiz.
+Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú.
 Primera edición digital, 2026
 
 ISBN (edición digital / EPUB): [ISBN PENDIENTE]

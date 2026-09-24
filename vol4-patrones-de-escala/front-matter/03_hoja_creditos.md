@@ -1,13 +1,13 @@
-Título: Código sintético, Patrones de Escala: Orquestación, resiliencia y coste en sistemas multi-agente de producción
+# Hoja de créditos
 
-Serie: Código Sintético (Volumen 4 de 4)
+Título: Código sintético, Patrones de Escala: Orquestación, resiliencia y coste en sistemas multi-agente de producción.
 
-Autor: Sergio Perez Ruiz
+Serie: Código Sintético (Volumen 4 de 4).
 
-Editor:
-Sergio Perez Ruiz
-Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú
+Autor: Sergio Perez Ruiz.
 
+Editor: Sergio Perez Ruiz.
+Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú.
 Primera edición digital, 2026
 
 ISBN (edición digital / EPUB): [ISBN PENDIENTE]

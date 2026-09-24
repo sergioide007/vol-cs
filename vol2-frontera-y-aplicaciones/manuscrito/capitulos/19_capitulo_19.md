@@ -20,9 +20,9 @@ La implicación arquitectónica inmediata para un equipo de software que diseña
 
 ## Privacy-Preserving ML: la respuesta técnica al GDPR + AI Act
 
-Merece énfasis que la intersección entre GDPR (Reglamento 2016/679) y AI Act crea un espacio técnico que Europa domina por necesidad: el *privacy-preserving machine learning*. Cuando un agente de clasificación de riesgo crediticio debe entrenarse sobre datos de millones de clientes sin que esos datos puedan centralizarse, las soluciones son técnicas, no solo legales:
+La intersección entre GDPR (Reglamento 2016/679) y AI Act crea un espacio técnico que Europa domina por necesidad: el *privacy-preserving machine learning*. Cuando un agente de clasificación de riesgo crediticio debe entrenarse sobre datos de millones de clientes sin que esos datos puedan centralizarse, las soluciones son técnicas, no solo legales:
 
-**Federated Learning (FL).** El servidor de entrenamiento no recibe datos; recibe gradientes locales. La arquitectura pionera documentada por Bonawitz et al. (*Towards Federated Learning at Scale*, Google, MLSys 2019) ha sido adoptada por Siemens para modelos de mantenimiento predictivo en plantas industriales distribuidas. Un enjambre de agentes puede federar su entrenamiento: cada nodo agente actualiza su modelo localmente y contribuye solo los gradientes al orquestador central.
+**Federated Learning (FL).** El servidor de entrenamiento no recibe datos; recibe gradientes locales. La arquitectura documentada por Bonawitz et al. (*Towards Federated Learning at Scale*, Google, MLSys 2019) ha sido adoptada por Siemens para modelos de mantenimiento predictivo en plantas industriales distribuidas. Un enjambre de agentes puede federar su entrenamiento: cada nodo agente actualiza su modelo localmente y contribuye solo los gradientes al orquestador central.
 
 **Differential Privacy (DP).** La formalización matemática de Dwork et al. (*The Algorithmic Foundations of Differential Privacy*, 2014) establece que los outputs de un modelo son ε-diferencialmente privados si revelan ε-bits de información sobre cualquier registro individual. La integración de DP en el pipeline de un enjambre añade ruido calibrado en la capa de agregación de gradientes, haciendo imposible la inversión del modelo para recuperar datos individuales.
 

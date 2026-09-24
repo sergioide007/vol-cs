@@ -28,7 +28,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - El costo bajo la línea del token: la infraestructura que ejecuta al agente
   - Lo esencial del capítulo 1
 
-**Capítulo 2: Estimaciones probabilísticas en la era de la IA**
+**Capítulo 2: Estimaciones probabilísticas en sistemas agénticos**
   - El fin de las horas-persona
   - Ejercicio resuelto 2.1: lea los percentiles como un directivo
   - Lo esencial del capítulo 2

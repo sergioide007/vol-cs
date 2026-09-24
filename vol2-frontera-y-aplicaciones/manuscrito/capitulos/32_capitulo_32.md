@@ -203,7 +203,7 @@ class EdgeInferenceRouter {
 
 ### QA de agentes móviles en pipelines CI/CD
 
-Merece énfasis que la validación de agentes móviles requiere un enfoque distinto al testing de APIs convencionales. El entorno de ejecución varía entre dispositivos: la misma operación de inferencia puede tardar 18 ms en un iPhone 15 Pro y 340 ms en un Android de gama media de 2022.
+La validación de agentes móviles requiere un enfoque distinto al testing de APIs convencionales. El entorno de ejecución varía entre dispositivos: la misma operación de inferencia puede tardar 18 ms en un iPhone 15 Pro y 340 ms en un Android de gama media de 2022.
 
 Las estrategias recomendadas para QA de agentes móviles en CI/CD:
 
@@ -445,7 +445,7 @@ El protocolo de QA para comportamiento emergente incluye: red team de comportami
 
 La métrica más citada en la industria: Gartner (2024) estima una reducción del 40% en tiempo de scripting de NPC cuando se utilizan sistemas de generación asistida por IA. En términos de costos de estudio, esto se traduce en ahorros significativos para un RPG con 300 NPCs con diálogos únicos, un proyecto que históricamente requeriría 18–24 meses de trabajo de escritores de diálogo y diseñadores de comportamiento.
 
-No obstante, merece énfasis que el ROI no es automático: los estudios que no invierten en infraestructura de QA para comportamientos emergentes pueden ver ese ahorro revertido por el costo de parchear exploits post-lanzamiento. El caso de No Man's Sky (Hello Games, 2016) (donde el comportamiento emergente de los sistemas de generación procedural produjo una recepción crítica devastadora) es el estudio de caso canónico del riesgo de subestimar la QA en sistemas con comportamiento emergente.
+No obstante, el ROI no es automático: los estudios que no invierten en infraestructura de QA para comportamientos emergentes pueden ver ese ahorro revertido por el costo de parchear exploits post-lanzamiento. El caso de No Man's Sky (Hello Games, 2016) (donde el comportamiento emergente de los sistemas de generación procedural produjo una recepción crítica devastadora) es el estudio de caso canónico del riesgo de subestimar la QA en sistemas con comportamiento emergente.
 
 | Métrica de PO | Benchmark sin IA | Con agentes MARL | Delta |
 |---|---|---|---|
@@ -639,7 +639,7 @@ En consecuencia, el business case para invertir en agentes VR adaptativos es má
 
 ### El riesgo técnico con costo humano: cinetosis por deuda técnica
 
-Merece énfasis particular el riesgo que distingue a VR de todos los demás dominios: el **cybersickness** (náuseas, desorientación y malestar producidos por la latencia del sistema) no es un bug de UX. Es una respuesta fisiológica documentada que afecta entre el 20% y el 40% de los usuarios en experiencias con latencia superior a 20 ms (LaViola Jr., 2000, ACM Computing Surveys).
+El riesgo que distingue a VR de todos los demás dominios es particular: el **cybersickness** (náuseas, desorientación y malestar producidos por la latencia del sistema) no es un bug de UX. Es una respuesta fisiológica documentada que afecta entre el 20% y el 40% de los usuarios en experiencias con latencia superior a 20 ms (LaViola Jr., 2000, ACM Computing Surveys).
 
 Para el PO y el Scrum Master, esto establece una jerarquía de priorización inusual: la deuda técnica que incrementa la latencia de presencia no es deuda opcional, es un pasivo con costo humano directo. En cualquier backlog de un proyecto VR, los issues de latencia del agente de presencia tienen prioridad sobre cualquier feature nueva, independientemente del valor de negocio que esa feature prometa. Esta es una de las pocas situaciones en el desarrollo de software donde la ingeniería de bajo nivel tiene prioridad absoluta, inmodificable, sobre la hoja de ruta de producto.
 

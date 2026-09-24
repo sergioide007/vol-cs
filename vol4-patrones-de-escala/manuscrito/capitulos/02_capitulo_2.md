@@ -1,4 +1,4 @@
-# Capítulo 2: Estimaciones probabilísticas en la era de la IA
+# Capítulo 2: Estimaciones probabilísticas en sistemas agénticos
 
 ## El fin de las horas-persona
 

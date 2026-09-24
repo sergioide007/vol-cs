@@ -61,7 +61,7 @@ Producir reporte en este formato:
 - ACCIONES REQUERIDAS: [lista numerada de cambios]
 ```
 
-Nótese que el skill anterior es la **operacionalización del capítulo 6**: el contexto de dominio define las reglas; el skill define el procedimiento para auditarlas. Esa composición, documentos de conocimiento más procedimientos que los consumen, es la forma madura de la ingeniería de contexto.
+El skill anterior es la **operacionalización del capítulo 6**: el contexto de dominio define las reglas; el skill define el procedimiento para auditarlas. Esa composición, documentos de conocimiento más procedimientos que los consumen, es la forma madura de la ingeniería de contexto.
 
 ## Los cinco patrones de skill más valiosos
 

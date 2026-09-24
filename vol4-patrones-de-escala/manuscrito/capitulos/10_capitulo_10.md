@@ -41,7 +41,7 @@ Y luego vienen los sistemas multiagentes, donde ocurre lo verdaderamente disrupt
 
 ## Sección 2: RAG: El Punto de Inflexión
 
-Para el ejecutivo que encarga sistemas de IA, RAG es simple: **es llevar un modelo de lenguaje a datos que actualmente no conoce**. La metáfora es tan común que se vuelve invisible: un jurista (el modelo) con internet (el retriever) y una biblioteca (la base de vectores) al lado. Correcto, pero insuficiente para entender por qué RAG fue revolucionario y, al mismo tiempo, por qué era apenas el principio.
+Para el ejecutivo que encarga sistemas de IA, RAG es simple: **es llevar un modelo de lenguaje a datos que actualmente no conoce**. La metáfora es tan común que se vuelve invisible: un jurista (el modelo) con internet (el retriever) y una biblioteca (la base de vectores) al lado. Correcto, pero insuficiente para entender por qué RAG llegó a ser el patrón dominante y, al mismo tiempo, por qué era apenas el principio.
 
 Repasemos qué ocurría antes. GPT-3.5 fue entrenado en datos hasta abril de 2023. Si en mayo de 2023 tu empresa lanzaba un producto nuevo, el modelo no lo conocía. Si tu equipo legal publicaba una política interna el jueves, el modelo seguía ignorándola el viernes. El entrenamiento ocurría en ciclos de meses, a costo descomunal ([Anthropic, 2024](#ref-anthropic2024); [Kaplan et al., 2020](#ref-kaplan2020)), y cada paso de aprendizaje requería recompilar cientos de miles de parámetros. Era como estar condenado a reescribir toda tu filosofía cada vez que aprendías una canción nueva.
 
@@ -239,7 +239,7 @@ Esto es **escalabilidad horizontal sin refactor**. Y es posible gracias a que NI
 | Empresarial (100K–1M inf/día) | NIM Operator en K8s · on-prem | $50K–200K (GPUs) | $0.0001–0.001 | 30–50ms | Finanzas, healthcare |
 | Máxima (>1M inf/día) | Multi-región NIM + DGX Cloud | $200K+ | $0.00001–0.0005 | 10–30ms | JPMorgan, Stripe-scale |
 
-En síntesis: **NIM es la respuesta a "¿cómo monetizo escalabilidad en inferencia?"** Para equipos que ya tienen batching, caching, routing en lugar, NIM es el "dónde", la capa de hospedaje que hace todo eso viable a escala sin comprometer latencia o compliance.
+**NIM es la respuesta a "¿cómo monetizo escalabilidad en inferencia?"** Para equipos que ya tienen batching, caching, routing en lugar, NIM es el "dónde", la capa de hospedaje que hace todo eso viable a escala sin comprometer latencia o compliance.
 
 **NIM Operator: Orquestación Declarativa de Inferencia en Kubernetes (2024-2025)**
 
@@ -334,13 +334,13 @@ Ahora el futuro próximo. En 2024-2025, computación cuántica y IA agéntica pa
 
 **Primero, esclarecimiento teórico.** La computación cuántica aprovecha los principios de la mecánica cuántica para realizar cálculos complejos que son imposibles para computadoras clásicas. En lugar de bits (0 o 1), usa cúbits que pueden existir en superposición de ambos estados simultáneamente. Esta propiedad, junto con entrelazamiento cuántico, permite explorar espacios de soluciones exponencialmente más rápido. Pero aquí el mito: "quantum va a ejecutar prompts directamente". Incorrecto. Es que ciertos problemas que los agentes resuelven (optimización combinatoria, muestreo probabilístico, búsqueda en bases masivas) tienen ventajas potenciales si accedes a hardware cuántico.
 
-**La historia acelerada.** Richard Feynman reconoció el potencial en 1981. David Deutsch presentó la computadora cuántica universal en 1985. Peter Shor desarrolló su algoritmo innovador en 1994 (factorización eficiente, amenaza real a criptografía). En 2001, D-Wave lanza la primera computadora cuántica comercial. En 2019, Google anuncia "supremacía cuántica" (Sycamore completó un cálculo específico más rápido que cualquier supercomputadora). En 2024, Google Willow reclama qubits lógicos con tasas de error <1%, un salto desde ~10% hace dos años. IBM Quantum publicó estrategias de mitigación de errores que hacen viable usar ~100 qubits para problemas reales.
+**La historia acelerada.** Richard Feynman reconoció el potencial en 1981. David Deutsch presentó la computadora cuántica universal en 1985. Peter Shor desarrolló su algoritmo en 1994 (factorización eficiente, amenaza real a criptografía). En 2001, D-Wave lanza la primera computadora cuántica comercial. En 2019, Google anuncia "supremacía cuántica" (Sycamore completó un cálculo específico más rápido que cualquier supercomputadora). En 2024, Google Willow reclama qubits lógicos con tasas de error <1%, un salto desde ~10% hace dos años. IBM Quantum publicó estrategias de mitigación de errores que hacen viable usar ~100 qubits para problemas reales.
 
 **Casos reales operacionales hoy (2024-2025):**
 
 **Google** usa computación cuántica para desarrollar nuevos materiales para baterías (potencial: aumentar significativamente capacidad de almacenamiento de energía). El algoritmo explora el espacio de configuraciones moleculares de forma exponencialmente más rápida que heurísticas clásicas.
 
-**IBM**, en colaboración con BASF, usa computación cuántica para diseñar nuevos catalizadores que podrían revolucionar la industria química. En junio 2023, IBM y Samsung anunciaron una colaboración para desarrollar computadoras cuánticas de próxima generación. El roadmap de IBM apunta a 100,000 qubits en un computador cuántico-céntrico para 2033 (ambición explícita).
+**IBM**, en colaboración con BASF, usa computación cuántica para diseñar nuevos catalizadores que podrían transformar la industria química. En junio 2023, IBM y Samsung anunciaron una colaboración para desarrollar computadoras cuánticas de próxima generación. El roadmap de IBM apunta a 100,000 qubits en un computador cuántico-céntrico para 2033 (ambición explícita).
 
 **JPMorgan Chase** desarrolla nuevos algoritmos para optimización de carteras de inversión. El problema: con 1,000 activos, hay 2^1000 permutaciones. Un solver clásico toma meses; un solver cuántico podría hacerlo en horas.
 

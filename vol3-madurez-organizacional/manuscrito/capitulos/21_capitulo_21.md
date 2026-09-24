@@ -60,7 +60,7 @@ Frente a esta realidad, tres disciplinas resultan no solo recomendables sino ope
 
 En consecuencia, el rol del programador se transforma profundamente, pero no se devalúa: asciende. Deja de ser quien teclea cada línea y pasa a ser el **garante de cada línea** (quien decide cuáles merecen confianza, cuáles exigen revisión y cuáles deben rechazarse). Esta es, paradójicamente, una responsabilidad mayor que la de escribir. Escribir una línea exige conocimiento; responder por mil líneas que otro escribió exige criterio, y el criterio es justamente lo que distingue a un ingeniero de un generador de texto.
 
-Importa destacar que esta transformación del rol tiene implicaciones directas para la evaluación del rendimiento. Los equipos que miden productividad en líneas de código generadas están evaluando la velocidad del agente, no la del ingeniero. Los equipos que miden productividad en decisiones de integración fundamentadas (código aceptado con comprensión documentada, código rechazado con justificación técnica) están evaluando la competencia real del ingeniero en la era agéntica.
+Esta transformación del rol tiene implicaciones directas para la evaluación del rendimiento. Los equipos que miden productividad en líneas de código generadas están evaluando la velocidad del agente, no la del ingeniero. Los equipos que miden productividad en decisiones de integración fundamentadas (código aceptado con comprensión documentada, código rechazado con justificación técnica) están evaluando la competencia real del ingeniero en la era agéntica.
 
 ## Perspectiva de QA: la verificación como nueva primera línea
 

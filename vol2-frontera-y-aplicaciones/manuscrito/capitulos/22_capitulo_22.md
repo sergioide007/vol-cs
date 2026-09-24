@@ -4,7 +4,7 @@
 
 ## La paradoja del aislamiento productivo
 
-Conviene señalar que el relato dominante sobre Rusia en inteligencia artificial oscila entre dos polos igualmente distorsionados: el de la amenaza tecnológica omnipresente y el del atraso irremediable. La realidad técnica es más matizada. Desde la imposición de controles de exportación sobre semiconductores avanzados, particularmente los equipos de litografía EUV de ASML y los aceleradores NVIDIA A100/H100, vedados desde 2022 por regulaciones del Departamento de Comercio de Estados Unidos (Export Administration Regulations, EAR Category 3E001), el ecosistema ruso de IA no colapsó. Se transformó.
+El relato dominante sobre Rusia en inteligencia artificial oscila entre dos polos igualmente distorsionados: el de la amenaza tecnológica omnipresente y el del atraso irremediable. La realidad técnica es más matizada. Desde la imposición de controles de exportación sobre semiconductores avanzados, particularmente los equipos de litografía EUV de ASML y los aceleradores NVIDIA A100/H100, vedados desde 2022 por regulaciones del Departamento de Comercio de Estados Unidos (Export Administration Regulations, EAR Category 3E001), el ecosistema ruso de IA no colapsó. Se transformó.
 
 La transformación no es lineal ni gloriosa, pero sí técnicamente coherente: Rusia apostó por *especialización extrema sobre datos propios*, en lugar de competir en modelos fundacionales de propósito general. Esta apuesta resulta más defendible de lo que el consenso occidental reconoce.
 
@@ -45,7 +45,7 @@ En consecuencia, el enjambre de agentes que Sber despliega en producción es un 
 - **Agente de asesoramiento hipotecario**: procesa regulaciones del Banco Central de Rusia actualizadas semanalmente.
 - **Agente de atención al cliente**: 87 % de resolución en primer contacto sin escalamiento humano.
 
-Merece énfasis que estos números no son comparables directamente con los de un banco occidental porque el benchmark regulatorio y la infraestructura de datos son distintos. Sin embargo, lo que demuestran es que la especialización extrema (forzada por la escasez, no elegida libremente) puede producir resultados superiores en el dominio acotado.
+Estos números no son comparables directamente con los de un banco occidental porque el benchmark regulatorio y la infraestructura de datos son distintos. Sin embargo, lo que demuestran es que la especialización extrema (forzada por la escasez, no elegida libremente) puede producir resultados superiores en el dominio acotado.
 
 ## La dimensión ejecutiva: soberanía tecnológica como mandato estratégico
 

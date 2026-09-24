@@ -6,7 +6,7 @@
 
 He aquí un fenómeno que revela por qué Japón domina manufactura de precisión: Honda, Toyota, Siemens ya no despliegan robots programados. Despliegan *enjambres de agentes*. Un *agente de visión* inspecciona 100 componentes por segundo. Un *agente de decisión* vota si pasa o falla. Un *agente de robots* ejecuta la acción coordinada.
 
-Cabe precisar la arquitectura: no es centralizada. Es consenso distribuido. Los 100 agentes de visión emiten *candidatos* (punto de defecto). El agente coordinador aplica un protocolo Byzantine Fault Tolerant (PBFT) para elegir el veredicto. Tolera hasta 33% de agentes defectuosos sin perder correctitud.
+La arquitectura no es centralizada. Es consenso distribuido. Los 100 agentes de visión emiten *candidatos* (punto de defecto). El agente coordinador aplica un protocolo Byzantine Fault Tolerant (PBFT) para elegir el veredicto. Tolera hasta 33% de agentes defectuosos sin perder correctitud.
 
 ## La economía de escala agéntica
 

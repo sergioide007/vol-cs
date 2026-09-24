@@ -29,7 +29,7 @@ Dicho esto, Taiwan no fabrica solo para NVIDIA. El segundo actor fundamental es 
 
 Detrás de TSMC opera un tejido de investigación que raramente aparece en los artículos de prensa occidental. El Industrial Technology Research Institute (ITRI), fundado en 1973, ha patentado más de 32 000 tecnologías, muchas de ellas directamente aplicables a sistemas agénticos: procesadores neuromórficos de ultra-bajo consumo, memorias resistivas (RRAM) para inferencia en el borde, y protocolos de interconexión die-to-die (el estándar UCIe) que permiten construir chiplets heterogéneos para cargas de trabajo de IA distribuida.
 
-No obstante, conviene señalar que el ecosistema taiwanese no se limita al hardware. Empresas como Asus, Acer y Quanta llevan décadas integrando subsistemas de cómputo en forma de servidores de alto rendimiento. Quanta Cloud Technology (QCT) ensambla los servidores DGX de NVIDIA (la unidad atómica de la mayoría de enjambres empresariales) con integración vertical desde la placa madre hasta el sistema de refrigeración líquida. La arquitectura de un enjambre que corre en AWS, Azure o GCP depende, en el nivel físico, de estos sistemas.
+No obstante, el ecosistema taiwanese no se limita al hardware. Empresas como Asus, Acer y Quanta llevan décadas integrando subsistemas de cómputo en forma de servidores de alto rendimiento. Quanta Cloud Technology (QCT) ensambla los servidores DGX de NVIDIA (la unidad atómica de la mayoría de enjambres empresariales) con integración vertical desde la placa madre hasta el sistema de refrigeración líquida. La arquitectura de un enjambre que corre en AWS, Azure o GCP depende, en el nivel físico, de estos sistemas.
 
 ## La dimensión ejecutiva: riesgo de cadena de suministro como variable de arquitectura
 

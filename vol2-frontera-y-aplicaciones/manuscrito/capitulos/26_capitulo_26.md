@@ -4,7 +4,7 @@
 
 ## La bifurcación silenciosa: benchmark vs. problema real
 
-Merece énfasis una divergencia fundamental en estrategia de innovación. Silicon Valley: "¿Cuál es el benchmark más retador? Vamos a dominarlo." Melbourne: "¿Cuál es el problema más urgente? Vamos a resolverlo."
+Hay una divergencia fundamental en estrategia de innovación. Silicon Valley: "¿Cuál es el benchmark más retador? Vamos a dominarlo." Melbourne: "¿Cuál es el problema más urgente? Vamos a resolverlo."
 
 Este cambio de pregunta altera todo. Silicon Valley construye modelos que maximizan métricas en datasets públicos. Melbourne construye sistemas que minimizan sufrimiento en contextos reales. Cambio de clima. Sequía agrícola. Medicina en regiones remotas. Estos impulsan arquitecturas agénticas en Melbourne.
 

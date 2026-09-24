@@ -23,7 +23,7 @@ Un ecosistema multiagente puede (y suele deber) ser híbrido en varios ejes simu
 | Modelos | Grandes | Pequeños | Dificultad de la tarea (cap. 28) |
 | Control | Centralizado | Emergente | Necesidad de coordinación vs. autonomía |
 
-La clave es que estos ejes son **independientes**: una arquitectura puede usar cloud para el procesamiento intensivo y edge para el dato sensible, IA para lo ambiguo y reglas deterministas para lo crítico, modelos grandes para el razonamiento complejo y modelos pequeños para la clasificación rápida (todo en el mismo sistema).
+Estos ejes son **independientes**: una arquitectura puede usar cloud para el procesamiento intensivo y edge para el dato sensible, IA para lo ambiguo y reglas deterministas para lo crítico, modelos grandes para el razonamiento complejo y modelos pequeños para la clasificación rápida (todo en el mismo sistema).
 
 ## El Teorema CAP aplicado a enjambres híbridos
 
@@ -83,7 +83,7 @@ La **matriz de costos reales** hace la decisión arquitectónica objetiva:
 **Costo si TODO en cloud**: ~$12/día (2.7x más caro)
 **Costo si TODO en edge**: ~$1/día pero sin razonamiento profundo (calidad comprometida)
 
-Merece énfasis que la decisión de dónde va cada agente es **arquitectónica, no accidental**. La pregunta clave es: "¿Cuál es la latencia máxima que tolero para este agente específico?" Si es <10ms → edge. Si es >100ms → cloud. Si es variable → usa ambos con circuit breaker.
+La decisión de dónde va cada agente es **arquitectónica, no accidental**. La pregunta clave es: "¿Cuál es la latencia máxima que tolero para este agente específico?" Si es <10ms → edge. Si es >100ms → cloud. Si es variable → usa ambos con circuit breaker.
 
 ## Patrones de integración para costuras híbridas
 

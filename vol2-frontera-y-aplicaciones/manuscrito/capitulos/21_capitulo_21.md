@@ -41,7 +41,7 @@ Los resultados documentados (Rio Tinto, *Annual Report 2023*) son inequívocos: 
 **■ PISTA EJECUTIVA**
 
 
-Merece énfasis que Australia fue uno de los primeros países en publicar un marco nacional de ética en IA (2019), revisado en 2024 para incorporar los desarrollos en sistemas agénticos autónomos. Los ocho principios del marco (privacidad, seguridad, fiabilidad, transparencia, equidad, responsabilidad, bienestar humano y prosperidad) no son declaraciones abstractas; se han traducido en herramientas prácticas para arquitectos de sistemas:
+Australia fue uno de los primeros países en publicar un marco nacional de ética en IA (2019), revisado en 2024 para incorporar los desarrollos en sistemas agénticos autónomos. Los ocho principios del marco (privacidad, seguridad, fiabilidad, transparencia, equidad, responsabilidad, bienestar humano y prosperidad) no son declaraciones abstractas; se han traducido en herramientas prácticas para arquitectos de sistemas:
 
 1. *AI Ethics Indicators*, métricas auditables para cada principio.
 2. *AI Impact Assessment Tool*, análogo al Privacy Impact Assessment del GDPR, aplicado a agentes.

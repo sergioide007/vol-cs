@@ -35,7 +35,7 @@ La diferencia con los sistemas de permisos clásicos es sustancial. En los siste
 
 ## El ciclo de vida del permiso agéntico
 
-Una de las contribuciones más importantes que DevSecOps puede aportar a la arquitectura de enjambres es la conceptualización del permiso agéntico como un ciclo de vida, no como un estado binario (tiene/no tiene). Cabe precisar que este ciclo comprende cinco fases que deben implementarse explícitamente en la infraestructura:
+Una de las contribuciones más importantes que DevSecOps puede aportar a la arquitectura de enjambres es la conceptualización del permiso agéntico como un ciclo de vida, no como un estado binario (tiene/no tiene). El ciclo comprende cinco fases que deben implementarse explícitamente en la infraestructura:
 
 1. **Solicitud**: el agente declara qué necesita hacer y por qué, expresado en lenguaje de política formal. El PDP recibe esta solicitud junto con el contexto de la tarea en curso.
 2. **Evaluación de riesgo**: el PDP computa un score de riesgo basado en quién solicita, qué solicita, sobre qué recurso, en qué contexto y en qué momento del flujo de trabajo. Esta evaluación puede incorporar modelos de riesgo probabilístico.

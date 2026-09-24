@@ -50,7 +50,7 @@ sudo apt-get install -y pandoc texlive-xetex texlive-latex-recommended \
   fonts-texgyre fonts-dejavu fonts-liberation poppler-utils
 ```
 
-## 3. Formato y márgenes (lo importante para la imprenta)
+## 4. Formato y márgenes (lo importante para la imprenta)
 
 El formato final (*trim*) es **6 × 9 pulgadas (15,24 × 22,86 cm)**, pero la
 **caja de texto es menor que el trim** porque hay que respetar los márgenes:
@@ -80,7 +80,7 @@ encuadernaciones:**
 > El script comprueba la paginación real y, si un volumen exigiera más lomo del
 > aplicado, **recompone el PDF automáticamente** con el margen que KDP pide.
 
-## 4. Decisiones editoriales de la maquetación
+## 5. Decisiones editoriales de la maquetación
 
 1. **Índice generado por el compositor.** Se usa el índice automático con
    folios reales; el archivo `04_tabla_contenido.md` es un índice de trabajo del
@@ -107,7 +107,7 @@ encuadernaciones:**
 9. **EPUB sin fuentes incrustadas**: máxima compatibilidad con lectores; el
    usuario elige su tipografía.
 
-## 5. Lo que falta antes de subir a las plataformas
+## 6. Lo que falta antes de subir a las plataformas
 
 - **ISBN**: los cuatro `metadata_es.yaml` llevan `PENDIENTE-ISBN-VOLx-ES`.
   Cada edición (EPUB y PDF, en su caso) requiere su propio ISBN.
@@ -123,7 +123,7 @@ encuadernaciones:**
   Unas pocas con tablas muy anchas son tolerables; si el número es alto,
   conviene partir esas tablas o reducir columnas en el manuscrito.
 
-## 6. Estructura de los archivos de apoyo
+## 7. Estructura de los archivos de apoyo
 
 ```
 tools/
@@ -133,5 +133,29 @@ tools/
 │  ├─ header-interior.tex     Cabeceras, folios, código, tablas, viudas
 │  └─ cover-page.tex          Página de portada 6×9 para el PDF de lectura
 └─ lua/
-   └─ table-widths.lua        Ancho de columnas: evita desbordes de tabla
+│  ├─ table-widths.lua        Ancho de columnas: evita desbordes de tabla
+│  ├─ print-breaks.lua        Puntos de corte en celdas largas (solo PDF)
+│  └─ reference-anchors.lua   Oculta del índice las anclas bibliográficas
+├─ skill_cliches.py           Detector de clichés de IA (solo lectura)
+├─ skill_aplicar.py           Aplicador del mapa curado (idempotente)
+└─ skills/anti-cliches-ia/
+   └─ SKILL.md                Criterio editorial: qué es cliché y qué no
 ```
+
+## 8. Pasador anti-clichés de IA
+
+Antes de componer, la prosa de los cuatro volúmenes pasa por el skill
+`tools/skills/anti-cliches-ia/SKILL.md`, que elimina el metadiscurso enfático
+(«Merece énfasis que…», «Conviene señalar…», «Cabe destacar…») y los tics de
+escritura tipo Wikipedia, **sin tocar tablas, código, fórmulas ni citas**.
+
+```bash
+python3 tools/skill_cliches.py --detall   # inventario (no modifica nada)
+python3 tools/skill_aplicar.py --check     # simulación: cuántas sustituciones faltan
+python3 tools/skill_aplicar.py             # aplica el mapa curado
+```
+
+El aplicador es **idempotente**: si la versión nueva ya está en el archivo,
+cuenta la sustitución como hecha en lugar de fallar. Si una frase no se
+encuentra ni en su forma antigua ni en la nueva, la reporta y aborta para que
+el editor la revise a mano.

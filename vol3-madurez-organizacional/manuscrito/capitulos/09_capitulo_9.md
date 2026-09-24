@@ -54,7 +54,7 @@ Los OKRs habilitadores sin OKRs de impacto producen equipos de ingeniería satis
 **■ PISTA EJECUTIVA**
 
 
-Merece énfasis un argumento que con frecuencia se omite en las discusiones sobre IA: el liderazgo técnico débil no solo reduce el beneficio de los enjambres; los convierte activamente en pasivos. Un enjambre sin especificaciones claras produce un 40-60% más de iteraciones de corrección que uno bien especificado (estimación conservadora basada en datos de equipos que han publicado post-mortems de implementaciones agénticas en 2023-2024). Un enjambre sin evals propias tarda, en promedio, tres veces más en detectar regresiones de calidad que uno con evaluaciones automatizadas.
+Las discusiones sobre IA suelen omitir un argumento: el liderazgo técnico débil no solo reduce el beneficio de los enjambres; los convierte activamente en pasivos. Un enjambre sin especificaciones claras produce un 40-60% más de iteraciones de corrección que uno bien especificado (estimación conservadora basada en datos de equipos que han publicado post-mortems de implementaciones agénticas en 2023-2024). Un enjambre sin evals propias tarda, en promedio, tres veces más en detectar regresiones de calidad que uno con evaluaciones automatizadas.
 
 El glosario operacional que el líder no puede ignorar:
 
@@ -68,7 +68,7 @@ El glosario operacional que el líder no puede ignorar:
 
 ## El corazón invariante del liderazgo agéntico
 
-En síntesis, lo que distingue al líder técnico no cambia con la IA: sigue siendo el **criterio bajo incertidumbre**. Lo que cambia es la escala de las consecuencias. Los agentes amplifican la capacidad de ejecución, pero amplifican igualmente las consecuencias de un criterio pobre. Por consiguiente, cuanto más potente es el enjambre, más decisivo se vuelve el juicio humano que lo dirige. La tecnología escala la fuerza; el liderazgo decide su dirección y sus límites.
+Lo que distingue al líder técnico no cambia con la IA: sigue siendo el **criterio bajo incertidumbre**. Lo que cambia es la escala de las consecuencias. Los agentes amplifican la capacidad de ejecución, pero amplifican igualmente las consecuencias de un criterio pobre. Por consiguiente, cuanto más potente es el enjambre, más decisivo se vuelve el juicio humano que lo dirige. La tecnología escala la fuerza; el liderazgo decide su dirección y sus límites.
 
 **Versión alternativa (mayor densidad académica):**
 

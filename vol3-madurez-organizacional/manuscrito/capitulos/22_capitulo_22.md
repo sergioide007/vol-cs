@@ -30,7 +30,7 @@ Un buen MVP de agentes ataca la incertidumbre en orden de riesgo decreciente. La
 | ¿Lo adoptan los usuarios? | Despliegue acotado con usuarios reales | Retención semana 2 ≥ 40% |
 | ¿Funciona el enjambre coordinado? | Dos agentes con orquestación mínima | Coherencia de salida ≥ agente único |
 
-Nótese que el primer MVP a menudo **no contiene agente alguno**: simula la solución para validar el dolor antes de invertir en automatizarla. Esta es, quizá, la lección más contraintuitiva. Un equipo que construye un agente de síntesis de reportes antes de confirmar que alguien necesita esos reportes en ese formato específico está optimizando la solución antes de confirmar el problema. La solución Wizard of Oz (un humano que hace manualmente lo que el agente haría) es el MVP más honesto y más rápido de validar.
+El primer MVP a menudo **no contiene agente alguno**: simula la solución para validar el dolor antes de invertir en automatizarla. Esta es, quizá, la lección más contraintuitiva. Un equipo que construye un agente de síntesis de reportes antes de confirmar que alguien necesita esos reportes en ese formato específico está optimizando la solución antes de confirmar el problema. La solución Wizard of Oz (un humano que hace manualmente lo que el agente haría) es el MVP más honesto y más rápido de validar.
 
 ## El marco RACE para MVPs agénticos
 

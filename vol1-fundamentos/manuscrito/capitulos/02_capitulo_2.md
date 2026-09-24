@@ -10,7 +10,7 @@ Ese profesional (el **AI Engineer**) es el arquitecto de la era agéntica.
 
 Para entender qué hace único al AI Engineer, hay que distinguirlo con precisión de los roles adyacentes:
 
-![Tabla 2.1: Diferenciación de roles en la era de la IA](imagenes/capitulo02/tabla2_1_es.png)
+![Tabla 2.1: Diferenciación de roles del AI Engineer frente a roles adyacentes](imagenes/capitulo02/tabla2_1_es.png)
 
 La distinción no es burocrática; es de **dirección del flujo de trabajo**. El ML Engineer trabaja *hacia* el modelo: datos, entrenamiento, despliegue de pesos. El AI Engineer trabaja *desde* el modelo: prompts, contexto, herramientas, evaluación, producto. Ambos comparten frontera con el software engineering clásico, pero sus artefactos, sus métricas y sus modos de fallo son distintos.
 
@@ -100,7 +100,7 @@ Esa es la prueba que un comité de contratación (o un cliente) puede verificar 
 
 **El estándar de tres piezas.** Un AI Engineer que pueda mostrar (1) un repositorio con un sistema multiagente propio, con arnés y evals (no un tutorial copiado), (2) esa misma arquitectura desplegada y accesible, no solo funcionando en su máquina, y (3) al menos un incidente real que depuró y documentó, ha demostrado más que la mayoría de los currículums con cinco certificaciones. Las tres piezas son verificables en la misma hora de entrevista; las certificaciones no lo son.
 
-**Discriminar entre tecnología de punta y ruido.** No toda herramienta nueva merece el tiempo de aprenderla; la disciplina que distingue al AI Engineer del entusiasta es saber cuándo una tecnología resuelve un problema estructural y cuándo solo añade una capa de moda. Tres criterios prácticos: ¿la mantiene un actor con incentivo de largo plazo (un proveedor cloud, una fundación, no un solo mantenedor de fin de semana)? ¿Existe ya una alternativa establecida y la nueva opción resuelve algo que la anterior no resolvía? ¿Sobrevive la herramienta a un fallo de red o una caída de servicio sin dejar el sistema en un estado inconsistente? Aplicado a los servidores MCP del capítulo 9, esto separa lo que vale la pena adoptar hoy de lo que vale la pena solo vigilar:
+**Discriminar entre tecnología de punta y ruido.** No toda herramienta nueva merece el tiempo de aprenderla; la disciplina que distingue al AI Engineer del entusiasta es saber cuándo una tecnología resuelve un problema estructural y cuándo solo añade una capa de moda. Tres criterios prácticos: ¿la mantiene un actor con incentivo de largo plazo (un proveedor cloud, una fundación, no un solo mantenedor de fin de semana)? ¿Existe ya una alternativa establecida y la nueva opción resuelve algo que la anterior no resolvía? ¿Sobrevive la herramienta a un fallo de red o una caída de servicio sin dejar el sistema en un estado inconsistente? Aplicado a los servidores MCP del capítulo 9, esto separa lo que conviene adoptar hoy de lo que conviene solo vigilar:
 
 | Herramienta | Qué resuelve realmente | Por qué discriminarla como madura |
 |---|---|---|

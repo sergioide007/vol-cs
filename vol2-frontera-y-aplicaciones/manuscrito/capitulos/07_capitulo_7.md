@@ -4,7 +4,7 @@
 
 ## El mito de la obsolescencia acelerada
 
-Existe una creencia extendida y, en última instancia, costosa: que en el dominio de la inteligencia artificial, lo que fue anunciado hace doce meses ha quedado superado y ya no merece atención. La realidad documentada es, sin embargo, considerablemente más matizada. El autor, al revisar novedades de IA generativa en plataformas de nube como Azure de hace un año, ilustra un principio que la literatura de adopción de tecnología conoce bien: la mayoría de las capacidades anunciadas **se anuncian mucho antes de ser explotadas**.
+Existe una creencia extendida y costosa: que en el dominio de la inteligencia artificial, lo que fue anunciado hace doce meses ha quedado superado y ya no merece atención. La realidad documentada es, sin embargo, considerablemente más matizada. El autor, al revisar novedades de IA generativa en plataformas de nube como Azure de hace un año, ilustra un principio que la literatura de adopción de tecnología conoce bien: la mayoría de las capacidades anunciadas **se anuncian mucho antes de ser explotadas**.
 
 Rogers (2003), en su influyente análisis de la difusión de las innovaciones, identificó que el tiempo entre la adopción de los primeros usuarios (*innovators*) y la mayoría tardía (*late majority*) puede abarcar años, incluso décadas. En el caso de la IA generativa, esta curva se comprime, pero no desaparece. La brecha entre lo que una plataforma *puede* hacer y lo que las organizaciones *efectivamente* hacen con ella es sistemática, persistente y, para el observador estratégico, una oportunidad continua. Mirar atrás un año no es ejercicio de nostalgia: es descubrir potencial sin reclamar que los competidores tampoco han explotado todavía.
 

@@ -4,13 +4,13 @@
 
 He aquí el punto de llegada. Ochenta capítulos, un recorrido que comenzó con la pregunta más simple (¿qué es un agente?) y terminó en los bordes del mapa geopolítico, en los estadios de fútbol como metáforas de emergencia colectiva, en los IDE que redefinen lo que significa programar. Este capítulo final no añade nueva teoría; recoge, destila y cierra. Es la despedida del libro al lector, y del lector a la versión de sí mismo que existía antes de abrirlo.
 
-Quien ha llegado hasta aquí no es el mismo profesional que empezó en el capítulo 1. Ha atravesado la economía del token, la anatomía del orquestador, los contratos de confianza entre agentes, la geopolítica de los semiconductores y la física del contexto. Ha visto cómo SOLID trasciende el objeto para gobernar el agente, cómo Kafka actúa como sistema nervioso distribuido, cómo una partida de fútbol puede modelar la emergencia de comportamiento colectivo no planificado. Merece énfasis este hecho: ninguno de esos capítulos fue ornamental. Cada uno respondió a una pregunta que la producción plantea sin piedad.
+Quien ha llegado hasta aquí no es el mismo profesional que empezó en el capítulo 1. Ha atravesado la economía del token, la anatomía del orquestador, los contratos de confianza entre agentes, la geopolítica de los semiconductores y la física del contexto. Ha visto cómo SOLID trasciende el objeto para gobernar el agente, cómo Kafka actúa como sistema nervioso distribuido, cómo una partida de fútbol puede modelar la emergencia de comportamiento colectivo no planificado. Ninguno de esos capítulos fue ornamental. Cada uno respondió a una pregunta que la producción plantea sin piedad.
 
 Lo que sigue en estas páginas finales es una síntesis de las grandes corrientes temáticas del libro, una guía ejecutiva condensada para quienes toman decisiones en organizaciones reales, la arquitectura técnica invariante que todo sistema multi-agente en producción debe satisfacer, la historia de cómo fue construido este volumen, y el agradecimiento a quienes hicieron posible que existiera.
 
 ---
 
-## 1. El viaje completo: síntesis por partes
+## 1. El recorrido completo: síntesis por partes
 
 ### Parte I: El despertar del AI Engineer (caps. 1–3)
 
@@ -40,7 +40,7 @@ La música y el vídeo como laboratorios de agentes creativos, el fútbol como m
 
 ### Parte VII: La frontera del IDE (caps. 76–79)
 
-El viaje concluyó donde muchos practitioners lo inician: el entorno de desarrollo. Cline, Continue, Cursor, Windsurf, Grok, Cody, Amazon Q: estos no son editores de texto mejorados. Son la interfaz entre el juicio humano y la ejecución agéntica, el lugar donde las decisiones de arquitectura se traducen en acción. Los dominios móvil, de videojuegos y de realidad virtual ampliaron el horizonte: los principios de orquestación que gobiernan un pipeline de datos empresarial son los mismos que coordinan NPCs autónomos en un mundo abierto o asistentes contextuales en un dispositivo de mano. La invarianza de los principios ante la diversidad de los dominios es, quizás, la validación más robusta del framework presentado en este libro.
+El recorrido termina donde muchos profesionales lo empiezan: el entorno de desarrollo. Cline, Continue, Cursor, Windsurf, Grok, Cody, Amazon Q: estos no son editores de texto mejorados. Son la interfaz entre el juicio humano y la ejecución agéntica, el lugar donde las decisiones de arquitectura se traducen en acción. Los dominios móvil, de videojuegos y de realidad virtual ampliaron el horizonte: los principios de orquestación que gobiernan un pipeline de datos empresarial son los mismos que coordinan NPCs autónomos en un mundo abierto o asistentes contextuales en un dispositivo de mano. La invarianza de los principios ante la diversidad de los dominios es, quizás, la validación más robusta del framework presentado en este libro.
 
 ---
 
@@ -230,7 +230,7 @@ Un giro inesperado (o quizás el más esperado de todos) es que este libro fue c
 
 El proceso fue el siguiente: el juicio editorial del autor definió la arquitectura del volumen, los ochenta capítulos, la progresión temática, los estándares de rigor, las referencias Q1 que debían aparecer. Ese juicio no fue delegado; fue el núcleo irreducible de la autoría. Sobre ese andamiaje, la síntesis agéntica operó como ejecutor de alta velocidad: investigación bibliográfica, generación de borradores, verificación de coherencia entre capítulos, detección de redundancias y lagunas. El proceso iteró: el autor revisaba, identificaba desviaciones, ajustaba el contexto, reencuadraba el problema. El agente ejecutaba el ciclo siguiente con la nueva información.
 
-El resultado no es ni puramente humano ni puramente sintético. Es el producto de un equipo híbrido trabajando en el mismo modo que el libro propone para las organizaciones que adopta como audiencia. Cabe destacar que este hecho no es anecdótico; es metodológico. La validación más sólida de un framework de ingeniería es construir con él.
+El resultado no es ni puramente humano ni puramente sintético. Es el producto de un equipo híbrido trabajando en el mismo modo que el libro propone para las organizaciones que adopta como audiencia. El hecho no es anecdótico; es metodológico. La validación más sólida de un framework de ingeniería es construir con él.
 
 Las 300.000 palabras en español e inglés que componen este volumen representan el mismo compromiso de rigor en ambas lenguas y en ambos hemisferios: los practitioners de América Latina y España merecen acceso a la misma profundidad que los de habla inglesa, sin traducción que diluya los matices técnicos. Ese compromiso bilingüe no fue decorativo; fue una decisión arquitectónica del libro mismo.
 

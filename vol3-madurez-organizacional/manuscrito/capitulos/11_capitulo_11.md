@@ -54,7 +54,7 @@ Ahora bien, reinventarse duele, porque a menudo exige canibalizar activamente lo
 
 La investigación de Christensen (1997) sobre el dilema del innovador (publicada originalmente en *Harvard Business Review* y ampliada en su obra homónima) documentó con precisión este mecanismo: las empresas que mejor ejecutan sus modelos de negocio actuales son las más vulnerables a las disrupciones, porque su estructura organizacional, sus métricas de éxito y sus incentivos están alineados con la optimización de lo existente, no con la exploración de lo nuevo.
 
-En la era agéntica, este dilema se presenta con una velocidad sin precedentes: el ciclo de obsolescencia de un proceso no adaptado puede ser de 18 a 36 meses, no de una década. La historia es inflexible en su veredicto: quienes optimizaron el caballo perdieron ante quienes reinventaron el transporte.
+En la era agéntica, este dilema se presenta con una velocidad inédita en este sector: el ciclo de obsolescencia de un proceso no adaptado puede ser de 18 a 36 meses, no de una década. La historia es inflexible en su veredicto: quienes optimizaron el caballo perdieron ante quienes reinventaron el transporte.
 
 ## Hoja de ruta ejecutiva para la transformación agéntica
 

@@ -196,7 +196,7 @@ La diferencia respecto al PMBOK tradicional es la frecuencia: donde antes el ges
 
 El **Scrum Master** facilita la integración de los artefactos agénticos del PMBOK en las ceremonias existentes. El Registro de Riesgos vivo se revisa en la Daily como un ítem de agenda de 2 minutos; el resumen ejecutivo de costos se incorpora a la Sprint Review como contexto para el patrocinador; el análisis Monte Carlo del cronograma se presenta en la Sprint Planning para calibrar el alcance del sprint frente al riesgo de calendario.
 
-La clave es que el agente *prepara* los datos; el Scrum Master *facilita* la conversación sobre ellos. Confundir estos roles (dejar que el agente también "facilite" la conversación) reproduce la confusión RACI del capítulo anterior: el agente como Aprobador de la dinámica del equipo.
+El agente *prepara* los datos; el Scrum Master *facilita* la conversación sobre ellos. Confundir estos roles (dejar que el agente también "facilite" la conversación) reproduce la confusión RACI del capítulo anterior: el agente como Aprobador de la dinámica del equipo.
 
 ---
 

@@ -1,6 +1,6 @@
 # Informe de construcción — Serie «Código Sintético»
 
-Generado: 2026-09-24 08:29 UTC
+Generado: 2026-09-25 13:23 UTC
 
 ## Parámetros de imprenta aplicados (6 × 9 pulgadas)
 
@@ -26,12 +26,12 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 | Dato | Valor |
 |---|---|
-| Páginas del interior | 172 |
+| Páginas del interior | 174 |
 | Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
 | Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 172 págs. | 0.875 in / 0.5 in |
+| Lomo aplicado / mínimo KDP para 174 págs. | 0.875 in / 0.5 in |
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.387 in / 0.430 in |
+| Lomo de cubierta (papel blanco / crema) | 0.392 in / 0.435 in |
 | Fuentes incrustadas | 12/12 |
 | Líneas desbordadas (Overfull hbox) | 0 |
 | Recursos no encontrados | 0 |
@@ -49,12 +49,12 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 | Dato | Valor |
 |---|---|
-| Páginas del interior | 340 |
+| Páginas del interior | 342 |
 | Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
 | Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 340 págs. | 0.875 in / 0.625 in |
+| Lomo aplicado / mínimo KDP para 342 págs. | 0.875 in / 0.625 in |
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.766 in / 0.850 in |
+| Lomo de cubierta (papel blanco / crema) | 0.770 in / 0.855 in |
 | Fuentes incrustadas | 9/9 |
 | Líneas desbordadas (Overfull hbox) | 2 |
 | Recursos no encontrados | 0 |
@@ -72,12 +72,12 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 | Dato | Valor |
 |---|---|
-| Páginas del interior | 298 |
+| Páginas del interior | 300 |
 | Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
 | Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 298 págs. | 0.875 in / 0.5 in |
+| Lomo aplicado / mínimo KDP para 300 págs. | 0.875 in / 0.5 in |
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.671 in / 0.745 in |
+| Lomo de cubierta (papel blanco / crema) | 0.676 in / 0.750 in |
 | Fuentes incrustadas | 11/11 |
 | Líneas desbordadas (Overfull hbox) | 2 |
 | Recursos no encontrados | 0 |
@@ -95,12 +95,12 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 | Dato | Valor |
 |---|---|
-| Páginas del interior | 266 |
+| Páginas del interior | 268 |
 | Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
 | Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 266 págs. | 0.875 in / 0.5 in |
+| Lomo aplicado / mínimo KDP para 268 págs. | 0.875 in / 0.5 in |
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.599 in / 0.665 in |
+| Lomo de cubierta (papel blanco / crema) | 0.604 in / 0.670 in |
 | Fuentes incrustadas | 12/12 |
 | Líneas desbordadas (Overfull hbox) | 1 |
 | Recursos no encontrados | 0 |

@@ -114,4 +114,14 @@ Se recibió una reseña externa del Volumen 1 con cinco fortalezas y dos oportun
 | **Densidad cognoscitiva:** el paso de la teoría abstracta de agentes a bloques de código densos fatiga al lector sin base backend | Objetiva y medible: el **55,7 % de las líneas del volumen son código**; el cap. 3 dedica 148 líneas a un solo bloque, el 56,3 % de su extensión, y el cap. 8 acumula 374 líneas en 4 bloques (Python, TypeScript y Java). Los dos capítulos densos ya abrían con nota de orientación, pero la guía de lectura no explicaba **cómo** atravesar los bloques: el lector quedaba sin instrucción de uso | Nueva sección **«Cómo leer el código de este volumen»** en la guía (tres reglas: leer la frase que precede al bloque, no ejecutar en la primera pasada, separar patrón de herramienta) y enlace desde la nota de orientación del cap. 8 |
 | **Estructura de serie:** las referencias constantes a los vols. 3 y 4 generan «ansiedad de completitud» | Objetiva: el cap. 8 remite 13 veces a otros tomos, y los caps. 9 y 10, diez veces cada uno. Además, el índice rápido prometía un «Mapa de prerrequisitos» entre volúmenes que **no existía** en la guía del Vol. 1, el único de los cuatro volúmenes sin mapa de serie. En cambio, la tabla de prerrequisitos del Vol. 1 no contiene **ninguna** entrada externa: el volumen se cierra a sí mismo | Nueva sección **«Mapa de la serie»** en la guía, con tabla de doble dirección (qué aporta cada tomo y qué necesita de este) y la declaración explícita de que las remisiones son profundizaciones diferidas, no requisitos; el índice rápido se actualizó para nombrar esa sección. Se corrigió además la afirmación, inexacta, de que el Epílogo es «común a los cuatro volúmenes» |
 
+
 **Criterio aplicado.** Ninguna de las dos objeciones se resolvió reescribiendo prosa del autor: se corrigieron piezas del aparato editorial (guía de lectura, nota de capítulo, índice rápido) y se verificó cada afirmación nueva contra los datos del manuscrito. Las tablas de la sección «Mapa de la serie» se derivaron de las tablas de prerrequisitos ya existentes en las guías de los vols. 2, 3 y 4, sin añadir dependencias nuevas.
+
+## 8. Prefacios añadidos tras el prólogo
+
+Se añadió `front-matter/02d_prefacio.md` a los cuatro volúmenes. Cada prefacio
+explica el alcance y la forma de lectura de su tomo, y se compone después de
+`02c_prologo.md`; la entrada **Prefacio** se añadió al índice de trabajo de cada
+volumen. La comprobación sobre las ediciones reconstruidas confirma, en los
+cuatro PDF, la secuencia **Prólogo → Prefacio → Guía de lectura** y, en los ocho
+EPUB, la navegación y EPUBCheck sin errores.

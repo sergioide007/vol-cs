@@ -107,6 +107,7 @@ body_files() {
     "$d/front-matter/02b_dedicatoria.md" \
     "$d/front-matter/01b_sinopsis.md" \
     "$d/front-matter/02c_prologo.md" \
+    "$d/front-matter/02d_prefacio.md" \
     "$d/front-matter/04b_guia_de_lectura.md" \
     "$d/front-matter/04c_nota_vigencia.md" \
     "$d/front-matter/05_cuaderno_de_lectura_critica.md" \

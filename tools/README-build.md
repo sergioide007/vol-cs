@@ -28,7 +28,8 @@ Cada volumen incluye, en este orden:
 | Hoja de créditos | `front-matter/03_hoja_creditos.md` | tras la portadilla, sin numerar |
 | Dedicatoria | `front-matter/02b_dedicatoria.md` | tras los créditos, sin numerar |
 | Sinopsis (texto de contracubierta y ficha de tienda) | `front-matter/01b_sinopsis.md` + campo `description` de `metadata_es.yaml` | interior (tras la dedicatoria) y metadatos del EPUB |
-| Prólogo | `front-matter/02c_prologo.md` | tras la sinopsis, sin numerar |
+| Prólogo | `front-matter/02c_prologo.md` | tras la sinopsis, con folio propio en el índice |
+| Prefacio | `front-matter/02d_prefacio.md` | tras el prólogo, con folio propio en el índice |
 | Guía de lectura, nota de vigencia, cuaderno crítico, glosario, índice rápido | `04b/04c/05/06/07` | cuerpo preliminar, con folios en el índice |
 | Índice generado por el compositor | automático (`--toc`) | con folios reales |
 

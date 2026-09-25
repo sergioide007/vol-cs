@@ -1,6 +1,6 @@
 {
   "vol1-fundamentos": {
-    "pages": 172,
+    "pages": 174,
     "size_6x9": true,
     "fonts_embedded": true,
     "empty_toc_entries": [],
@@ -19,7 +19,7 @@
     }
   },
   "vol2-frontera-y-aplicaciones": {
-    "pages": 340,
+    "pages": 342,
     "size_6x9": true,
     "fonts_embedded": true,
     "empty_toc_entries": [],
@@ -38,7 +38,7 @@
     }
   },
   "vol3-madurez-organizacional": {
-    "pages": 298,
+    "pages": 300,
     "size_6x9": true,
     "fonts_embedded": true,
     "empty_toc_entries": [],
@@ -57,7 +57,7 @@
     }
   },
   "vol4-patrones-de-escala": {
-    "pages": 266,
+    "pages": 268,
     "size_6x9": true,
     "fonts_embedded": true,
     "empty_toc_entries": [],

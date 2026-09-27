@@ -1,10 +1,12 @@
 ---
 title: "Código Sintético"
 subtitle: "Madurez Organizacional — Gobernanza, autonomía y calidad en equipos de agentes"
-author: "Sergio Perez Ruiz"
+author:
+  - "Sergio Perez Ruiz"
+  - "Henry Fuentes"
 lang: "es"
 date: "2026"
-rights: "© 2026 Sergio Perez Ruiz. Todos los derechos reservados."
+rights: "© 2026 Sergio Perez Ruiz y Henry Fuentes. Todos los derechos reservados."
 publisher: "Sergio Perez Ruiz"
 identifier:
   - scheme: UUID

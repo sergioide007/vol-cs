@@ -8,5 +8,5 @@ Este volumen está escrito para dos lectores que suelen no hablarse: el ingenier
 
 Gobernar no es frenar. Es la condición para ir rápido sin romper lo que importa.
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**
 *Lima, 2026*

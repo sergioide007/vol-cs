@@ -8,5 +8,5 @@ Por eso este tomo alterna tres miradas en cada capítulo: la técnica, que muest
 
 La frontera se mueve. Los criterios para leerla —verificabilidad, defensa en profundidad, soberanía sobre la propia pila— son los que este volumen deja instalados.
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**
 *Lima, 2026*

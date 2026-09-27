@@ -10,4 +10,4 @@ Patrones de escalabilidad, resiliencia, pipelines event-driven, autocorrección,
 
 **Volumen 4 de 4, Serie Código Sintético**
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**

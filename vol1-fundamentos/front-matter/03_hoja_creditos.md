@@ -4,7 +4,7 @@ Título: Código sintético, Fundamentos: Arquitectura, economía y ética de lo
 
 Serie: Código Sintético (Volumen 1 de 4).
 
-Autor: Sergio Perez Ruiz.
+Autores: Sergio Perez Ruiz y Henry Fuentes.
 
 Editor: Sergio Perez Ruiz.
 Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú.

@@ -4,7 +4,7 @@ Título: Código sintético, Madurez Organizacional: Gobernanza, autonomía y ca
 
 Serie: Código Sintético (Volumen 3 de 4).
 
-Autor: Sergio Perez Ruiz.
+Autores: Sergio Perez Ruiz y Henry Fuentes.
 
 Editor: Sergio Perez Ruiz.
 Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú.

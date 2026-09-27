@@ -33,11 +33,13 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TOOLS="$ROOT/tools"
 DIST="$ROOT/dist"
+COVERS="$DIST/covers"
 WORK="${TMPDIR:-/tmp}/codigo-sintetico-build"
 mkdir -p "$DIST" "$WORK"
 
 PANDOC="${PANDOC:-pandoc}"
 PDF_ENGINE="${PDF_ENGINE:-xelatex}"
+COVER_DPI="${COVER_DPI:-300}"      # resolución de la cubierta para el EPUB
 
 # --- Parámetros de imprenta ------------------------------------------------
 TRIM_W_IN="${TRIM_W_IN:-6}"
@@ -60,11 +62,11 @@ die()  { printf '\033[1;31m✘\033[0m %s\n' "$*" >&2; exit 1; }
 
 require_tools() {
   local missing=()
-  for t in "$PANDOC" "$PDF_ENGINE" pdfinfo pdfunite pdffonts; do
+  for t in "$PANDOC" "$PDF_ENGINE" pdfinfo pdfunite pdffonts pdftoppm python3; do
     command -v "$t" >/dev/null 2>&1 || missing+=("$t")
   done
   if [ "${#missing[@]}" -gt 0 ]; then
-    die "Faltan herramientas: ${missing[*]}. Instale pandoc, texlive-xetex, poppler-utils."
+    die "Faltan herramientas: ${missing[*]}. Instale pandoc, texlive-xetex, poppler-utils, python3-pil."
   fi
 }
 
@@ -195,7 +197,7 @@ build_interior_pdf() {
 
 # --- Composición del EPUB ---------------------------------------------------
 build_epub() {
-  local d="$1" out="$2" tmp="$3" with_cover="$4"
+  local d="$1" out="$2" tmp="$3" cover="$4"
   mapfile -t files < <(body_files "$d")
   local args=( "${files[@]}"
     --from=markdown+smart+pipe_tables
@@ -210,26 +212,50 @@ build_epub() {
     --split-level=1
     -V lang=es )
 
-  if [ "$with_cover" = "yes" ]; then
-    # El id XML del item de portada lo deriva pandoc del nombre del archivo;
-    # con "01_cubierta_delantera.png" queda "01_cubierta_delantera_png", que
-    # EPUBCheck rechaza (RSC-005: un nombre XML no puede empezar por dígito).
-    # Se usa una copia con nombre válido en el directorio temporal.
-    cp "$d/front-matter/01_cubierta_delantera.png" "$tmp/cover.png"
-    args+=( --epub-cover-image="$tmp/cover.png" )
+  if [ -n "$cover" ]; then
+    # La cubierta es la compuesta por tools/covers/render_covers.sh (arte
+    # original + leyenda con los dos coautores), no el PNG del arte. El id XML
+    # del item de portada lo deriva pandoc del nombre del archivo; se copia con
+    # un nombre que empiece por letra para que EPUBCheck no lo rechace
+    # (RSC-005: un nombre XML no puede empezar por dígito).
+    cp "$cover" "$tmp/cubierta.jpg"
+    args+=( --epub-cover-image="$tmp/cubierta.jpg" )
   fi
 
   "$PANDOC" "${args[@]}" 2> "$tmp/epub.log" \
     || { tail -20 "$tmp/epub.log"; die "pandoc falló al generar el EPUB de $d"; }
 }
 
+# --- Cubiertas compuestas ---------------------------------------------------
+# El arte de las portadas acredita a un solo autor. tools/covers/ mide ese arte
+# (altura de mayúscula, línea base, espaciado, color de acento, franja limpia)
+# y compone una leyenda vectorial con los dos coautores sobre un parche de la
+# propia ilustración. Por cada volumen produce:
+#   dist/covers/<vol>.pdf                   cubierta 6x9 (432 x 648 bp)
+#   dist/covers/<vol>-cover-300ppp.jpg      la misma, para el EPUB
+build_covers() {
+  local work="$WORK/covers"
+  mkdir -p "$work" "$COVERS"
+  python3 "$TOOLS/covers/make_styles.py" >"$work/styles.log" 2>&1 \
+    || { tail -20 "$work/styles.log"; die "Falló la medición del arte de cubiertas"; }
+  bash "$TOOLS/covers/render_covers.sh" --out "$COVERS" --dpi "$COVER_DPI" "$@" \
+    >"$work/render.log" 2>&1 \
+    || { tail -30 "$work/render.log"; die "Falló la composición de cubiertas"; }
+}
+
+# Leyenda de autoría decidida para un volumen (de la medición, no a mano)
+legend_of() {
+  python3 -c 'import json,sys
+d = json.load(open(sys.argv[1], encoding="utf-8"))["volumenes"]
+print(d[sys.argv[2]]["legend"])' "$TOOLS/covers/cover-styles.json" "$1"
+}
+
 # --- Portada suelta (6x9) para el PDF de lectura ----------------------------
 make_cover_pdf() {
-  local png="$1" out="$2" tmp="$3"
-  sed "s|@COVER@|$png|g" "$TOOLS/latex/cover-page.tex" > "$tmp/cover-page.tex"
-  ( cd "$tmp" && xelatex -interaction=nonstopmode -halt-on-error cover-page.tex </dev/null >/dev/null 2>&1 ) \
-    || { tail -20 "$tmp/cover-page.log"; die "No se pudo componer la portada en PDF"; }
-  cp "$tmp/cover-page.pdf" "$out"
+  local slug="$1" out="$2"
+  local cover="$COVERS/$slug.pdf"
+  [ -f "$cover" ] || die "No hay cubierta compuesta para $slug: $cover"
+  cp "$cover" "$out"
 }
 
 # --- Verificación de un PDF ya compuesto ------------------------------------
@@ -274,7 +300,21 @@ require_tools
 
 failures=0
 
-for slug in $(volumes "$@"); do
+mapfile -t slugs < <(volumes "$@")
+
+# Cubiertas: se componen antes del bucle porque el EPUB con portada y el PDF de
+# lectura las necesitan. Solo se procesan los volúmenes que existen en disco.
+cover_slugs=()
+for slug in "${slugs[@]}"; do
+  [ -d "$ROOT/$slug" ] && cover_slugs+=("$slug")
+done
+if [ "${#cover_slugs[@]}" -gt 0 ]; then
+  log "Componiendo cubiertas (arte original + leyenda de autoría) …"
+  build_covers "${cover_slugs[@]}"
+  ok "cubiertas 6x9 y para EPUB en $COVERS"
+fi
+
+for slug in "${slugs[@]}"; do
   d="$ROOT/$slug"
   [ -d "$d" ] || { warn "Directorio no encontrado: $slug (se omite)"; continue; }
 
@@ -304,11 +344,11 @@ for slug in $(volumes "$@"); do
   verify_pdf "$interior"
 
   # 2) EPUB con y sin portada
-  build_epub "$d" "$epub_cover" "$tmp" yes
-  build_epub "$d" "$epub_plain" "$tmp" no
+  build_epub "$d" "$epub_cover" "$tmp" "$COVERS/$slug-cover-${COVER_DPI}ppp.jpg"
+  build_epub "$d" "$epub_plain" "$tmp" ""
 
-  # 3) PDF de lectura: portada 6x9 + interior
-  make_cover_pdf "$d/front-matter/01_cubierta_delantera.png" "$tmp/cover-6x9.pdf" "$tmp"
+  # 3) PDF de lectura: portada compuesta 6x9 + interior
+  make_cover_pdf "$slug" "$tmp/cover-6x9.pdf"
   pdfunite "$tmp/cover-6x9.pdf" "$interior" "$reading"
 
   # --- Métricas y avisos ----------------------------------------------------
@@ -337,6 +377,9 @@ for slug in $(volumes "$@"); do
     printf '| Elegible para tapa dura KDP (75–550 págs.) | %s |\n' "$hc_ok"
     printf '| Lomo de cubierta (papel blanco / crema) | %s in / %s in |\n' "$(spine_width "$pages")" "$(spine_width_cream "$pages")"
     printf '| Fuentes incrustadas | %s/%s |\n' "$PDF_EMB_OK" "$PDF_EMB_TOTAL"
+    printf '| Cubierta compuesta | `dist/covers/%s.pdf` + `%s-cover-%sppp.jpg` |\n' \
+      "$slug" "$slug" "$COVER_DPI"
+    printf '| Leyenda de autoría de la cubierta | %s |\n' "$(legend_of "$slug")"
     printf '| Líneas desbordadas (Overfull hbox) | %s |\n' "$overfull"
     printf '| Recursos no encontrados | %s |\n' "$misses"
     echo

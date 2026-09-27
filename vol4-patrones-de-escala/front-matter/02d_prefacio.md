@@ -10,5 +10,5 @@ La crónica de «la semana del coverage» conserva el registro de una entrega ex
 
 Este tomo cierra la serie con una preocupación que atraviesa los cuatro volúmenes: un sistema de agentes debe ser comprensible, gobernable y sostenible. El Epílogo recoge las ideas comunes y las deja abiertas a la próxima puesta en producción.
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**
 *Lima, 2026*

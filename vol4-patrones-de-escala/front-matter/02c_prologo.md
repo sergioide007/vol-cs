@@ -6,5 +6,5 @@ Este último volumen reúne lo que la experiencia enseña y los tutoriales omite
 
 Con este tomo se cierra la serie *Código Sintético*: fundamentos, frontera, organización y escala. Cuatro volúmenes independientes que juntos forman un sistema —igual que los agentes que describen—. Gracias por llegar hasta aquí; el Epílogo que sigue es tanto un cierre como una invitación a construir lo que viene.
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**
 *Lima, 2026*

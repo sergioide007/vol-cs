@@ -8,5 +8,5 @@ Este primer volumen pone los cimientos. Los volúmenes siguientes llevan estos f
 
 Léalo con un editor abierto y con espíritu crítico. El código está para usarse; las tesis, para discutirse.
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**
 *Lima, 2026*

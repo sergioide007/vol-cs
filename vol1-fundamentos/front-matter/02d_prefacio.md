@@ -10,5 +10,5 @@ Los capítulos incluyen ejercicios resueltos para examinar decisiones, no solo p
 
 Este primer volumen no promete resolver la ingeniería de sistemas con agentes. Plantea las preguntas que conviene responder antes de llamarlos producción, y ofrece un lenguaje común para hacerlo.
 
-**Sergio Perez Ruiz**
+**Sergio Perez Ruiz y Henry Fuentes**
 *Lima, 2026*

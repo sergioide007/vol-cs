@@ -1,0 +1,41 @@
+{
+  "_lee": [
+    "Decisiones editoriales de cubierta (lo único que elige una persona).",
+    "Las cifras de geometría salen de tools/covers/inspect_covers.py: este",
+    "archivo no repite medidas del arte, solo intención de diseño.",
+    "Lo consume tools/covers/make_styles.py, que escribe",
+    "tools/covers/cover-styles.json y tools/latex/covers/<volumen>.tex.",
+    "legend: leyenda de autoría con los dos coautores. El separador «·» es el",
+    "  mismo recurso gráfico que usan las cubiertas (regla con punto).",
+    "case: 'upper' (mayúsculas con espaciado amplio) o 'title'; se debe",
+    "  corresponder con el nombre original del arte de cada volumen.",
+    "rules: reglas horizontales a los lados del nombre (solo el vol. 2). El",
+    "  parche inferior las tapa, así que hay que volver a dibujarlas."
+  ],
+  "legends": {
+    "vol1-fundamentos": {
+      "legend": "SERGIO PEREZ RUIZ · HENRY FUENTES",
+      "case": "upper",
+      "source_word": "SERGIO",
+      "rules": false
+    },
+    "vol2-frontera-y-aplicaciones": {
+      "legend": "SERGIO PEREZ RUIZ · HENRY FUENTES",
+      "case": "upper",
+      "source_word": "SERGIO",
+      "rules": true
+    },
+    "vol3-madurez-organizacional": {
+      "legend": "Sergio Perez Ruiz · Henry Fuentes",
+      "case": "title",
+      "source_word": "Sergio",
+      "rules": false
+    },
+    "vol4-patrones-de-escala": {
+      "legend": "SERGIO PEREZ RUIZ · HENRY FUENTES",
+      "case": "upper",
+      "source_word": "SERGIO",
+      "rules": false
+    }
+  }
+}

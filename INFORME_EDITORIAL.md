@@ -124,4 +124,4 @@ explica el alcance y la forma de lectura de su tomo, y se compone después de
 `02c_prologo.md`; la entrada **Prefacio** se añadió al índice de trabajo de cada
 volumen. La comprobación sobre las ediciones reconstruidas confirma, en los
 cuatro PDF, la secuencia **Prólogo → Prefacio → Guía de lectura** y, en los ocho
-EPUB, la navegación y EPUBCheck sin errores.
+EPUB, la navegación y EPUBCheck sin errores

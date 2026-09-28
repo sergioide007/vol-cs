@@ -180,9 +180,6 @@
 
 **Peng, Sida; Kalliamvakou, Eirini; Cihon, Peter; Demirer, Mert** (2023). *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot*. _arXiv:2302.06590 [cs.SE]. Experimento controlado: el grupo con acceso al asistente completó la tarea un 55,8 % más rápido que el grupo de control._
 
-### {#ref-ponemon2023}
-
-**Ponemon Institute, Report, as cited in the manuscript, 2023** (2023). *Report, as cited in the manuscript, 2023*.
 
 ### {#ref-pmbok2021}
 

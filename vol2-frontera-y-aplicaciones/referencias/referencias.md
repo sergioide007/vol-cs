@@ -111,7 +111,8 @@
 
 ### {#ref-idc2024}
 
-**IDC, Report, as cited in the manuscript, 2024** (2024). *Report, as cited in the manuscript, 2024*.
+
+**IDC** (julio de 2026). *Worldwide Quarterly Wearable Device Tracker y Worldwide Quarterly Augmented and Virtual Reality Headset Tracker*, actualizados el 1 de julio de 2026. _Gafas inteligentes: 2,25 millones de unidades en el primer trimestre de 2026 y previsión de 13,6 millones para 2026; ingresos de 5.100 millones de dólares en 2026. Realidad mixta: de 3,2 millones de unidades en 2026 a 10,4 millones en 2030, con ingresos de 7.100 millones en 2030._
 
 ### {#ref-idrcunesco2023}
 
@@ -231,7 +232,8 @@
 
 ### {#ref-unity2023}
 
-**Unity Technologies, As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*.
+
+**Unity Technologies** (23 de agosto de 2025). *ML-Agents Toolkit*, version 1.1.0. _Repositorio `Unity-Technologies/ml-agents`. Herramienta de codigo abierto para entrenar agentes con aprendizaje por refuerzo e imitacion en juegos y simulaciones. Version verificada 1.1.0; el paquete verificado para Unity 2020.1 en adelante se numera 1.0.x. Trabajo de referencia: Juliani et al. (2020), «Unity: A General Platform for Intelligent Agents», arXiv:1809.02627._
 
 ### {#ref-vogels2008}
 

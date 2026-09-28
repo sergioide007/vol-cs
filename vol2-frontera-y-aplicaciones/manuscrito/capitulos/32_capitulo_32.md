@@ -268,7 +268,7 @@ Esta arquitectura jerárquica (estrategia lenta, táctica media, ejecución ráp
 
 Los juegos 3D son entornos privilegiados para el aprendizaje por refuerzo multi-agente porque permiten simular millones de horas de juego en tiempo acelerado. Lowe et al. (2017, NeurIPS) demostraron que la arquitectura actor-critic multi-agente puede aprender políticas cooperativas y competitivas simultáneamente en entornos de mezcla. Rashid et al. (2018, ICML) introdujeron QMIX, que aprende factorizaciones monotónicas del valor conjunto de acción, permitiendo coordinar hasta 64 agentes con complejidad computacional manejable.
 
-Estos avances académicos han comenzado a filtrarse al desarrollo de juegos comerciales. Unity ML-Agents Toolkit v3.0 ([Unity Technologies, 2023](#ref-unity2023)) integra MARL de forma accesible para desarrolladores sin experiencia en aprendizaje por refuerzo.
+Estos avances académicos han comenzado a filtrarse al desarrollo de juegos comerciales. Unity ML-Agents Toolkit 1.1.0 ([Unity Technologies, 2023](#ref-unity2023)) integra MARL de forma accesible para desarrolladores sin experiencia en aprendizaje por refuerzo.
 
 ### Ejemplo: orquestador multiagente para NPCs en Unity
 
@@ -622,9 +622,9 @@ La complejidad de testing en VR multi-usuario requiere **bots de usuario sintét
 
 ## ■ PISTA EJECUTIVA: Perspectiva ejecutiva, Realidad Virtual
 
-### La oportunidad de mercado XR: $72B antes de 2028
+### La oportunidad de mercado XR, y lo que dura una previsión
 
-IDC (2024, Worldwide Augmented and Virtual Reality Spending Guide) proyecta un mercado XR de $72.000 millones para 2028, con un CAGR del 27,3% desde 2023. El segmento de mayor crecimiento es el empresarial (formación y simulación ($18B), colaboración remota ($12B) y visualización de diseño industrial ($9B)), no el consumidor (gaming).
+IDC (2024, Worldwide Augmented and Virtual Reality Spending Guide) proyectó un mercado XR de 72.000 millones de dólares para 2028, con un CAGR del 27,3 % desde 2023. Esa cifra conviene leerla con cautela: los datos que la propia IDC publicó en julio de 2026 sitún el conjunto del segmento en un orden de magnitud muy inferior —unos 5.100 millones de dólares de ingresos en gafas inteligentes solo para 2026, y 7.100 millones en realidad mixta para 2030—, de modo que la previsión de 2024 sirve como señal de expectativa y no como dato de mercado. Es un buen ejemplo de por qué este libro insiste en fechar las cifras: una previsión publicada hace dos años ya es un dato caducado. El segmento de mayor crecimiento es el empresarial (formación y simulación ($18B), colaboración remota ($12B) y visualización de diseño industrial ($9B)), no el consumidor (gaming).
 
 En consecuencia, el business case para invertir en agentes VR adaptativos es más sólido en verticales B2B que en gaming de consumo. Un entorno de formación de cirujanos con agentes que adaptan la dificultad y el feedback al desempeño individual del aprendiz (en lugar de un escenario estático idéntico para todos) tiene un ROI medible en tasas de certificación y reducción de errores en procedimientos reales.
 
@@ -667,6 +667,6 @@ La convergencia de estos tres dominios en una perspectiva unificada revela un pr
 - En videojuegos 3D, la arquitectura jerárquica de tres capas (estratégica/lenta, táctica/media, ejecución/rápida) resuelve la contradicción entre la latencia del LLM y el presupuesto de fotograma de 2 ms; el AI budget manager aplica LOD cognitivo para garantizar el framerate.
 - El aprendizaje por refuerzo multi-agente (MARL) produce comportamiento emergente que supera el scripting manual (documentado en OpenAI Five y AlphaStar) pero requiere QA activa de comportamientos degenerates que producen churn de jugadores.
 - En VR/AR/XR, la latencia motion-to-photon superior a 20 ms no es un bug de rendimiento: es un inductor fisiológico de cybersickness con prevalencia del 20–40% en usuarios afectados; la deuda técnica en esta capa tiene prioridad absoluta sobre cualquier feature nueva.
-- La oportunidad de mercado XR de $72.000 millones para 2028 ([IDC, 2024](#ref-idc2024)) se concentra en verticales empresariales (formación, colaboración, diseño industrial) donde los agentes adaptativos tienen ROI cuantificado en reducción de errores del 29–43%.
+- La previsión de mercado XR de 72.000 millones de dólares para 2028, tal como se publicó en 2024 y tal como los datos de 2026 la relativizan ([IDC, 2026](#ref-idc2024)) se concentra en verticales empresariales (formación, colaboración, diseño industrial) donde los agentes adaptativos tienen ROI cuantificado en reducción de errores del 29–43%.
 
 ---

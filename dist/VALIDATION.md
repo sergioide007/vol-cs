@@ -1,4 +1,4 @@
-# Validación de las ediciones — 28 de septiembre de 2026 (5.ª pasada)
+u# Validación de las ediciones — 28 de septiembre de 2026 (5.ª pasada)
 
 Estado: **construcción completa y validada por herramientas; pendiente de
 aprobación editorial (revisión visual) y de datos de publicación (ISBN, cubierta)**.

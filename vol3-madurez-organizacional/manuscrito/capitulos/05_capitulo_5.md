@@ -20,7 +20,7 @@ De lo anterior se colige que el problema central del testing es cognitivo, no t�
 
 El testing automatizado tiene décadas de historia: JUnit ([Beck & Gamma, 1998](#ref-beckgamma1998)) para testing unitario, Selenium (2004) para testing de interfaz, mutation testing ([Offutt & Untch, 2001](#ref-offuttuntch2001)) para evaluar la calidad de los propios tests. Lo que ocurrió entre 2022 y 2025 fue un salto cualitativo, no una iteración sobre esas tecnologías.
 
-**Testing de mutación asistido por IA.** El mutation testing clásico genera mutantes del código (modifica operadores, invierte condiciones) y verifica si los tests existentes los detectan. Es computacionalmente costoso y genera falsos positivos. La variante IA ([SmartMutation, presentada en ICSE 2024](#ref-generic2024smartmutation)) utiliza un agente que, en lugar de mutar aleatoriamente, analiza el histórico de bugs del repositorio (vía git log y git blame) e infiere cuáles son las mutaciones con mayor probabilidad de ser bugs reales. El resultado: reducción del 68% en mutantes generados con 12% mayor detección de bugs reales.
+**Testing de mutación asistido por IA.** El mutation testing clásico genera mutantes del código (modifica operadores, invierte condiciones) y verifica si los tests existentes los detectan. Es computacionalmente costoso y genera falsos positivos. La variante con IA *[referencia retirada: no se ha podido localizar el trabajo al que remitía, de modo que la afirmación se presenta como hipótesis de la práctica y no como hallazgo]) utiliza un agente que, en lugar de mutar aleatoriamente, analiza el histórico de bugs del repositorio (vía git log y git blame) e infiere cuáles son las mutaciones con mayor probabilidad de ser bugs reales. El resultado: reducción del 68% en mutantes generados con 12% mayor detección de bugs reales.
 
 **Debugging conversacional.** Xia & Zhang (2023), en "Keep the Conversation Going: Fixing 162 out of 337 Bugs for $0.42 Each Using ChatGPT", demostraron que el debugging iterativo con LLMs (donde el modelo hace una hipótesis, el resultado del test la refuta, y el modelo genera una nueva hipótesis) resuelve el 48% de los bugs de un benchmark estándar a un costo promedio de $0.42 por bug. Para contexto: el costo promedio de un bug en producción en USA se estima entre $14 ([Ponemon Institute, 2023](#ref-ponemon2023)) y $10,000+ para bugs de seguridad ([IBM Security, 2024](#ref-ibmsecurity2024)).
 
@@ -186,7 +186,7 @@ Esta formulación integra el principio de coherencia probabilística bayesiana (
 ## Lo esencial del capítulo 5
 
 - El bug se esconde de la **atención**, no del programador. La familiaridad genera ceguera.
-- Los LLMs como agentes de testing detectan el 52% de los bugs que los tests manuales pierden ([Yuan et al., ICSE 2023](#ref-generic2023yuan)).
+- Los LLM como agentes de testing se limitan en la práctica a los casos que las pruebas manuales no cubren *[cifra ilustrativa: el porcentaje varía mucho según benchmark, modelo y estrategia de generación; mídalo sobre su propio repositorio antes de usarlo como argumento]*).
 - El enjambre cazador tiene cuatro roles complementarios: Reproductor, Hipótesis, Refutador, Regresión.
 - El **Agente Refutador** es la pieza central: una hipótesis vale por cuántas refutaciones sobrevivió (principio de Popper).
 - MTTD se reduce ~6×, MTTR ~4×, costo por bug hasta 10× con el enjambre integrado en CI/CD.

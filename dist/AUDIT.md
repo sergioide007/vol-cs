@@ -1,6 +1,6 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.819 palabras de prosa
+Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.864 palabras de prosa
 
 Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 
@@ -9,8 +9,8 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | ID | Comprobación | Errores | Avisos |
 |---|---|---:|---:|
 | C1 | remisiones cruzadas | 0 | 37 |
-| C2 | bibliografía sin verificar | 47 | 0 |
-| C3 | cifras sin origen declarado | 0 | 261 |
+| C2 | bibliografía sin verificar | 42 | 0 |
+| C3 | cifras sin origen declarado | 0 | 263 |
 | C4 | apéndices y marcadores pendientes | 0 | 14 |
 | C5 | numeración antigua | 0 | 0 |
 | C6 | modelos fijados en el texto | 0 | 0 |
@@ -25,7 +25,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 |---|---:|---:|---:|---:|
 | 1 — Fundamentos | 10 | 21.140 | 0 | 21 |
 | 2 — Frontera y Aplicaciones | 32 | 58.039 | 0 | 110 |
-| 3 — Madurez Organizacional | 25 | 52.806 | 0 | 92 |
+| 3 — Madurez Organizacional | 25 | 52.851 | 0 | 94 |
 | 4 — Patrones de Escala | 13 | 36.457 | 0 | 111 |
 
 ## C1 · remisiones cruzadas (37)
@@ -119,7 +119,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L62 ! «cap. 31» remite al cap. 31 sin decir de qué tomo: en el Vol. 4 no existe; sí en el Vol. 2
 
 
-## C2 · bibliografía sin verificar (47)
+## C2 · bibliografía sin verificar (42)
 
 **`vol1-fundamentos/referencias/referencias.md`**
 
@@ -146,18 +146,15 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol3-madurez-organizacional/referencias/referencias.md`**
 
 - L16 ✘ «acp2026» se declara sin verificar (03_capitulo_3.md)
-- L40 ✘ «generic2023bi» se declara sin verificar (03_capitulo_3.md)
-- L48 ✘ «cenepred2017» se declara sin verificar (03_capitulo_3.md)
-- L52 ✘ «chase2025» se declara sin verificar (02_capitulo_2.md)
-- L64 ✘ «digitalai2024» se declara sin verificar (25_capitulo_25.md)
-- L117 ✘ «generic2022kurth» se declara sin verificar (03_capitulo_3.md)
-- L121 ✘ «generic2023lam» se declara sin verificar (03_capitulo_3.md)
-- L125 ✘ «generic2020misc» se declara sin verificar (17_capitulo_17.md)
-- L142 ✘ «msresearch2023» se declara sin verificar (11_capitulo_11.md)
-- L146 ✘ «mitchell2025» se declara sin verificar (02_capitulo_2.md)
-- L154 ✘ «noaa2026» se declara sin verificar (03_capitulo_3.md)
-- L179 ✘ «ponemon2023» se declara sin verificar (05_capitulo_5.md)
-- … y 3 más en `dist/AUDIT.json`
+- L49 ✘ «cenepred2017» se declara sin verificar (03_capitulo_3.md)
+- L53 ✘ «chase2025» se declara sin verificar (02_capitulo_2.md)
+- L65 ✘ «digitalai2024» se declara sin verificar (25_capitulo_25.md)
+- L146 ✘ «msresearch2023» se declara sin verificar (11_capitulo_11.md)
+- L150 ✘ «mitchell2025» se declara sin verificar (02_capitulo_2.md)
+- L158 ✘ «noaa2026» se declara sin verificar (03_capitulo_3.md)
+- L183 ✘ «ponemon2023» se declara sin verificar (05_capitulo_5.md)
+- L207 ✘ «generic2024smartmutation» se declara sin verificar (sin citarla)
+- L239 ✘ «generic2023yuan» se declara sin verificar (sin citarla)
 
 **`vol4-patrones-de-escala/referencias/referencias.md`**
 
@@ -170,7 +167,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L135 ✘ «syssec2025» se declara sin verificar (10_capitulo_10.md)
 
 
-## C3 · cifras sin origen declarado (261)
+## C3 · cifras sin origen declarado (263)
 
 **`vol1-fundamentos/manuscrito/capitulos/02_capitulo_2.md`**
 
@@ -388,11 +385,13 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L11 ! cifra sin origen declarado: «73%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L13 ! cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L23 ! cifra sin origen declarado: «68%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L27 ! cifra sin origen declarado: «63%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L29 ! cifra sin origen declarado: «70%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L96 ! cifra sin origen declarado: «15%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L164 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L166 ! cifra sin origen declarado: «30%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L188 ! cifra sin origen declarado: «6×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L201 ! cifra sin origen declarado: «0.03%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L209 ! cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L213 ! cifra sin origen declarado: «0.03%» — marcar [D] dato, [E] estimación o [I] ilustrativa

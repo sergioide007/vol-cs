@@ -20,7 +20,7 @@ He aquí una capacidad de los sistemas multiagente que merece reflexión detenid
 
 Esta dinámica replica, en el dominio sintético, la estructura de las comunidades de práctica humanas descritas por Wenger (1998): comunidades donde el conocimiento circula mediante la participación en la práctica compartida, donde el novato aprende del experto no a través de transferencia directa de información sino a través de la observación del hacer. El agente experto enseña al novato; el novato verifica al experto; y de ese intercambio el conocimiento del sistema entero asciende.
 
-Las investigaciones sobre aprendizaje federado ([Li et al., 2020](#ref-generic2020misc)) proporcionan un marco técnico para esta enseñanza distribuida: en lugar de un modelo centralizado que aprende de todos los datos, múltiples agentes aprenden localmente y comparten únicamente las actualizaciones de sus modelos (gradientes, pesos), preservando la privacidad mientras propagan el aprendizaje. El paralelo con la enseñanza entre agentes es estructuralmente preciso.
+Las investigaciones sobre aprendizaje federado ([Kairouz et al., 2021](#ref-generic2020misc)) proporcionan un marco técnico para esta enseñanza distribuida: en lugar de un modelo centralizado que aprende de todos los datos, múltiples agentes aprenden localmente y comparten únicamente las actualizaciones de sus modelos (gradientes, pesos), preservando la privacidad mientras propagan el aprendizaje. El paralelo con la enseñanza entre agentes es estructuralmente preciso.
 
 ## El mentor humano como corrector de deriva y fuente de verdad
 

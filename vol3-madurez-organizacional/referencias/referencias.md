@@ -39,7 +39,8 @@
 
 ### {#ref-generic2023bi}
 
-**Bi et al., As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*. _bibliographic detail not fully verified._
+
+**Bi, Kaifeng; Xie, Lingxi; Zhang, Hengheng; Chen, Xin; Gu, Xiaotao; Tian, Qi** (2022). *Pangu-Weather: A 3D High-Resolution Model for Fast and Accurate Global Weather Forecast*. _arXiv:2211.02556 [physics.ao-ph]._
 
 ### {#ref-brewer2000}
 
@@ -116,15 +117,18 @@
 
 ### {#ref-generic2022kurth}
 
-**Kurth et al., As cited in the manuscript, 2022** (2022). *As cited in the manuscript, 2022*. _bibliographic detail not fully verified._
+
+**Pathak, Jaideep; Subramanian, Shashank; Harrington, Peter; et al.** (2022). *FourCastNet: A Global Data-driven High-resolution Weather Model using Adaptive Fourier Neural Operators*. _arXiv:2202.11214 [physics.ao-ph]._
 
 ### {#ref-generic2023lam}
 
-**Lam et al., As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*. _bibliographic detail not fully verified._
+
+**Lam, Remi; Sanchez-Gonzalez, Alvaro; Willson, Matthew; et al.** (2022). *GraphCast: Learning Skillful Medium-Range Global Weather Forecasting*. _arXiv:2212.12794 [cs.LG]._
 
 ### {#ref-generic2020misc}
 
-**Li et al., As cited in the manuscript, 2020** (2020). *As cited in the manuscript, 2020*. _bibliographic detail not fully verified._
+
+**Kairouz, Peter; McMahan, H. Brendan; Avent, Brendan; et al.** (2021). *Advances and Open Problems in Federated Learning*. _Foundations and Trends in Machine Learning, 4(1-2). Preprint arXiv:1912.04977._
 
 ### {#ref-liu2024}
 
@@ -238,7 +242,8 @@
 
 ### {#ref-generic2024zhou}
 
-**Zhou et al., As cited in the manuscript, 2024** (2024). *As cited in the manuscript, 2024*. _bibliographic detail not fully verified._
+
+**Zhou, Shuyan; Xu, Frank F.; Zhu, Hao; et al.** (2024). *WebArena: A Realistic Web Environment for Building Autonomous Agents*. _arXiv:2307.13854 [cs.AI] (ICLR 2024). El mejor agente basado en GPT-4 resuelve el 14,41 % de las tareas frente al 78,24 % de las personas._
 
 ### {#ref-ziegler2024}
 

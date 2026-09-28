@@ -29,7 +29,7 @@
       "number": 3,
       "name": "vol3-madurez-organizacional",
       "chapters": 25,
-      "words": 52806
+      "words": 52851
     },
     {
       "number": 4,
@@ -1019,21 +1019,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 40,
-      "message": "«generic2023bi» se declara sin verificar (03_capitulo_3.md)",
-      "volume": null,
-      "detail": {
-        "anchor": "ref-generic2023bi",
-        "chapters": [
-          "03_capitulo_3.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 48,
+      "line": 49,
       "message": "«cenepred2017» se declara sin verificar (03_capitulo_3.md)",
       "volume": null,
       "detail": {
@@ -1047,7 +1033,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 52,
+      "line": 53,
       "message": "«chase2025» se declara sin verificar (02_capitulo_2.md)",
       "volume": null,
       "detail": {
@@ -1061,7 +1047,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 64,
+      "line": 65,
       "message": "«digitalai2024» se declara sin verificar (25_capitulo_25.md)",
       "volume": null,
       "detail": {
@@ -1075,49 +1061,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 117,
-      "message": "«generic2022kurth» se declara sin verificar (03_capitulo_3.md)",
-      "volume": null,
-      "detail": {
-        "anchor": "ref-generic2022kurth",
-        "chapters": [
-          "03_capitulo_3.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 121,
-      "message": "«generic2023lam» se declara sin verificar (03_capitulo_3.md)",
-      "volume": null,
-      "detail": {
-        "anchor": "ref-generic2023lam",
-        "chapters": [
-          "03_capitulo_3.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 125,
-      "message": "«generic2020misc» se declara sin verificar (17_capitulo_17.md)",
-      "volume": null,
-      "detail": {
-        "anchor": "ref-generic2020misc",
-        "chapters": [
-          "17_capitulo_17.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 142,
+      "line": 146,
       "message": "«msresearch2023» se declara sin verificar (11_capitulo_11.md)",
       "volume": null,
       "detail": {
@@ -1131,7 +1075,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 146,
+      "line": 150,
       "message": "«mitchell2025» se declara sin verificar (02_capitulo_2.md)",
       "volume": null,
       "detail": {
@@ -1145,7 +1089,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 154,
+      "line": 158,
       "message": "«noaa2026» se declara sin verificar (03_capitulo_3.md)",
       "volume": null,
       "detail": {
@@ -1159,7 +1103,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 179,
+      "line": 183,
       "message": "«ponemon2023» se declara sin verificar (05_capitulo_5.md)",
       "volume": null,
       "detail": {
@@ -1173,28 +1117,12 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 203,
-      "message": "«generic2024smartmutation» se declara sin verificar (05_capitulo_5.md)",
+      "line": 207,
+      "message": "«generic2024smartmutation» se declara sin verificar (sin citarla)",
       "volume": null,
       "detail": {
         "anchor": "ref-generic2024smartmutation",
-        "chapters": [
-          "05_capitulo_5.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 235,
-      "message": "«generic2023yuan» se declara sin verificar (05_capitulo_5.md)",
-      "volume": null,
-      "detail": {
-        "anchor": "ref-generic2023yuan",
-        "chapters": [
-          "05_capitulo_5.md"
-        ]
+        "chapters": []
       }
     },
     {
@@ -1202,13 +1130,11 @@
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
       "line": 239,
-      "message": "«generic2024zhou» se declara sin verificar (14_capitulo_14.md)",
+      "message": "«generic2023yuan» se declara sin verificar (sin citarla)",
       "volume": null,
       "detail": {
-        "anchor": "ref-generic2024zhou",
-        "chapters": [
-          "14_capitulo_14.md"
-        ]
+        "anchor": "ref-generic2023yuan",
+        "chapters": []
       }
     },
     {
@@ -2545,6 +2471,17 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 23,
+      "message": "cifra sin origen declarado: «68%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 3,
+      "detail": {
+        "excerpt": "**Testing de mutación asistido por IA.** El mutation testing clásico genera mutantes del código (modifica operadores, invierte condiciones) y verifica si los tests existentes los detectan. Es computac"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
       "line": 27,
       "message": "cifra sin origen declarado: «63%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
@@ -2594,6 +2531,17 @@
       "volume": 3,
       "detail": {
         "excerpt": "**Impacto en velocidad del sprint.** El indicador más sensible para el PO es el porcentaje de capacidad del sprint consumida por bugs vs. por features. La norma industria: 20-30% del sprint en bugs (S"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 188,
+      "message": "cifra sin origen declarado: «6×» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 3,
+      "detail": {
+        "excerpt": "- El bug se esconde de la **atención**, no del programador. La familiaridad genera ceguera. - Los LLM como agentes de testing se limitan en la práctica a los casos que las pruebas manuales no cubren *"
       }
     },
     {

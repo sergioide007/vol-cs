@@ -189,43 +189,12 @@
 
 **Ziegler, Albert; Kalliamvakou, Eirini; Li, X. Alice; Rice, Andrew; Rifkin, Devon; Simister, Shawn; Sittampalam, Ganesh; Aftandilian, Edward** (2024). *Measuring GitHub Copilot's Impact on Productivity*. _Communications of the ACM, 67_(3), 54-63._ _Estudio de campo con Metric, el equipo de análisis de GitHub._
 
-### {#ref-ferino2025}
 
-Ferino, S., Hoda, R., Grundy, J., & Treude, C. (2025). Novice developers' perspectives on adopting LLMs for software development: A systematic literature review. *arXiv preprint*.
 
-### {#ref-he2025}
 
-He, J., Treude, C., & Lo, D. (2025). LLM-based multi-agent systems for software engineering: Literature review, vision, and the road ahead. *ACM Transactions on Software Engineering and Methodology*, 34(5).
 
-### {#ref-hou2024}
 
-Hou, X., Zhao, Y., Liu, Y., Yang, Z., Wang, K., Li, L., Luo, X., Lo, D., Grundy, J., & Wang, H. (2024). Large language models for software engineering: A systematic literature review. *ACM Transactions on Software Engineering and Methodology*, 33(8), 1–79.
 
-### {#ref-kitchenham2009}
 
-Kitchenham, B., Brereton, O. P., Budgen, D., Turner, M., Bailey, J., & Linkman, S. (2009). Systematic literature reviews in software engineering, A systematic literature review. *Information and Software Technology*, 51(1), 7–15.
 
-### {#ref-mohamed2025}
-
-Mohamed, A., Assi, M., & Guizani, M. (2025). The impact of LLM-assistants on software developer productivity: A systematic literature review. *arXiv preprint*.
-
-### {#ref-ramírez-rueda2024}
-
-Ramírez-Rueda, R., Benítez-Guerrero, E., Mezura-Godoy, C., & Bárcenas, E. (2024). Transforming software development: A study on the integration of multi-agent systems and large language models for automatic code generation. *12th International Conference in Software Engineering Research and Innovation (CONISOFT)*, 11–20.
-
-### {#ref-rasheed2023}
-
-Rasheed, Z., Waseem, M., Kemell, K.-K., Xiaofeng, W., Duc, A. N., Systä, K., & Abrahamsson, P. (2023). Autonomous agents in software development: A vision paper. *arXiv preprint arXiv:2311.18440*.
-
-### {#ref-sasaki2024}
-
-Sasaki, Y., Washizaki, H., Li, J., Sander, D., Yoshioka, N., & Fukazawa, Y. (2024). Systematic literature review of prompt engineering patterns in software engineering. *IEEE 48th Annual Computers, Software, and Applications Conference (COMPSAC)*, 670–675.
-
-### {#ref-shi2025}
-
-Shi, J., Yang, Z., & Lo, D. (2025). Efficient and green large language models for software engineering: Literature review, vision, and the road ahead. *ACM Transactions on Software Engineering and Methodology*, 34(5), 1–22.
-
-### {#ref-yao2023}
-
-Yao, S., Yu, D., Zhao, J., Shafran, I., Griffiths, T. L., Cao, Y., & Narasimhan, K. (2023). Tree of thoughts: Deliberate problem solving with large language models. *NeurIPS*.
 

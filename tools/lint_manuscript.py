@@ -377,6 +377,10 @@ def check_c2_references(vols, add):
             continue
         # Cada entrada es un bloque `### {#ref-slug}` seguido de su texto.
         blocks = re.split(r'(?m)^###\s*\{#(ref-[^}]+)\}', text)
+        # Se envuelve el archivo de referencias para que los hallazgos lleven
+        # su volumen: si se pasa un Path suelto, `getattr(item, 'volume')` es
+        # None y el informe los pierde en el desglose por tomo.
+        ref = TextFile(volume.references_path, volume)
         for index in range(1, len(blocks) - 1, 2):
             anchor, body = blocks[index], blocks[index + 1]
             if not UNVERIFIED.search(body):
@@ -385,16 +389,22 @@ def check_c2_references(vols, add):
             label = anchor.replace('ref-', '')
             used = [c for c in volume.chapters if '#' + anchor in c.text]
             where = ', '.join(c.filename for c in used[:3]) or 'sin citarla'
-            add('C2', 'error', volume.references_path, line,
+            add('C2', 'error', ref, line,
                 f'«{label}» se declara sin verificar ({where})',
                 detail={'anchor': anchor, 'chapters': [c.filename for c in used]})
-        # Entradas huérfanas: definidas y nunca citadas (C8, no C2).
+        # Entradas huerfanas: definidas y nunca citadas (C8, no C2).
+        #
+        # La condicion es solo que no se cite en ningun capitulo. Antes se
+        # comprobaba ademas que '#anchor' no estuviera en el propio texto de la
+        # bibliografia, lo cual era una tautologia: el encabezado de la entrada
+        # es '### {#ref-slug}', de modo que '#ref-slug' SI aparece ahi. Esa
+        # rama no se ejecuto nunca y por eso C8 reportaba cero huerfanas
+        # teniendo 35.
         for index in range(1, len(blocks) - 1, 2):
             anchor = blocks[index]
-            if f'#{anchor}' not in text and not any(
-                    f'#{anchor}' in c.text for c in volume.chapters):
+            if not any(f'#{anchor}' in c.text for c in volume.chapters):
                 line = text.count('\n', 0, text.find('{#' + anchor + '}')) + 1
-                add('C8', 'aviso', volume.references_path, line,
+                add('C8', 'aviso', ref, line,
                     f'«{anchor.replace("ref-", "")}» está en la bibliografía y no se '
                     f'cita en ningún capítulo',
                     detail={'anchor': anchor})

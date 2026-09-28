@@ -204,9 +204,6 @@
 
 **Schwaber, Ken; Sutherland, Jeff, The Scrum Guide** (2020). *The Scrum Guide*. Scrum.org, 2020.
 
-### {#ref-generic2024smartmutation}
-
-**SmartMutation, As presented at ICSE, as cited in the manuscript, 2024** (2024). *As presented at ICSE, as cited in the manuscript, 2024*.
 
 ### {#ref-strubell2019}
 
@@ -236,9 +233,6 @@
 
 **Yao, Shunyu; Zhao, Jeffrey; Yu, Dian; Du, Nan; Shafran, Izhak; Narasimhan, Karthik; Cao, Yuan** (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. International Conference on Learning Representations (ICLR).
 
-### {#ref-generic2023yuan}
-
-**Yuan et al., As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*. _ICSE; bibliographic detail not fully verified._
 
 ### {#ref-generic2024zhou}
 
@@ -250,39 +244,11 @@
 
 **Ziegler, Albert; Kalliamvakou, Eirini; Li, X. Alice; Rice, Andrew; Rifkin, Devon; Simister, Shawn; Sittampalam, Ganesh; Aftandilian, Edward** (2024). *Measuring GitHub Copilot's Impact on Productivity*. _Communications of the ACM, 67_(3), 54-63._ _Estudio de campo con Metric, el equipo de análisis de GitHub._
 
-### {#ref-batool2023}
 
-Batool, A., Zowghi, D., & Bano, M. (2023). Responsible AI governance: A systematic literature review. *arXiv preprint arXiv:2401.10896*.
 
-### {#ref-bovens2002}
 
-Bovens, M., & Zouridis, S. (2002). From street-level to system-level bureaucracies: How information and communication technology is transforming administrative discretion and constitutional control. *Public Administration Review*, 62(2), 174–184.
 
-### {#ref-floridi2019}
 
-Floridi, L., & Cowls, J. (2019). A unified framework of five principles for AI in society. *Harvard Data Science Review*, 1(1).
 
-### {#ref-unknown2023}
 
-ISO. (2023). *ISO/IEC 42001: Information technology, Artificial intelligence management system*. International Organization for Standardization.
-
-### {#ref-mittelstadt2019}
-
-Mittelstadt, B. (2019). Principles alone cannot guarantee ethical AI. *Nature Machine Intelligence*, 1(11), 501–507.
-
-### {#ref-unknown2023b}
-
-NIST. (2023). *AI Risk Management Framework 1.0*. National Institute of Standards and Technology.
-
-### {#ref-novelli2024}
-
-Novelli, C., et al. (2024). Accountability in artificial intelligence: What it is and how it works. *AI & Society* (as cited in comparative regulatory analysis, 2026).
-
-### {#ref-unknown2022}
-
-OECD. (2022). *OECD Framework for the Classification of AI Systems*. Organisation for Economic Co-operation and Development.
-
-### {#ref-unknown0000}
-
-(Estudios adicionales citados de forma indirecta a través de las revisiones sistemáticas referenciadas arriba, Chan et al. 2023; Gridach et al. 2025; Stahl 2023; Wang & Wu 2024; Anderljung et al. 2023; Kluge Correa et al., s.f., no pudieron verificarse con datos bibliográficos completos y se citan aquí como aparecen en las SLR fuente, no como consulta directa de los estudios primarios.)
 

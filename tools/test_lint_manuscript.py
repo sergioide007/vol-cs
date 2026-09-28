@@ -201,6 +201,28 @@ class ManuscriptInvariantsTest(unittest.TestCase):
                            and f['file'] == lint.relative(item.path) and f['line'] == line]
                     self.assertTrue(hit, f'{lint.relative(item.path)}:{line} sin reportar')
 
+    def test_orphan_entries_are_detected(self):
+        """C8 debe listar las entradas de la bibliografia que nadie cita.
+
+        Esta comprobacion existe porque esa rama estuvo muerta: la condicion
+        extra «'#anchor' no esta en el texto de la bibliografia» es siempre
+        falsa, ya que el encabezado de la entrada es «### {#ref-slug}».
+        """
+        orphans = [f for f in self.findings
+                   if f['check'] == 'C8' and f['severity'] == 'aviso']
+        counted = 0
+        for volume in self.vols:
+            anchors = re.findall(r'(?m)^###\s*\{#(ref-[^}]+)\}',
+                                 volume.references())
+            reales = [a for a in anchors
+                      if not any(f'#{a}' in c.text for c in volume.chapters)]
+            counted += len(reales)
+            self.assertEqual(
+                len(reales), len([f for f in orphans if f['volume'] == volume.number
+                                  and f['detail']['anchor'] in reales]),
+                f'Vol. {volume.number}: {len(reales)} entradas sin citar')
+        self.assertEqual(counted, len(orphans), 'todos los hallazgos de C8')
+
     def test_report_renders(self):
         """El informe lista las nueve comprobaciones aunque no tengan hallazgos.
 

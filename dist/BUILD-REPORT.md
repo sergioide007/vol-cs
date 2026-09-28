@@ -1,6 +1,6 @@
 # Informe de construcción — Serie «Código Sintético»
 
-Generado: 2026-09-28 14:39 UTC
+Generado: 2026-09-28 15:09 UTC
 
 ## Parámetros de imprenta aplicados (6 × 9 pulgadas)
 
@@ -22,30 +22,30 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 ## Volúmenes
 
-### vol2-frontera-y-aplicaciones
+### vol1-fundamentos
 
 | Dato | Valor |
 |---|---|
-| Páginas del interior | 346 |
+| Páginas del interior | 178 |
 | Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
 | Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 346 págs. | 0.875 in / 0.625 in |
+| Lomo aplicado / mínimo KDP para 178 págs. | 0.875 in / 0.5 in |
 | Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.779 in / 0.865 in |
-| Fuentes incrustadas | 9/9 |
-| Cubierta compuesta | `dist/covers/vol2-frontera-y-aplicaciones.pdf` + `vol2-frontera-y-aplicaciones-cover-300ppp.jpg` |
+| Lomo de cubierta (papel blanco / crema) | 0.401 in / 0.445 in |
+| Fuentes incrustadas | 12/12 |
+| Cubierta compuesta | `dist/covers/vol1-fundamentos.pdf` + `vol1-fundamentos-cover-300ppp.jpg` |
 | Leyenda de autoría de la cubierta | SERGIO PEREZ RUIZ · HENRY FUENTES |
-| Líneas desbordadas (Overfull hbox) | 2 |
+| Líneas desbordadas (Overfull hbox) | 0 |
 | Recursos no encontrados | 0 |
 
 **Archivos generados**
 
-- `vol2-frontera-y-aplicaciones--epub--con-portada--epubcheck.log` (4.0K)
-- `vol2-frontera-y-aplicaciones--epub--con-portada.epub` (2.5M)
-- `vol2-frontera-y-aplicaciones--epub--sin-portada--epubcheck.log` (4.0K)
-- `vol2-frontera-y-aplicaciones--epub--sin-portada.epub` (2.0M)
-- `vol2-frontera-y-aplicaciones--interior-6x9--sin-caratula.pdf` (3.0M)
-- `vol2-frontera-y-aplicaciones--lectura-6x9--con-portada.pdf` (4.7M)
+- `vol1-fundamentos--epub--con-portada--epubcheck.log` (4.0K)
+- `vol1-fundamentos--epub--con-portada.epub` (1.9M)
+- `vol1-fundamentos--epub--sin-portada--epubcheck.log` (4.0K)
+- `vol1-fundamentos--epub--sin-portada.epub` (1.4M)
+- `vol1-fundamentos--interior-6x9--sin-caratula.pdf` (2.0M)
+- `vol1-fundamentos--lectura-6x9--con-portada.pdf` (3.4M)
 
 ### vol3-madurez-organizacional
 

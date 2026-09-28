@@ -254,35 +254,10 @@
 
 **Yao, Shunyu; Zhao, Jeffrey; Yu, Dian; Du, Nan; Shafran, Izhak; Narasimhan, Karthik; Cao, Yuan** (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. International Conference on Learning Representations (ICLR).
 
-### {#ref-aggarwal2021}
 
-Aggarwal, V. K., & Reddie, A. W. (2021). Comparative industrial policy and cybersecurity: A framework. *Journal of Cyber Policy*, 6(3), 296–316.
 
-### {#ref-bown2024}
 
-Bown, C. P., & Wang, Y. (2024). *Trade policy and the semiconductor industry* (as cited in Frontiers, 2026).
 
-### {#ref-farrell2019}
 
-Farrell, H., & Newman, A. L. (2019). Weaponized interdependence: How global economic networks shape state coercion. *International Security*, 44(1), 42–79.
 
-### {#ref-gao2023}
-
-Gao, X., et al. (2023); Hsu, S. (2025); Kim, J., & Rho, S. (2024); Manning, R., & Richter, K. (2023). Estudios sobre techno-nacionalismo en política de semiconductores (citados en la revisión sistemática de Frontiers, 2026, sobre gobernanza de la industria de semiconductores).
-
-### {#ref-govindan2020}
-
-Govindan, K., Mina, H., & Alavi, B. (2020). A decision support system for demand management in healthcare supply chains considering the epidemic outbreaks: A case study of coronavirus disease 2019 (COVID-19). *Transportation Research Part E*.
-
-### {#ref-lee2024}
-
-Lee, S., & Hawkins, R. (2024). The politics of artificial intelligence supply chains. *AI & Society*.
-
-### {#ref-samuels2025}
-
-Samuels, A. (2025). Examining the integration of artificial intelligence in supply chain management from Industry 4.0 to 6.0: A systematic literature review. *Frontiers in Artificial Intelligence*. https://doi.org/10.3389/frai.2024.1477044
-
-### {#ref-unknown0000}
-
-*(Fuentes adicionales, Lavery & Lopes-Valenca 2025; Yuan et al. 2025; Chow 2025; Peterson 2022; Chu 2024; Donnelly 2023; Newlands 2021; Perrigo 2023: se citan tal como aparecen referenciadas en las fuentes secundarias consultadas arriba; no fueron verificadas por consulta directa del estudio primario y se marcan aquí como tales, siguiendo el mismo estándar de honestidad bibliográfica del resto de esta revisión.)*
 

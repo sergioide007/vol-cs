@@ -149,35 +149,10 @@
 
 **Ziegler, Albert; Kalliamvakou, Eirini; Li, X. Alice; Rice, Andrew; Rifkin, Devon; Simister, Shawn; Sittampalam, Ganesh; Aftandilian, Edward** (2024). *Measuring GitHub Copilot's Impact on Productivity*. _Communications of the ACM, 67_(3), 54-63._ _Estudio de campo con Metric, el equipo de análisis de GitHub._
 
-### {#ref-heorhiadi2016}
 
-Heorhiadi, V., Rajagopalan, S., Jamjoom, H., Reiter, M. K., & Sekar, V. (2016). Gremlin: Systematic resilience testing of microservices. *36th IEEE International Conference on Distributed Computing Systems (ICDCS)*, 57–66.
 
-### {#ref-márquez0000}
 
-Márquez, G., et al. Systematic review of architectural patterns and tactics for microservices (citado en el catálogo de patrones de desarrollo tolerantes a fallos, XXIII Simposio Brasileño de Calidad de Software, 2024).
 
-### {#ref-nygard2018}
 
-Nygard, M. T. (2018). *Release It! Design and Deploy Production-Ready Software* (2nd ed.). Pragmatic Bookshelf.
 
-### {#ref-soldani2018}
-
-Soldani, J., Tamburri, D. A., & Van Den Heuvel, W.-J. (2018). The pains and gains of microservices: A systematic grey literature review. *Journal of Systems and Software*, 146, 215–232.
-
-### {#ref-taibi0000}
-
-Taibi, D., et al. Systematic mapping study on microservices architecture patterns (citado en el catálogo de patrones de desarrollo tolerantes a fallos, XXIII Simposio Brasileño de Calidad de Software, 2024).
-
-### {#ref-unknown0000}
-
-*(2025, diciembre). Resilient Microservices: A Systematic Review of Recovery Patterns, Strategies, and Evaluation Frameworks. arXiv:2512.16959.*
-
-### {#ref-unknown2024}
-
-*(2024). Resilience of Deep Learning applications: A systematic literature review of analysis and hardening techniques. arXiv:2309.16733.*
-
-### {#ref-unknown2023}
-
-*(2023). Understanding the Issues, Their Causes and Solutions in Microservices Systems: An Empirical Study. arXiv:2302.01894.*
 

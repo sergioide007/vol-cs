@@ -41,7 +41,7 @@ La regla de dependencia se respeta tal cual: los dominios dependen del núcleo, 
 
 ## Agentes guardianes y prompts maestros
 
-La estructura de archivos es la mitad del patrón; la otra mitad es quién la cuida y cómo se activa. Aquí la Parte II se cierra sobre sí misma.
+La estructura de archivos es la mitad del patrón; la otra mitad es quién la cuida y cómo se activa. Aquí el volumen se cierra sobre sí mismo.
 
 **Un agente guardián por dominio.** Cada *bounded context* tiene un skill especialista (capítulo 7) cuyo único trabajo es velar por la coherencia de *su* carpeta: detectar reglas duplicadas, contradictorias u obsoletas, y rechazar en revisión cualquier cambio que viole los invariantes del núcleo. Es el patrón council del capítulo 8 puesto al servicio del conocimiento: el guardián de facturación no opina sobre inventario, y por eso opina bien sobre facturación. Cuando una regla nueva llega por *pull request* (porque el corpus se versiona y se revisa como código, no se edita a mano en producción), el guardián del dominio afectado es el primer revisor.
 
@@ -65,7 +65,7 @@ La honestidad que el libro exige obliga al reverso. **Esta arquitectura no es gr
 - **Una regla, un dueño, un lugar.** Lo único peor que una regla enterrada es la misma regla escrita en dos dominios con dos redacciones distintas. La fuente de verdad es única (DRY, capítulo 4); lo compartido sube al núcleo.
 - **El corpus se versiona y se revisa como código.** Un cambio de regla sin revisión es un *commit* directo a la rama principal (capítulo 4); el guardián del dominio es su primer revisor y la suite de evals (capítulo 3 (Vol. 4)), su prueba de regresión.
 
-Como toda la Parte II, el principio es lo estable y la herramienta lo efímero: los nombres de archivo de hoy (`CLAUDE.md`, `AGENTS.md`) cambiarán; la idea de que el corpus de instrucciones es arquitectura, y que se gobierna con fronteras, dueños y una regla de dependencia, sobrevivirá a todos ellos.
+Como en todo este volumen, el principio es lo estable y la herramienta lo efímero: los nombres de archivo de hoy (`CLAUDE.md`, `AGENTS.md`) cambiarán; la idea de que el corpus de instrucciones es arquitectura, y que se gobierna con fronteras, dueños y una regla de dependencia, sobrevivirá a todos ellos.
 
 ## Memoria del Agente: el Ciclo de Vida Observable
 

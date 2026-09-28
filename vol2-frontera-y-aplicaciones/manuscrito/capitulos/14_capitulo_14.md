@@ -16,10 +16,10 @@ La tabla siguiente mapea los clásicos con su aplicación directa en arquitectur
 
 | Obra / autor | Qué enseña | Cómo aplica a los agentes |
 |--------------|------------|----------------------------|
-| *Clean Architecture* ([Martin, 2017](#ref-martin2017)) | Fronteras, dependencias, SOLID | SOLID en enjambres (cap. 55); separación de orquestador e inferencia |
+| *Clean Architecture* ([Martin, 2017](#ref-martin2017)) | Fronteras, dependencias, SOLID | SOLID en enjambres (Vol. 3, cap. 24); separación de orquestador e inferencia |
 | *Building Microservices* ([Newman, 2019](#ref-newman2019)) | Servicios autónomos coordinados | Topología de agentes, circuit breaker entre agentes |
 | *Designing Data-Intensive Applications* ([Kleppmann, 2017](#ref-kleppmann2017)) | Consistencia, fallos distribuidos, logs | Memoria distribuida del enjambre; log de estado de agente |
-| *The Pragmatic Programmer* ([Hunt & Thomas, 2019](#ref-hunt2019)) | Criterio, responsabilidad, adaptabilidad | El programador como garante (cap. 52); criterio irreemplazable |
+| *The Pragmatic Programmer* ([Hunt & Thomas, 2019](#ref-hunt2019)) | Criterio, responsabilidad, adaptabilidad | El programador como garante (Vol. 3, cap. 21); criterio irreemplazable |
 | *Release It!* ([Nygard, 2018](#ref-nygard2018)) | Patrones de estabilidad en producción | Timeout, circuit breaker, bulkhead en agentes |
 | *Accelerate* ([Forsgren et al., 2018](#ref-forsgren2018)) | Métricas DORA, DevOps como palanca | KPIs agénticos (cap. 27); velocidad de despliegue de enjambres |
 | *Team Topologies* ([Skelton & Pais, 2019](#ref-skeltonpais2019)) | Equipos cognitivos, flujo de valor | Organización humana alrededor de enjambres; fricción cognitiva |
@@ -50,7 +50,7 @@ Ahora bien, la dieta intelectual del profesional de IA agéntica no puede detene
 
 **Capa 3: Lectura ejecutiva (para el lado del criterio de negocio):**
 - Kahneman: *Thinking, Fast and Slow*: los sesgos cognitivos que los agentes heredan de datos humanos.
-- Taleb: *Antifragile*: los enjambres que mejoran bajo perturbación vs. los que se quiebran; cap. 36.
+- Taleb: *Antifragile*: los enjambres que mejoran bajo perturbación vs. los que se quiebran; Vol. 2, cap. 4.
 - O'Neil: *Weapons of Math Destruction*: cómo los modelos de ML amplifican la injusticia sistémica a escala.
 
 ## Leer para no quedar atrapado: el principio de la dieta híbrida
@@ -67,7 +67,7 @@ Quien implementa esta dieta durante 12 meses no solo conoce el estado del arte; 
 
 ## El cierre del libro: del código al criterio que ningún agente puede sustituir
 
-Finalmente, este capítulo cierra una obra que comenzó hablando de código y termina hablando de criterio. A lo largo de estos capítulos, desde los principios SOLID aplicados a enjambres (cap. 55) hasta las estrategias geopolíticas de China, USA, Europa y los mercados emergentes (cap. 64–70), , una idea ha vuelto una y otra vez: los agentes amplifican la capacidad de ejecución, pero el **juicio** (qué construir, cómo verificarlo, de qué responder, cómo gobernarlo) permanece irrevocablemente humano.
+Finalmente, este capítulo cierra una obra que comenzó hablando de código y termina hablando de criterio. A lo largo de estos capítulos, desde los principios SOLID aplicados a enjambres (Vol. 3, cap. 24) hasta las estrategias geopolíticas de China, USA, Europa y los mercados emergentes (Vol. 2, caps. 17–26), , una idea ha vuelto una y otra vez: los agentes amplifican la capacidad de ejecución, pero el **juicio** (qué construir, cómo verificarlo, de qué responder, cómo gobernarlo) permanece irrevocablemente humano.
 
 DeepSeek puede entrenarse a $5.6 M. Taiwan puede fabricar chips a 2 nm. La AI Act puede prescribir compliance-by-design. Ninguna de esas realidades resuelve la pregunta de *para qué* usar la tecnología, *a quién* sirve, *qué valores* encarna. Los libros que forman ese criterio (desde el *Clean Code* de Martin hasta el *Weapons of Math Destruction* de O'Neil) no son nostalgias del pasado; son el instrumental de quien pretende ser responsable de los sistemas que diseña.
 

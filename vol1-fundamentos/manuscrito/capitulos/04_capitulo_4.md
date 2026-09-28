@@ -260,7 +260,7 @@ Un comité ejecutivo que adopta agentes sin definir previamente estas cuatro dim
 
 Las tecnologías de esta industria caducan; los principios, no. *Clean Code* enseñó a una generación que el código se escribe para personas y que la legibilidad es una decisión económica, no estética [Martin, 2009](#ref-martin2009); *Refactoring* enseñó que mejorar el diseño sin cambiar el comportamiento es una disciplina con catálogo propio [Fowler, 2018](#ref-fowler2018). Ninguno de los dos libros menciona modelos de lenguaje y, sin embargo, ambos describen con precisión cómo se construyen buenos sistemas agénticos, porque los artefactos centrales de la era agéntica (prompts, herramientas, skills, orquestadores) son **texto que será leído por un intérprete falible**. Eso es lo que siempre fue el código.
 
-Proponemos el **Código Limpio Sintético**: la traducción de los principios clásicos a los artefactos agénticos. Lo presentamos aquí, en el capítulo de fundamentos, porque el resto de la Parte II lo aplicará pieza por pieza:
+Proponemos el **Código Limpio Sintético**: la traducción de los principios clásicos a los artefactos agénticos. Lo presentamos aquí, en el capítulo de fundamentos, porque el resto de este volumen lo aplicará pieza por pieza:
 
 | Principio clásico | En código ([Martin, 2009](#ref-martin2009); [Fowler, 2018](#ref-fowler2018)) | En sistemas agénticos |
 |---|---|---|
@@ -275,7 +275,7 @@ Proponemos el **Código Limpio Sintético**: la traducción de los principios cl
 
 Dos consecuencias de este cuadro merecen subrayarse. La primera: **el refactoring de prompts existe** y se practica con la misma disciplina que el de código: pequeños pasos, comportamiento verificado por la suite de evals antes y después [Fowler, 2018](#ref-fowler2018). La segunda: la revisión de prompts en *pull request* deja de ser opcional; un prompt de producción que cambia sin revisión es un *commit* directo a la rama principal.
 
-Este es el hilo que cose la Parte II: el capítulo 5 aplica estos principios a los roles y a los **prompts maestros**; el 6, a las fronteras de dominio; el 7, a los skills y sus **plantillas**; el 8, a los orquestadores; el 9, a las herramientas MCP. Si el lector retoma el libro meses después en cualquiera de esos capítulos, esta tabla es el mapa para reubicarse.
+Este es el hilo que cose el volumen: el capítulo 5 aplica estos principios a los roles y a los **prompts maestros**; el 6, a las fronteras de dominio; el 7, a los skills y sus **plantillas**; el 8, a los orquestadores; el 9, a las herramientas MCP. Si el lector retoma el libro meses después en cualquiera de esos capítulos, esta tabla es el mapa para reubicarse.
 
 ## SOLID como interrogatorio: las preguntas que refactorizan
 
@@ -359,6 +359,6 @@ En el bucle, el resultado se reenvía con la marca de error: `{"type": "tool_res
 - ReAct intercala razonamiento y acción [Yao, Zhao, et al., 2023](#ref-yaoreact2023); cada ciclo cuesta; el bucle SIEMPRE se acota.
 - CoT por defecto; Self-Refine con criterio automático; Reflexion con señal verificable; ToT solo si el espacio de búsqueda lo exige.
 - La ventana de contexto no es memoria: posición importa, menos es más, la memoria larga se externaliza ([Liu et al., 2024](#ref-liu2024); [Packer et al., 2024](#ref-packer2024)).
-- Los principios del Código Limpio Sintético (nombres, SRP, errores accionables, DRY, fronteras, tests, Boy Scout) gobiernan el resto de la Parte II.
+- Los principios del Código Limpio Sintético (nombres, SRP, errores accionables, DRY, fronteras, tests, Boy Scout) gobiernan el resto de este volumen.
 
 ---

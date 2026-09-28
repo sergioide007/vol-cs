@@ -22,7 +22,7 @@ La tesis central de este capítulo es que los enjambres representan un orden de 
 
 **Formulación agéntica**: cada agente debe tener una sola razón para existir.
 
-El agente que resume, resume. El que critica, critica. El que coordina, coordina. El agente "navaja suiza" es el equivalente agéntico de la clase-dios: difícil de razonar, imposible de mantener, y sistemáticamente más propenso al error (cf. cap. 54). En la práctica, la violación de SRP en enjambres se manifiesta como "context pollution": el agente recibe tanta información de contexto de dominios distintos que sus respuestas reflejan la confusión de sus instrucciones.
+El agente que resume, resume. El que critica, critica. El que coordina, coordina. El agente "navaja suiza" es el equivalente agéntico de la clase-dios: difícil de razonar, imposible de mantener, y sistemáticamente más propenso al error (cf. Vol. 3, cap. 23). En la práctica, la violación de SRP en enjambres se manifiesta como "context pollution": el agente recibe tanta información de contexto de dominios distintos que sus respuestas reflejan la confusión de sus instrucciones.
 
 **Caso concreto**: un agente de análisis de código que también genera documentación, también sugiere mejoras de arquitectura y también evalúa el impacto de negocio exhibe un 40% menor precisión en cada una de sus funciones respecto a cuatro agentes especializados que realizan la misma tarea (estimación basada en experimentos internos con agentes de revisión de código, 2024).
 
@@ -42,7 +42,7 @@ Esta práctica no es solo de higiene técnica: tiene implicaciones operacionales
 
 **Formulación agéntica**: un agente debe poder reemplazarse por otro que cumpla el mismo contrato de herramienta MCP sin romper el enjambre.
 
-Este principio es la base técnica de la independencia del modelo (cf. cap. 36). Si el Agente de Síntesis interactúa con el enjambre a través de una interfaz MCP estándar, `{input: DocumentChunk[], output: Summary, latency_max: 2000ms}`, , entonces puede ser implementado con Claude Sonnet hoy y sustituido por GPT-4o mañana, o por un modelo local en un contexto de alta privacidad, sin que ningún otro componente del enjambre necesite cambiar.
+Este principio es la base técnica de la independencia del modelo (cf. Vol. 2, cap. 4). Si el Agente de Síntesis interactúa con el enjambre a través de una interfaz MCP estándar, `{input: DocumentChunk[], output: Summary, latency_max: 2000ms}`, , entonces puede ser implementado con Claude Sonnet hoy y sustituido por GPT-4o mañana, o por un modelo local en un contexto de alta privacidad, sin que ningún otro componente del enjambre necesite cambiar.
 
 Sin LSP agéntico: migrar de modelo requiere modificar cada punto de integración. Con LSP agéntico: la sustitución es transparente para el enjambre. Siendo que los modelos de IA evolucionan en ciclos de 6-12 meses, LSP es la diferencia entre un enjambre que puede actualizar su inteligencia sin reescritura y uno que queda atado a un modelo específico.
 
@@ -95,7 +95,7 @@ El proceso de refactoring de un enjambre comprende cuatro pasos:
 
 El argumento económico para SOLID en enjambres es directo. Un enjambre de 20 agentes en producción durante 12 meses, sin SOLID, acumula una deuda de acoplamiento que hace que cada nueva feature cueste entre 3 y 7 veces más que la primera. Con SOLID, ese multiplicador se mantiene cercano a 1,2-1,5x durante toda la vida del sistema. La diferencia acumulada en 12 meses, para un equipo de 4 ingenieros, equivale a entre $180.000 y $400.000 en costos de desarrollo.
 
-Esta inversión en estructura temprana (estimada en 1-2 semanas de diseño adicional al inicio del proyecto) tiene un ROI de 4x en el primer mes y de 10x al tercer mes, conforme el costo evitado de reescritura y debugging se acumula (cf. cap. 60).
+Esta inversión en estructura temprana (estimada en 1-2 semanas de diseño adicional al inicio del proyecto) tiene un ROI de 4x en el primer mes y de 10x al tercer mes, conforme el costo evitado de reescritura y debugging se acumula (cf. Vol. 3, cap. 24).
 
 ## Lo esencial del capítulo 24
 

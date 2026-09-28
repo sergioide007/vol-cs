@@ -46,7 +46,7 @@ A partir del principio anterior, emergen cuatro patrones de negocio diferenciado
 
 ## El foso defensivo: por qué el modelo no es suficiente
 
-Una advertencia estratégica de primer orden, antes de cerrar este análisis. Como los modelos de IA son un recurso convergente hacia la commoditización (cf. cap. 36) (Claude, GPT, Gemini y Llama se acercan en capacidad con cada iteración) construir un negocio cuya única ventaja competitiva es "tengo acceso a un buen modelo" es edificar sobre arena. El foso defensivo durable es lo que rodea al modelo, no el modelo:
+Una advertencia estratégica de primer orden, antes de cerrar este análisis. Como los modelos de IA son un recurso convergente hacia la commoditización (cf. Vol. 2, cap. 4) (Claude, GPT, Gemini y Llama se acercan en capacidad con cada iteración) construir un negocio cuya única ventaja competitiva es "tengo acceso a un buen modelo" es edificar sobre arena. El foso defensivo durable es lo que rodea al modelo, no el modelo:
 
 - **Datos propietarios**: los datos específicos del dominio y del cliente que el enjambre ha procesado y que ningún competidor tiene acceso.
 - **Integración profunda**: la conexión del enjambre con los flujos de trabajo del cliente (su ERP, su CRM, sus sistemas de compliance) que tarda meses en construirse y que ningún recién llegado puede replicar en semanas.
@@ -57,7 +57,7 @@ Porter (1985) identificó estos elementos como fuentes de ventaja competitiva so
 
 ## De la idea al ingreso: validar barato con el MVP agéntico
 
-La disciplina del MVP (cap. 53) gobierna también la generación de ingresos con agentes. Antes de construir el enjambre perfecto, valida que alguien paga por el resultado que ese enjambre producirá. El **piloto manual agéntico** es el instrumento: durante las primeras semanas, "el agente" es en realidad un humano que ejecuta el proceso manualmente, entregando el mismo output que el enjambre automatizado entregaría. Este piloto prueba la disposición a pagar sin el costo de la construcción tecnológica.
+La disciplina del MVP (Vol. 3, cap. 22) gobierna también la generación de ingresos con agentes. Antes de construir el enjambre perfecto, valida que alguien paga por el resultado que ese enjambre producirá. El **piloto manual agéntico** es el instrumento: durante las primeras semanas, "el agente" es en realidad un humano que ejecuta el proceso manualmente, entregando el mismo output que el enjambre automatizado entregaría. Este piloto prueba la disposición a pagar sin el costo de la construcción tecnológica.
 
 Solo cuando el dolor y el pago están confirmados, se justifica automatizar a escala. Generar ingresos con agentes, en suma, es menos un problema de IA que un problema de negocio bien planteado: encuentra el dolor, valida el pago, construye el foso.
 

@@ -1,0 +1,52 @@
+name: manuscrito
+
+# Dos puertas: la maquetación (que ya existía como informe) y el texto, que es
+# donde se rompen las cosas de verdad. Ninguna de las dos depende de la otra.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  manuscrito:
+    name: Auditoría del manuscrito
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regresión de las herramientas
+        run: python3 -m unittest discover -s tools -p 'test_*.py' -v
+      - name: Remisiones, cifras, bibliografía y presupuesto
+        # Falla si queda algún error. Los avisos se imprimen pero no bloquean:
+        # son el trabajo pendiente, no un defecto de composición.
+        run: python3 tools/lint_manuscript.py --quiet
+      - name: Resumen
+        if: always()
+        run: sed -n '1,30p' dist/AUDIT.md >> "$GITHUB_STEP_SUMMARY"
+
+  ediciones:
+    name: Composición de las ediciones
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Herramientas de composición
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-recommended \
+            texlive-latex-extra texlive-lang-spanish texlive-fonts-recommended \
+            fonts-texgyre fonts-dejavu fonts-liberation poppler-utils \
+            default-jre-headless
+      - name: PDF y EPUB de los cuatro volúmenes
+        run: bash tools/build_editions.sh
+      - name: Validación de maquetación
+        run: python3 tools/validate_editions.py
+      - name: Regresión de las anclas bibliográficas
+        run: python3 tools/test_reference_anchors.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ediciones
+          path: dist/
+          retention-days: 7

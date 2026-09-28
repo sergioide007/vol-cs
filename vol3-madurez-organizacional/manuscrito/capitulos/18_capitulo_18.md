@@ -72,7 +72,7 @@ Necesitamos orquestar un enjambre de 5 agentes especializados con:
 Se adopta **LangGraph** porque:
 1. El grafo de estado resuelve directamente la coordinación entre agentes.
 2. La integración nativa con LangSmith provee la trazabilidad requerida.
-3. Supera las 3 preguntas-brújula del cap. 49: resuelve un problema real,
+3. Supera las 3 preguntas-brújula del Vol. 3, cap. 18: resuelve un problema real,
    es un cimiento (basado en grafos dirigidos, concepto estable),
    y preserva opcionalidad (el modelo LLM es intercambiable).
 

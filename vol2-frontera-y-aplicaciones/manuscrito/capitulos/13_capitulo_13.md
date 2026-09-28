@@ -20,7 +20,7 @@ La argumentación de Martin es matemática en su esencia. Si modelamos la funcio
 
 La inversión en estructura es recuperada cuando el costo acumulado sin estructura supera el costo de haberla construido. Para un enjambre de 20 agentes, este punto de cruce ocurre aproximadamente en la feature número 4 o 5: a partir de ahí, cada funcionalidad construida sobre una estructura sólida es más barata que la misma funcionalidad construida sobre un enjambre sin estructura.
 
-En un enjambre, este principio se agudiza: un sistema multiagente sin estructura clara, sin SOLID (cap. 55), sin roles definidos (cap. 54), sin fronteras nítidas, se convierte rápidamente en un caos de agentes que se solapan, donde cada nueva funcionalidad cuesta más que la anterior. La estructura, lejos de frenar, es lo que mantiene barata la funcionalidad.
+En un enjambre, este principio se agudiza: un sistema multiagente sin estructura clara, sin SOLID (Vol. 3, cap. 24), sin roles definidos (Vol. 3, cap. 23), sin fronteras nítidas, se convierte rápidamente en un caos de agentes que se solapan, donde cada nueva funcionalidad cuesta más que la anterior. La estructura, lejos de frenar, es lo que mantiene barata la funcionalidad.
 
 ## La deuda técnica agéntica: una taxonomía
 

@@ -116,6 +116,10 @@ body_files() {
     "$d/front-matter/06_glosario.md" \
     "$d/front-matter/07_indice_de_consulta_rapida.md"
   find "$d/manuscrito/capitulos" -maxdepth 1 -name '*.md' -printf '%p\n' | LC_ALL=C sort
+  # El apéndice B va después del cuerpo y antes de las referencias: los capítulos
+  # lo citan y el lector debe encontrarlo sin pasar por la bibliografía.
+  [ -f "$d/front-matter/08_apendice_b_precios.md" ] \
+    && printf '%s\n' "$d/front-matter/08_apendice_b_precios.md"
   printf '%s\n' \
     "$d/estado-del-arte/estado-del-arte.md" \
     "$d/referencias/referencias.md"

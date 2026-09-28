@@ -49,7 +49,7 @@ Si lo ejecutas en Ryzen AI (laptop del usuario), obtienes:
 
 Ahora bien, el agente de *razonamiento profundo* que necesita 100-500ms de latencia puede seguir en cloud GPU (donde tiene acceso a modelos de 7B+, con mayor capacidad de razonamiento). **Esto es hibridación genuina**: no duplicas agentes; especializas cada uno en su dominio económico/técnico.
 
-AMD Ryzen AI 300 (16 TOPS NPU, 15-25W) es el vínculo que hace viable esta hibridación en dispositivos consumer. Sin Ryzen AI, el "edge" es un teléfono o una tablet sin NPU especializado. Con Ryzen AI, el laptop tiene **CPU completa + GPU + NPU especializado**, permitiendo orquestación de consenso localmente (cf. Cap. 42, RACI en agentes).
+AMD Ryzen AI 300 (16 TOPS NPU, 15-25W) es el vínculo que hace viable esta hibridación en dispositivos consumer. Sin Ryzen AI, el "edge" es un teléfono o una tablet sin NPU especializado. Con Ryzen AI, el laptop tiene **CPU completa + GPU + NPU especializado**, permitiendo orquestación de consenso localmente (cf. Vol. 3, cap. 15, RACI en agentes).
 
 La topología resultante:
 

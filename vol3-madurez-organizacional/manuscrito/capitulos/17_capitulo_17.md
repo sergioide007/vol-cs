@@ -64,7 +64,7 @@ class Lesson:
 class SwarmKnowledgeBase:
     """
     Base de conocimiento compartida del enjambre.
-    Implementa el patrón de enseñanza mutua del cap. 45.
+    Implementa el patrón de enseñanza mutua del Vol. 3, cap. 17.
     Solo las lecciones validadas por un mentor humano pueden
     ser enseñadas a otros agentes (corrección de deriva).
     """
@@ -171,7 +171,7 @@ def test_lessons_require_human_validation_before_propagation(kb: SwarmKnowledgeB
 
 El **Product Owner** debe reconocer que un enjambre que aprende (que acumula lecciones validadas en su base de conocimiento) es un **activo de producto que se aprecia con el tiempo**. A diferencia del software tradicional, cuyo valor no aumenta por el mero uso, un enjambre con base de conocimiento enriquecida se vuelve más competente cuanto más opera en el dominio del cliente.
 
-Esto tiene implicaciones para la estrategia de producto: la base de conocimiento del enjambre es, en sí misma, un diferenciador competitivo (cf. cap. 50, el foso defensivo). Los datos propietarios con que el enjambre ha aprendido a resolver problemas específicos del cliente son más valiosos que el modelo subyacente, que cualquier competidor puede reemplazar. El P.O. debe incluir en el roadmap la inversión en **calidad del proceso de aprendizaje** del enjambre, no solo en sus capacidades de inferencia.
+Esto tiene implicaciones para la estrategia de producto: la base de conocimiento del enjambre es, en sí misma, un diferenciador competitivo (cf. Vol. 3, cap. 19, el foso defensivo). Los datos propietarios con que el enjambre ha aprendido a resolver problemas específicos del cliente son más valiosos que el modelo subyacente, que cualquier competidor puede reemplazar. El P.O. debe incluir en el roadmap la inversión en **calidad del proceso de aprendizaje** del enjambre, no solo en sus capacidades de inferencia.
 
 **Métrica de P.O.**: tasa de crecimiento de la base de conocimiento validada por trimestre. Una base que crece indica que el enjambre está aprendiendo; una que se estanca indica que no hay mecanismo de captura de lecciones o que el mentor humano no está validando.
 

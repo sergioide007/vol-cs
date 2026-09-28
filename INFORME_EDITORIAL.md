@@ -124,4 +124,73 @@ explica el alcance y la forma de lectura de su tomo, y se compone después de
 `02c_prologo.md`; la entrada **Prefacio** se añadió al índice de trabajo de cada
 volumen. La comprobación sobre las ediciones reconstruidas confirma, en los
 cuatro PDF, la secuencia **Prólogo → Prefacio → Guía de lectura** y, en los ocho
+EPUB, la navegación y EPUBCheck sin errores.
+
+## 9. Segunda pasada: auditoría del manuscrito (28 de septiembre de 2026)
+
+La revisión anterior se concentró en la maquetación y la coherencia interna. Esta
+pasada trabaja sobre otra clase de defecto: **el libro diciéndose cosas que no
+se sostienen**. Para que no se repita, la corrección no es un script suelto sino
+una herramienta con nueve comprobaciones.
+
+### 9.1 Qué se añadió a la cadena de producción
+
+| Pieza | Función |
+|---|---|
+| `tools/lint_manuscript.py` | Nueve comprobaciones del manuscrito (C1–C9). Escribe `dist/AUDIT.md` y `dist/AUDIT.json`. Devuelve 1 si queda algún error |
+| `tools/test_lint_manuscript.py` | Regresión: verifica las reglas de detección y que ninguna remisión rota escape sin reportarse (16 pruebas) |
+| `tools/model-allowlist.txt` | Familias de modelo admitidas en el cuerpo del texto (C6) |
+| `front-matter/08_apendice_b_precios.md` | Único lugar de la serie con precios e identificadores de modelo, con fecha de corte |
+| `.github/workflows/manuscrito.yml` | Dos puertas en cada *pull request*: auditoría del texto y composición de las ediciones |
+
+El criterio que ordena todo: **cada defecto se cierra con la comprobación que lo
+detecta**. Ya había ocurrido dos veces en este repositorio (las anclas
+bibliográficas vacías en el índice y las filas sin título) y ambas veces la
+corrección se sostuvo porque quedó escrita la condición que la impedía.
+
+### 9.2 Defectos corregidos
+
+| # | Defecto | Medición | Estado |
+|---|---|---|---|
+| 22 | El Epílogo organizaba el recorrido en «Partes I–VII» con rangos globales de capítulos (1–3, 4–15 … 76–79) que no existen en la serie actual | 17 apariciones | **Corregido**: la sección 1 recorre ahora los cuatro volúmenes con su numeración propia. La cifra «ochenta capítulos» se conservó porque es correcta (10+32+25+13) y se explicitó el reparto |
+| 23 | Remisiones cruzadas a capítulos inexistentes: restos de la numeración global antigua sin etiqueta de volumen | 34 | **Corregido**: cada una apunta ahora a su capítulo real, deducido del tema de la propia frase y verificado contra el título del capítulo de destino. Ejemplos: «cap. 42» → Vol. 3 cap. 15 (RACI), «cap. 55» → Vol. 3 cap. 24 (SOLID), «cap. 48» → Vol. 1 cap. 10 (contexto), «cap. 76» → Vol. 2 cap. 29 (Cline) |
+| 24 | Nueve referencias a un «apéndice B» que no existía en ningún volumen | 4 | **Corregido**: apéndice B escrito y compuesto en los cuatro volúmenes |
+| 25 | Identificadores de modelo y precios fijados en el cuerpo del texto | 25 identificadores | **Corregido**: centralizados en el apéndice B con fecha de corte; el cuerpo habla de familias, no de versiones |
+| 26 | Referencias «(Vol. 4) (Vol. 3)» y paréntesis anidados en las remisiones | — | **Corregido** y detectado por C1 en adelante |
+| 27 | «Parte I…VII» citados dentro de capítulos, no solo en el Epílogo | 9 | **Corregido**: sustituidos por referencias al volumen o al capítulo concreto |
+
+### 9.3 Lo que la auditoría encontró y **no** se corrigió en esta pasada
+
+Queda registrado en `dist/AUDIT.md` como trabajo pendiente. Los avisos no
+bloquean la composición; los errores sí.
+
+| ID | Pendiente | Volumen | Cantidad |
+|---|---|---|---:|
+| C2 | Entradas bibliográficas que se declaran no verificadas («as cited in the manuscript», «not fully verified») | los cuatro | **70** |
+| C3 | Párrafos con cifras sin marca de origen declarado (`[D]` dato, `[E]` estimación, `[I]` ilustrativa) | los cuatro | **260** |
+| C6 | Identificadores de modelo literales fuera de la lista blanca | Vols. 2 y 4 | 55 |
+| C7 | Capítulos fuera del presupuesto de 1.600–4.500 palabras | los cuatro | 23 |
+| C9 | Carpetas de imágenes con la numeración antigua (`capitulo60/`, `capitulo80/`…) | Vols. 2 y 4 | 13 |
+
+**Medición que corrige una creencia del informe anterior:** el defecto de las
+cifras sin fuente **no es mayor en el Vol. 2**, como se suponía, sino en el
+**Vol. 4** (el más técnico de los cuatro), que es donde la afirmación numérica es
+más específica y menos verificable. El Vol. 1 es el más limpio.
+
+### 9.4 Cambios en las cifras de esta pasada
+
+| Métrica | Antes | Ahora |
+|---|---:|---:|
+| Errores de auditoría | — | 70 (los 70 de C2) |
+| Remisiones rotas (C1) | 34 | **0** |
+| Apéndices citados inexistentes (C4) | 4 | **0** |
+| Restos de numeración antigua (C5) | 26 | **0** |
+| Comprobaciones de manuscrito en la cadena | 0 | 9 |
+
+
+Se añadió `front-matter/02d_prefacio.md` a los cuatro volúmenes. Cada prefacio
+explica el alcance y la forma de lectura de su tomo, y se compone después de
+`02c_prologo.md`; la entrada **Prefacio** se añadió al índice de trabajo de cada
+volumen. La comprobación sobre las ediciones reconstruidas confirma, en los
+cuatro PDF, la secuencia **Prólogo → Prefacio → Guía de lectura** y, en los ocho
 EPUB, la navegación y EPUBCheck sin errores

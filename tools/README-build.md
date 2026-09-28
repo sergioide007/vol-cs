@@ -139,11 +139,67 @@ tools/
 │  └─ reference-anchors.lua   Oculta del índice las anclas bibliográficas
 ├─ skill_cliches.py           Detector de clichés de IA (solo lectura)
 ├─ skill_aplicar.py           Aplicador del mapa curado (idempotente)
+├─ lint_manuscript.py         Auditoría del manuscrito (9 comprobaciones)
+├─ test_lint_manuscript.py    Regresión de la auditoría
+├─ model-allowlist.txt        Familias de modelo admitidas en el cuerpo (C6)
 └─ skills/anti-cliches-ia/
    └─ SKILL.md                Criterio editorial: qué es cliché y qué no
 ```
 
-## 8. Pasador anti-clichés de IA
+## 8. Integración continua
+
+`.github/workflows/manuscrito.yml` ejecuta dos puertas independientes en cada
+pull request:
+
+- **manuscrito**: regresión de las herramientas, `lint_manuscript.py` (falla si
+  queda algún error) y publicación del resumen de `dist/AUDIT.md` en la página
+  de la ejecución.
+- **ediciones**: `build_editions.sh`, `validate_editions.py` y la regresión de
+  las anclas bibliográficas, con los PDF y EPUB adjuntos como artefacto.
+
+## 9. Auditoría del manuscrito (`lint_manuscript.py`)
+
+`validate_editions.py` comprueba que el PDF esté bien maquetado. No comprueba que
+el libro se contradiga a sí mismo. Para eso está `lint_manuscript.py`, que lee el
+manuscrito y falla igual que el validador:
+
+```bash
+python3 tools/lint_manuscript.py                    # informe + exit 1 si hay errores
+python3 tools/lint_manuscript.py --vol vol4-patrones-de-escala
+python3 tools/lint_manuscript.py --only C1 C3       # una familia de checks
+python3 tools/lint_manuscript.py --quiet            # solo el resumen por stderr
+```
+
+Escribe `dist/AUDIT.md` (informe legible) y `dist/AUDIT.json` (para máquinas). Los
+**errores** bloquean la composición; los **avisos** son el trabajo pendiente
+registrado, no un defecto.
+
+| ID | Qué comprueba | Severidad |
+|---|---|---|
+| C1 | Remisión cruzada a un capítulo que no existe, o sin etiqueta de volumen | error / aviso |
+| C2 | Entrada bibliográfica que se declara no verificada | error |
+| C3 | Párrafo con cifras sin marca `[D]` dato, `[E]` estimación, `[I]` ilustrativa | aviso |
+| C4 | Apéndice citado que no existe, marcador `PENDIENTE`/`TODO` | error / aviso |
+| C5 | Restos de la numeración global antigua («Parte IV», «caps. 76–79») | error |
+| C6 | Identificador de modelo literal fuera de `tools/model-allowlist.txt` | aviso |
+| C7 | Capítulo fuera del presupuesto de palabras (1.600–4.500) | aviso |
+| C8 | Ancla `#ref-` sin entrada, o entrada nunca citada | error / aviso |
+| C9 | Carpeta de imágenes que conserva la numeración antigua | aviso |
+
+**C6 y el apéndice B.** Los precios y los nombres de modelo viven solo en
+`front-matter/08_apendice_b_precios.md`, con su fecha de corte. `model-allowlist.txt`
+declara qué familias se aceptan en el cuerpo del texto; por eso el apéndice se
+puede actualizar sin reescribir capítulos.
+
+**Presupuesto de palabras** (C7): se cuentan las palabras de prosa, sin contar los
+bloques de código. Es un aviso, no un error: un capítulo corto puede ser
+deliberado, y uno largo, un problema de estructura.
+
+**Regresión**: `python3 tools/test_lint_manuscript.py` verifica las reglas de
+detección y comprueba que toda remisión a un número inexistente produce un
+hallazgo.
+
+## 10. Pasador anti-clichés de IA
 
 Antes de componer, la prosa de los cuatro volúmenes pasa por el skill
 `tools/skills/anti-cliches-ia/SKILL.md`, que elimina el metadiscurso enfático

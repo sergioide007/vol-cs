@@ -34,7 +34,7 @@ Imaginemos un entorno educativo donde el niño no interactúa con un único "asi
 
 **Agente Supervisor (vista del docente).** Invisible para el niño, este agente monitoriza la sesión, genera un resumen del progreso para el docente, detecta señales de frustración excesiva o contenido inapropiado, y puede intervenir redirigiendo la conversación si alguno de los agentes se desvía de los objetivos pedagógicos.
 
-La virtud de esta separación es pedagógica y técnica al mismo tiempo: ningún agente único podría a la vez preguntar, retar y animar sin enviar señales contradictorias. La descomposición en roles (cf. cap. 54) permite una pedagogía rica, coherente y ajustable.
+La virtud de esta separación es pedagógica y técnica al mismo tiempo: ningún agente único podría a la vez preguntar, retar y animar sin enviar señales contradictorias. La descomposición en roles (cf. Vol. 3, cap. 23) permite una pedagogía rica, coherente y ajustable.
 
 ## Arquitectura técnica del enjambre pedagógico
 

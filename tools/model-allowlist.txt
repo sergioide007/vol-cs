@@ -1,0 +1,22 @@
+# Lista blanca de identificadores de modelo que `lint_manuscript.py` acepta (C6).
+# Un identificador por línea; las líneas que empiezan por `#` son comentarios.
+#
+# Vacía por defecto: cualquier identificador de modelo escrito en el manuscrito
+# se reporta como error hasta que exista el apéndice B, que es el único sitio
+# donde deben vivir (junto con la fecha de corte de los precios).
+#
+# Formato aceptado: el identificador exacto (claude-opus-4-8) o un prefijo
+# seguido de `*` (claude-opus-*), que cubre todas las versiones de esa familia.
+#
+# Ejemplo una vez redactado el apéndice B:
+#   claude-opus-*
+#   claude-sonnet-*
+#   claude-haiku-*
+#
+# Los modelos genéricos («GPT», «Gemini») no llevan versión y no caducan con la
+# misma rapidez: se admiten por familia.
+claude-opus-*
+claude-sonnet-*
+claude-haiku-*
+gpt-*
+gemini-*

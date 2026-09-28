@@ -18,7 +18,7 @@ Cursor «Tab» no completa la línea actual: predice la **siguiente edición del
 
 ### Composer: el agente de cambios multiarchivo
 
-Composer es la respuesta de Cursor a Cline (cap. 76). Recibe una instrucción en lenguaje natural y genera un plan de cambios que puede abarcar docenas de archivos. A diferencia de Cline, Composer no ejecuta comandos de shell de forma autónoma por defecto, propone los cambios y el programador los aprueba o descarta archivo por archivo.
+Composer es la respuesta de Cursor a Cline (Vol. 2, cap. 29). Recibe una instrucción en lenguaje natural y genera un plan de cambios que puede abarcar docenas de archivos. A diferencia de Cline, Composer no ejecuta comandos de shell de forma autónoma por defecto, propone los cambios y el programador los aprueba o descarta archivo por archivo.
 
 ### Contexto semántico global
 

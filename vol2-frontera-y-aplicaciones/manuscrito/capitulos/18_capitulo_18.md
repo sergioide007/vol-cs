@@ -32,7 +32,7 @@ La ventaja no es solo de capacidad bruta. Es de *integración vertical de la cad
 
 ## La paradoja resuelta: liderazgo en investigación + tensión en producto
 
-Existe una tensión real, aunque no fatal, en el ecosistema americano de IA agéntica. USA produce el 54 % de los papers presentados en las conferencias de primer rango en sistemas multiagente (NeurIPS, ICML, ICLR, AAAI) según el análisis de macro-tendencias de Papers With Code (2024). Sin embargo, las aplicaciones más robustas en producción masiva siguen localizadas en China (cf. cap. 64).
+Existe una tensión real, aunque no fatal, en el ecosistema americano de IA agéntica. USA produce el 54 % de los papers presentados en las conferencias de primer rango en sistemas multiagente (NeurIPS, ICML, ICLR, AAAI) según el análisis de macro-tendencias de Papers With Code (2024). Sin embargo, las aplicaciones más robustas en producción masiva siguen localizadas en China (cf. Vol. 2, cap. 17, y este capítulo para el lado estadounidense).
 
 La explicación es estructural, no técnica: el ecosistema americano es fragmentado por diseño competitivo. Anthropic, OpenAI y Google DeepMind innovan en paralelo, a veces en direcciones incompatibles, lo que genera divergencia de estándares en el corto plazo. China tiene dirección unificada por política estatal; menos velocidad de innovación, más coherencia de stack. El analista que interpreta esto como debilidad americana confunde la dinámica de corto plazo con la estructura de largo plazo: la fragmentación que hoy ralentiza la adopción produce, en 36–48 meses, convergencia en el estándar más robusto, que invariablemente es americano porque es el que más iteraciones ha acumulado.
 

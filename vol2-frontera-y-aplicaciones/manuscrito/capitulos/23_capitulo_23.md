@@ -44,7 +44,7 @@ La implicación arquitectónica directa para quienes diseñan sistemas agéntico
 
 ## Taiwan como árbitro silencioso de la carrera agéntica
 
-Un giro inesperado para quienes mapean la competencia entre USA y China en IA agéntica (cf. cap. 64–65) es que Taiwan sirve a ambos lados simultáneamente. TSMC fabrica chips diseñados por NVIDIA (empresa plenamente estadounidense) y también fabrica chips diseñados por HiSilicon (Huawei), aunque con las restricciones derivadas de los controles de exportación de 2022-2023. De facto, Taiwan es el proveedor de capacidad de cómputo de ambos competidores.
+Un giro inesperado para quienes mapean la competencia entre USA y China en IA agéntica (cf. Vol. 2, caps. 17 y 18) es que Taiwan sirve a ambos lados simultáneamente. TSMC fabrica chips diseñados por NVIDIA (empresa plenamente estadounidense) y también fabrica chips diseñados por HiSilicon (Huawei), aunque con las restricciones derivadas de los controles de exportación de 2022-2023. De facto, Taiwan es el proveedor de capacidad de cómputo de ambos competidores.
 
 Esta posición de neutralidad técnica resulta, paradójicamente, más poderosa que la de cualquier actor que solo compite en modelos. Anthropic puede diseñar Claude 4; OpenAI puede diseñar GPT-5; DeepSeek puede diseñar R2. Todos dependerán de que TSMC ejecute sus órdenes de fabricación en el momento preciso y con los rendimientos requeridos. En esa dependencia radica la palanca silenciosa de Taiwan sobre la evolución del ecosistema agéntico global.
 

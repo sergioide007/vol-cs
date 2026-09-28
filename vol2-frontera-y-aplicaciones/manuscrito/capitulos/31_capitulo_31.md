@@ -4,7 +4,7 @@
 
 ## El mapa que faltaba
 
-Los capítulos 76 y 77 cubrieron los polos del espectro: herramientas que viven dentro de VSCode y herramientas que construyeron su propio editor. Este capítulo cubre el resto del ecosistema, los asistentes que operan a nivel de modelo, de empresa o de plataforma, y que a menudo quedan fuera de la conversación porque no son extensiones de VSCode ni IDEs independientes.
+Los capítulos 30 y 31 de este volumen cubrieron los polos del espectro: herramientas que viven dentro de VSCode y herramientas que construyeron su propio editor. Este capítulo cubre el resto del ecosistema, los asistentes que operan a nivel de modelo, de empresa o de plataforma, y que a menudo quedan fuera de la conversación porque no son extensiones de VSCode ni IDEs independientes.
 
 ## Grok: el modelo de xAI en el entorno de desarrollo
 
@@ -16,7 +16,7 @@ Los modelos Grok-2 y Grok-3 muestran capacidades de razonamiento comparables a l
 
 ### Integración en el entorno de desarrollo
 
-Grok se consume vía API compatible con OpenAI: lo que significa que Cline (cap. 76) puede usar Grok como motor sin ningún cambio de código. Para equipos que buscan alternativas a Anthropic o OpenAI, Grok es un proveedor de primera clase en la capa de razonamiento.
+Grok se consume vía API compatible con OpenAI: lo que significa que Cline (Vol. 2, cap. 29) puede usar Grok como motor sin ningún cambio de código. Para equipos que buscan alternativas a Anthropic o OpenAI, Grok es un proveedor de primera clase en la capa de razonamiento.
 
 ### Grok y las búsquedas en tiempo real
 
@@ -49,7 +49,7 @@ Para equipos en AWS, Q Developer es el punto de entrada natural. Para equipos ag
 
 ## Codeium: el autocompletado de alta velocidad
 
-Más allá de Windsurf (su IDE, cap. 77), Codeium ofrece extensiones para VSCode, JetBrains y otros editores. Su propuesta de valor histórica fue la **velocidad de completado**: latencias por debajo de 100ms en conexiones normales, gracias a modelos optimizados para inferencia rápida en lugar de razonamiento profundo.
+Más allá de Windsurf (su IDE, Vol. 2, cap. 30), Codeium ofrece extensiones para VSCode, JetBrains y otros editores. Su propuesta de valor histórica fue la **velocidad de completado**: latencias por debajo de 100ms en conexiones normales, gracias a modelos optimizados para inferencia rápida en lugar de razonamiento profundo.
 
 Con la integración de Supermaven, Codeium amplió su ventana de contexto a un millón de tokens, permitiendo que el modelo vea el repositorio completo antes de sugerir la siguiente línea. Esta combinación de velocidad y contexto amplio define su nicho: el completado inline de alta frecuencia donde la latencia importa más que la profundidad de razonamiento.
 

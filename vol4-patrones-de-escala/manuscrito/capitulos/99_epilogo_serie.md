@@ -2,7 +2,7 @@
 
 > *"El código ya no se escribe; se orquesta."*
 
-He aquí el punto de llegada. Ochenta capítulos, un recorrido que comenzó con la pregunta más simple (¿qué es un agente?) y terminó en los bordes del mapa geopolítico, en los estadios de fútbol como metáforas de emergencia colectiva, en los IDE que redefinen lo que significa programar. Este capítulo final no añade nueva teoría; recoge, destila y cierra. Es la despedida del libro al lector, y del lector a la versión de sí mismo que existía antes de abrirlo.
+He aquí el punto de llegada. Ochenta capítulos repartidos en cuatro volúmenes —10, 32, 25 y 13—, un recorrido que comenzó con la pregunta más simple (¿qué es un agente?) y terminó en los bordes del mapa geopolítico, en los estadios de fútbol como metáforas de emergencia colectiva, en los IDE que redefinen lo que significa programar. Este capítulo final no añade nueva teoría; recoge, destila y cierra. Es la despedida del libro al lector, y del lector a la versión de sí mismo que existía antes de abrirlo.
 
 Quien ha llegado hasta aquí no es el mismo profesional que empezó en el capítulo 1. Ha atravesado la economía del token, la anatomía del orquestador, los contratos de confianza entre agentes, la geopolítica de los semiconductores y la física del contexto. Ha visto cómo SOLID trasciende el objeto para gobernar el agente, cómo Kafka actúa como sistema nervioso distribuido, cómo una partida de fútbol puede modelar la emergencia de comportamiento colectivo no planificado. Ninguno de esos capítulos fue ornamental. Cada uno respondió a una pregunta que la producción plantea sin piedad.
 
@@ -10,37 +10,89 @@ Lo que sigue en estas páginas finales es una síntesis de las grandes corriente
 
 ---
 
-## 1. El recorrido completo: síntesis por partes
+## 1. El recorrido completo: los cuatro volúmenes
 
-### Parte I: El despertar del AI Engineer (caps. 1–3)
+La serie no tiene partes ni capítulos con numeración global: cada volumen se
+numera de uno a su fin y se cita por su propio número. Este epílogo recorre los
+cuatro tomos en orden de publicación, que es también el orden en que se
+construyeron.
 
-La primera provocación del libro fue terminológica antes que técnica. *AI Engineer*, no "desarrollador con IA": un arquetipo profesional emergente cuya responsabilidad es diseñar sistemas que razonan, delegan y se corrigen, no escribir funciones. La Parte I estableció las coordenadas ontológicas del resto del volumen. El platform engineer de agentes no programa comportamientos individuales; levanta infraestructura de confianza sobre la que los equipos sintéticos pueden operar con autonomía controlada. De este modo, la unidad de trabajo dejó de ser el desarrollador individual y pasó a ser el equipo híbrido: humanos como árbitros de juicio, agentes como ejecutores de ciclo. Ese desplazamiento (aparentemente cosmético) tiene consecuencias organizativas que el libro tardó cuarenta capítulos en desplegar completamente.
+### Volumen I. Fundamentos (10 capítulos)
 
-### Parte II: Fundamentos técnicos (caps. 4–15)
+La primera provocación del libro fue terminológica antes que técnica. *AI
+Engineer*, no «desarrollador con IA»: un arquetipo profesional emergente cuya
+responsabilidad es diseñar sistemas que razonan, delegan y se corrigen, no
+escribir funciones. El platform engineer de agentes no programa
+comportamientos individuales; levanta infraestructura de confianza sobre la que
+los equipos sintéticos pueden operar con autonomía controlada. La unidad de
+trabajo dejó de ser el desarrollador individual y pasó a ser el equipo híbrido:
+humanos como árbitros de juicio, agentes como ejecutores de ciclo.
 
-El asunto adquiere otra dimensión cuando se desciende al sustrato. MCP no es un protocolo de conveniencia; es la gramática del ecosistema agéntico, el contrato que permite a un orquestador invocar capacidades sin conocer su implementación. La Parte II construyó la pirámide técnica con paciencia: skills como unidades de despliegue, patrones de orquestación (ReAct, Reflexion, CoT, tree-of-thought), la arquitectura de contexto como recurso finito y escaso, la economía del token como disciplina de ingeniería, la estimación probabilística, el testing de sistemas no deterministas, la seguridad en cadenas de herramientas y el playbook del orquestador. Un giro inesperado del libro fue tratar la ventana de contexto no como limitación técnica sino como presión de diseño: los sistemas que prosperan en producción son aquellos que aprenden a decir qué no incluir.
+Debajo de esa declaración, el sustrato técnico: qué es un agente en un modelo
+moderno, cómo se construye un gateway que enruta y registra cada llamada, cómo
+se diseña el bucle ReAct tipado, cómo se hace que un DDD actúe como sistema
+inmunológico contra la corrupción de contexto, cómo se empaqueta un
+procedimiento como skill reutilizable, cómo se orquestan varios agentes sin
+perder el control y cómo MCP se convierte en la gramática que permite a un
+orquestador invocar capacidades sin conocer su implementación. Un giro
+inesperado: tratar la ventana de contexto no como limitación técnica sino como
+presión de diseño. Los sistemas que prosperan en producción son los que
+aprenden a decir qué no incluir.
 
-### Parte III: La empresa agéntica (caps. 16–21)
+### Volumen II. Frontera y aplicaciones (32 capítulos)
 
-La trama se complica cuando los agentes salen del laboratorio y entran en organizaciones reales. La Parte III abordó ese choque de frente. El sistema inmunológico del DDD (bounded contexts, ubiquitous language, aggregate roots) resultó ser un mecanismo de contención igualmente eficaz para los agentes: un agente que no conoce sus límites es un vector de corrupción, no de valor. Kafka como sistema nervioso distribuido no fue una metáfora gratuita: la asincronía, la durabilidad del log y la tolerancia a particiones son exactamente las propiedades que necesita un orquestador cuando los agentes pueden fallar, reintentar y desincronizarse. Los Architecture Decision Records (ADR) adquirieron una dimensión nueva: documentar por qué se confió a un agente una responsabilidad específica, y bajo qué condiciones esa confianza puede revocarse.
+Aquí el agente sale del taller y se encuentra con el mundo: lo que se rompe, lo
+que se cuesta y lo que no tiene solución técnica. El bloque de apertura trata
+la seguridad agéntica, la formación de intuiciones en sistemas que otros usan y
+la frontera entre el patrón y su imitación. Le siguen la programación reactiva
+multiagéntica, la confianza como variable graduada y no como estado binario, y
+un bloque que recorre dominios donde el patrón funciona: la educación, las
+ciudades, la arquitectura híbrida, la lectura de clásicos como formación, la
+música, el vídeo y el desarrollo móvil y de videojuegos.
 
-### Parte IV: Patrones de escala (caps. 22–40)
+El tramo más largo del volumen es geopolítico: China (caps. 17), EE.UU. (cap.
+18), Europa (cap. 19), América Latina y África (cap. 20), Australia (cap. 21),
+Rusia (cap. 22), Taiwán (cap. 23), Países Bajos (cap. 24), Japón (cap. 25) y
+Melbourne (cap. 26). La conclusión que muchos profesionales prefieren ignorar
+es que la arquitectura de los sistemas de IA tiene nacionalidad: la
+concentración del litografado de semiconductores, la política de exportación de
+chips, el AI Act europeo o la soberanía del dato latinoamericano determinan qué
+modelos puede desplegar una organización, en qué jurisdicción y bajo qué
+obligaciones. Termina en la frontera del IDE: Cline y Continue (cap. 29), Cursor,
+Windsurf y Zed (cap. 30), Grok, Cody y Amazon Q (cap. 31). No son editores de
+texto mejorados, son la interfaz entre el juicio humano y la ejecución
+agéntica. La invariancia de los principios ante la diversidad de los dominios
+es, quizá, la validación más robusta del framework presentado en esta obra.
 
-No obstante el rigor técnico de las partes anteriores, fue la Parte IV la que confrontó al lector con la realidad de la escala. De los agentes globales a los ecosistemas de negocio: la promesa no se realiza en el prototipo, se realiza en el décimo mes de producción, cuando los bugs son geopolíticos, la seguridad es una superficie, el consumo energético tiene un CFO mirándolo, y los KPIs del equipo de agentes deben justificarse ante una junta. Los templates de equipo, los modelos de gobernanza, la deuda técnica acelerada por la velocidad de generación: todos son desafíos que no existían en el mundo pre-agéntico y que requieren respuestas arquitectónicas, no parches operacionales.
+### Volumen III. Madurez organizacional (25 capítulos)
 
-### Parte V: La madurez organizacional (caps. 41–60)
+El sujeto cambia: del sistema a la organización que lo adopta. Ética y
+alineación en producción, el perfil del ingeniero orquestador, la defensa de una
+arquitectura multiagente ante un comité, el descubrimiento de bugs reformulado
+por los agentes, las plantillas de proyecto que operan como equipos, la gestión
+de expectativas y tiempos, el síntoma del programador cansado aplicado al
+enjambre, las katas donde los agentes compiten entre sí, el RACI con Eisenhower y
+la simbiosis con el PMBOK. RACI aplicado a enjambres no es burocracia
+importada: es el mecanismo que evita que la autonomía distribuida degenere en
+caos coordinado. La madurez no se declara, se demuestra bajo presión.
 
-A tal efecto, la Parte V introdujo el concepto más contraintuitivo del libro: la confianza como variable, no como estado binario. Un agente no es confiable o no confiable; su confiabilidad se calibra, se mide, se degrada bajo distribución de datos diferentes a las del entrenamiento y se restaura mediante verificación explícita. RACI en enjambres de agentes no es burocracia importada del PMBOK; es el mecanismo que evita que la autonomía distribuida degenere en caos coordinado. El pensamiento extendido, SOLID para agentes, las ciudades como sistemas multi-agente, las arquitecturas híbridas y la aceleración de deuda técnica forman un mosaico cuyo mensaje unificador es: la madurez no se declara, se demuestra bajo presión.
+Aquí aparece también el aporte más reciente del libro: la auditoría de
+reproducción cruzada y el Índice de Autonomía Operativa, que formulan la
+autonomía como un rango que se verifica y no como un estado que se declara.
 
-### Parte VI: La dimensión geopolítica (caps. 61–75)
+### Volumen IV. Patrones de escala (13 capítulos)
 
-De este análisis se desprende una conclusión que muchos practitioners prefieren ignorar: la arquitectura de los sistemas de IA tiene nacionalidad. La Parte VI fue la más audaz del libro, y deliberadamente. China, EE.UU., Europa, LATAM, Australia, Rusia, Taiwán, Países Bajos, Japón, Melbourne: no son telones de fondo; son variables arquitectónicas. La concentración del litografado de semiconductores en ASML, la política de exportación de chips de EE.UU., la regulación europea del AI Act, la apuesta latinoamericana por la soberanía del dato, todo ello determina qué modelos puede desplegar una organización, en qué jurisdicción, con qué latencia y bajo qué obligaciones legales. El ingeniero que ignora la geopolítica diseña sistemas frágiles ante eventos que ya han ocurrido.
-
-La música y el vídeo como laboratorios de agentes creativos, el fútbol como metáfora de emergencia colectiva: no fueron capítulos de relleno. Fueron el recordatorio de que los sistemas multi-agente no son fenómenos exclusivamente corporativos. Están reorganizando la cultura, el entretenimiento, el deporte y la educación con la misma fuerza (y el mismo conjunto de riesgos) que la industria.
-
-### Parte VII: La frontera del IDE (caps. 76–79)
-
-El recorrido termina donde muchos profesionales lo empiezan: el entorno de desarrollo. Cline, Continue, Cursor, Windsurf, Grok, Cody, Amazon Q: estos no son editores de texto mejorados. Son la interfaz entre el juicio humano y la ejecución agéntica, el lugar donde las decisiones de arquitectura se traducen en acción. Los dominios móvil, de videojuegos y de realidad virtual ampliaron el horizonte: los principios de orquestación que gobiernan un pipeline de datos empresarial son los mismos que coordinan NPCs autónomos en un mundo abierto o asistentes contextuales en un dispositivo de mano. La invarianza de los principios ante la diversidad de los dominios es, quizás, la validación más robusta del framework presentado en este libro.
+La escala, donde la promesa del prototipo se cumple o se rompe en el décimo mes
+de producción. El silencioso token-burn y la métrica CIU (costo por iteración
+útil) como métrica económica fundamental; la estimación probabilística como
+disciplina; el testing de sistemas no deterministas; la seguridad del stack
+agéntico; el playbook del orquestador con casos completos; la arquitectura
+limpia; la arquitectura orientada a eventos con Kafka como sistema nervioso
+distribuido; la operación del sistema con observabilidad y MLOps para equipos
+pequeños; la semana del coverage, un diario real de trabajo con un asistente en
+un proyecto heredado; la evolución de la arquitectura, del contexto al enjambre;
+las métricas de KPI; la eficiencia energética como decisión arquitectónica; y la
+recuperación ante desastres con multiagentes en producción.
 
 ---
 
@@ -194,7 +246,7 @@ class MetaOrchestrator:
         return {"status": "success", "context": context, "trace": self.trace}
 ```
 
-Este patrón no es un juguete académico. Es la síntesis operacional de los capítulos 4 al 15: MCP como protocolo de invocación, ReAct como ciclo de razonamiento, Reflexion como corrección verbal, circuit breaker como resiliencia, RACI-as-code como gobernanza explícita. Un sistema que implementa estos cinco elementos tiene la base para escalar desde el nivel operacional al autónomo sin rediseño estructural.
+Este patrón no es un juguete académico. Es la síntesis operacional de los fundamentos técnicos: MCP como protocolo de invocación, ReAct como ciclo de razonamiento, Reflexion como corrección verbal, circuit breaker como resiliencia, RACI-as-code como gobernanza explícita. Un sistema que implementa estos cinco elementos tiene la base para escalar desde el nivel operacional al autónomo sin rediseño estructural.
 
 ---
 
@@ -226,9 +278,9 @@ Los riesgos de adopción no son técnicos en primera instancia; son de gobernanz
 
 ## 5. Cómo se construyó este libro
 
-Un giro inesperado (o quizás el más esperado de todos) es que este libro fue construido con los mismos instrumentos que describe. Ochenta capítulos sobre orquestación de agentes escritos mediante orquestación de agentes: hay en eso una completitud que ningún otro método editorial podría replicar.
+Un giro inesperado (o quizás el más esperado de todos) es que esta obra fue construida con los mismos instrumentos que describe. Ochenta capítulos sobre orquestación de agentes escritos mediante orquestación de agentes: hay en eso una completitud que ningún otro método editorial podría replicar.
 
-El proceso fue el siguiente: el juicio editorial del autor definió la arquitectura del volumen, los ochenta capítulos, la progresión temática, los estándares de rigor, las referencias Q1 que debían aparecer. Ese juicio no fue delegado; fue el núcleo irreducible de la autoría. Sobre ese andamiaje, la síntesis agéntica operó como ejecutor de alta velocidad: investigación bibliográfica, generación de borradores, verificación de coherencia entre capítulos, detección de redundancias y lagunas. El proceso iteró: el autor revisaba, identificaba desviaciones, ajustaba el contexto, reencuadraba el problema. El agente ejecutaba el ciclo siguiente con la nueva información.
+El proceso fue el siguiente: el juicio editorial del autor definió la arquitectura de los cuatro volúmenes, los ochenta capítulos, la progresión temática, los estándares de rigor, las referencias que debían aparecer. Ese juicio no fue delegado; fue el núcleo irreducible de la autoría. Sobre ese andamiaje, la síntesis agéntica operó como ejecutor de alta velocidad: investigación bibliográfica, generación de borradores, verificación de coherencia entre capítulos, detección de redundancias y lagunas. El proceso iteró: el autor revisaba, identificaba desviaciones, ajustaba el contexto, reencuadraba el problema. El agente ejecutaba el ciclo siguiente con la nueva información.
 
 El resultado no es ni puramente humano ni puramente sintético. Es el producto de un equipo híbrido trabajando en el mismo modo que el libro propone para las organizaciones que adopta como audiencia. El hecho no es anecdótico; es metodológico. La validación más sólida de un framework de ingeniería es construir con él.
 

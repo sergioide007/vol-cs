@@ -4,7 +4,7 @@
 
 ## El territorio: agentes que se quedan en VSCode
 
-Mientras una parte del ecosistema decidía construir IDEs completos (cap. 77), otra parte apostó por algo distinto: llevar la agencia completa al interior de VSCode sin romper el flujo del programador. Cline y Continue son los dos exponentes más influyentes de esa apuesta. No compiten entre sí (resuelven necesidades adyacentes) y juntos definen los extremos del espectro entre *autonomía* y *contexto*.
+Mientras una parte del ecosistema decidía construir IDEs completos (Vol. 2, caps. 30 y 31), otra parte apostó por algo distinto: llevar la agencia completa al interior de VSCode sin romper el flujo del programador. Cline y Continue son los dos exponentes más influyentes de esa apuesta. No compiten entre sí (resuelven necesidades adyacentes) y juntos definen los extremos del espectro entre *autonomía* y *contexto*.
 
 ## Cline: el agente autónomo
 

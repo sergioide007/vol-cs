@@ -47,7 +47,7 @@ Conviene pensar la agencia como un espectro y no como una categoría binaria:
 | 3 | Agente con herramientas | El modelo, dentro de un presupuesto | Depurar un test que falla |
 | 4 | Sistema multi-agente | Un orquestador + agentes especializados | Desarrollar una funcionalidad completa |
 
-Cada nivel hacia abajo en la tabla aumenta la capacidad y, simultáneamente, la varianza del comportamiento, el costo por tarea y la superficie de fallo. La tesis económica de este libro (que desarrollaremos en la Parte III) es que el nivel correcto es el **mínimo** que resuelve el problema, no el máximo que la tecnología permite.
+Cada nivel hacia abajo en la tabla aumenta la capacidad y, simultáneamente, la varianza del comportamiento, el costo por tarea y la superficie de fallo. La tesis económica de esta obra (que desarrollaremos en el Vol. 4, al medir el costo por iteración útil) es que el nivel correcto es el **mínimo** que resuelve el problema, no el máximo que la tecnología permite.
 
 **■ PISTA EJECUTIVA**
 

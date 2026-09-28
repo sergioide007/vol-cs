@@ -52,7 +52,7 @@ SALIDA:           Rₙ + historial de reflexiones [V₁, V₂, ..., Vₙ₋₁]
 
 En un enjambre multiagente, este patrón se descompone en agentes especializados con responsabilidades no solapadas: el agente de acción ignora la lógica de evaluación; el evaluador no genera respuestas primarias; la memoria de reflexiones es estado compartido explícito, no contexto conversacional implícito. Esta separación de responsabilidades, que satisface el principio de responsabilidad única (SRP) del diseño SOLID, tratado en detalle en el capítulo 24 (Vol. 3), permite sustituir cualquier componente sin rediseñar el sistema completo.
 
-El patrón produce valor precisamente porque rompe la circularidad del modelo que juzga su propia salida con el mismo contexto que la generó. Al externalizar la evaluación a un agente distinto (o incluso a una función determinista con criterios formales) se introduce la diversidad epistémica que hace productiva la autocrítica. Sin esa externalización, el bucle colapsa en la autoconfirmación (cf. cap. 37, síntoma del programador cansado).
+El patrón produce valor precisamente porque rompe la circularidad del modelo que juzga su propia salida con el mismo contexto que la generó. Al externalizar la evaluación a un agente distinto (o incluso a una función determinista con criterios formales) se introduce la diversidad epistémica que hace productiva la autocrítica. Sin esa externalización, el bucle colapsa en la autoconfirmación (cf. Vol. 3, cap. 13, el síntoma del programador cansado).
 
 ## Los multiagentes como amplificador de intuiciones colectivas
 

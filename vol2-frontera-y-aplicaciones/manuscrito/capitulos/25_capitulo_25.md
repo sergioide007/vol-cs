@@ -33,7 +33,7 @@ Ahora bien, el aspecto arquitectónico es que cada **robot Collaborative Robot (
 - La nube (latencia inaceptable)
 - Embedded microcontroller (sin IA)
 
-Con Ryzen AI, el robot MISMO es un agente con reasoning local. La *coordinación* entre 50 robots ocurre vía Byzantine Fault Tolerance (cf. Cap. 72, Japón Orquestación), donde el NPU corre el protocolo de consenso en ~1ms.
+Con Ryzen AI, el robot MISMO es un agente con reasoning local. La *coordinación* entre 50 robots ocurre vía Byzantine Fault Tolerance (cf. Vol. 2, cap. 25, Japón), donde el NPU corre el protocolo de consenso en ~1ms.
 
 El costo es razonable: Ryzen AI APU integrado en controlador industrial = ~$300-400 por robot. Comparado con GPU edge (Jetson Orin) = $1000+, o cloud por robot = $10-50/día. **Break-even: 10-30 días** (según utilización).
 

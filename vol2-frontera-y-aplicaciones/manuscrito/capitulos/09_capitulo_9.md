@@ -76,7 +76,7 @@ class AgentResourceMetrics:
 class AgentResourceManager:
     """
     Gestor explícito de ciclo de vida de recursos para agentes.
-    Implementa el principio de diseño del cap. 48:
+    Implementa el principio de diseño del Vol. 1, cap. 10:
     cierra todo lo que abre, incluso en caso de error.
     """
     def __init__(
@@ -132,7 +132,7 @@ class AgentResourceManager:
 class BoundedContextAgent:
     """
     Agente con contexto acotado: previene la degradación por crecimiento ilimitado.
-    Implementa el principio de purga de contexto del cap. 48.
+    Implementa el principio de purga de contexto del Vol. 1, cap. 10.
     """
     def __init__(
         self,

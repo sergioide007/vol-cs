@@ -64,7 +64,7 @@ class CorporateMemoryStore:
     """
     Memoria semántica persistente del enjambre.
     Permite recuperación por similitud semántica, no solo por keyword.
-    Implementa el patrón de extensión de memoria del cap. 44.
+    Implementa el patrón de extensión de memoria del Vol. 1, cap. 10.
     """
     def __init__(self, vector_client):
         self._client      = vector_client      # Qdrant, Pinecone, Weaviate, etc.

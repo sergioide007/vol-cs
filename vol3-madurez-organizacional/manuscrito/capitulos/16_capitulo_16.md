@@ -28,7 +28,7 @@ El PMBOK dice *qué* gestionar; los agentes hacen posible gestionarlo *sin inter
 
 Existe, no obstante, un núcleo que permanece irreductiblemente humano. La **gestión de interesados** (entender la política, la emoción y el poder que rodean a un proyecto) exige una comprensión social que ningún agente posee. Un director de proyecto experto sabe cuándo la información correcta, comunicada de la manera equivocada al interesado equivocado, convierte un aliado en un obstáculo. Los agentes pueden sintetizar información; no pueden leer la sala.
 
-Del mismo modo, la decisión de cerrar o pivotar un proyecto (con todas sus implicaciones humanas, presupuestarias y políticas) es accountability pura (cf. cap. 42): indelegable. El valor de la simbiosis correcta no consiste en entregar el PMBOK a la IA, sino en **liberar al gestor humano de lo mecánico para que se concentre en lo verdaderamente humano**: la negociación política, la decisión de propósito, el mantenimiento de la coalición de apoyo del proyecto.
+Del mismo modo, la decisión de cerrar o pivotar un proyecto (con todas sus implicaciones humanas, presupuestarias y políticas) es accountability pura (cf. Vol. 3, cap. 15): indelegable. El valor de la simbiosis correcta no consiste en entregar el PMBOK a la IA, sino en **liberar al gestor humano de lo mecánico para que se concentre en lo verdaderamente humano**: la negociación política, la decisión de propósito, el mantenimiento de la coalición de apoyo del proyecto.
 
 ## El riesgo de la automatización ciega: métricas perfectas sobre un proyecto que naufraga
 
@@ -85,7 +85,7 @@ class RiskRegistryAgent:
     """
     Agente que mantiene el registro de riesgos vivo.
     Detecta riesgos emergentes, actualiza scores y alerta al humano responsable.
-    El rol Accountable (owner) siempre es humano (cf. RACI, cap. 42).
+    El rol Accountable (owner) siempre es humano (cf. RACI, Vol. 3, cap. 15).
     """
     def __init__(self):
         self._registry: dict[str, Risk] = {}

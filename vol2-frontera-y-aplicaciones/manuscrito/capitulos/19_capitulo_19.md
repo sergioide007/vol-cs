@@ -50,7 +50,7 @@ En términos de ingeniería, esto se traduce en tres patrones arquitectónicos q
 
 2. **Explainability Gate**: antes de que un agente de riesgo alto materialice una acción (aprobar un crédito, rechazar una solicitud de empleo, activar una alerta médica), un agente explicador genera la justificación en lenguaje natural vinculada a los atributos del input más determinantes. Si el agente explicador no puede producir una justificación coherente, la acción se bloquea y se escala a supervisión humana.
 
-3. **Human-in-the-Loop Checkpoint**: para decisiones de riesgo alto definidas por el Anexo III, el enjambre debe detener el flujo automático e insertar una confirmación humana documentada. Este checkpoint no es un simple botón de aprobación; es un punto de transferencia de accountability (cf. cap. 42, RACI en enjambres) donde el humano que aprueba asume responsabilidad legal por la decisión.
+3. **Human-in-the-Loop Checkpoint**: para decisiones de riesgo alto definidas por el Anexo III, el enjambre debe detener el flujo automático e insertar una confirmación humana documentada. Este checkpoint no es un simple botón de aprobación; es un punto de transferencia de accountability (cf. Vol. 3, cap. 15, RACI en enjambres) donde el humano que aprueba asume responsabilidad legal por la decisión.
 
 ## La dimensión ejecutiva: el coste del cumplimiento como inversión
 

@@ -78,6 +78,15 @@ MODEL_ID = re.compile(
     r'\b(claude|gpt|gemini|llama|qwen|mistral|deepseek)-[a-z0-9][a-z0-9._-]*',
     re.I)
 
+# C13: caracteres que la cadena de composicion no sabe dibujar.
+#
+# Las fuentes del libro (TeX Gyre Pagella y DejaVu Sans Mono) no cubren los
+# rangos CJK, kana ni hangul: un titulo en chino en la bibliografia produce
+# quince glifos ausentes en el PDF, que es exactamente lo que paso al citar el
+# titulo original de las Interim Measures chinas. La solucion no es meter una
+# fuente CJK en un libro de 6x9 pulgadas, sino romanizar y dar la referencia.
+CJK = re.compile('[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]')
+
 # C12: simbolo pegado a una palabra, fuera de codigo y de comillas.
 #
 # Se apunta a dos cosas. La primera es evitar la clase de error que se ha
@@ -623,6 +632,26 @@ def check_c12_language(vols, add):
                     detail={'token': match.group(0)})
 
 
+def check_c13_glyphs(vols, add):
+    """C13: caracteres que la cadena de composicion no puede dibujar.
+
+    No es una comprobacion estetica: son glifos que en el PDF salen como
+    cuadrados vacios. Se resuelve romanizando, no anadiendo fuentes.
+    """
+    for volume in vols:
+        for item in volume.manuscript_files():
+            masked = mask_code(item.text)
+            for number, line in enumerate(masked.splitlines(), 1):
+                match = CJK.search(line)
+                if not match:
+                    continue
+                add('C13', 'error', item, number,
+                    f'caracter no representable en las fuentes del libro: '
+                    f'\u00ab{match.group(0)}\u00bb (U+{ord(match.group(0)):04X}). '
+                    f'Romanizar.',
+                    detail={'char': match.group(0)})
+
+
 CHECKS = (
     ('C1', 'remisiones cruzadas', check_c1_crossrefs),
     ('C2', 'bibliografía sin verificar', check_c2_references),
@@ -635,6 +664,7 @@ CHECKS = (
     ('C9', 'carpetas de imágenes', check_image_folders),
     ('C11', 'año de la cita', check_c11_citation_years),
     ('C12', 'lenguaje', check_c12_language),
+    ('C13', 'glifos no representables', check_c13_glyphs),
 )
 
 
@@ -758,6 +788,7 @@ def main():
         'C9': lambda: check_image_folders(vols, add),
         'C11': lambda: check_c11_citation_years(vols, add),
         'C12': lambda: check_c12_language(vols, add),
+        'C13': lambda: check_c13_glyphs(vols, add),
     }
     for code, _, _ in CHECKS:
         if code in selected:

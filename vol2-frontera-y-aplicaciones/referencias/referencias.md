@@ -32,7 +32,7 @@
 ### {#ref-cacc2023}
 
 
-**CAC** (10 de julio de 2023). *Interim Measures for the Management of Generative Artificial Intelligence Services* (生成式人工智能服务管理暂行办法). _Orden n.º 15 de la Administración Nacional de Ciberseguridad (CAC), junto con NDRC, Ministerio de Educación, de Ciencia y Tecnología, de Industria e Información, de Seguridad Pública y de Radiodifusión. Adoptada el 23 de mayo de 2023, en vigor desde el 15 de agosto de 2023. 24 artículos y 5 capítulos. Texto oficial en `gov.cn`._
+**CAC** (10 de julio de 2023). *Interim Measures for the Management of Generative Artificial Intelligence Services* (Shengcheng rengong zhineng fuwu guanli zanxing banfa, romanizado). _Orden n.º 15 de la Administración Nacional de Ciberseguridad (CAC), junto con NDRC, Ministerio de Educación, de Ciencia y Tecnología, de Industria e Información, de Seguridad Pública y de Radiodifusión. Adoptada el 23 de mayo de 2023, en vigor desde el 15 de agosto de 2023. 24 artículos y 5 capítulos. Texto oficial en `gov.cn`._
 
 ### {#ref-cma2026}
 

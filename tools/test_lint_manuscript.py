@@ -118,6 +118,19 @@ class GluedTest(unittest.TestCase):
         self.assertEqual(text.count('\n'), masked.count('\n'))
 
 
+class GlyphsTest(unittest.TestCase):
+    """C13: un caracter no representable sale como cuadrado vacio en el PDF."""
+
+    def test_detects_cjk(self):
+        self.assertTrue(lint.CJK.search('(\u751f\u6210\u5f0f)'))
+
+    def test_ignores_latin_and_punctuation(self):
+        self.assertIsNone(lint.CJK.search('Interim Measures (2023), n.o 15.'))
+
+    def test_spanish_letters_are_not_flagged(self):
+        self.assertIsNone(lint.CJK.search('a\u00f1o n\u00fa\u00f1o gu\u00edi\u00e1 ¿cu\u00e1l?'))
+
+
 class ManuscriptInvariantsTest(unittest.TestCase):
     """Propiedades que deben cumplirse siempre, passen o no los checks."""
 

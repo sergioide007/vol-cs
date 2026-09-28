@@ -32,6 +32,29 @@ class ParagraphsTest(unittest.TestCase):
         self.assertEqual(['antes', 'despues'], [p for _, p in lint.paragraphs(text)])
 
 
+class MaskCodeTest(unittest.TestCase):
+    def test_preserves_line_numbers(self):
+        text = 'antes\n\n```python\nx = 1\ny = 2\n```\n\ndespues'
+        self.assertEqual(text.count('\n'), lint.mask_code(text).count('\n'))
+
+    def test_preserves_offsets(self):
+        """Sin esto, el número de línea de C6 apunta a la línea equivocada."""
+        text = 'antes\n\n```py\nclaude-sonnet\n```\n\nfin claude-sonnet\n'
+        masked = lint.mask_code(text)
+        self.assertEqual(len(text), len(masked))
+        self.assertEqual(text.index('fin claude'), masked.index('fin claude'))
+
+    def test_keeps_prose_and_drops_code(self):
+        text = 'antes claude-sonnet\n\n```\nclaude-haiku\n```\n\ndespues claude-opus'
+        masked = lint.mask_code(text)
+        self.assertIn('antes claude-sonnet', masked)
+        self.assertIn('despues claude-opus', masked)
+        self.assertNotIn('claude-haiku', masked)
+
+    def test_unclosed_fence_masks_to_end(self):
+        self.assertNotIn('claude-opus', lint.mask_code('```\nclaude-opus\n'))
+
+
 class PatternTest(unittest.TestCase):
     def test_ref_reads_single_and_range(self):
         for text, expected in [
@@ -155,9 +178,24 @@ class ManuscriptInvariantsTest(unittest.TestCase):
                     self.assertTrue(hit, f'{lint.relative(item.path)}:{line} sin reportar')
 
     def test_report_renders(self):
+        """El informe lista las nueve comprobaciones aunque no tengan hallazgos.
+
+        Una comprobación sin hallazgos no abre sección de detalle, así que la
+        prueba mira la tabla resumen, que es la que siempre se compone.
+        """
+        selected = {c for c, _, _ in lint.CHECKS}
+        report = lint.render(self.vols, self.findings, selected)
+        for code, name, _ in lint.CHECKS:
+            self.assertIn(f'| {code} | {name} |', report)
+        # Y el detalle aparece para la comprobación que sí tiene hallazgos.
+        for code, _, _ in lint.CHECKS:
+            expected = any(f['check'] == code for f in self.findings)
+            self.assertEqual(expected, f'## {code} ·' in report, code)
+
+    def test_report_truncates_and_points_to_json(self):
+        """El markdown se recorta; el JSON conserva la lista completa."""
         report = lint.render(self.vols, self.findings, {c for c, _, _ in lint.CHECKS})
-        self.assertIn('| C1 | remisiones cruzadas |', report)
-        self.assertIn('## C5 · numeración antigua', report)
+        self.assertIn('AUDIT.json', report)
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ Tenía cuatro días y medio.
 
 Este capítulo es el diario de esa semana: todos los comandos, todos los prompts, lo que funcionó y lo que no, y cuánto costó en tokens. Al final del viernes, el coverage estaba en 82.3 % y el issues tracker en cero. Lo que sigue es exactamente cómo llegamos ahí.
 
-> **Una nota sobre costos antes de empezar:** los precios de la API son los vigentes al cierre de edición (Opus 4.8: $5/$25 MTok; Sonnet 4.6: $3/$15 MTok; Haiku 4.5: $1/$5 MTok). Consúlte el apéndice B para las cifras actualizadas y los índices de cache (capítulo 11). Los cálculos de esta semana también aplican para Claude Pro ($20/mes en suscripción), que en lugar de pagar por token ofrece un techo mensual: conveniente para el trabajo diario, pero sin la granularidad de saber exactamente qué gastaste en qué.
+> **Una nota sobre costos antes de empezar:** los precios de la API son los del apéndice B, con su fecha de corte. Este capítulo no los repite: los lee de allí, y un solo lugar donde actualizar precios es lo que evita que este capítulo y el apéndice se contradigan en la tercera edición. Los cálculos de esta semana también aplican a la suscripción de consumo, que ofrece un techo mensual en lugar de un coste por llamada: conveniente para el trabajo diario, pero sin la granularidad de saber qué gastaste en qué. Esa granularidad es la que exige la métrica CIU del capítulo 1.
 
 ## 9.1 Antes de generar un solo test: leer el terreno
 

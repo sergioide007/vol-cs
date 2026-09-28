@@ -40,7 +40,7 @@ Lo que resulta menos evidente es que esta deuda es más peligrosa que la clásic
 
 La responsabilidad sobre el código agéntico no es monolítica: se distribuye en tres dimensiones que deben identificarse y asignarse explícitamente en el proceso de desarrollo:
 
-**Responsabilidad de generación.** ¿Qué agente generó este código, con qué instrucciones, en qué fecha, usando qué modelo y versión? Esta dimensión es técnicamente tratable: los metadatos de generación pueden anotarse en el commit. Un esquema de anotación propuesto: `@agent-generated: claude-3.7-sonnet · task: implement OAuth2 flow · date: 2025-03-14 · risk-level: high`.
+**Responsabilidad de generación.** ¿Qué agente generó este código, con qué instrucciones, en qué fecha, usando qué modelo y versión? Esta dimensión es técnicamente tratable: los metadatos de generación pueden anotarse en el commit. Un esquema de anotación propuesto: `@agent-generated: claude-sonnet-5 · task: implement OAuth2 flow · date: 2025-03-14 · risk-level: high`.
 
 **Responsabilidad de integración.** ¿Qué humano identificado revisó este código, lo comprendió y decidió integrarlo al sistema? Esta es la responsabilidad que ningún agente puede asumir. La aceptación de un pull request que contiene código agéntico sin comprensión real de su funcionamiento no es responsabilidad de integración: es su simulacro. El EU AI Act (Art. 13-14, Regulación 2024/1689) establece que la responsabilidad por sistemas de IA de alto riesgo recae en el *deployer* humano, no en el modelo; por extensión, la responsabilidad de integración de código agéntico en sistemas críticos recae en el ingeniero que lo aceptó.
 

@@ -1,22 +1,25 @@
 # Lista blanca de identificadores de modelo que `lint_manuscript.py` acepta (C6).
 # Un identificador por línea; las líneas que empiezan por `#` son comentarios.
 #
-# Vacía por defecto: cualquier identificador de modelo escrito en el manuscrito
-# se reporta como error hasta que exista el apéndice B, que es el único sitio
-# donde deben vivir (junto con la fecha de corte de los precios).
+# Formato: el identificador exacto, o un prefijo seguido de `*`.
 #
-# Formato aceptado: el identificador exacto (claude-opus-4-8) o un prefijo
-# seguido de `*` (claude-opus-*), que cubre todas las versiones de esa familia.
+# Para la familia Claude se listan los identificadores EXACTOS de la gama vigente
+# en la fecha de corte del apéndice B (28-09-2026). No se admiten comodines:
+# un `claude-sonnet-*` también aceptaría `claude-sonnet-4-6`, que está retirado, y
+# eso es justamente lo que C6 debe cazar. Al actualizar el apéndice B hay que
+# actualizar también esta línea: si un nombre desaparece de la tabla oficial,
+# desaparece de aquí.
+claude-fable-5-1
+claude-opus-5-5
+claude-sonnet-5
+claude-haiku-4-5
 #
-# Ejemplo una vez redactado el apéndice B:
-#   claude-opus-*
-#   claude-sonnet-*
-#   claude-haiku-*
-#
-# Los modelos genéricos («GPT», «Gemini») no llevan versión y no caducan con la
-# misma rapidez: se admiten por familia.
-claude-opus-*
-claude-sonnet-*
-claude-haiku-*
+# Las demás familias se admiten por familia: el libro las menciona en روا,
+# y se fijan al proveedor, no a la versión.
 gpt-*
 gemini-*
+llama-*
+qwen-*
+mistral-*
+deepseek-*
+kimi-*

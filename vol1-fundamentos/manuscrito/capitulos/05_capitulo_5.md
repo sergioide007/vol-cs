@@ -194,7 +194,7 @@ La anatomía (rol, alcance, reglas priorizadas, fuera de alcance, formato) no es
 |---|---|---|---|
 | Clasificador | Categoría + urgencia + idioma | Económico (`claude-haiku-4-5`) | Clasificación cerrada de texto corto: la gama económica rinde igual aquí; a 500/día, la diferencia de precio financia el resto del pipeline |
 | Extractor | JSON con cliente, producto, problema | Económico, con salida estructurada | Extracción contra esquema: verificable en el nivel 1 de la pirámide de testing |
-| Redactor | Borrador de respuesta con tono de marca | Balanceado (`claude-sonnet-4-6`) | Único rol donde la calidad de prosa importa; recibe SOLO el JSON del extractor, no el ticket crudo: menos tokens y menos inyección indirecta (capítulo 4 (Vol. 4)) |
+| Redactor | Borrador de respuesta con tono de marca | Balanceado (`claude-sonnet-5`) | Único rol donde la calidad de prosa importa; recibe SOLO el JSON del extractor, no el ticket crudo: menos tokens y menos inyección indirecta (capítulo 4 (Vol. 4)) |
 
 Los detalles que separan la solución profesional de la ingenua: (1) el redactor consume el JSON del extractor, contrato explícito, contexto mínimo; (2) el humano aprueba el borrador, el sistema «falla barato» (capítulo 5 (Vol. 4)); (3) los tres prompts derivan del prompt maestro; y (4) el lote nocturno de tickets no urgentes va por la API batch a mitad de precio (capítulo 1 (Vol. 4)). Costo estimado del pipeline completo: calcúlelo con el apéndice B: es un ejercicio dentro del ejercicio, y la respuesta sorprende por lo baja.
 

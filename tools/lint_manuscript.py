@@ -45,6 +45,10 @@ ALLOWLIST = ROOT / 'tools' / 'model-allowlist.txt'
 # Presupuesto editorial de palabras por capítulo (C7).
 MIN_WORDS, MAX_WORDS = 1600, 4500
 
+# Hallazgos por archivo que se detallan en el markdown. El JSON lleva la lista
+# completa: el informe se lee en el navegador y un bloque de 259 líneas no se lee.
+MAX_DETAIL_PER_FILE = 12
+
 # Un párrafo con cifras debe medir al menos esto para entrar en el informe
 # (debajo es una leyenda, una viñeta o una línea de tabla, no una afirmación).
 MIN_PROSE_CHARS = 120
@@ -158,6 +162,31 @@ def paragraphs(text):
     return out
 
 
+def mask_code(text):
+    """Enmascara los bloques de código conservando los saltos de línea.
+
+    Se usa en C6: un nombre de modelo dentro de un ejemplo de código es el
+    valor de una variable de ejemplo, no una afirmación sobre la vigencia del
+    libro. En C1, en cambio, sí se buscan remisiones dentro del código: allí
+    un comentario puede apuntar a un capítulo que ya no existe.
+
+    Sustituye el contenido por espacios en lugar de borrarlo para que los
+    números de línea del informe sigan coincidiendo con el archivo.
+    """
+    out, fenced = [], False
+    for line in text.splitlines(keepends=True):
+        if line.lstrip().startswith(('```', '~~~')):
+            fenced = not fenced
+            out.append(line)
+        elif fenced:
+            # Se conservan longitud y saltos: el desplazamiento de los
+            # caracteres following debe seguir apuntando a la línea correcta.
+            out.append(re.sub(r'[^\n]', ' ', line))
+        else:
+            out.append(line)
+    return ''.join(out)
+
+
 def find_appendices(volumes):
     """Apéndices y anexos que existen de verdad, por volumen."""
     found = {v.number: set() for v in volumes}
@@ -182,7 +211,15 @@ def read_allowlist():
 
 
 def allowed_model(identifier, patterns):
+    """La lista blanca se compara sin distinguir mayúsculas.
+
+    El manuscrito escribe «GPT-4» con mayúsculas y la lista dice «gpt-*»: sin
+    esta normalización, C6 marcaría como literales nombres que sí están
+    admitidos, que es peor que no comprobar nada.
+    """
+    identifier = identifier.lower()
     for pattern in patterns:
+        pattern = pattern.lower()
         if pattern.endswith('*') and identifier.startswith(pattern[:-1]):
             return True
         if identifier == pattern:
@@ -419,7 +456,7 @@ def check_c6_models(vols, add):
     patterns = read_allowlist()
     for volume in vols:
         for item in volume.manuscript_files():
-            for match in MODEL_ID.finditer(item.text):
+            for match in MODEL_ID.finditer(mask_code(item.text)):
                 identifier = match.group(0)
                 if allowed_model(identifier, patterns):
                     continue
@@ -514,7 +551,9 @@ def render(vols, findings, selected):
         .replace(',', '.'),
         '',
         'Generado por `tools/lint_manuscript.py`. Complementa a '
-        '`validate_editions.py`, que solo comprueba la maquetación.',
+        '`validate_editions.py`, que solo comprueba la maquetación. '
+        'La lista completa de hallazgos está en `dist/AUDIT.json`; este '
+        'informe se recorta por archivo para que se pueda leer.',
         '',
         '## Resumen por comprobación',
         '',
@@ -548,11 +587,15 @@ def render(vols, findings, selected):
         for finding in mine:
             by_file.setdefault(finding['file'], []).append(finding)
         for path in sorted(by_file):
+            shown = sorted(by_file[path], key=lambda f: f['line'])
             lines.append(f'**`{path}`**')
             lines.append('')
-            for finding in sorted(by_file[path], key=lambda f: f['line']):
+            for finding in shown[:MAX_DETAIL_PER_FILE]:
                 mark = '✘' if finding['severity'] == 'error' else '!'
                 lines.append(f'- L{finding["line"]} {mark} {finding["message"]}')
+            if len(shown) > MAX_DETAIL_PER_FILE:
+                lines.append(f'- … y {len(shown) - MAX_DETAIL_PER_FILE} más en '
+                             f'`dist/AUDIT.json`')
             lines.append('')
     return '\n'.join(lines) + '\n'
 

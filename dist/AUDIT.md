@@ -1,8 +1,8 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.555 palabras de prosa
+Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.574 palabras de prosa
 
-Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación.
+Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 
 ## Resumen por comprobación
 
@@ -10,10 +10,10 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 |---|---|---:|---:|
 | C1 | remisiones cruzadas | 0 | 37 |
 | C2 | bibliografía sin verificar | 70 | 0 |
-| C3 | cifras sin origen declarado | 0 | 260 |
+| C3 | cifras sin origen declarado | 0 | 259 |
 | C4 | apéndices y marcadores pendientes | 0 | 14 |
 | C5 | numeración antigua | 0 | 0 |
-| C6 | modelos fijados en el texto | 0 | 55 |
+| C6 | modelos fijados en el texto | 0 | 1 |
 | C7 | presupuesto de palabras | 0 | 23 |
 | C8 | anclas bibliográficas | 0 | 0 |
 | C9 | carpetas de imágenes | 0 | 13 |
@@ -22,10 +22,10 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 | Volumen | Capítulos | Palabras | Errores | Avisos |
 |---|---:|---:|---:|---:|
-| 1 — Fundamentos | 10 | 21.140 | 0 | 23 |
-| 2 — Frontera y Aplicaciones | 32 | 57.962 | 0 | 129 |
-| 3 — Madurez Organizacional | 25 | 52.638 | 0 | 109 |
-| 4 — Patrones de Escala | 13 | 36.438 | 0 | 128 |
+| 1 — Fundamentos | 10 | 21.140 | 0 | 22 |
+| 2 — Frontera y Aplicaciones | 32 | 57.962 | 0 | 110 |
+| 3 — Madurez Organizacional | 25 | 52.638 | 0 | 91 |
+| 4 — Patrones de Escala | 13 | 36.457 | 0 | 111 |
 
 ## C1 · remisiones cruzadas (37)
 
@@ -145,23 +145,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L83 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
 - L87 ✘ «google2024» se declara sin verificar (32_capitulo_32.md)
 - L91 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
-- L107 ✘ «idc2024» se declara sin verificar (32_capitulo_32.md)
-- L111 ✘ «idrcunesco2023» se declara sin verificar (20_capitulo_20.md)
-- L115 ✘ «jerald2009» se declara sin verificar (32_capitulo_32.md)
-- L123 ✘ «jordet2013» se declara sin verificar (28_capitulo_28.md)
-- L127 ✘ «khanacademy2024» se declara sin verificar (10_capitulo_10.md)
-- L143 ✘ «mckinseygi2024» se declara sin verificar (17_capitulo_17.md)
-- L147 ✘ «mckinsey2024» se declara sin verificar (19_capitulo_19.md)
-- L155 ✘ «meta2024» se declara sin verificar (32_capitulo_32.md)
-- L167 ✘ «chinamem2026» se declara sin verificar (17_capitulo_17.md)
-- L171 ✘ «mitmedialab2023» se declara sin verificar (10_capitulo_10.md)
-- L187 ✘ «openai2024» se declara sin verificar (16_capitulo_16.md)
-- L211 ✘ «scmp2026» se declara sin verificar (17_capitulo_17.md)
-- L215 ✘ «stanfordvhil2023» se declara sin verificar (32_capitulo_32.md)
-- L219 ✘ «synergy2024» se declara sin verificar (18_capitulo_18.md)
-- L223 ✘ «techcouncilau2024» se declara sin verificar (19_capitulo_19.md, 21_capitulo_21.md)
-- L235 ✘ «unity2023» se declara sin verificar (32_capitulo_32.md)
-- L243 ✘ «wang2021iccv» se declara sin verificar (16_capitulo_16.md)
+- … y 17 más en `dist/AUDIT.json`
 
 **`vol3-madurez-organizacional/referencias/referencias.md`**
 
@@ -177,15 +161,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L127 ✘ «generic2020misc» se declara sin verificar (17_capitulo_17.md)
 - L139 ✘ «mckinseygi2024» se declara sin verificar (07_capitulo_7.md)
 - L143 ✘ «mckinsey2024» se declara sin verificar (25_capitulo_25.md)
-- L151 ✘ «msresearch2023» se declara sin verificar (11_capitulo_11.md)
-- L155 ✘ «mitchell2025» se declara sin verificar (02_capitulo_2.md)
-- L163 ✘ «noaa2026» se declara sin verificar (03_capitulo_3.md)
-- L183 ✘ «peng2023» se declara sin verificar (02_capitulo_2.md, 10_capitulo_10.md)
-- L187 ✘ «ponemon2023» se declara sin verificar (05_capitulo_5.md)
-- L211 ✘ «generic2024smartmutation» se declara sin verificar (05_capitulo_5.md)
-- L243 ✘ «generic2023yuan» se declara sin verificar (05_capitulo_5.md)
-- L247 ✘ «generic2024zhou» se declara sin verificar (14_capitulo_14.md)
-- L251 ✘ «ziegler2024» se declara sin verificar (02_capitulo_2.md)
+- … y 9 más en `dist/AUDIT.json`
 
 **`vol4-patrones-de-escala/referencias/referencias.md`**
 
@@ -203,7 +179,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L143 ✘ «ziegler2024» se declara sin verificar (05_capitulo_5.md)
 
 
-## C3 · cifras sin origen declarado (260)
+## C3 · cifras sin origen declarado (259)
 
 **`vol1-fundamentos/manuscrito/capitulos/02_capitulo_2.md`**
 
@@ -398,13 +374,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L446 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L459 ! cifra sin origen declarado: «35%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L467 ! cifra sin origen declarado: «20 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L469 ! cifra sin origen declarado: «45 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L477 ! cifra sin origen declarado: «100 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L500 ! cifra sin origen declarado: «20 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L613 ! cifra sin origen declarado: «2×» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L627 ! cifra sin origen declarado: «$7» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L642 ! cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L654 ! cifra sin origen declarado: «8 GB» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- … y 7 más en `dist/AUDIT.json`
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/01_capitulo_1.md`**
 
@@ -584,7 +554,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L5 ! cifra sin origen declarado: «80 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L7 ! cifra sin origen declarado: «38 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L11 ! cifra sin origen declarado: «82.3 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L13 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L40 ! cifra sin origen declarado: «12 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L94 ! cifra sin origen declarado: «$2» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L107 ! cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa
@@ -608,23 +577,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L202 ! cifra sin origen declarado: «$7» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L211 ! cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L217 ! cifra sin origen declarado: «95%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L297 ! cifra sin origen declarado: «140GB» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L307 ! cifra sin origen declarado: «500ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L317 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L319 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L337 ! cifra sin origen declarado: «1%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L365 ! cifra sin origen declarado: «100×» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L381 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L383 ! cifra sin origen declarado: «1%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L412 ! cifra sin origen declarado: «10×» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L418 ! cifra sin origen declarado: «15×» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L435 ! cifra sin origen declarado: «78%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L437 ! cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L442 ! cifra sin origen declarado: «$8» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L451 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L460 ! cifra sin origen declarado: «25%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L465 ! cifra sin origen declarado: «22%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L474 ! cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- … y 17 más en `dist/AUDIT.json`
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/11_capitulo_11.md`**
 
@@ -659,8 +612,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L805 ! cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L811 ! cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L924 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L926 ! cifra sin origen declarado: «$3» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L934 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- … y 2 más en `dist/AUDIT.json`
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/99_epilogo_serie.md`**
 
@@ -705,146 +657,11 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L363 ! marcador pendiente: «PENDIENTE' }));»
 
 
-## C6 · modelos fijados en el texto (55)
+## C6 · modelos fijados en el texto (1)
 
-**`vol1-fundamentos/manuscrito/capitulos/02_capitulo_2.md`**
+**`vol1-fundamentos/manuscrito/capitulos/05_capitulo_5.md`**
 
-- L25 ! «GPT-3» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol1-fundamentos/manuscrito/capitulos/08_capitulo_8.md`**
-
-- L509 ! «GPT-6» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/07_capitulo_7.md`**
-
-- L206 ! «GPT-5o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md`**
-
-- L98 ! «GPT-5» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/14_capitulo_14.md`**
-
-- L41 ! «GPT-3» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/17_capitulo_17.md`**
-
-- L13 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L13 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L25 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L87 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/18_capitulo_18.md`**
-
-- L17 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L29 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/19_capitulo_19.md`**
-
-- L17 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/22_capitulo_22.md`**
-
-- L15 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/23_capitulo_23.md`**
-
-- L19 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L49 ! «GPT-5» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/29_capitulo_29.md`**
-
-- L27 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/30_capitulo_30.md`**
-
-- L88 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/31_capitulo_31.md`**
-
-- L11 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L35 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L71 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md`**
-
-- L111 ! «GPT-4o-mini» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md`**
-
-- L13 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L134 ! «claude-sonnet» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L142 ! «claude-sonnet» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L150 ! «claude-haiku» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/08_capitulo_8.md`**
-
-- L42 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/09_capitulo_9.md`**
-
-- L34 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/12_capitulo_12.md`**
-
-- L23 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L58 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L59 ! «GPT-4o-mini» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L60 ! «GPT-4o-mini» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L90 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/13_capitulo_13.md`**
-
-- L49 ! «GPT-4o-mini» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/15_capitulo_15.md`**
-
-- L28 ! «GPT-6» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/19_capitulo_19.md`**
-
-- L21 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L21 ! «GPT-3.5» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/20_capitulo_20.md`**
-
-- L97 ! «GPT-6» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/21_capitulo_21.md`**
-
-- L43 ! «claude-3.7-sonnet» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md`**
-
-- L45 ! «GPT-4o» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol4-patrones-de-escala/manuscrito/capitulos/05_capitulo_5.md`**
-
-- L165 ! «GPT-6» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md`**
-
-- L419 ! «Llama-3.1-8B-Instruct-GGUF» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md`**
-
-- L9 ! «GPT-2» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L11 ! «GPT-3.5» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L11 ! «GPT-4» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L28 ! «GPT-2» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L46 ! «GPT-3.5» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L205 ! «llama-70b-instruct» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L206 ! «llama-70b-instruct» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L265 ! «llama-70b-instruct» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-**`vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md`**
-
-- L11 ! «GPT-3» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L196 ! «Llama-8B-legal» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L246 ! «GPT-3» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L269 ! «Llama-3.1-8B-finance-finetuned» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L275 ! «Llama-3.1-8B-fraud-detector» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-- L281 ! «Llama-3.1-70B-finance» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
+- L197 ! «claude-sonnet-4-6» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
 
 
 ## C7 · presupuesto de palabras (23)

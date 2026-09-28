@@ -535,7 +535,7 @@ El meta-aprendizaje del ejercicio: la pregunta nunca es «¿qué patrón es mejo
 - Más agentes no es mejor: sin control de costo, las comparaciones son marketing [Kapoor et al., 2024](#ref-kapoor2024). El patrón correcto es el mínimo que compra la propiedad necesaria.
 - Cinco patrones canónicos: pipeline (defecto), fan-out (independencia + contrato), council (decisiones caras), jerárquico (descomposición dinámica), self-reflection (señal verificable + presupuesto).
 - **Máquina de estados de producción:** el ciclo del agente (Inactivo → Planificación → Ejecución → Evaluación → Completado/Fallido) no es conceptual; es un autómata observable, auditable y con guardarraíles de presupuesto integrados en la estructura, no como validaciones posteriores.
-- **Presupuesto como política codificada:** transiciones bloqueadas, no sugerencias ignoradas. Si maxIterations se alcanza, la máquina salta a Fallido sin pedir permiso.
+- **Presupuesto como política codificada:** transiciones bloqueadas, no sugerencias ignoradas. Si `maxIterations` se alcanza, la máquina salta a Fallido sin pedir permiso.
 - **Arquitectura empresarial de cuatro capas:** (1) Abstracción de Modelos (gateway con resiliencia y caché), (2) Núcleo de Ejecución (orquestador + MCP), (3) Eventos y Evaluación Continua (Kafka + Eval Harness), (4) Observabilidad Transversal (trazas distribuidas). El desacoplamiento entre capas es el axioma: cambiar un proveedor de LLM no debe recompilar el orquestador.
 - Cuatro anti-patrones: dios-orquestador, agentes charlatanes, bucle de cortesía, jerarquía infinita.
 - Entre agentes viajan contratos, no transcripciones.

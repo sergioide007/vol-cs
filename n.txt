@@ -1,0 +1,30 @@
+=== ecns2026
+  vol2 17_capitulo_17.md L80  ETIQUETA: ECNS, julio 2026
+    ...mprana**, acotado a un dominio único: vientos extremos y tormentas de arena en un puerto concreto, con el objetivo declarado de programación precisa de operaciones y seguridad de los trabajadores ([ECNS, julio 2026](#ref-ecns2026)
+=== globaltimes2026
+  vol2 17_capitulo_17.md L78  ETIQUETA: Global Times, julio 2026
+    ...inmediato (*nowcasting*) junto a modelos de IA en el mismo terminal, con resolución espacial refinada de 9 a 3 kilómetros, ciclo de pronóstico a 3 días y actualización cada 6 horas ([Global Times, julio 2026](#ref-globaltimes2026)
+=== scmp2026
+  vol2 17_capitulo_17.md L78  ETIQUETA: South China Morning Post, julio 2026
+    ...imes2026)). MAZU ya opera físicamente en siete países (Pakistán, Yibuti, Etiopía, Jordania, Mongolia, Islas Salomón y Sri Lanka) y ha sido probada por 40 países del Sur Global ([South China Morning Post, julio 2026](#ref-scmp2026)
+=== bloomberg2025
+  vol4 10_capitulo_10.md L109  ETIQUETA: Bloomberg lo reporta en enero 2025
+    ...ianza disminuye 80%. Es decir: pagas más dinero, ganas previsibilidad y escalabilidad. Para sistemas financieros (JPMorgan está experimentando con IA agéntica en el trading; [Bloomberg lo reporta en enero 2025](#ref-bloomberg2025)
+=== chinamem2026
+  vol2 17_capitulo_17.md L76  ETIQUETA: Ministerio de Gestión de Emergencias de China, 2026
+    ...l noreste; los desastres naturales afectaron a 17,276 millones de personas en el primer semestre y 587 000 requirieron evacuación o asistencia de emergencia ([Ministerio de Gestión de Emergencias de China, 2026](#ref-chinamem2026)
+=== acp2026
+  vol3 03_capitulo_3.md L151  ETIQUETA: Autoridad del Canal de Panamá, agosto 2026
+    ... de 2026, las lluvias en la cuenca cayeron un 34% por debajo del promedio histórico y el lago Gatún se ubicó apenas por debajo de su promedio de cinco años para esa fecha ([Autoridad del Canal de Panamá, agosto 2026](#ref-acp2026)
+=== noaa2026
+  vol3 03_capitulo_3.md L151  ETIQUETA: NOAA Climate Prediction Center, 2026
+    ...el Canal de Panamá, agosto 2026](#ref-acp2026)). La NOAA estimó en ese mismo periodo una probabilidad del 81% de que El Niño alcance categoría "muy fuerte" hacia fines de 2026 ([NOAA Climate Prediction Center, 2026](#ref-noaa2026)
+=== cenepred2017
+  vol3 03_capitulo_3.md L9  ETIQUETA: CENEPRED, 2017
+    ...enciales, desbordamientos de ríos, huaicos, pérdida de cosechas y colapso de infraestructura sanitaria. El evento de 2017 generó daños estimados en más de 3,100 millones de dólares solo en Perú ([CENEPRED, 2017](#ref-cenepred2017)
+=== cacc2023
+  vol2 16_capitulo_16.md L38  ETIQUETA: CACC, agosto 2023
+    ...ura defensiva: cómo China gobierna el riesgo a escala La trama se complica cuando se analiza la capa de gobernanza que opera sobre la capa de generación. Los *Interim Measures for Generative AI* ([CACC, agosto 2023](#ref-cacc2023)
+=== conab2024
+  vol2 20_capitulo_20.md L37  ETIQUETA: CONAB, 2024
+    ...a Latina son aquellos donde el contexto local es una ventaja competitiva insuperable para actores externos: **Agentes de precisión agrícola.** Brasil concentra el 26 % de la producción global de soja ([CONAB, 2024](#ref-conab2024)

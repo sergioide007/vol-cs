@@ -94,6 +94,30 @@ class AllowlistTest(unittest.TestCase):
         self.assertTrue(lint.allowed_model('claude-opus-4-8', ['claude-opus-*']))
         self.assertFalse(lint.allowed_model('claude-sonnet-4-6', ['claude-opus-*']))
         self.assertTrue(lint.allowed_model('gpt-4o', ['gpt-4o']))
+class GluedTest(unittest.TestCase):
+    """C12 solo marca lo que queda tras enmascarar codigo y comillas."""
+
+    def setUp(self):
+        self.pat = lint.re.compile(lint.GLUED)
+
+    def test_identifier_in_backticks_is_masked(self):
+        text = 'usa `maxIterations` en el bucle'
+        self.assertIsNone(self.pat.search(lint.mask_inline_code(text)))
+
+    def test_identifier_in_block_is_masked(self):
+        text = '```python\nwhile promptSistema():\n    pass\n```'
+        self.assertIsNone(self.pat.search(lint.mask_inline_code(text)))
+
+    def test_glued_word_in_prose_is_caught(self):
+        self.assertIsNotNone(self.pat.search('el metodo comoHipotesis'))
+
+    def test_masking_preserves_length_and_newlines(self):
+        text = 'antes `codigo` despues\n```\nx = 1\n```\nfin'
+        masked = lint.mask_inline_code(text)
+        self.assertEqual(len(text), len(masked))
+        self.assertEqual(text.count('\n'), masked.count('\n'))
+
+
 class ManuscriptInvariantsTest(unittest.TestCase):
     """Propiedades que deben cumplirse siempre, passen o no los checks."""
 

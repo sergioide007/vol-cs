@@ -78,6 +78,20 @@ MODEL_ID = re.compile(
     r'\b(claude|gpt|gemini|llama|qwen|mistral|deepseek)-[a-z0-9][a-z0-9._-]*',
     re.I)
 
+# C12: simbolo pegado a una palabra, fuera de codigo y de comillas.
+#
+# Se apunta a dos cosas. La primera es evitar la clase de error que se ha
+# repetido al editar desde el terminal: una palabra pegada a la anterior
+# («comoHipotesis»). La segunda es mas util todavia: un identificador de codigo
+# citado en la prosa sin comillas inversas, que es un defecto tipografico
+# distinto y igual de visible para el lector.
+#
+# La precision se midio antes de adoptarlo: en el manuscrito hay 449
+# identificadores pegados dentro de bloques de codigo o de comillas inversas
+# (legitimos) y solo 1 fuera. Por eso el patron exige estar fuera de ambos.
+GLUED = (r'(?<![A-Za-z`\w\-])[a-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1]{3,}'
+         r'[A-Z\u00c1\u00c9\u00cd\u00d3\u00da\u00d1][a-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1]{2,}(?:[a-zA-Z]*)')
+
 # Año declarado en la entrada bibliográfica y año en la cita del texto (C11).
 YEAR = re.compile(r'\b(?:19|20)\d{2}\b')
 CITE = re.compile(r'\[[^\]]*?\((?:#ref-[a-z0-9-]+\)|https?://[^)]*)\]|\[[^\]]*\]\(#ref-[a-z0-9-]+\)')
@@ -562,6 +576,43 @@ def check_c11_citation_years(vols, add):
                                 'texto': sorted(citados), 'entrada': sorted(anios[anchor])})
 
 
+def mask_inline_code(text):
+    """Enmascara bloques de codigo y comillas inversas conservando la longitud.
+
+    Es lo que permite que C12 distinga un identificador de codigo citado en la
+    prosa (que va entrecomillado) de una palabra pegada por error.
+    """
+    text = re.sub(r'(?ms)^(```|~~~).*?^\1',
+                  lambda m: re.sub(r'[^\n]', ' ', m.group(0)), text)
+    return re.sub(r'`[^`\n]*`', lambda m: re.sub(r'[^\n]', ' ', m.group(0)), text)
+
+
+def check_c12_language(vols, add):
+    """C12: palabra pegada a un identificador, fuera de codigo y comillas.
+
+    Se mide sobre el texto con los bloques de codigo y las comillas inversas
+    enmascarados: dentro de ellos, un identificador pegado es lo normal.
+    """
+    glued = re.compile(GLUED)
+    for volume in vols:
+        for item in volume.manuscript_files():
+            if item.path.name == 'referencias.md':
+                continue
+            text = mask_inline_code(item.text)
+            for number, line in enumerate(text.splitlines(), 1):
+                stripped = line.lstrip()
+                if stripped.startswith(('|', '#', '>')):
+                    continue
+                match = glued.search(line)
+                if not match:
+                    continue
+                add('C12', 'aviso', item, number,
+                    f'\u00ab{match.group(0)}\u00bb pegado a la palabra anterior, fuera de '
+                    f'comillas inversas: si es un identificador de codigo, entrecom\u00edllalo; '
+                    f'si no lo es, es un error de edici\u00f3n',
+                    detail={'token': match.group(0)})
+
+
 CHECKS = (
     ('C1', 'remisiones cruzadas', check_c1_crossrefs),
     ('C2', 'bibliografía sin verificar', check_c2_references),
@@ -573,6 +624,7 @@ CHECKS = (
     ('C8', 'anclas bibliográficas', check_c8_anchors),
     ('C9', 'carpetas de imágenes', check_image_folders),
     ('C11', 'año de la cita', check_c11_citation_years),
+    ('C12', 'lenguaje', check_c12_language),
 )
 
 
@@ -695,6 +747,7 @@ def main():
         'C8': lambda: check_c8_anchors(vols, add),
         'C9': lambda: check_image_folders(vols, add),
         'C11': lambda: check_c11_citation_years(vols, add),
+        'C12': lambda: check_c12_language(vols, add),
     }
     for code, _, _ in CHECKS:
         if code in selected:

@@ -1,6 +1,6 @@
 # Informe de construcción — Serie «Código Sintético»
 
-Generado: 2026-09-28 23:24 UTC
+Generado: 2026-09-28 23:40 UTC
 
 ## Parámetros de imprenta aplicados (6 × 9 pulgadas)
 

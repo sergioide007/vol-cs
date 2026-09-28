@@ -145,7 +145,8 @@
 
 ### {#ref-msresearch2023}
 
-**Microsoft Research, As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*.
+
+**Li, Chunyuan; Wong, Cliff; Zhang, Sheng; Usuyama, Naoto; Liu, Haotian; Yang, Jianwei; Naumann, Tristan; Poon, Hoifung; Gao, Jianfeng** (2023). *LLaVA-Med: Training a Large Language-and-Vision Assistant for Biomedicine in One Day*. _arXiv:2306.00890 [cs.CV] (Microsoft Research). Asistente multimodal entrenado en menos de 15 horas con ocho A100._
 
 ### {#ref-mitchell2025}
 

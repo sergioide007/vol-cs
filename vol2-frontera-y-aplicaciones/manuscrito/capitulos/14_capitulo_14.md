@@ -59,7 +59,7 @@ El verbo clave del título de este capítulo es *adentrarse*. Leer solo lo últi
 
 La dieta híbrida que este capítulo recomienda tiene tres frecuencias de lectura:
 
-1. **Semanal (actualidad):** arXiv Sanity Preserver para papers de la semana en cs.AI y cs.CL; Hugging Face Daily Papers; newsletter de importWAI. Tiempo: 30 minutos.
+1. **Semanal (actualidad):** arXiv Sanity Preserver para papers de la semana en cs.AI y cs.CL; Hugging Face Daily Papers; newsletter de Import AI. Tiempo: 30 minutos.
 2. **Mensual (tendencias):** un paper Q1 leído en profundidad; las notas técnicas de Anthropic, OpenAI y Google DeepMind. Tiempo: 2–3 horas.
 3. **Trimestral (fundamentos):** un capítulo de un clásico o la relectura de un paper fundacional con la perspectiva de los problemas actuales. Tiempo: 4–6 horas.
 

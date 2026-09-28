@@ -72,7 +72,8 @@
 
 ### {#ref-langchain2024}
 
-**LangChain, As cited in the manuscript, 2024** (2024). *As cited in the manuscript, 2024*.
+
+**LangChain Inc.** (2024). *LangGraph*, framework de orquestacion y runtime para agentes con estado y larga duracion. _Documentacion en `docs.langchain.com`. Beneficios declarados: mezclar pasos deterministas y pasos agénticos en un mismo grafo, persistencia que sobrevive a fallos, inspección humana en cualquier punto y memoria a corto y largo plazo._
 
 ### {#ref-lis2025}
 

@@ -131,6 +131,34 @@ class GlyphsTest(unittest.TestCase):
         self.assertIsNone(lint.CJK.search('a\u00f1o n\u00fa\u00f1o gu\u00edi\u00e1 ¿cu\u00e1l?'))
 
 
+class CapsInWordTest(unittest.TestCase):
+    """C14: una mayuscula en medio de palabra castellana."""
+
+    def setUp(self):
+        self.pat = lint.CAMEL
+
+    def test_flags_glued_capital(self):
+        self.assertIsNotNone(self.pat.search('los turnOS de palabra'))
+        self.assertIsNotNone(self.pat.search('el metodo comoHipotesis'))
+
+    def test_allows_known_terms(self):
+        for term in ('arXiv:2302.06590', 'iPhone', 'eBay', 'macOS'):
+            match = self.pat.search(term)
+            if match:
+                self.assertTrue(match.group(0).startswith(lint.CAMEL_OK), term)
+
+    def test_ignores_code_and_backticks(self):
+        self.assertIsNone(self.pat.search(lint.mask_inline_code('`maxIterations`')))
+
+    def test_flags_symbol_in_prose_without_backticks(self):
+        """Un identificador citado en prosa debe ir entrecomillado: ese es el
+        defecto que C14 detecta y que la convencion del libro resuelve."""
+        self.assertIsNotNone(self.pat.search(lint.mask_inline_code('el promptSistema del agente')))
+
+    def test_plain_spanish_is_clean(self):
+        self.assertIsNone(self.pat.search('los turnos de palabra se organizan bien'))
+
+
 class ManuscriptInvariantsTest(unittest.TestCase):
     """Propiedades que deben cumplirse siempre, passen o no los checks."""
 

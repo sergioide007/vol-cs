@@ -12,7 +12,8 @@
     "C9": "carpetas de imágenes",
     "C11": "año de la cita",
     "C12": "lenguaje",
-    "C13": "glifos no representables"
+    "C13": "glifos no representables",
+    "C14": "mayusculas en medio de palabra"
   },
   "volumes": [
     {
@@ -25,7 +26,7 @@
       "number": 2,
       "name": "vol2-frontera-y-aplicaciones",
       "chapters": 32,
-      "words": 58177
+      "words": 58230
     },
     {
       "number": 3,
@@ -653,24 +654,6 @@
       }
     },
     {
-      "check": "C11",
-      "severity": "error",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
-      "line": 271,
-      "message": "la cita dice 2023 y la entrada «unity2023» es de 2020, 2025",
-      "volume": 2,
-      "detail": {
-        "anchor": "unity2023",
-        "texto": [
-          2023
-        ],
-        "entrada": [
-          2020,
-          2025
-        ]
-      }
-    },
-    {
       "check": "C2",
       "severity": "error",
       "file": "vol1-fundamentos/referencias/referencias.md",
@@ -744,7 +727,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 71,
+      "line": 72,
       "message": "«ecns2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -758,7 +741,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 75,
+      "line": 76,
       "message": "«epochai2024» se declara sin verificar (02_capitulo_2.md)",
       "volume": 2,
       "detail": {
@@ -772,7 +755,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 83,
+      "line": 84,
       "message": "«globaltimes2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -786,7 +769,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 87,
+      "line": 88,
       "message": "«googledeepmind2024» se declara sin verificar (23_capitulo_23.md)",
       "volume": 2,
       "detail": {
@@ -800,7 +783,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 96,
+      "line": 97,
       "message": "«govtechsg2024» se declara sin verificar (11_capitulo_11.md)",
       "volume": 2,
       "detail": {
@@ -814,7 +797,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 117,
+      "line": 118,
       "message": "«idrcunesco2023» se declara sin verificar (20_capitulo_20.md)",
       "volume": 2,
       "detail": {
@@ -828,7 +811,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 121,
+      "line": 122,
       "message": "«jerald2009» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -842,7 +825,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 130,
+      "line": 131,
       "message": "«khanacademy2024» se declara sin verificar (10_capitulo_10.md)",
       "volume": 2,
       "detail": {
@@ -856,7 +839,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 151,
+      "line": 152,
       "message": "«meta2024» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -870,7 +853,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 163,
+      "line": 164,
       "message": "«chinamem2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -884,7 +867,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 209,
+      "line": 210,
       "message": "«scmp2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -898,21 +881,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 213,
-      "message": "«stanfordvhil2023» se declara sin verificar (32_capitulo_32.md)",
-      "volume": 2,
-      "detail": {
-        "anchor": "ref-stanfordvhil2023",
-        "chapters": [
-          "32_capitulo_32.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 217,
+      "line": 219,
       "message": "«synergy2024» se declara sin verificar (18_capitulo_18.md)",
       "volume": 2,
       "detail": {
@@ -926,7 +895,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 221,
+      "line": 223,
       "message": "«techcouncilau2024» se declara sin verificar (19_capitulo_19.md, 21_capitulo_21.md)",
       "volume": 2,
       "detail": {
@@ -997,21 +966,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 146,
-      "message": "«msresearch2023» se declara sin verificar (11_capitulo_11.md)",
-      "volume": 3,
-      "detail": {
-        "anchor": "ref-msresearch2023",
-        "chapters": [
-          "11_capitulo_11.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 150,
+      "line": 151,
       "message": "«mitchell2025» se declara sin verificar (02_capitulo_2.md)",
       "volume": 3,
       "detail": {
@@ -1025,7 +980,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol3-madurez-organizacional/referencias/referencias.md",
-      "line": 158,
+      "line": 159,
       "message": "«noaa2026» se declara sin verificar (03_capitulo_3.md)",
       "volume": 3,
       "detail": {
@@ -1081,21 +1036,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol4-patrones-de-escala/referencias/referencias.md",
-      "line": 73,
-      "message": "«langchain2024» se declara sin verificar (10_capitulo_10.md)",
-      "volume": 4,
-      "detail": {
-        "anchor": "ref-langchain2024",
-        "chapters": [
-          "10_capitulo_10.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol4-patrones-de-escala/referencias/referencias.md",
-      "line": 77,
+      "line": 78,
       "message": "«lis2025» se declara sin verificar (10_capitulo_10.md)",
       "volume": 4,
       "detail": {
@@ -1109,7 +1050,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol4-patrones-de-escala/referencias/referencias.md",
-      "line": 101,
+      "line": 102,
       "message": "«nvidia2024» se declara sin verificar (10_capitulo_10.md)",
       "volume": 4,
       "detail": {
@@ -1123,7 +1064,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol4-patrones-de-escala/referencias/referencias.md",
-      "line": 135,
+      "line": 136,
       "message": "«syssec2025» se declara sin verificar (10_capitulo_10.md)",
       "volume": 4,
       "detail": {
@@ -4365,10 +4306,10 @@
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
       "line": 1,
-      "message": "4606 palabras (máximo 4500): considerar dividirlo",
+      "message": "4658 palabras (máximo 4500): considerar dividirlo",
       "volume": 2,
       "detail": {
-        "words": 4606,
+        "words": 4658,
         "max": 4500
       }
     },

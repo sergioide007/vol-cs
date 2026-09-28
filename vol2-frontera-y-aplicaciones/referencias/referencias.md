@@ -62,7 +62,8 @@
 ### {#ref-deepseek2025}
 
 
-**DeepSeek-AI** (27 de diciembre de 2024). *DeepSeek-V3 Technical Report*. _arXiv:2412.19437 [cs.CL] (v2 en febrero de 2025). Modelo MoE de 671 000 millones de parámetros con 37 000 activos por token, entrenado con 14,8 billones de tokens y 2,788 millones de horas de GPU H800._
+
+**DeepSeek-AI** (20 de enero de 2025). *DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning*. _arXiv:2501.12948 [cs.CL]_. El trabajo previo del mismo equipo es *DeepSeek-V3 Technical Report*, arXiv:2412.19437 (27 de diciembre de 2024)._
 
 ### {#ref-dettmers2023}
 
@@ -212,7 +213,8 @@
 
 ### {#ref-stanfordvhil2023}
 
-**Stanford Virtual Human Interaction Lab, As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*.
+
+**Park, R.; Miller, M.; Han, E.; DeVeaux, C.; Bailenson, J.; Ram, N.** (2026). *Evolution of Networks in Virtual Reality: A Scalable Framework for Studying Social Dynamics of Small Groups*. _PLoS One, 21_(8). Laboratorio de Interaccion Humana Virtual de Stanford (VHIL, dirigido por Jeremy Bailenson)._
 
 ### {#ref-synergy2024}
 

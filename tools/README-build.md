@@ -188,6 +188,7 @@ registrado, no un defecto.
 | C11 | Año de la cita distinto del año de la entrada | error |
 | C12 | Palabra pegada a un identificador, fuera de código y comillas | aviso |
 | C13 | Carácter no representable en las fuentes del libro (CJK) | error |
+| C14 | Mayúscula en medio de palabra, fuera de código y comillas | aviso |
 
 **C6 y el apéndice B.** Los precios y los nombres de modelo viven solo en
 `front-matter/08_apendice_b_precios.md`, con su fecha de corte. `model-allowlist.txt`

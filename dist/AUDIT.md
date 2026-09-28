@@ -1,6 +1,6 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 172.084 palabras de prosa
+Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 172.137 palabras de prosa
 
 Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 
@@ -9,7 +9,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | ID | Comprobación | Errores | Avisos |
 |---|---|---:|---:|
 | C1 | remisiones cruzadas | 0 | 37 |
-| C2 | bibliografía sin verificar | 33 | 0 |
+| C2 | bibliografía sin verificar | 30 | 0 |
 | C3 | cifras sin origen declarado | 0 | 263 |
 | C4 | apéndices y marcadores pendientes | 0 | 14 |
 | C5 | numeración antigua | 0 | 0 |
@@ -17,18 +17,19 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | C7 | presupuesto de palabras | 0 | 23 |
 | C8 | anclas bibliográficas | 0 | 0 |
 | C9 | carpetas de imágenes | 0 | 13 |
-| C11 | año de la cita | 1 | 0 |
+| C11 | año de la cita | 0 | 0 |
 | C12 | lenguaje | 0 | 0 |
 | C13 | glifos no representables | 0 | 0 |
+| C14 | mayusculas en medio de palabra | 0 | 0 |
 
 ## Detalle por volumen
 
 | Volumen | Capítulos | Palabras | Errores | Avisos |
 |---|---:|---:|---:|---:|
 | 1 — Fundamentos | 10 | 21.140 | 3 | 21 |
-| 2 — Frontera y Aplicaciones | 32 | 58.177 | 17 | 111 |
-| 3 — Madurez Organizacional | 25 | 52.933 | 7 | 94 |
-| 4 — Patrones de Escala | 13 | 36.457 | 7 | 111 |
+| 2 — Frontera y Aplicaciones | 32 | 58.230 | 15 | 111 |
+| 3 — Madurez Organizacional | 25 | 52.933 | 6 | 94 |
+| 4 — Patrones de Escala | 13 | 36.457 | 6 | 111 |
 
 ## C1 · remisiones cruzadas (37)
 
@@ -121,7 +122,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L62 ! «cap. 31» remite al cap. 31 sin decir de qué tomo: en el Vol. 4 no existe; sí en el Vol. 2
 
 
-## C2 · bibliografía sin verificar (33)
+## C2 · bibliografía sin verificar (30)
 
 **`vol1-fundamentos/referencias/referencias.md`**
 
@@ -133,17 +134,17 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L45 ✘ «cisco2024» se declara sin verificar (11_capitulo_11.md)
 - L58 ✘ «conab2024» se declara sin verificar (20_capitulo_20.md)
-- L71 ✘ «ecns2026» se declara sin verificar (17_capitulo_17.md)
-- L75 ✘ «epochai2024» se declara sin verificar (02_capitulo_2.md)
-- L83 ✘ «globaltimes2026» se declara sin verificar (17_capitulo_17.md)
-- L87 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
-- L96 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
-- L117 ✘ «idrcunesco2023» se declara sin verificar (20_capitulo_20.md)
-- L121 ✘ «jerald2009» se declara sin verificar (32_capitulo_32.md)
-- L130 ✘ «khanacademy2024» se declara sin verificar (10_capitulo_10.md)
-- L151 ✘ «meta2024» se declara sin verificar (32_capitulo_32.md)
-- L163 ✘ «chinamem2026» se declara sin verificar (17_capitulo_17.md)
-- … y 4 más en `dist/AUDIT.json`
+- L72 ✘ «ecns2026» se declara sin verificar (17_capitulo_17.md)
+- L76 ✘ «epochai2024» se declara sin verificar (02_capitulo_2.md)
+- L84 ✘ «globaltimes2026» se declara sin verificar (17_capitulo_17.md)
+- L88 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
+- L97 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
+- L118 ✘ «idrcunesco2023» se declara sin verificar (20_capitulo_20.md)
+- L122 ✘ «jerald2009» se declara sin verificar (32_capitulo_32.md)
+- L131 ✘ «khanacademy2024» se declara sin verificar (10_capitulo_10.md)
+- L152 ✘ «meta2024» se declara sin verificar (32_capitulo_32.md)
+- L164 ✘ «chinamem2026» se declara sin verificar (17_capitulo_17.md)
+- … y 3 más en `dist/AUDIT.json`
 
 **`vol3-madurez-organizacional/referencias/referencias.md`**
 
@@ -151,19 +152,17 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L49 ✘ «cenepred2017» se declara sin verificar (03_capitulo_3.md)
 - L53 ✘ «chase2025» se declara sin verificar (02_capitulo_2.md)
 - L65 ✘ «digitalai2024» se declara sin verificar (25_capitulo_25.md)
-- L146 ✘ «msresearch2023» se declara sin verificar (11_capitulo_11.md)
-- L150 ✘ «mitchell2025» se declara sin verificar (02_capitulo_2.md)
-- L158 ✘ «noaa2026» se declara sin verificar (03_capitulo_3.md)
+- L151 ✘ «mitchell2025» se declara sin verificar (02_capitulo_2.md)
+- L159 ✘ «noaa2026» se declara sin verificar (03_capitulo_3.md)
 
 **`vol4-patrones-de-escala/referencias/referencias.md`**
 
 - L8 ✘ «clineanthropic2024» se declara sin verificar (10_capitulo_10.md)
 - L12 ✘ «aspuru2024» se declara sin verificar (10_capitulo_10.md)
 - L20 ✘ «bloomberg2025» se declara sin verificar (10_capitulo_10.md)
-- L73 ✘ «langchain2024» se declara sin verificar (10_capitulo_10.md)
-- L77 ✘ «lis2025» se declara sin verificar (10_capitulo_10.md)
-- L101 ✘ «nvidia2024» se declara sin verificar (10_capitulo_10.md)
-- L135 ✘ «syssec2025» se declara sin verificar (10_capitulo_10.md)
+- L78 ✘ «lis2025» se declara sin verificar (10_capitulo_10.md)
+- L102 ✘ «nvidia2024» se declara sin verificar (10_capitulo_10.md)
+- L136 ✘ «syssec2025» se declara sin verificar (10_capitulo_10.md)
 
 
 ## C3 · cifras sin origen declarado (263)
@@ -712,7 +711,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md`**
 
-- L1 ! 4606 palabras (máximo 4500): considerar dividirlo
+- L1 ! 4658 palabras (máximo 4500): considerar dividirlo
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/16_capitulo_16.md`**
 
@@ -796,11 +795,4 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol4-patrones-de-escala/manuscrito/imagenes/capitulo80`**
 
 - L1 ! `capitulo80` guarda la numeración antigua: lo usa el cap. 13 de este volumen
-
-
-## C11 · año de la cita (1)
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md`**
-
-- L271 ✘ la cita dice 2023 y la entrada «unity2023» es de 2020, 2025
 

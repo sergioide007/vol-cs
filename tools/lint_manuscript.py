@@ -87,6 +87,18 @@ MODEL_ID = re.compile(
 # fuente CJK en un libro de 6x9 pulgadas, sino romanizar y dar la referencia.
 CJK = re.compile('[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]')
 
+# C14: mayuscula dentro de una palabra, fuera de codigo y comillas.
+#
+# Es la forma que toma la corrupcion de prosa cuando se sustituye un texto desde
+# el terminal: una palabra castellana a la que se le colan mayusculas inglesas
+# («turnOS», «comoHipotesis», «importWAI»). Se mide antes de adoptarla: sobre el
+# manuscrito solo quedan los terminos que empiezan por mayuscula por nombre
+# propio, y esos estan en la lista de admisiones.
+CAMEL = re.compile(
+    r'(?<![A-Za-z`\w])[a-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1]{2,}[A-Z][A-Za-z]*')
+CAMEL_OK = ('arXiv', 'iOS', 'iPhone', 'iPad', 'iMac', 'eBay', 'macOS', 'watchOS',
+            'PyTorch', 'scikit', 'nVidia', 'oAuth', 'sQuid', 'aWS')
+
 # C12: simbolo pegado a una palabra, fuera de codigo y de comillas.
 #
 # Se apunta a dos cosas. La primera es evitar la clase de error que se ha
@@ -577,7 +589,14 @@ def check_c11_citation_years(vols, add):
         bloques = re.split(r'(?m)^###\s*\{#ref-([a-z0-9_-]+)\}', texto)
         anios = {}
         for i in range(1, len(bloques) - 1, 2):
-            anios[bloques[i]] = {int(a) for a in re.findall(YEAR, bloques[i + 1][:400])}
+            # Solo el año de publicacion, el que va tras los autores. Tomar
+            # cualquier año de la nota daba falsos positivos: la entrada de
+            # Unity menciona 2020 (el preprint de Juliani) y 2025, y la cita
+            # en el texto puede decir 2023 sin que eso sea un error real.
+            cabecera = bloques[i + 1].lstrip()[:200]
+            declarados = re.search(r'\((?:[^)]{0,40})?((?:19|20)\d{2})', cabecera)
+            anios[bloques[i]] = ({int(declarados.group(1))} if declarados
+                             else {int(a) for a in re.findall(r'(?:19|20)\d{2}', bloques[i])})
         for item in volume.manuscript_files():
             for match in re.finditer(r'([^\n\n]{0,90}?)\[([^\]]*)\]\(#ref-([a-z0-9_-]+)\)',
                                      item.text):
@@ -652,6 +671,26 @@ def check_c13_glyphs(vols, add):
                     detail={'char': match.group(0)})
 
 
+def check_c14_caps_in_word(vols, add):
+    """C14: mayuscula dentro de una palabra, fuera de codigo y comillas.
+
+    Solo se miran capitulos y preliminares: en la bibliografia los titulos
+    PauseCase, McMahan o las abreviaturas de publisher son lo habitual.
+    """
+    for volume in vols:
+        for item in volume.manuscript_files():
+            if item.path.name == 'referencias.md':
+                continue
+            text = mask_inline_code(item.text)
+            for number, line in enumerate(text.splitlines(), 1):
+                match = CAMEL.search(line)
+                if not match or match.group(0).startswith(CAMEL_OK):
+                    continue
+                add('C14', 'aviso', item, number,
+                    f'mayuscula dentro de una palabra: \u00ab{match.group(0)}\u00bb',
+                    detail={'token': match.group(0)})
+
+
 CHECKS = (
     ('C1', 'remisiones cruzadas', check_c1_crossrefs),
     ('C2', 'bibliografía sin verificar', check_c2_references),
@@ -665,6 +704,7 @@ CHECKS = (
     ('C11', 'año de la cita', check_c11_citation_years),
     ('C12', 'lenguaje', check_c12_language),
     ('C13', 'glifos no representables', check_c13_glyphs),
+    ('C14', 'mayusculas en medio de palabra', check_c14_caps_in_word),
 )
 
 
@@ -789,6 +829,7 @@ def main():
         'C11': lambda: check_c11_citation_years(vols, add),
         'C12': lambda: check_c12_language(vols, add),
         'C13': lambda: check_c13_glyphs(vols, add),
+        'C14': lambda: check_c14_caps_in_word(vols, add),
     }
     for code, _, _ in CHECKS:
         if code in selected:

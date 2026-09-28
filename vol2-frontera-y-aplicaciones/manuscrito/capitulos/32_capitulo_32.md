@@ -268,7 +268,7 @@ Esta arquitectura jerárquica (estrategia lenta, táctica media, ejecución ráp
 
 Los juegos 3D son entornos privilegiados para el aprendizaje por refuerzo multi-agente porque permiten simular millones de horas de juego en tiempo acelerado. Lowe et al. (2017, NeurIPS) demostraron que la arquitectura actor-critic multi-agente puede aprender políticas cooperativas y competitivas simultáneamente en entornos de mezcla. Rashid et al. (2018, ICML) introdujeron QMIX, que aprende factorizaciones monotónicas del valor conjunto de acción, permitiendo coordinar hasta 64 agentes con complejidad computacional manejable.
 
-Estos avances académicos han comenzado a filtrarse al desarrollo de juegos comerciales. Unity ML-Agents Toolkit 1.1.0 ([Unity Technologies, 2023](#ref-unity2023)) integra MARL de forma accesible para desarrolladores sin experiencia en aprendizaje por refuerzo.
+Estos avances académicos han comenzado a filtrarse al desarrollo de juegos comerciales. Unity ML-Agents Toolkit 1.1.0 ([Unity Technologies, 2025](#ref-unity2023)) integra MARL de forma accesible para desarrolladores sin experiencia en aprendizaje por refuerzo.
 
 ### Ejemplo: orquestador multiagente para NPCs en Unity
 
@@ -503,7 +503,7 @@ A tal efecto, la separación en tres capas de latencia (presencia, interacción,
 
 Un giro inesperado en el diseño de agentes para VR multi-usuario: la sincronización de estado entre usuarios crea una complejidad adicional que no existe en VR de un solo jugador. Cuando dos usuarios interactúan con el mismo agente virtual simultáneamente (y el agente puede ver a ambos, responder a ambos, y gestionar la dinámica social entre ellos) el sistema se convierte en un problema de teoría de juegos y coordinación distribuida.
 
-Los entornos de reuniones corporativas en VR (Horizon Workrooms, Microsoft Mesh, Immersed) han comenzado a desplegar **facilitator agents**: agentes que monitorizan la dinámica conversacional del grupo, detectan participantes silenciosos, proponen turnos de intervención, y resumen puntos de consenso en tiempo real. La investigación de Bailenson ([Stanford VHIL, 2023](#ref-stanfordvhil2023)) sugiere que la presencia de un facilitador agéntico reduce la desigualdad de participación en reuniones VR en un 34% respecto a grupos sin facilitador.
+Los entornos de reuniones corporativas en VR (Horizon Workrooms, Microsoft Mesh, Immersed) han comenzado a desplegar **facilitator agents**: agentes que monitorizan la dinámica conversacional del grupo, detectan participantes silenciosos, proponen turnos de intervención, y resumen puntos de consenso en tiempo real. El laboratorio de Stanford lleva tiempo midiendo cómo la dinámica de los grupos pequeños dentro de VR y cómo la red de turnos de palabra redistribuye la participación ([Park et al., 2026](#ref-stanfordvhil2023)). La hipótesis de que un facilitador agéntico reduce la desigualdad de participación es coherente con esos datos, pero la magnitud concreta depende del diseño del estudio *[cifra ilustrativa: mídela en tus propias reuniones antes de prometerla]*; lo que la literatura sí sostiene es la dirección del efecto, no un porcentaje cerrado.
 
 ### Código: coordinador VR con presupuesto de latencia explícito
 

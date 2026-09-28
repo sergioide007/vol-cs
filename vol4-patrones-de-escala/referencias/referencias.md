@@ -43,7 +43,8 @@
 
 ### {#ref-cncf2024}
 
-**CNCF, OpenTelemetry specification, as cited in the manuscript, 2024** (2024). *OpenTelemetry specification, as cited in the manuscript, 2024*.
+
+**CNCF** (2026). *OpenTelemetry Specification*, versión 1.61.0. _Proyecto incubation de la Cloud Native Computing Foundation. Especificación en `opentelemetry.io/docs/specs/otel/`._
 
 ### {#ref-evans2003}
 
@@ -107,7 +108,8 @@
 
 ### {#ref-owasp2025}
 
-**OWASP Foundation, As cited in the manuscript, 2025** (2025). *As cited in the manuscript, 2025*.
+
+**OWASP Foundation** (2025). *OWASP Top 10 for LLM and GenAI Applications 2025*. _Proyecto OWASP GenAI Security Project. Diez riesgos de LLM01:2025 (inyección de instrucciones) a LLM10:2025 (consumo no acotado). En `genai.owasp.org/llm-top-10/`._
 
 ### {#ref-patterson2021}
 

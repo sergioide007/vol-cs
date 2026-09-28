@@ -23,9 +23,9 @@ Majors, Fong-Jones & Miranda (2022), en *Observability Engineering: Achieving Pr
 
 ## Sección 2: El Stack de Observabilidad para Enjambres: OpenTelemetry como Estándar
 
-OpenTelemetry (OTel), el estándar de la Cloud Native Computing Foundation ([CNCF, 2024](#ref-cncf2024)) para instrumentación de sistemas distribuidos, es la respuesta técnica a la observabilidad de enjambres. Su modelo de datos cubre los tres pilares clásicos de la observabilidad (trazas, métricas y logs) y los extiende con un cuarto pilar emergente en sistemas agénticos: **eventos semánticos estructurados**.
+OpenTelemetry (OTel), el estándar de la Cloud Native Computing Foundation ([CNCF, 2026](#ref-cncf2024)) para instrumentación de sistemas distribuidos, es la respuesta técnica a la observabilidad de enjambres. Su modelo de datos cubre los tres pilares clásicos de la observabilidad (trazas, métricas y logs) y los extiende con un cuarto pilar emergente en sistemas agénticos: **eventos semánticos estructurados**.
 
-La especificación OTel v1.30 ([CNCF, 2024](#ref-cncf2024)) define el concepto de *span* como la unidad fundamental de traza: una operación con timestamp de inicio, timestamp de fin, nombre, atributos, y (un aspecto determinante para sistemas agénticos) un árbol de relaciones causales entre spans. Para un enjambre, cada acción de un agente es un span hijo del span raíz de la tarea.
+La especificación OTel v1.30 ([CNCF, 2026](#ref-cncf2024)) define el concepto de *span* como la unidad fundamental de traza: una operación con timestamp de inicio, timestamp de fin, nombre, atributos, y (un aspecto determinante para sistemas agénticos) un árbol de relaciones causales entre spans. Para un enjambre, cada acción de un agente es un span hijo del span raíz de la tarea.
 
 ```python
 from opentelemetry import trace

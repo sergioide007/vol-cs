@@ -77,9 +77,6 @@
 
 **Fowler, Martin** (2003). *Patterns of Enterprise Application Architecture*. Addison-Wesley.
 
-### {#ref-gartner2024}
-
-**Gartner, Report, as cited in the manuscript, 2024** (2024). *Report, as cited in the manuscript, 2024*.
 
 ### {#ref-grote2012}
 

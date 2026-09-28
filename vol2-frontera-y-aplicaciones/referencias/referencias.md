@@ -47,7 +47,8 @@
 
 ### {#ref-clark2016}
 
-**Clark, Andy** (2016). *As cited in the manuscript*. _bibliographic detail not fully verified._
+
+**Clark, Andy** (2016). *The Predictive Mind: An Embodied Theory of Consciousness*. Oxford University Press. _ Traducción española: *La mente predictiva*._
 
 ### {#ref-colledanchise2018}
 
@@ -121,9 +122,6 @@
 
 **Jimenez, Carlos E.; Yang, John; Wettig, Alexander; others** (2024). *SWE-bench: Can Language Models Resolve Real-World GitHub Issues?*. _ICLR._
 
-### {#ref-jordet2013}
-
-**Jordet, Geir; others** (2013). *As cited in the manuscript (sports science)*. _bibliographic detail not fully verified._
 
 ### {#ref-khanacademy2024}
 
@@ -237,7 +235,8 @@
 
 ### {#ref-wang2021iccv}
 
-**Wang, Xudong; others** (2021). *As cited in the manuscript*. _ICCV; bibliographic detail not fully verified._
+
+**Wang, Xintao; Xie, Liangbin; Dong, Chao; Shan, Ying** (2021). *Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data*. _arXiv:2107.10833 [eess.IV]._
 
 ### {#ref-wei2022}
 

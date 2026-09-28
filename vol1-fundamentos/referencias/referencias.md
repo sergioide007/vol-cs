@@ -169,7 +169,8 @@
 
 ### {#ref-wu2024}
 
-**Wu, Qingyun; others** (2024). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+**Wu, Qingyun; Bansal, Gagan; Zhang, Jieyu; Wu, Yiran; Li, Beibin; Zhu, Erkang; et al.** (2023). *AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation*. _arXiv:2308.08155 [cs.AI] (preprint, 16 de agosto de 2023; v2 en octubre de 2023)._
 
 ### {#ref-yaotot2023}
 

@@ -29,7 +29,7 @@ La solución china (documentada en los informes técnicos de Kuaishou Research y
 
 2. **Paralelización espacial.** Dentro de cada frame, un *agente de fondo* genera el ambiente estático (background), un *agente de primer plano* genera los sujetos principales con máscara de segmentación, y un *agente de composición* integra capas con control de iluminación consistente. Este pipeline es 4.2x más rápido que la generación monolítica del frame completo ([Blattmann et al., CVPR 2023](#ref-blattmann2023)).
 
-3. **Paralelización de calidad.** Un *agente de upscaling* aplica super-resolución (SR) al video generado a 480p para producir la versión 1080p final. Este agente usa modelos de SR como Real-ESRGAN ([Wang et al., ICCV 2021](#ref-wang2021iccv)), que son computacionalmente más baratos que regenerar nativamente en alta resolución.
+3. **Paralelización de calidad.** Un *agente de upscaling* aplica super-resolución (SR) al video generado a 480p para producir la versión 1080p final. Este agente usa modelos de SR como Real-ESRGAN ([Wang et al., 2021](#ref-wang2021iccv)), que son computacionalmente más baratos que regenerar nativamente en alta resolución.
 
 El resultado combinado: lo que requería 50 minutos de GPU por minuto de video se reduce a 5–8 minutos con el enjambre en paralelo, una reducción del 90 % en tiempo de generación, que hace posible la producción a escala de plataforma.
 

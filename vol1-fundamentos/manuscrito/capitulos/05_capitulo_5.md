@@ -4,7 +4,7 @@
 
 Frederick Winslow Taylor revolucionó la manufactura a principios del siglo XX con un principio devastadoramente simple: la especialización sistemática del trabajo aumenta la productividad más que cualquier otro factor. Un trabajador que hace una sola tarea con excelencia supera en rendimiento a diez que hacen diez tareas con mediocridad.
 
-La misma lógica aplica a los sistemas de agentes, y aquí la intuición taylorista tiene respaldo experimental moderno. Un agente de propósito general, que planifica, escribe, revisa y despliega simultáneamente, comete más errores, consume más tokens y produce salidas de menor calidad que un sistema donde cada agente tiene un rol definido y restringido. Los marcos que organizaron agentes como una empresa de software lo demostraron de forma independiente: ChatDev estructura el desarrollo como una cadena de fases (diseño, codificación, prueba) atendidas por agentes especializados que dialogan entre sí [Qian et al., 2024](#ref-qian2024); MetaGPT codifica procedimientos operativos estándar (los SOP de una consultora) en el flujo de comunicación entre agentes con roles de gerente de producto, arquitecto e ingeniero, y con ello reduce drásticamente las alucinaciones en cascada [Hong et al., 2024](#ref-hong2024); y AutoGen generalizó el patrón de conversación entre agentes como primitiva de programación [Wu et al., 2024](#ref-wu2024).
+La misma lógica aplica a los sistemas de agentes, y aquí la intuición taylorista tiene respaldo experimental moderno. Un agente de propósito general, que planifica, escribe, revisa y despliega simultáneamente, comete más errores, consume más tokens y produce salidas de menor calidad que un sistema donde cada agente tiene un rol definido y restringido. Los marcos que organizaron agentes como una empresa de software lo demostraron de forma independiente: ChatDev estructura el desarrollo como una cadena de fases (diseño, codificación, prueba) atendidas por agentes especializados que dialogan entre sí [Qian et al., 2024](#ref-qian2024); MetaGPT codifica procedimientos operativos estándar (los SOP de una consultora) en el flujo de comunicación entre agentes con roles de gerente de producto, arquitecto e ingeniero, y con ello reduce drásticamente las alucinaciones en cascada [Hong et al., 2024](#ref-hong2024); y AutoGen generalizó el patrón de conversación entre agentes como primitiva de programación [Wu et al., 2023](#ref-wu2024).
 
 Este es el principio de la **Empresa Sintética**: la organización de agentes en roles especializados, con interfaces de comunicación explícitas entre ellos, refleja la estructura de una empresa de software bien organizada.
 
@@ -200,7 +200,7 @@ Los detalles que separan la solución profesional de la ingenua: (1) el redactor
 
 ## Lo esencial del capítulo 5
 
-- Especialización vence a generalismo, con evidencia: ChatDev, MetaGPT y AutoGen ([Qian et al., 2024](#ref-qian2024); [Hong et al., 2024](#ref-hong2024); [Wu et al., 2024](#ref-wu2024)).
+- Especialización vence a generalismo, con evidencia: ChatDev, MetaGPT y AutoGen ([Qian et al., 2024](#ref-qian2024); [Hong et al., 2024](#ref-hong2024); [Wu et al., 2023](#ref-wu2024)).
 - La Ley de Conway (1968) ahora se diseña: organización y sistema son el mismo artefacto.
 - Modelo por rol = primera optimización de costos; suele recortar la factura a la mitad.
 - Detección separada de filtrado en los revisores: el sensor nunca decide el umbral.

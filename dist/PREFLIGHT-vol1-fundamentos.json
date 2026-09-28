@@ -1,0 +1,21 @@
+{
+  "vol1-fundamentos": {
+    "pages": 178,
+    "size_6x9": true,
+    "fonts_embedded": true,
+    "empty_toc_entries": [],
+    "horizontal_text_violations": [],
+    "overfull_hbox": 0,
+    "missing_glyphs": [],
+    "epubs": {
+      "vol1-fundamentos--epub--con-portada.epub": {
+        "exit": 0,
+        "output": "Validating using EPUB version 3.2 rules.\nNo errors or warnings detected.\nMessages: 0 fatals / 0 errors / 0 warnings / 0 infos\n\nEPUBCheck completed\n"
+      },
+      "vol1-fundamentos--epub--sin-portada.epub": {
+        "exit": 0,
+        "output": "Validating using EPUB version 3.2 rules.\nNo errors or warnings detected.\nMessages: 0 fatals / 0 errors / 0 warnings / 0 infos\n\nEPUBCheck completed\n"
+      }
+    }
+  }
+}

@@ -1,13 +1,36 @@
-# Validación de las ediciones — 25 de septiembre de 2026 (4.ª pasada)
+# Validación de las ediciones — 28 de septiembre de 2026 (5.ª pasada)
 
 Estado: **construcción completa y validada por herramientas; pendiente de
 aprobación editorial (revisión visual) y de datos de publicación (ISBN, cubierta)**.
 
-Esta pasada incorpora, después del prólogo de cada volumen, el **Prefacio**,
-junto con la portadilla, la hoja de créditos, la dedicatoria y la sinopsis.
-El orden preliminar impreso es: Prólogo → Prefacio → Guía de lectura.
+Esta pasada añade el **Apéndice B** (precios de referencia) a los cuatro volúmenes
+y corrige la numeración heredada del Epílogo y de 34 remisiones cruzadas. El
+Apéndice B se compone después del cuerpo y antes de la bibliografía, y es la
+única fuente de precios e identificadores de modelo de la serie.
 
 Resultados de `tools/validate_editions.py` (detalle en `dist/PREFLIGHT.json`):
+
+| Volumen | Páginas | 6×9 | Fuentes | EPUBCheck | Glifos ausentes | Texto fuera de caja | Overfull hbox |
+|---|---:|:-:|:-:|:-:|:-:|:-:|---:|
+| 1 — Fundamentos | 178 | ✔ | ✔ | 2/2 | 0 | 0 | 0 |
+| 2 — Frontera y aplicaciones | 346 | ✔ | ✔ | 2/2 | 0 | 0 | 2 |
+| 3 — Madurez organizacional | 306 | ✔ | ✔ | 2/2 | 0 | 0 | 2 |
+| 4 — Patrones de escala | 270 | ✔ | ✔ | 2/2 | 0 | 0 | 1 |
+
+Las cuatro páginas suben por el Apéndice B (+4, +4, +6 y +2 respecto a la
+4.ª pasada). Los cinco `Overfull \hbox` son los mismos de la pasada anterior:
+residuos de 0,14 a 1,21 pt, invisibles y sin riesgo de corte.
+
+La auditoría del **manuscrito** (no de la maquetación) la produce
+`tools/lint_manuscript.py` y vive en `dist/AUDIT.md`. En esta pasada quedan
+**0 errores de C1** (remisiones cruzadas), **0 de C4** (apéndices inexistentes),
+**0 de C5** (numeración antigua) y **0 de C8** (anclas rotas). Sigue pendiente la
+bibliografía sin verificar (C2), que requiere verificación documental fuente por
+fuente y no puede cerrarse con herramientas.
+
+## Pasada anterior (25 de septiembre de 2026)
+
+Resultados de `tools/validate_editions.py`:
 
 | Volumen | Páginas | 6×9 | Fuentes | EPUBCheck | Glifos ausentes | Texto fuera de caja | Overfull hbox |
 |---|---:|:-:|:-:|:-:|:-:|:-:|---:|

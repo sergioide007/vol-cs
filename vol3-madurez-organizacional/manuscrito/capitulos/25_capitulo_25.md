@@ -66,7 +66,7 @@ Por tanto, el rescate auténtico consiste en usar los agentes para acortar los c
 **■ PISTA EJECUTIVA**
 
 
-El argumento económico para rescatar la agilidad (no simularla) es cuantificable. Las organizaciones con alta agilidad genuina tienen 60% más probabilidad de superar a sus competidores ([McKinsey, 2021](#ref-mckinsey2024)). En enjambres específicamente: un equipo que inyecta principios ágiles reales en su enjambre reduce el cost-per-feature en 35% y el time-to-market en 47% respecto a un equipo que usa los mismos agentes para automatizar el proceso ágil burocrático ([Gartner, 2024](#ref-gartner2024)).
+El argumento económico para rescatar la agilidad (no simularla) es cuantificable. Las organizaciones con alta agilidad genuina tienden a superar a sus competidores con una ventaja de en torno al 60 % *[cifra ilustrativa: el orden de magnitud que suele citarse en el sector; no procede de un estudio identificable, y conviene sustituirla por la medida propia antes de usarla en una decisión de inversión]*. En enjambres específicamente: un equipo que inyecta principios ágiles reales en su enjambre reduce el cost-per-feature en 35% y el time-to-market en 47% respecto a un equipo que usa los mismos agentes para automatizar el proceso ágil burocrático ([Gartner, 2024](#ref-gartner2024)).
 
 La diferencia económica entre un enjambre ágil genuino y un enjambre ágil ceremonial, en un equipo de 6 ingenieros durante 12 meses, se estima en $240.000 de valor generado adicional (la diferencia entre un enjambre que aprende y se adapta iterativamente y uno que ejecuta eficientemente el plan equivocado).
 
@@ -76,4 +76,4 @@ La diferencia económica entre un enjambre ágil genuino y un enjambre ágil cer
 - Los 12 principios del Manifiesto tienen equivalentes directos en comportamientos agénticos; algunos son más fáciles de implementar genuinamente con agentes que con humanos.
 - Automatizar ceremonias acelera la cáscara; inyectar principios ágiles en los agentes rescata lo esencial.
 - La revisión universal por pares (ideal incumplido por costo en humanos) se vuelve práctica por defecto y barata en enjambres.
-- Agilidad es adaptación con retroalimentación, no rapidez; el ROI de la agilidad genuina es +60% de ventaja competitiva ([McKinsey, 2021](#ref-mckinsey2024)).
+- Agilidad es adaptación con retroalimentación, no rapidez; la ventaja competitiva atribuida a la agilidad genuina se sitúa en el entorno del 60 % *[cifra ilustrativa]*, y solo la instrumentación de su propio equipo puede dar el valor real.

@@ -131,7 +131,7 @@ Bughin et al. (2018), en "Notes from the AI Frontier: Modeling the Impact of AI 
 - La arquitectura de tres capas (Detección → Síntesis → Entrega) opera **asíncronamente**, produciendo flujo continuo de valor en lugar de entregas por lotes.
 - La **deuda técnica agéntica** tiene cuatro dimensiones: deuda de prompt, de evaluación, de observabilidad y de seguridad. Velocidad sin guardarraíles de calidad genera deuda que frena la velocidad en el sprint 10-20.
 - El argumento ejecutivo: no "más rápido que antes", sino **"operar en la frecuencia del mercado"**: una categoría cualitativamente distinta de ventaja competitiva.
-- Las empresas AI-first tienen una ventaja de rentabilidad proyectada de 3.5–4.5× en 10 años respecto a las que no adoptan IA sistemáticamente ([McKinsey Global Institute, 2018](#ref-mckinseygi2024)).
+- Las empresas AI-first suelen proyectar una ventaja de rentabilidad de entre 3,5× y 4,5× en diez años frente a las que no adoptan IA de forma sistemática. *Cifra ilustrativa: es el orden de magnitud habitual en las proyecciones del sector, no el resultado de un estudio concreto. Sustitúyase por el dato propio de la organización cuando exista.*
 
 ---
 

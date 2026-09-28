@@ -1,6 +1,6 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.574 palabras de prosa
+Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.695 palabras de prosa
 
 Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 
@@ -9,22 +9,23 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | ID | Comprobación | Errores | Avisos |
 |---|---|---:|---:|
 | C1 | remisiones cruzadas | 0 | 37 |
-| C2 | bibliografía sin verificar | 70 | 0 |
+| C2 | bibliografía sin verificar | 54 | 0 |
 | C3 | cifras sin origen declarado | 0 | 259 |
 | C4 | apéndices y marcadores pendientes | 0 | 14 |
 | C5 | numeración antigua | 0 | 0 |
-| C6 | modelos fijados en el texto | 0 | 1 |
+| C6 | modelos fijados en el texto | 0 | 0 |
 | C7 | presupuesto de palabras | 0 | 23 |
 | C8 | anclas bibliográficas | 0 | 0 |
 | C9 | carpetas de imágenes | 0 | 13 |
+| C11 | año de la cita | 0 | 0 |
 
 ## Detalle por volumen
 
 | Volumen | Capítulos | Palabras | Errores | Avisos |
 |---|---:|---:|---:|---:|
-| 1 — Fundamentos | 10 | 21.140 | 0 | 22 |
-| 2 — Frontera y Aplicaciones | 32 | 57.962 | 0 | 110 |
-| 3 — Madurez Organizacional | 25 | 52.638 | 0 | 91 |
+| 1 — Fundamentos | 10 | 21.140 | 0 | 21 |
+| 2 — Frontera y Aplicaciones | 32 | 57.997 | 0 | 110 |
+| 3 — Madurez Organizacional | 25 | 52.724 | 0 | 91 |
 | 4 — Patrones de Escala | 13 | 36.457 | 0 | 111 |
 
 ## C1 · remisiones cruzadas (37)
@@ -118,65 +119,58 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L62 ! «cap. 31» remite al cap. 31 sin decir de qué tomo: en el Vol. 4 no existe; sí en el Vol. 2
 
 
-## C2 · bibliografía sin verificar (70)
+## C2 · bibliografía sin verificar (54)
 
 **`vol1-fundamentos/referencias/referencias.md`**
 
-- L3 ✘ «anthropic2024» se declara sin verificar (01_capitulo_1.md, 02_capitulo_2.md, 04_capitulo_4.md)
-- L19 ✘ «chase2025» se declara sin verificar (01_capitulo_1.md)
-- L91 ✘ «mitchell2025» se declara sin verificar (01_capitulo_1.md)
-- L99 ✘ «openai2024» se declara sin verificar (04_capitulo_4.md)
-- L119 ✘ «peng2023» se declara sin verificar (01_capitulo_1.md, 04_capitulo_4.md)
-- L155 ✘ «wang2023aieng» se declara sin verificar (02_capitulo_2.md)
-- L167 ✘ «wu2024» se declara sin verificar (01_capitulo_1.md, 05_capitulo_5.md)
-- L183 ✘ «ziegler2024» se declara sin verificar (01_capitulo_1.md, 04_capitulo_4.md)
+- L20 ✘ «chase2025» se declara sin verificar (01_capitulo_1.md)
+- L92 ✘ «mitchell2025» se declara sin verificar (01_capitulo_1.md)
+- L158 ✘ «wang2023aieng» se declara sin verificar (02_capitulo_2.md)
+- L170 ✘ «wu2024» se declara sin verificar (01_capitulo_1.md, 05_capitulo_5.md)
 
 **`vol2-frontera-y-aplicaciones/referencias/referencias.md`**
 
-- L3 ✘ «anthropic2024» se declara sin verificar (08_capitulo_8.md)
-- L31 ✘ «cacc2023» se declara sin verificar (16_capitulo_16.md)
-- L43 ✘ «cisco2024» se declara sin verificar (11_capitulo_11.md)
-- L47 ✘ «clark2016» se declara sin verificar (10_capitulo_10.md)
-- L55 ✘ «conab2024» se declara sin verificar (20_capitulo_20.md)
-- L59 ✘ «deepseek2025» se declara sin verificar (17_capitulo_17.md)
-- L67 ✘ «ecns2026» se declara sin verificar (17_capitulo_17.md)
-- L71 ✘ «epochai2024» se declara sin verificar (02_capitulo_2.md)
-- L79 ✘ «globaltimes2026» se declara sin verificar (17_capitulo_17.md)
-- L83 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
-- L87 ✘ «google2024» se declara sin verificar (32_capitulo_32.md)
-- L91 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
-- … y 17 más en `dist/AUDIT.json`
+- L32 ✘ «cacc2023» se declara sin verificar (16_capitulo_16.md)
+- L44 ✘ «cisco2024» se declara sin verificar (11_capitulo_11.md)
+- L48 ✘ «clark2016» se declara sin verificar (10_capitulo_10.md)
+- L56 ✘ «conab2024» se declara sin verificar (20_capitulo_20.md)
+- L60 ✘ «deepseek2025» se declara sin verificar (17_capitulo_17.md)
+- L68 ✘ «ecns2026» se declara sin verificar (17_capitulo_17.md)
+- L72 ✘ «epochai2024» se declara sin verificar (02_capitulo_2.md)
+- L80 ✘ «globaltimes2026» se declara sin verificar (17_capitulo_17.md)
+- L84 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
+- L88 ✘ «google2024» se declara sin verificar (32_capitulo_32.md)
+- L92 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
+- L108 ✘ «idc2024» se declara sin verificar (32_capitulo_32.md)
+- … y 13 más en `dist/AUDIT.json`
 
 **`vol3-madurez-organizacional/referencias/referencias.md`**
 
-- L7 ✘ «anthropic2024» se declara sin verificar (18_capitulo_18.md)
-- L15 ✘ «acp2026» se declara sin verificar (03_capitulo_3.md)
-- L39 ✘ «generic2023bi» se declara sin verificar (03_capitulo_3.md)
-- L47 ✘ «cenepred2017» se declara sin verificar (03_capitulo_3.md)
-- L51 ✘ «chase2025» se declara sin verificar (02_capitulo_2.md)
-- L63 ✘ «digitalai2024» se declara sin verificar (25_capitulo_25.md)
-- L79 ✘ «gartner2024» se declara sin verificar (20_capitulo_20.md, 22_capitulo_22.md, 25_capitulo_25.md)
-- L119 ✘ «generic2022kurth» se declara sin verificar (03_capitulo_3.md)
-- L123 ✘ «generic2023lam» se declara sin verificar (03_capitulo_3.md)
-- L127 ✘ «generic2020misc» se declara sin verificar (17_capitulo_17.md)
-- L139 ✘ «mckinseygi2024» se declara sin verificar (07_capitulo_7.md)
-- L143 ✘ «mckinsey2024» se declara sin verificar (25_capitulo_25.md)
-- … y 9 más en `dist/AUDIT.json`
+- L16 ✘ «acp2026» se declara sin verificar (03_capitulo_3.md)
+- L40 ✘ «generic2023bi» se declara sin verificar (03_capitulo_3.md)
+- L48 ✘ «cenepred2017» se declara sin verificar (03_capitulo_3.md)
+- L52 ✘ «chase2025» se declara sin verificar (02_capitulo_2.md)
+- L64 ✘ «digitalai2024» se declara sin verificar (25_capitulo_25.md)
+- L80 ✘ «gartner2024» se declara sin verificar (20_capitulo_20.md, 22_capitulo_22.md, 25_capitulo_25.md)
+- L120 ✘ «generic2022kurth» se declara sin verificar (03_capitulo_3.md)
+- L124 ✘ «generic2023lam» se declara sin verificar (03_capitulo_3.md)
+- L128 ✘ «generic2020misc» se declara sin verificar (17_capitulo_17.md)
+- L145 ✘ «msresearch2023» se declara sin verificar (11_capitulo_11.md)
+- L149 ✘ «mitchell2025» se declara sin verificar (02_capitulo_2.md)
+- L157 ✘ «noaa2026» se declara sin verificar (03_capitulo_3.md)
+- … y 4 más en `dist/AUDIT.json`
 
 **`vol4-patrones-de-escala/referencias/referencias.md`**
 
-- L3 ✘ «anthropic2024» se declara sin verificar (10_capitulo_10.md)
-- L7 ✘ «clineanthropic2024» se declara sin verificar (10_capitulo_10.md)
-- L11 ✘ «aspuru2024» se declara sin verificar (10_capitulo_10.md)
-- L19 ✘ «bloomberg2025» se declara sin verificar (10_capitulo_10.md)
-- L43 ✘ «cncf2024» se declara sin verificar (11_capitulo_11.md)
-- L71 ✘ «langchain2024» se declara sin verificar (10_capitulo_10.md)
-- L75 ✘ «lis2025» se declara sin verificar (10_capitulo_10.md)
-- L99 ✘ «nvidia2024» se declara sin verificar (10_capitulo_10.md)
-- L107 ✘ «owasp2025» se declara sin verificar (04_capitulo_4.md)
-- L115 ✘ «peng2023» se declara sin verificar (05_capitulo_5.md)
-- L131 ✘ «syssec2025» se declara sin verificar (10_capitulo_10.md)
-- L143 ✘ «ziegler2024» se declara sin verificar (05_capitulo_5.md)
+- L8 ✘ «clineanthropic2024» se declara sin verificar (10_capitulo_10.md)
+- L12 ✘ «aspuru2024» se declara sin verificar (10_capitulo_10.md)
+- L20 ✘ «bloomberg2025» se declara sin verificar (10_capitulo_10.md)
+- L44 ✘ «cncf2024» se declara sin verificar (11_capitulo_11.md)
+- L72 ✘ «langchain2024» se declara sin verificar (10_capitulo_10.md)
+- L76 ✘ «lis2025» se declara sin verificar (10_capitulo_10.md)
+- L100 ✘ «nvidia2024» se declara sin verificar (10_capitulo_10.md)
+- L108 ✘ «owasp2025» se declara sin verificar (04_capitulo_4.md)
+- L133 ✘ «syssec2025» se declara sin verificar (10_capitulo_10.md)
 
 
 ## C3 · cifras sin origen declarado (259)
@@ -657,13 +651,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L363 ! marcador pendiente: «PENDIENTE' }));»
 
 
-## C6 · modelos fijados en el texto (1)
-
-**`vol1-fundamentos/manuscrito/capitulos/05_capitulo_5.md`**
-
-- L197 ! «claude-sonnet-4-6» está fijado en el texto: los modelos y sus precios cambian; consúltense en el apéndice B
-
-
 ## C7 · presupuesto de palabras (23)
 
 **`vol1-fundamentos/manuscrito/capitulos/03_capitulo_3.md`**
@@ -688,7 +675,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/19_capitulo_19.md`**
 
-- L1 ! 1578 palabras (mínimo 1600): capítulo corto
+- L1 ! 1592 palabras (mínimo 1600): capítulo corto
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md`**
 
@@ -732,7 +719,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/25_capitulo_25.md`**
 
-- L1 ! 1528 palabras (mínimo 1600): capítulo corto
+- L1 ! 1583 palabras (mínimo 1600): capítulo corto
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/02_capitulo_2.md`**
 

@@ -22,6 +22,7 @@ Ocho comprobaciones (C1..C8), documentadas en `PLAN_DE_TRABAJO.md`:
   C7  Capítulo fuera del presupuesto de palabras (aviso, no error).
   C8  Ancla `#ref-` usada sin entrada, o entrada de bibliografía nunca usada.
   C9  Carpeta de imágenes que conserva la numeración global antigua.
+  C11 Año de la cita en el texto distinto del año de la entrada.
 
 Uso:
     python3 tools/lint_manuscript.py                     # informe + exit 1 si hay errores
@@ -76,6 +77,10 @@ PENDING = re.compile(r'\[?\bPENDIENTE\b[^\]\n]{0,12}\]?|PENDIENTE-|\bTODO\b|\bFI
 MODEL_ID = re.compile(
     r'\b(claude|gpt|gemini|llama|qwen|mistral|deepseek)-[a-z0-9][a-z0-9._-]*',
     re.I)
+
+# Año declarado en la entrada bibliográfica y año en la cita del texto (C11).
+YEAR = re.compile(r'\b(?:19|20)\d{2}\b')
+CITE = re.compile(r'\[[^\]]*?\((?:#ref-[a-z0-9-]+\)|https?://[^)]*)\]|\[[^\]]*\]\(#ref-[a-z0-9-]+\)')
 
 # Apéndices y anexos citados (C4).
 APPENDIX = re.compile(r'\bap[ée]ndice\s+([A-Z])\b|\banexo\s+([A-Z])\b', re.I)
@@ -524,6 +529,39 @@ def check_image_folders(vols, add):
                 detail={'folder': folder.name, 'chapters': owners})
 
 
+def check_c11_citation_years(vols, add):
+    """C11: el año de la cita en el texto no coincide con el de la entrada.
+
+    Una cita que dice «(McKinsey, 2021)» y apunta a una entrada fechada en 2024
+    no es una entrada sin verificar: es una cita que dice una cosa y remite a
+    otra. Ninguna de las dos se puede arreglar maquetando, pero sí se puede
+    detectar sin leerlas.
+    """
+    for volume in vols:
+        texto = volume.references()
+        if not texto:
+            continue
+        bloques = re.split(r'(?m)^###\s*\{#ref-([a-z0-9_-]+)\}', texto)
+        anios = {}
+        for i in range(1, len(bloques) - 1, 2):
+            anios[bloques[i]] = {int(a) for a in re.findall(YEAR, bloques[i + 1][:400])}
+        for item in volume.manuscript_files():
+            for match in re.finditer(r'([^\n\n]{0,90}?)\[([^\]]*)\]\(#ref-([a-z0-9_-]+)\)',
+                                     item.text):
+                etiqueta, anio_texto, anchor = match.group(1), match.group(2), match.group(3)
+                if anchor not in anios or not anios[anchor]:
+                    continue
+                citados = {int(a) for a in re.findall(YEAR, etiqueta + ' ' + anio_texto)}
+                if citados and not (citados & anios[anchor]):
+                    line = item.text.count('\n', 0, match.start()) + 1
+                    add('C11', 'error', item, line,
+                        f'la cita dice {", ".join(str(a) for a in sorted(citados))} y la '
+                        f'entrada «{anchor.replace("ref-", "")}» es de '
+                        f'{", ".join(str(a) for a in sorted(anios[anchor]))}',
+                        detail={'anchor': anchor,
+                                'texto': sorted(citados), 'entrada': sorted(anios[anchor])})
+
+
 CHECKS = (
     ('C1', 'remisiones cruzadas', check_c1_crossrefs),
     ('C2', 'bibliografía sin verificar', check_c2_references),
@@ -534,6 +572,7 @@ CHECKS = (
     ('C7', 'presupuesto de palabras', check_c7_budget),
     ('C8', 'anclas bibliográficas', check_c8_anchors),
     ('C9', 'carpetas de imágenes', check_image_folders),
+    ('C11', 'año de la cita', check_c11_citation_years),
 )
 
 
@@ -655,6 +694,7 @@ def main():
         'C7': lambda: check_c7_budget(vols, add),
         'C8': lambda: check_c8_anchors(vols, add),
         'C9': lambda: check_image_folders(vols, add),
+        'C11': lambda: check_c11_citation_years(vols, add),
     }
     for code, _, _ in CHECKS:
         if code in selected:

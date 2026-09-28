@@ -6,7 +6,8 @@
 
 ### {#ref-anthropic2024}
 
-**Anthropic** (2024). *Model Context Protocol and related technical documentation*. _As cited in the manuscript; multiple 2024 documents (a/b/c)._
+
+**Anthropic** (25 de noviembre de 2024). *Introducing the Model Context Protocol*. _Anuncio oficial. Creado por David Soria Parra y Justin Spahr-Summers. Especificación en `modelcontextprotocol.io`._
 
 ### {#ref-arrieta2020}
 
@@ -136,13 +137,6 @@
 
 **McKeeman, William M., Differential Testing for Software, 1998** (1998). *Differential Testing for Software, 1998*.
 
-### {#ref-mckinseygi2024}
-
-**McKinsey Global Institute, Report, as cited in the manuscript, 2024** (2024). *Report, as cited in the manuscript, 2024*.
-
-### {#ref-mckinsey2024}
-
-**McKinsey, Report, as cited in the manuscript, 2024** (2024). *Report, as cited in the manuscript, 2024*.
 
 ### {#ref-mehrabi2021}
 
@@ -182,7 +176,8 @@
 
 ### {#ref-peng2023}
 
-**Peng, Baolin; others** (2023). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+**Peng, Sida; Kalliamvakou, Eirini; Cihon, Peter; Demirer, Mert** (2023). *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot*. _arXiv:2302.06590 [cs.SE]. Experimento controlado: el grupo con acceso al asistente completó la tarea un 55,8 % más rápido que el grupo de control._
 
 ### {#ref-ponemon2023}
 
@@ -250,7 +245,8 @@
 
 ### {#ref-ziegler2024}
 
-**Ziegler, Daniel M.; others** (2024). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+**Ziegler, Albert; Kalliamvakou, Eirini; Li, X. Alice; Rice, Andrew; Rifkin, Devon; Simister, Shawn; Sittampalam, Ganesh; Aftandilian, Edward** (2024). *Measuring GitHub Copilot's Impact on Productivity*. _Communications of the ACM, 67_(3), 54-63._ _Estudio de campo con Metric, el equipo de análisis de GitHub._
 
 ### {#ref-batool2023}
 

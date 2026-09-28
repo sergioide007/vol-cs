@@ -2,7 +2,8 @@
 
 ### {#ref-anthropic2024}
 
-**Anthropic** (2024). *Model Context Protocol and related technical documentation*. _As cited in the manuscript; multiple 2024 documents (a/b/c)._
+
+**Anthropic** (25 de noviembre de 2024). *Introducing the Model Context Protocol*. _Anuncio oficial. Creado por David Soria Parra y Justin Spahr-Summers. Especificación en `modelcontextprotocol.io`._
 
 ### {#ref-bender2021}
 
@@ -98,7 +99,8 @@
 
 ### {#ref-openai2024}
 
-**OpenAI** (2024). *Technical documentation, as cited in the manuscript*.
+
+**OpenAI** (12 de septiembre de 2024). *Learning to Reason with LLMs*. _En AIME 2024, GPT-4o resolvió de media el 12 % de los problemas (1,8 de 15) y o1 el 74 % (11,1 de 15) con una sola muestra por problema._
 
 ### {#ref-ouyang2022}
 
@@ -118,7 +120,8 @@
 
 ### {#ref-peng2023}
 
-**Peng, Baolin; others** (2023). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+**Peng, Sida; Kalliamvakou, Eirini; Cihon, Peter; Demirer, Mert** (2023). *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot*. _arXiv:2302.06590 [cs.SE]. Experimento controlado: el grupo con acceso al asistente completó la tarea un 55,8 % más rápido que el grupo de control._
 
 ### {#ref-qian2024}
 
@@ -182,7 +185,8 @@
 
 ### {#ref-ziegler2024}
 
-**Ziegler, Daniel M.; others** (2024). *As cited in the manuscript*. _Bibliographic detail not fully verified; see manuscript context._
+
+**Ziegler, Albert; Kalliamvakou, Eirini; Li, X. Alice; Rice, Andrew; Rifkin, Devon; Simister, Shawn; Sittampalam, Ganesh; Aftandilian, Edward** (2024). *Measuring GitHub Copilot's Impact on Productivity*. _Communications of the ACM, 67_(3), 54-63._ _Estudio de campo con Metric, el equipo de análisis de GitHub._
 
 ### {#ref-ferino2025}
 

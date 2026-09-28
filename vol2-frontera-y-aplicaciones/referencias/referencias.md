@@ -2,7 +2,8 @@
 
 ### {#ref-anthropic2024}
 
-**Anthropic** (2024). *Model Context Protocol and related technical documentation*. _As cited in the manuscript; multiple 2024 documents (a/b/c)._
+
+**Anthropic** (25 de noviembre de 2024). *Introducing the Model Context Protocol*. _Anuncio oficial. Creado por David Soria Parra y Justin Spahr-Summers. Especificación en `modelcontextprotocol.io`._
 
 ### {#ref-ausaiethics2024}
 
@@ -140,13 +141,6 @@
 
 **Martin, Robert C.** (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall.
 
-### {#ref-mckinseygi2024}
-
-**McKinsey Global Institute, Report, as cited in the manuscript, 2024** (2024). *Report, as cited in the manuscript, 2024*.
-
-### {#ref-mckinsey2024}
-
-**McKinsey, Report, as cited in the manuscript, 2024** (2024). *Report, as cited in the manuscript, 2024*.
 
 ### {#ref-mehta2021}
 
@@ -186,7 +180,8 @@
 
 ### {#ref-openai2024}
 
-**OpenAI** (2024). *Technical documentation, as cited in the manuscript*.
+
+**OpenAI** (12 de septiembre de 2024). *Learning to Reason with LLMs*. _En AIME 2024, GPT-4o resolvió de media el 12 % de los problemas (1,8 de 15) y o1 el 74 % (11,1 de 15) con una sola muestra por problema._
 
 ### {#ref-ouyang2022}
 

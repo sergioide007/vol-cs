@@ -24,7 +24,7 @@
       "number": 2,
       "name": "vol2-frontera-y-aplicaciones",
       "chapters": 32,
-      "words": 58039
+      "words": 58062
     },
     {
       "number": 3,
@@ -697,21 +697,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 32,
-      "message": "«cacc2023» se declara sin verificar (16_capitulo_16.md)",
-      "volume": 2,
-      "detail": {
-        "anchor": "ref-cacc2023",
-        "chapters": [
-          "16_capitulo_16.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 44,
+      "line": 45,
       "message": "«cisco2024» se declara sin verificar (11_capitulo_11.md)",
       "volume": 2,
       "detail": {
@@ -725,7 +711,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 57,
+      "line": 58,
       "message": "«conab2024» se declara sin verificar (20_capitulo_20.md)",
       "volume": 2,
       "detail": {
@@ -739,21 +725,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 61,
-      "message": "«deepseek2025» se declara sin verificar (17_capitulo_17.md)",
-      "volume": 2,
-      "detail": {
-        "anchor": "ref-deepseek2025",
-        "chapters": [
-          "17_capitulo_17.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 69,
+      "line": 71,
       "message": "«ecns2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -767,7 +739,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 73,
+      "line": 75,
       "message": "«epochai2024» se declara sin verificar (02_capitulo_2.md)",
       "volume": 2,
       "detail": {
@@ -781,7 +753,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 81,
+      "line": 83,
       "message": "«globaltimes2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -795,7 +767,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 85,
+      "line": 87,
       "message": "«googledeepmind2024» se declara sin verificar (23_capitulo_23.md)",
       "volume": 2,
       "detail": {
@@ -809,21 +781,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 89,
-      "message": "«google2024» se declara sin verificar (32_capitulo_32.md)",
-      "volume": 2,
-      "detail": {
-        "anchor": "ref-google2024",
-        "chapters": [
-          "32_capitulo_32.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 93,
+      "line": 96,
       "message": "«govtechsg2024» se declara sin verificar (11_capitulo_11.md)",
       "volume": 2,
       "detail": {
@@ -837,7 +795,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 109,
+      "line": 112,
       "message": "«idc2024» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -851,7 +809,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 113,
+      "line": 116,
       "message": "«idrcunesco2023» se declara sin verificar (20_capitulo_20.md)",
       "volume": 2,
       "detail": {
@@ -865,7 +823,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 117,
+      "line": 120,
       "message": "«jerald2009» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -879,7 +837,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 126,
+      "line": 129,
       "message": "«khanacademy2024» se declara sin verificar (10_capitulo_10.md)",
       "volume": 2,
       "detail": {
@@ -893,7 +851,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 147,
+      "line": 150,
       "message": "«meta2024» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -907,7 +865,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 159,
+      "line": 162,
       "message": "«chinamem2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -921,21 +879,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 163,
-      "message": "«mitmedialab2023» se declara sin verificar (10_capitulo_10.md)",
-      "volume": 2,
-      "detail": {
-        "anchor": "ref-mitmedialab2023",
-        "chapters": [
-          "10_capitulo_10.md"
-        ]
-      }
-    },
-    {
-      "check": "C2",
-      "severity": "error",
-      "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 204,
+      "line": 208,
       "message": "«scmp2026» se declara sin verificar (17_capitulo_17.md)",
       "volume": 2,
       "detail": {
@@ -949,7 +893,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 208,
+      "line": 212,
       "message": "«stanfordvhil2023» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -963,7 +907,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 212,
+      "line": 216,
       "message": "«synergy2024» se declara sin verificar (18_capitulo_18.md)",
       "volume": 2,
       "detail": {
@@ -977,7 +921,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 216,
+      "line": 220,
       "message": "«techcouncilau2024» se declara sin verificar (19_capitulo_19.md, 21_capitulo_21.md)",
       "volume": 2,
       "detail": {
@@ -992,7 +936,7 @@
       "check": "C2",
       "severity": "error",
       "file": "vol2-frontera-y-aplicaciones/referencias/referencias.md",
-      "line": 228,
+      "line": 232,
       "message": "«unity2023» se declara sin verificar (32_capitulo_32.md)",
       "volume": 2,
       "detail": {
@@ -4312,10 +4256,10 @@
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/16_capitulo_16.md",
       "line": 1,
-      "message": "1383 palabras (mínimo 1600): capítulo corto",
+      "message": "1382 palabras (mínimo 1600): capítulo corto",
       "volume": 2,
       "detail": {
-        "words": 1383,
+        "words": 1382,
         "min": 1600
       }
     },

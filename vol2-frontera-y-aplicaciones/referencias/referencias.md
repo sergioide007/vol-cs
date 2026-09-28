@@ -31,7 +31,8 @@
 
 ### {#ref-cacc2023}
 
-**CACC, As cited in the manuscript, August, 2023** (2023). *As cited in the manuscript, August, 2023*.
+
+**CAC** (10 de julio de 2023). *Interim Measures for the Management of Generative Artificial Intelligence Services* (生成式人工智能服务管理暂行办法). _Orden n.º 15 de la Administración Nacional de Ciberseguridad (CAC), junto con NDRC, Ministerio de Educación, de Ciencia y Tecnología, de Industria e Información, de Seguridad Pública y de Radiodifusión. Adoptada el 23 de mayo de 2023, en vigor desde el 15 de agosto de 2023. 24 artículos y 5 capítulos. Texto oficial en `gov.cn`._
 
 ### {#ref-cma2026}
 
@@ -60,7 +61,8 @@
 
 ### {#ref-deepseek2025}
 
-**DeepSeek AI, Technical documentation, as cited in the manuscript, 2025** (2025). *Technical documentation, as cited in the manuscript, 2025*.
+
+**DeepSeek-AI** (27 de diciembre de 2024). *DeepSeek-V3 Technical Report*. _arXiv:2412.19437 [cs.CL] (v2 en febrero de 2025). Modelo MoE de 671 000 millones de parámetros con 37 000 activos por token, entrenado con 14,8 billones de tokens y 2,788 millones de horas de GPU H800._
 
 ### {#ref-dettmers2023}
 
@@ -88,7 +90,8 @@
 
 ### {#ref-google2024}
 
-**Google, Technical documentation, as cited in the manuscript, 2024** (2024). *Technical documentation, as cited in the manuscript, 2024*.
+
+**Google DeepMind** (febrero de 2024). *Gemma: Open Models Based on Gemini Technology*. _Model card técnica de la familia Gemma, que incluye la variante Gemma 2B citada en el capítulo._
 
 ### {#ref-govtechsg2024}
 
@@ -162,7 +165,8 @@
 
 ### {#ref-mitmedialab2023}
 
-**MIT Media Lab, As cited in the manuscript, 2023** (2023). *As cited in the manuscript, 2023*.
+
+**Danry, Valdemar; Pataranutaporn, Pattarapong; Cui, Carolyn; Hung, Justin; Blanchard, Lesley; Buçinca, Zana; et al.; Maes, Pattie** (2025). *Human-AI Interaction for Augmented Reasoning: Improving Human Reflective and Critical Thinking with Artificial Intelligence*. _CHI 2025, Extended Abstracts._ _MIT Media Lab._
 
 ### {#ref-newman2019}
 

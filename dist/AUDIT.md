@@ -1,6 +1,6 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.900 palabras de prosa
+Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 171.923 palabras de prosa
 
 Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 
@@ -9,7 +9,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | ID | Comprobación | Errores | Avisos |
 |---|---|---:|---:|
 | C1 | remisiones cruzadas | 0 | 37 |
-| C2 | bibliografía sin verificar | 40 | 0 |
+| C2 | bibliografía sin verificar | 36 | 0 |
 | C3 | cifras sin origen declarado | 0 | 263 |
 | C4 | apéndices y marcadores pendientes | 0 | 14 |
 | C5 | numeración antigua | 0 | 0 |
@@ -25,7 +25,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | Volumen | Capítulos | Palabras | Errores | Avisos |
 |---|---:|---:|---:|---:|
 | 1 — Fundamentos | 10 | 21.140 | 3 | 21 |
-| 2 — Frontera y Aplicaciones | 32 | 58.039 | 22 | 110 |
+| 2 — Frontera y Aplicaciones | 32 | 58.062 | 18 | 110 |
 | 3 — Madurez Organizacional | 25 | 52.887 | 8 | 94 |
 | 4 — Patrones de Escala | 13 | 36.457 | 7 | 111 |
 
@@ -120,7 +120,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L62 ! «cap. 31» remite al cap. 31 sin decir de qué tomo: en el Vol. 4 no existe; sí en el Vol. 2
 
 
-## C2 · bibliografía sin verificar (40)
+## C2 · bibliografía sin verificar (36)
 
 **`vol1-fundamentos/referencias/referencias.md`**
 
@@ -130,19 +130,19 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol2-frontera-y-aplicaciones/referencias/referencias.md`**
 
-- L32 ✘ «cacc2023» se declara sin verificar (16_capitulo_16.md)
-- L44 ✘ «cisco2024» se declara sin verificar (11_capitulo_11.md)
-- L57 ✘ «conab2024» se declara sin verificar (20_capitulo_20.md)
-- L61 ✘ «deepseek2025» se declara sin verificar (17_capitulo_17.md)
-- L69 ✘ «ecns2026» se declara sin verificar (17_capitulo_17.md)
-- L73 ✘ «epochai2024» se declara sin verificar (02_capitulo_2.md)
-- L81 ✘ «globaltimes2026» se declara sin verificar (17_capitulo_17.md)
-- L85 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
-- L89 ✘ «google2024» se declara sin verificar (32_capitulo_32.md)
-- L93 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
-- L109 ✘ «idc2024» se declara sin verificar (32_capitulo_32.md)
-- L113 ✘ «idrcunesco2023» se declara sin verificar (20_capitulo_20.md)
-- … y 10 más en `dist/AUDIT.json`
+- L45 ✘ «cisco2024» se declara sin verificar (11_capitulo_11.md)
+- L58 ✘ «conab2024» se declara sin verificar (20_capitulo_20.md)
+- L71 ✘ «ecns2026» se declara sin verificar (17_capitulo_17.md)
+- L75 ✘ «epochai2024» se declara sin verificar (02_capitulo_2.md)
+- L83 ✘ «globaltimes2026» se declara sin verificar (17_capitulo_17.md)
+- L87 ✘ «googledeepmind2024» se declara sin verificar (23_capitulo_23.md)
+- L96 ✘ «govtechsg2024» se declara sin verificar (11_capitulo_11.md)
+- L112 ✘ «idc2024» se declara sin verificar (32_capitulo_32.md)
+- L116 ✘ «idrcunesco2023» se declara sin verificar (20_capitulo_20.md)
+- L120 ✘ «jerald2009» se declara sin verificar (32_capitulo_32.md)
+- L129 ✘ «khanacademy2024» se declara sin verificar (10_capitulo_10.md)
+- L150 ✘ «meta2024» se declara sin verificar (32_capitulo_32.md)
+- … y 6 más en `dist/AUDIT.json`
 
 **`vol3-madurez-organizacional/referencias/referencias.md`**
 
@@ -668,7 +668,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/16_capitulo_16.md`**
 
-- L1 ! 1383 palabras (mínimo 1600): capítulo corto
+- L1 ! 1382 palabras (mínimo 1600): capítulo corto
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/19_capitulo_19.md`**
 

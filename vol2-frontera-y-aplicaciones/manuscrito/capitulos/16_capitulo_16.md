@@ -35,7 +35,7 @@ El resultado combinado: lo que requería 50 minutos de GPU por minuto de video s
 
 ## La arquitectura defensiva: cómo China gobierna el riesgo a escala
 
-La trama se complica cuando se analiza la capa de gobernanza que opera sobre la capa de generación. Los *Interim Measures for Generative AI* ([CACC, agosto 2023](#ref-cacc2023)) obligan a que toda plataforma china de generación de video implemente:
+La trama se complica cuando se analiza la capa de gobernanza que opera sobre la capa de generación. Los *Interim Measures for Generative AI* ([CAC, 2023](#ref-cacc2023)) obligan a que toda plataforma china de generación de video implemente:
 
 - **Marca de agua imperceptible**: cada video generado debe contener metadatos de autoría embebidos en el espectro de frecuencias que son invisibles para el ojo humano pero detectables algorítmicamente. La técnica subyacente (watermarking en el espacio latente del modelo de difusión) fue investigada en el paper de Fernandez et al. (*The Stable Signature: Rooting Watermarks in Latent Diffusion Models*, ICCV 2023).
 - **Registro de prompts**: cada prompt de generación debe ser registrado con timestamp, IP del usuario y hash del video generado, con retención mínima de 3 años.

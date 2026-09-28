@@ -72,7 +72,7 @@ No se trata de especulación teórica. La evidencia empírica de sistemas de IA 
 
 Khan Academy reporta que Khanmigo (su asistente IA socrático) produce un 18% de mejora en comprensión matemática cuando el asistente pregunta en lugar de explicar directamente ([Khan Academy, 2024](#ref-khanacademy2024)). El mecanismo es el que la neurociencia predice: la fricción cognitiva activa un procesamiento más profundo.
 
-El MIT Media Lab documentó que niños de 8-11 años que interactuaron con agentes "socráticos" durante 6 semanas mostraron un 31% más de activación de pensamiento crítico en evaluaciones post-intervención, respecto al grupo de control que usó asistentes de respuesta directa ([MIT Media Lab, 2023](#ref-mitmedialab2023)).
+En la misma línea, la investigación del MIT Media Lab sobre interacción humano-IA para el razonamiento aumentado ha mostrado que pedir a la persona que justifique y evalúe su respuesta mejora el pensamiento reflexivo y crítico frente a recibir una respuesta directa ([Danry et al., 2025](#ref-mitmedialab2023)). *[La magnitud concreta del efecto varía por edad, tarea y diseño del estudio: mídalo en tu propio grupo antes de usarlo como argumento]*
 
 Carnegie Learning (2024) reporta que sus sistemas de tutoría inteligente adaptativa (que ajustan la dificultad dinámicamente) mejoran el rendimiento académico en 0,76 desviaciones estándar respecto a la instrucción tradicional, un efecto de magnitud comparable a la reducción del tamaño de clase de 30 a 15 estudiantes.
 

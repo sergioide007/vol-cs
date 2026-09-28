@@ -1,6 +1,6 @@
 # Informe de construcción — Serie «Código Sintético»
 
-Generado: 2026-09-28 15:49 UTC
+Generado: 2026-09-28 23:24 UTC
 
 ## Parámetros de imprenta aplicados (6 × 9 pulgadas)
 
@@ -46,3 +46,28 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 - `vol2-frontera-y-aplicaciones--epub--sin-portada.epub` (2.0M)
 - `vol2-frontera-y-aplicaciones--interior-6x9--sin-caratula.pdf` (3.0M)
 - `vol2-frontera-y-aplicaciones--lectura-6x9--con-portada.pdf` (4.7M)
+
+### vol3-madurez-organizacional
+
+| Dato | Valor |
+|---|---|
+| Páginas del interior | 306 |
+| Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
+| Caja de texto | 4.5000 × 7.5000 in |
+| Lomo aplicado / mínimo KDP para 306 págs. | 0.875 in / 0.625 in |
+| Elegible para tapa dura KDP (75–550 págs.) | sí |
+| Lomo de cubierta (papel blanco / crema) | 0.689 in / 0.765 in |
+| Fuentes incrustadas | 11/11 |
+| Cubierta compuesta | `dist/covers/vol3-madurez-organizacional.pdf` + `vol3-madurez-organizacional-cover-300ppp.jpg` |
+| Leyenda de autoría de la cubierta | Sergio Perez Ruiz · Henry Fuentes |
+| Líneas desbordadas (Overfull hbox) | 2 |
+| Recursos no encontrados | 0 |
+
+**Archivos generados**
+
+- `vol3-madurez-organizacional--epub--con-portada--epubcheck.log` (4.0K)
+- `vol3-madurez-organizacional--epub--con-portada.epub` (1.7M)
+- `vol3-madurez-organizacional--epub--sin-portada--epubcheck.log` (4.0K)
+- `vol3-madurez-organizacional--epub--sin-portada.epub` (1.3M)
+- `vol3-madurez-organizacional--interior-6x9--sin-caratula.pdf` (2.0M)
+- `vol3-madurez-organizacional--lectura-6x9--con-portada.pdf` (3.5M)

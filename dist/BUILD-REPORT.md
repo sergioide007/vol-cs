@@ -1,6 +1,6 @@
 # Informe de construcción — Serie «Código Sintético»
 
-Generado: 2026-09-28 14:00 UTC
+Generado: 2026-09-28 14:39 UTC
 
 ## Parámetros de imprenta aplicados (6 × 9 pulgadas)
 
@@ -21,31 +21,6 @@ Los valores superan el mínimo de KDP (0,25" exterior; 0,375"–0,875"
 interior según paginación) y el de Lulu (0,5" en todos los lados).
 
 ## Volúmenes
-
-### vol1-fundamentos
-
-| Dato | Valor |
-|---|---|
-| Páginas del interior | 178 |
-| Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
-| Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 178 págs. | 0.875 in / 0.5 in |
-| Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.401 in / 0.445 in |
-| Fuentes incrustadas | 12/12 |
-| Cubierta compuesta | `dist/covers/vol1-fundamentos.pdf` + `vol1-fundamentos-cover-300ppp.jpg` |
-| Leyenda de autoría de la cubierta | SERGIO PEREZ RUIZ · HENRY FUENTES |
-| Líneas desbordadas (Overfull hbox) | 0 |
-| Recursos no encontrados | 0 |
-
-**Archivos generados**
-
-- `vol1-fundamentos--epub--con-portada--epubcheck.log` (4.0K)
-- `vol1-fundamentos--epub--con-portada.epub` (1.9M)
-- `vol1-fundamentos--epub--sin-portada--epubcheck.log` (4.0K)
-- `vol1-fundamentos--epub--sin-portada.epub` (1.4M)
-- `vol1-fundamentos--interior-6x9--sin-caratula.pdf` (2.0M)
-- `vol1-fundamentos--lectura-6x9--con-portada.pdf` (3.4M)
 
 ### vol2-frontera-y-aplicaciones
 
@@ -96,28 +71,3 @@ interior según paginación) y el de Lulu (0,5" en todos los lados).
 - `vol3-madurez-organizacional--epub--sin-portada.epub` (1.3M)
 - `vol3-madurez-organizacional--interior-6x9--sin-caratula.pdf` (2.0M)
 - `vol3-madurez-organizacional--lectura-6x9--con-portada.pdf` (3.5M)
-
-### vol4-patrones-de-escala
-
-| Dato | Valor |
-|---|---|
-| Páginas del interior | 270 |
-| Tamaño de página | 432 x 648 pts (= 6 × 9 in) |
-| Caja de texto | 4.5000 × 7.5000 in |
-| Lomo aplicado / mínimo KDP para 270 págs. | 0.875 in / 0.5 in |
-| Elegible para tapa dura KDP (75–550 págs.) | sí |
-| Lomo de cubierta (papel blanco / crema) | 0.608 in / 0.675 in |
-| Fuentes incrustadas | 12/12 |
-| Cubierta compuesta | `dist/covers/vol4-patrones-de-escala.pdf` + `vol4-patrones-de-escala-cover-300ppp.jpg` |
-| Leyenda de autoría de la cubierta | SERGIO PEREZ RUIZ · HENRY FUENTES |
-| Líneas desbordadas (Overfull hbox) | 1 |
-| Recursos no encontrados | 0 |
-
-**Archivos generados**
-
-- `vol4-patrones-de-escala--epub--con-portada--epubcheck.log` (4.0K)
-- `vol4-patrones-de-escala--epub--con-portada.epub` (4.4M)
-- `vol4-patrones-de-escala--epub--sin-portada--epubcheck.log` (4.0K)
-- `vol4-patrones-de-escala--epub--sin-portada.epub` (3.9M)
-- `vol4-patrones-de-escala--interior-6x9--sin-caratula.pdf` (5.2M)
-- `vol4-patrones-de-escala--lectura-6x9--con-portada.pdf` (6.7M)

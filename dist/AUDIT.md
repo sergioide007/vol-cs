@@ -1,6 +1,6 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-28 · 4 volúmenes · 80 capítulos · 172.137 palabras de prosa
+Fecha: 2026-09-29 · 4 volúmenes · 80 capítulos · 172.137 palabras de prosa
 
 Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 
@@ -10,8 +10,8 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 |---|---|---:|---:|
 | C1 | remisiones cruzadas | 0 | 37 |
 | C2 | bibliografía sin verificar | 30 | 0 |
-| C3 | cifras sin origen declarado | 0 | 263 |
-| C4 | apéndices y marcadores pendientes | 0 | 14 |
+| C3 | cifras sin origen declarado | 0 | 233 |
+| C4 | apéndices y marcadores pendientes | 0 | 8 |
 | C5 | numeración antigua | 0 | 0 |
 | C6 | modelos fijados en el texto | 0 | 0 |
 | C7 | presupuesto de palabras | 0 | 23 |
@@ -27,9 +27,9 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | Volumen | Capítulos | Palabras | Errores | Avisos |
 |---|---:|---:|---:|---:|
 | 1 — Fundamentos | 10 | 21.140 | 3 | 21 |
-| 2 — Frontera y Aplicaciones | 32 | 58.230 | 15 | 111 |
-| 3 — Madurez Organizacional | 25 | 52.933 | 6 | 94 |
-| 4 — Patrones de Escala | 13 | 36.457 | 6 | 111 |
+| 2 — Frontera y Aplicaciones | 32 | 58.230 | 15 | 98 |
+| 3 — Madurez Organizacional | 25 | 52.933 | 6 | 85 |
+| 4 — Patrones de Escala | 13 | 36.457 | 6 | 97 |
 
 ## C1 · remisiones cruzadas (37)
 
@@ -165,7 +165,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L136 ✘ «syssec2025» se declara sin verificar (10_capitulo_10.md)
 
 
-## C3 · cifras sin origen declarado (263)
+## C3 · cifras sin origen declarado (233)
 
 **`vol1-fundamentos/manuscrito/capitulos/02_capitulo_2.md`**
 
@@ -181,6 +181,10 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L190 ! cifra sin origen declarado: «95 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L238 ! cifra sin origen declarado: «500 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
+
+**`vol1-fundamentos/manuscrito/capitulos/05_capitulo_5.md`**
+
+- L183 ! cifra sin origen declarado: «40 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol1-fundamentos/manuscrito/capitulos/08_capitulo_8.md`**
 
@@ -201,8 +205,8 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/03_capitulo_3.md`**
 
 - L17 ! cifra sin origen declarado: «26%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L18 ! cifra sin origen declarado: «25%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L86 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L94 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/04_capitulo_4.md`**
 
@@ -215,11 +219,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/09_capitulo_9.md`**
 
 - L19 ! cifra sin origen declarado: «200.000 tokens» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L277 ! cifra sin origen declarado: «0.5%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md`**
-
-- L101 ! cifra sin origen declarado: «18%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/11_capitulo_11.md`**
 
@@ -231,14 +230,11 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md`**
 
 - L9 ! cifra sin origen declarado: «60%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L40 ! cifra sin origen declarado: «5ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L45 ! cifra sin origen declarado: «5ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L50 ! cifra sin origen declarado: «500ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L82 ! cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L86 ! cifra sin origen declarado: «10ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L114 ! cifra sin origen declarado: «99.95%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L123 ! cifra sin origen declarado: «60%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L131 ! cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md`**
 
@@ -254,14 +250,12 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L34 ! cifra sin origen declarado: «90 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L55 ! cifra sin origen declarado: «90 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L59 ! cifra sin origen declarado: «90 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/17_capitulo_17.md`**
 
 - L3 ! cifra sin origen declarado: «$6» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L19 ! cifra sin origen declarado: «60 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L55 ! cifra sin origen declarado: «60 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L86 ! cifra sin origen declarado: «35 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/18_capitulo_18.md`**
 
@@ -272,7 +266,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/19_capitulo_19.md`**
 
 - L62 ! cifra sin origen declarado: «18 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L68 ! cifra sin origen declarado: «34 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md`**
 
@@ -283,9 +276,8 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/21_capitulo_21.md`**
 
-- L32 ! cifra sin origen declarado: «100 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L33 ! cifra sin origen declarado: «100 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L37 ! cifra sin origen declarado: «15 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L76 ! cifra sin origen declarado: «47 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/22_capitulo_22.md`**
 
@@ -297,7 +289,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L15 ! cifra sin origen declarado: «200 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L39 ! cifra sin origen declarado: «37 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L43 ! cifra sin origen declarado: «92 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L53 ! cifra sin origen declarado: «92 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/24_capitulo_24.md`**
 
@@ -307,7 +298,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L21 ! cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L23 ! cifra sin origen declarado: «50ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L34 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L42 ! cifra sin origen declarado: «92%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/25_capitulo_25.md`**
 
@@ -316,7 +306,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L36 ! cifra sin origen declarado: «1ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L38 ! cifra sin origen declarado: «$3» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L53 ! cifra sin origen declarado: «$3» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L57 ! cifra sin origen declarado: «33%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/26_capitulo_26.md`**
 
@@ -335,7 +324,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L72 ! cifra sin origen declarado: «55%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L82 ! cifra sin origen declarado: «55.8%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L88 ! cifra sin origen declarado: «55%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol2-frontera-y-aplicaciones/manuscrito/capitulos/30_capitulo_30.md`**
 
@@ -354,13 +342,13 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L119 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L127 ! cifra sin origen declarado: «5 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L206 ! cifra sin origen declarado: «18 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L210 ! cifra sin origen declarado: «2%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L213 ! cifra sin origen declarado: «2%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L229 ! cifra sin origen declarado: «18%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L247 ! cifra sin origen declarado: «16,67 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L446 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L459 ! cifra sin origen declarado: «35%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L467 ! cifra sin origen declarado: «20 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- … y 7 más en `dist/AUDIT.json`
+- … y 9 más en `dist/AUDIT.json`
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/01_capitulo_1.md`**
 
@@ -376,7 +364,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/04_capitulo_4.md`**
 
-- L33 ! cifra sin origen declarado: «99.5%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L35 ! cifra sin origen declarado: «99.5%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L145 ! cifra sin origen declarado: «97%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md`**
@@ -389,7 +377,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L96 ! cifra sin origen declarado: «15%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L164 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L166 ! cifra sin origen declarado: «30%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L188 ! cifra sin origen declarado: «6×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L201 ! cifra sin origen declarado: «0.03%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L209 ! cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L213 ! cifra sin origen declarado: «0.03%» — marcar [D] dato, [E] estimación o [I] ilustrativa
@@ -399,10 +386,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L13 ! cifra sin origen declarado: «23%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L150 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L189 ! cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L195 ! cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L202 ! cifra sin origen declarado: «66%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L209 ! cifra sin origen declarado: «80%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L224 ! cifra sin origen declarado: «71%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L196 ! cifra sin origen declarado: «27%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/07_capitulo_7.md`**
 
@@ -417,8 +401,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/08_capitulo_8.md`**
 
-- L41 ! cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L76 ! cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L42 ! cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/09_capitulo_9.md`**
 
@@ -428,13 +411,11 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L9 ! cifra sin origen declarado: «55%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L68 ! cifra sin origen declarado: «70%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L97 ! cifra sin origen declarado: «55%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/11_capitulo_11.md`**
 
 - L9 ! cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L27 ! cifra sin origen declarado: «90%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L80 ! cifra sin origen declarado: «70%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/12_capitulo_12.md`**
 
@@ -455,7 +436,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/16_capitulo_16.md`**
 
-- L190 ! cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L191 ! cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/19_capitulo_19.md`**
 
@@ -464,7 +445,7 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/20_capitulo_20.md`**
 
-- L40 ! cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L42 ! cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L50 ! cifra sin origen declarado: «73%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L68 ! cifra sin origen declarado: «12%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L78 ! cifra sin origen declarado: «95 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
@@ -482,14 +463,12 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L39 ! cifra sin origen declarado: «30%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L63 ! cifra sin origen declarado: «47%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L74 ! cifra sin origen declarado: «68%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L78 ! cifra sin origen declarado: «68%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md`**
 
 - L17 ! cifra sin origen declarado: «34%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L19 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L73 ! cifra sin origen declarado: «31%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L83 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md`**
 
@@ -507,18 +486,21 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/01_capitulo_1.md`**
 
+- L26 ! cifra sin origen declarado: «5×» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L28 ! cifra sin origen declarado: «10 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L31 ! cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L126 ! cifra sin origen declarado: «60 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L128 ! cifra sin origen declarado: «60 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L133 ! cifra sin origen declarado: «90.000 tokens» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/02_capitulo_2.md`**
 
-- L9 ! cifra sin origen declarado: «85 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L10 ! cifra sin origen declarado: «85 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L123 ! cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L125 ! cifra sin origen declarado: «2.000 ×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/03_capitulo_3.md`**
 
+- L131 ! cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L142 ! cifra sin origen declarado: «20 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/05_capitulo_5.md`**
@@ -536,8 +518,8 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/08_capitulo_8.md`**
 
-- L74 ! cifra sin origen declarado: «10 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L121 ! cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L76 ! cifra sin origen declarado: «10 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L122 ! cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md`**
 
@@ -551,7 +533,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L134 ! cifra sin origen declarado: «80 %» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L497 ! cifra sin origen declarado: «$8» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L545 ! cifra sin origen declarado: «dólares» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L557 ! cifra sin origen declarado: «$2» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md`**
 
@@ -562,12 +543,12 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L168 ! cifra sin origen declarado: «3×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L170 ! cifra sin origen declarado: «8×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L188 ! cifra sin origen declarado: «50ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L190 ! cifra sin origen declarado: «100ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L200 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L202 ! cifra sin origen declarado: «$7» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L211 ! cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L217 ! cifra sin origen declarado: «95%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- … y 17 más en `dist/AUDIT.json`
+- L297 ! cifra sin origen declarado: «140GB» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L307 ! cifra sin origen declarado: «500ms» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L317 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- … y 12 más en `dist/AUDIT.json`
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/11_capitulo_11.md`**
 
@@ -579,13 +560,9 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L100 ! cifra sin origen declarado: «6×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L106 ! cifra sin origen declarado: «80%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L144 ! cifra sin origen declarado: «80%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L154 ! cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L158 ! cifra sin origen declarado: «88%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L188 ! cifra sin origen declarado: «50×» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L198 ! cifra sin origen declarado: «14×» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L209 ! cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L215 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L221 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L304 ! cifra sin origen declarado: «$2» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md`**
@@ -596,39 +573,27 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 - L388 ! cifra sin origen declarado: «$8» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L435 ! cifra sin origen declarado: «34%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L769 ! cifra sin origen declarado: «35%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L771 ! cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L778 ! cifra sin origen declarado: «38%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L803 ! cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L805 ! cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- L811 ! cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa
+- L814 ! cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 - L924 ! cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa
-- … y 2 más en `dist/AUDIT.json`
+- L926 ! cifra sin origen declarado: «$3» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 **`vol4-patrones-de-escala/manuscrito/capitulos/99_epilogo_serie.md`**
 
 - L257 ! cifra sin origen declarado: «60%» — marcar [D] dato, [E] estimación o [I] ilustrativa
 
 
-## C4 · apéndices y marcadores pendientes (14)
+## C4 · apéndices y marcadores pendientes (8)
 
 **`vol1-fundamentos/front-matter/03_hoja_creditos.md`**
 
 - L13 ! marcador pendiente: «PENDIENTE]»
 - L14 ! marcador pendiente: «PENDIENTE]»
 
-**`vol1-fundamentos/manuscrito/capitulos/04_capitulo_4.md`**
-
-- L40 ! marcador pendiente: «TODO»
-
 **`vol2-frontera-y-aplicaciones/front-matter/03_hoja_creditos.md`**
 
 - L13 ! marcador pendiente: «PENDIENTE]»
 - L14 ! marcador pendiente: «PENDIENTE]»
-
-**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md`**
-
-- L83 ! marcador pendiente: «TODO»
-- L84 ! marcador pendiente: «TODO»
 
 **`vol3-madurez-organizacional/front-matter/03_hoja_creditos.md`**
 
@@ -639,12 +604,6 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 
 - L13 ! marcador pendiente: «PENDIENTE]»
 - L14 ! marcador pendiente: «PENDIENTE]»
-
-**`vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md`**
-
-- L204 ! marcador pendiente: «PENDIENTE).build();»
-- L214 ! marcador pendiente: «PENDIENTE);»
-- L363 ! marcador pendiente: «PENDIENTE' }));»
 
 
 ## C7 · presupuesto de palabras (23)

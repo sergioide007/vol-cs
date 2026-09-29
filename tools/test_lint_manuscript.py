@@ -31,6 +31,55 @@ class ParagraphsTest(unittest.TestCase):
         text = 'antes\n\n| a | b |\n|---|---|\n| 50 % | x |\n\n    code = 1\n\ndespues'
         self.assertEqual(['antes', 'despues'], [p for _, p in lint.paragraphs(text)])
 
+    def test_table_row_does_not_merge_with_long_paragraph(self):
+        """Regresión: con dos líneas de prosa delante, la tabla se fusionaba."""
+        text = 'linea uno\nlinea dos\n| a | 50 % |\n| b | 60 % |\n\ndespues'
+        self.assertEqual(['linea uno\nlinea dos', 'despues'],
+                         [p for _, p in lint.paragraphs(text)])
+
+    def test_indented_code_does_not_merge_with_long_paragraph(self):
+        text = 'linea uno\nlinea dos\n    code = 50 %\n\ndespues'
+        self.assertEqual(['linea uno\nlinea dos', 'despues'],
+                         [p for _, p in lint.paragraphs(text)])
+
+    def test_bullet_opens_its_own_unit(self):
+        """Regresión del Vol. 2 cap. 9: la viñeta se fundía con la prosa."""
+        text = ('Prosa que ocupa\nuna línea y media.\n'
+                '- Viñeta con su propia cifra del 40 %.\n'
+                '- Otra viñeta.\n')
+        self.assertEqual(
+            ['Prosa que ocupa\nuna línea y media.',
+             '- Viñeta con su propia cifra del 40 %.',
+             '- Otra viñeta.'],
+            [p for _, p in lint.paragraphs(text)])
+
+    def test_quote_continuation_is_a_single_unit(self):
+        text = '> primera línea de la cita\n> segunda línea de la cita\n\notro'
+        self.assertEqual(['> primera línea de la cita\n> segunda línea de la cita',
+                          'otro'],
+                         [p for _, p in lint.paragraphs(text)])
+
+    def test_unit_reports_its_containing_heading(self):
+        found = list(lint.prose_units('## Lo esencial del capítulo 3\n\n- Viñeta.\n'))
+        self.assertEqual([(3, '- Viñeta.', '## Lo esencial del capítulo 3')], found)
+
+
+class UnitKindTest(unittest.TestCase):
+    def test_is_item_distinguishes_bullet_and_quote_from_prose(self):
+        for text in ('- viñeta', '* viñeta', '1. paso', '12) paso', '> cita'):
+            self.assertTrue(lint.is_item(text), text)
+        for text in ('prosa normal', '# Encabezado', '| a | b |'):
+            self.assertFalse(lint.is_item(text), text)
+
+    def test_summary_heading_marks_restatement_blocks(self):
+        for text in ('## Lo esencial del capítulo 9', '### Resumen',
+                     '## 5. Conclusiones', '## Cierre del volumen',
+                     '## Síntesis', '### Puntos clave'):
+            self.assertTrue(lint.SUMMARY_HEADING.match(text), text)
+        for text in ('## Las cinco causas principales del Token-Burn',
+                     '## Lo que sigue', '## Taxonomía de conferencias'):
+            self.assertFalse(lint.SUMMARY_HEADING.match(text), text)
+
 
 class MaskCodeTest(unittest.TestCase):
     def test_preserves_line_numbers(self):
@@ -77,6 +126,18 @@ class PatternTest(unittest.TestCase):
         self.assertIsNone(lint.PENDING.search('el agente todo lo automatiza'))
         self.assertTrue(lint.PENDING.search('[ISBN PENDIENTE]'))
         self.assertTrue(lint.PENDING.search('TODO: revisar'))
+
+    def test_pending_only_counts_marker_forms(self):
+        """«TODO» en mayúsculas para enfatizar es castellano, no trabajo pendiente."""
+        self.assertIsNone(lint.PENDING.search('**Costo si TODO en cloud**: ~$12/día'))
+        self.assertIsNone(lint.PENDING.search('# Este es el esqueleto de TODO agente'))
+        self.assertTrue(lint.PENDING.search('[TODO] revisar el apéndice'))
+        self.assertTrue(lint.PENDING.search('TODO: reescribir la sección'))
+
+    def test_c4_ignores_pending_inside_code(self):
+        """Un enum llamado PENDIENTE en un ejemplo de Java no es un hueco."""
+        code = '```java\nvar pago = Pago.builder().estado(EstadoPago.PENDIENTE).build();\n```\n'
+        self.assertIsNone(lint.PENDING.search(lint.mask_code(code)))
 
     def test_legacy_part_reads_roman_and_range(self):
         match = lint.LEGACY_PART.search('### Parte IV: Patrones de escala (caps. 22–40)')

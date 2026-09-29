@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "checks": {
     "C1": "remisiones cruzadas",
     "C2": "bibliografía sin verificar",
@@ -1143,6 +1143,17 @@
     {
       "check": "C3",
       "severity": "aviso",
+      "file": "vol1-fundamentos/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 183,
+      "message": "cifra sin origen declarado: «40 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 1,
+      "detail": {
+        "excerpt": "4. **Asignación de modelo por rol.** Planificador en el modelo premium; codificador en el balanceado; barrido de seguridad en el económico (ejemplo 5.1). El CIU se estabiliza y cae en torno al 40 % re"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
       "file": "vol1-fundamentos/manuscrito/capitulos/08_capitulo_8.md",
       "line": 519,
       "message": "cifra sin origen declarado: «18.000 tokens» — marcar [D] dato, [E] estimación o [I] ilustrativa",
@@ -1199,22 +1210,22 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/03_capitulo_3.md",
-      "line": 86,
-      "message": "cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "line": 18,
+      "message": "cifra sin origen declarado: «25%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
       "detail": {
-        "excerpt": "El ROI del patrocinio de conferencias de IA para empresas medianas y grandes está documentado en términos de reducción del costo de adquisición de talento senior: publicar y presentar en conferencias "
+        "excerpt": "- **ICML** (*International Conference on Machine Learning*): junto a NeurIPS, define la agenda de investigación en aprendizaje automático. Tasa de aceptación histórica ~25%."
       }
     },
     {
       "check": "C3",
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/03_capitulo_3.md",
-      "line": 94,
+      "line": 86,
       "message": "cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
       "detail": {
-        "excerpt": "- En un campo que se reconfigura cada trimestre, los eventos son instrumentos de calibración estratégica, no networking opcional. - Taxonomía de conferencias: NeurIPS/ICML/ICLR (frontera investigación"
+        "excerpt": "El ROI del patrocinio de conferencias de IA para empresas medianas y grandes está documentado en términos de reducción del costo de adquisición de talento senior: publicar y presentar en conferencias "
       }
     },
     {
@@ -1248,28 +1259,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "**Contextos que no se purgan.** La memoria de un agente, si nunca se limita o se cierra, crece hasta degradar el razonamiento por dilución de contexto relevante (cf. Liu et al., 2024, \"Lost in the Mid"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/09_capitulo_9.md",
-      "line": 277,
-      "message": "cifra sin origen declarado: «0.5%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- Todos los recursos tienen timeout configurado explícitamente. - El circuit breaker está habilitado para cada conexión a servicio externo. - El leak rate del `AgentResourceMetrics` es < 0.5% en el en"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 101,
-      "message": "cifra sin origen declarado: «18%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- La IA atrofia o potencia el aprendizaje según cómo se introduzca: la que da respuestas atrofia; la que provoca preguntas potencia el ciclo neurológico predicción-error-actualización. - El enjambre p"
       }
     },
     {
@@ -1331,28 +1320,6 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 40,
-      "message": "cifra sin origen declarado: «5ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "Imagina un *agente de validación crítica* que debe responder en <5ms. Si lo ejecutas en cloud GPU, sufres: - Network latency: 50-100ms (introduce jitter) - Geolocation: Tú en Perú, servidor en Virgini"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 45,
-      "message": "cifra sin origen declarado: «5ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "Si lo ejecutas en Ryzen AI (laptop del usuario), obtienes: - Latency: <5ms (determinístico) - Cost: $0.001/hora amortizado - Privacy: Datos nunca salen del dispositivo"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
       "line": 50,
       "message": "cifra sin origen declarado: «500ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
@@ -1402,17 +1369,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "**Tres métricas**: (1) Reducción de costo operativo del 40-60% respecto a cloud puro mediante uso de edge para cargas de trabajo de alta frecuencia y baja latencia. (2) Reducción de latencia de 200ms "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 131,
-      "message": "cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- La pureza arquitectónica es casi siempre un error en multiagentes; lo híbrido optimiza cada parte según su naturaleza y sus requisitos operacionales específicos. - El Teorema CAP obliga a elegir AP "
       }
     },
     {
@@ -1484,17 +1440,6 @@
     {
       "check": "C3",
       "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/16_capitulo_16.md",
-      "line": 59,
-      "message": "cifra sin origen declarado: «90 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- El video es un problema espaciotemporal tridimensional que ningún agente único puede resolver a escala: la arquitectura multiagente es la única solución viable en producción industrial. - Paraleliza"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/17_capitulo_17.md",
       "line": 3,
       "message": "cifra sin origen declarado: «$6» — marcar [D] dato, [E] estimación o [I] ilustrativa",
@@ -1523,17 +1468,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "Un giro inesperado en la narrativa de las restricciones de exportación de chips es que las sanciones de USA sobre exportaciones de NVIDIA H100/H200 a China no lograron el efecto de freno esperado en e"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/17_capitulo_17.md",
-      "line": 86,
-      "message": "cifra sin origen declarado: «35 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- La estrategia china prioriza aplicaciones a escala sobre investigación de modelos fundacionales, con un diferencial de crecimiento del 35 % vs. 25 % CAGR frente a occidente. - DeepSeek R1 (2025) rec"
       }
     },
     {
@@ -1578,17 +1512,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "El análisis de McKinsey (2024) sobre el mercado de IA regulada en Europa estima que los sistemas que cumplen el AI Act tienen una prima de contratación empresarial de entre el 18 % y el 34 % respecto "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/19_capitulo_19.md",
-      "line": 68,
-      "message": "cifra sin origen declarado: «34 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- El AI Act (2024/1689) no obstaculiza los enjambres de agentes; define formalmente los requisitos arquitectónicos para sistemas agénticos de alto impacto, con penalizaciones de hasta €35 M. - Privacy"
       }
     },
     {
@@ -1639,11 +1562,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/21_capitulo_21.md",
-      "line": 32,
+      "line": 33,
       "message": "cifra sin origen declarado: «100 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
       "detail": {
-        "excerpt": "- **Agente de percepción**: procesa LIDAR, radar y cámaras 360° a 20 Hz por vehículo. - **Agente de planificación de ruta**: recalcula trayectorias cada 100 ms en función del estado del suelo, la carg"
+        "excerpt": "- **Agente de planificación de ruta**: recalcula trayectorias cada 100 ms en función del estado del suelo, la carga útil y la posición de otros vehículos."
       }
     },
     {
@@ -1660,23 +1583,12 @@
     {
       "check": "C3",
       "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/21_capitulo_21.md",
-      "line": 76,
-      "message": "cifra sin origen declarado: «47 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- La confianza geopolítica certificada por AUKUS Pillar II convierte a Australia en el laboratorio de validación más seguro para IA agéntica en la región Asia-Pacífico. - CSIRO/Data61 produce investig"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/22_capitulo_22.md",
       "line": 44,
       "message": "cifra sin origen declarado: «1.4 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
       "detail": {
-        "excerpt": "- **Agente de detección de fraude**: 1.4 ms de latencia promedio, 99.2 % de recall en anomalías transaccionales (Sber Annual Report 2023). - **Agente de asesoramiento hipotecario**: procesa regulacion"
+        "excerpt": "- **Agente de detección de fraude**: 1.4 ms de latencia promedio, 99.2 % de recall en anomalías transaccionales (Sber Annual Report 2023)."
       }
     },
     {
@@ -1721,17 +1633,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "> **Visión general:** La configuración geopolítica de la cadena de suministro de semiconductores de avanzada generación impone restricciones no derivables de principios puramente tecnológicos sobre la"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/23_capitulo_23.md",
-      "line": 53,
-      "message": "cifra sin origen declarado: «92 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- Taiwan produce el 92 % de los semiconductores de punta global; sin esos chips, ningún enjambre de agentes a escala es posible. - CoWoS y HBM3e (tecnologías de packaging propias de TSMC) son tan dete"
       }
     },
     {
@@ -1803,17 +1704,6 @@
     {
       "check": "C3",
       "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/24_capitulo_24.md",
-      "line": 42,
-      "message": "cifra sin origen declarado: «92%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- ASML: monopolio técnico (92% chips avanzados); Países Bajos: monopolio topológico. - Amsterdam IX controla 40% tráfico europeo; veto sobre latency-critical paths. - Autonomía de nodos lejanos = O(lo"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/25_capitulo_25.md",
       "line": 9,
       "message": "cifra sin origen declarado: «33%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
@@ -1864,17 +1754,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "Tres implicaciones organizacionales merecen articulación directa para directivos. Primero, el perfil de gasto de capital de la manufactura agéntica es cargado al inicio pero con ciclo de ROI más rápid"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/25_capitulo_25.md",
-      "line": 57,
-      "message": "cifra sin origen declarado: «33%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- 100 agentes visión, consenso PBFT, 50 robots = emergencia de inteligencia. - Economía: 1000x inspecciones, 1/1000 costo, calidad superior. - Tolerancia: hasta 33% defectuosos, sistema continúa. - Ry"
       }
     },
     {
@@ -1941,17 +1820,6 @@
       "volume": 2,
       "detail": {
         "excerpt": "La investigación de Peng et al. (2023), *The Impact of AI on Developer Productivity: Evidence from GitHub Copilot* (publicado como working paper del National Bureau of Economic Research), proporciona "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/29_capitulo_29.md",
-      "line": 88,
-      "message": "cifra sin origen declarado: «55%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 2,
-      "detail": {
-        "excerpt": "- Cline es un agente autónomo open-source para VSCode: edita, ejecuta, navega y llama herramientas MCP en un bucle supervisado. - Continue es un asistente contextual que indexa el repositorio completo"
       }
     },
     {
@@ -2057,11 +1925,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
-      "line": 210,
+      "line": 213,
       "message": "cifra sin origen declarado: «2%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
       "detail": {
-        "excerpt": "1. **Pruebas de latencia en matriz de dispositivos**: ejecutar el agente en un conjunto representativo de dispositivos (Firebase Test Lab, BrowserStack) y establecer percentiles P50/P95/P99 como crite"
+        "excerpt": "4. **Contrato de accuracy mínima**: el pipeline CI/CD debe incluir un benchmark de accuracy mínima en el modelo cuantizado; si una actualización de modelo degrada el accuracy por encima del umbral (ej"
       }
     },
     {
@@ -2167,6 +2035,28 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 614,
+      "message": "cifra sin origen declarado: «5%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 2,
+      "detail": {
+        "excerpt": "- **Reprojection rate**: los runtimes de VR (SteamVR, Meta XR) exponen la tasa de fotogramas sintéticos generados por reprojección temporal. Una tasa > 5% indica que el render no mantiene el framerate"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 615,
+      "message": "cifra sin origen declarado: «50 ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 2,
+      "detail": {
+        "excerpt": "- **Agent response latency distribution**: la latencia de respuesta de los agentes de interacción debe medirse como distribución, no como promedio. El QA debe rechazar builds donde el P95 de latencia "
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
       "line": 627,
       "message": "cifra sin origen declarado: «dólares» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 2,
@@ -2266,11 +2156,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/04_capitulo_4.md",
-      "line": 33,
+      "line": 35,
       "message": "cifra sin origen declarado: «99.5%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
       "detail": {
-        "excerpt": "**Paso 2: Identificar los escenarios de atributo de calidad.** Un escenario de atributo de calidad tiene la forma: \"Bajo condición X, el sistema debe hacer Y en Z tiempo/costo/probabilidad\". Ejemplos:"
+        "excerpt": "- \"Cuando el modelo de IA produce una respuesta que viola la política de privacidad, el evaluador debe detectarla y descartarla antes de que llegue al usuario en el 99.5% de los casos.\""
       }
     },
     {
@@ -2376,17 +2266,6 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
-      "line": 188,
-      "message": "cifra sin origen declarado: «6×» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "- El bug se esconde de la **atención**, no del programador. La familiaridad genera ceguera. - Los LLM como agentes de testing se limitan en la práctica a los casos que las pruebas manuales no cubren *"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
       "line": 201,
       "message": "cifra sin origen declarado: «0.03%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
@@ -2453,44 +2332,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/06_capitulo_6.md",
-      "line": 195,
-      "message": "cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "line": 196,
+      "message": "cifra sin origen declarado: «27%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
       "detail": {
-        "excerpt": "### POI 1: Churn -10% → Logrado parcialmente: -7.3% **Impacto ROI**: $-180K proyectados vs. $-131.4K reales (-27% del objetivo) **Análisis**: El segmento SMB redujo churn -11.2% (superó objetivo); el "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/06_capitulo_6.md",
-      "line": 202,
-      "message": "cifra sin origen declarado: «66%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "### POI 2: 3 ERPs integrados → Logrado 2/3 (66%) **Impacto ROI**: $+340K proyectados vs. $+226K reales **Análisis**: SAP y Oracle integrados y en producción. NetSuite retrasado 3 semanas por incompati"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/06_capitulo_6.md",
-      "line": 209,
-      "message": "cifra sin origen declarado: «80%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "### POI 3: TTFV 5 días → 2 días → Logrado al 80%: 2.4 días **Impacto ROI**: $+95K/año (vs. $+118K proyectados) **Análisis**: Onboarding automatizado redujo de 5 a 3.1 días en S45. Optimización adicion"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/06_capitulo_6.md",
-      "line": 224,
-      "message": "cifra sin origen declarado: «71%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "> **Veredicto Q1**: 71% de impacto de revenue prometido. 2 de 3 POIs logrados. Rendimiento técnico DORA en cuartil Elite. Q2 ajusta prioridades basado en gaps identificados."
+        "excerpt": "**Impacto ROI**: $-180K proyectados vs. $-131.4K reales (-27% del objetivo) **Análisis**: El segmento SMB redujo churn -11.2% (superó objetivo); el segmento Enterprise se retrasó (-3.1%). Causa raíz: "
       }
     },
     {
@@ -2585,22 +2431,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/08_capitulo_8.md",
-      "line": 41,
+      "line": 42,
       "message": "cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
       "detail": {
-        "excerpt": "- **Evaluaciones deterministas**: la salida correcta es conocida y computable (código que pasa tests, JSON con schema válido, respuesta con fact exacto). Son las más fiables y las primeras que deben e"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/08_capitulo_8.md",
-      "line": 76,
-      "message": "cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "- La transición de programador a director de orquesta es, ante todo, un cambio de identidad: de la causa-efecto determinista al gobierno de la varianza estocástica. - El AMM describe cinco niveles de "
+        "excerpt": "- **Evaluaciones basadas en modelo**: se emplea un segundo LLM como juez. Zheng et al. (2023) demostraron en *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena* (NeurIPS 2023) que modelos de la f"
       }
     },
     {
@@ -2639,17 +2474,6 @@
     {
       "check": "C3",
       "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 97,
-      "message": "cifra sin origen declarado: «55%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "- La IA desplaza la incertidumbre de los plazos de la generación a la verificación; el cuello de botella migró del teclado al criterio. - Peng et al. (2023): +55% en velocidad de generación de código,"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/11_capitulo_11.md",
       "line": 9,
       "message": "cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
@@ -2667,17 +2491,6 @@
       "volume": 3,
       "detail": {
         "excerpt": "El error más frecuente en las organizaciones que inician la transformación agéntica es concentrar el 90% del presupuesto en H1 (visible, medible, de bajo riesgo) y no asignar nada a H3. El resultado, "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/11_capitulo_11.md",
-      "line": 80,
-      "message": "cifra sin origen declarado: «70%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "- Optimizar es mejorar dentro del paradigma; reinventar es cuestionar el paradigma. Solo lo segundo produce ventaja competitiva durable en la era agéntica. - Los multiagentes representan un cambio de "
       }
     },
     {
@@ -2772,11 +2585,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/16_capitulo_16.md",
-      "line": 190,
+      "line": 191,
       "message": "cifra sin origen declarado: «10%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
       "detail": {
-        "excerpt": "- *\"Como gestor de proyecto, quiero recibir diariamente un resumen ejecutivo de riesgos críticos, generado por el agente de riesgos, para poder actuar antes de que el riesgo escale.\"* - *\"Como patroci"
+        "excerpt": "- *\"Como patrocinador, quiero que el agente de costos genere una alerta cuando la variación presupuestaria supere el 10%, con proyección de fin de proyecto actualizada.\"*"
       }
     },
     {
@@ -2805,11 +2618,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/20_capitulo_20.md",
-      "line": 40,
+      "line": 42,
       "message": "cifra sin origen declarado: «20%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 3,
       "detail": {
-        "excerpt": "1. **Solicitud**: el agente declara qué necesita hacer y por qué, expresado en lenguaje de política formal. El PDP recibe esta solicitud junto con el contexto de la tarea en curso. 2. **Evaluación de "
+        "excerpt": "3. **Otorgamiento temporal** (*just-in-time access*): si el PDP aprueba, el permiso se otorga con una vida útil mínima (típicamente el tiempo estimado para completar la tarea más un margen de segurida"
       }
     },
     {
@@ -2936,17 +2749,6 @@
     {
       "check": "C3",
       "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/22_capitulo_22.md",
-      "line": 78,
-      "message": "cifra sin origen declarado: «68%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "- El MVP es un experimento que responde la pregunta más arriesgada con el mínimo de recursos, no una versión pequeña. - Los agentes abaratan construir, pero no construir *lo correcto*: la tentación de"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
       "file": "vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md",
       "line": 17,
       "message": "cifra sin origen declarado: «34%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
@@ -2975,17 +2777,6 @@
       "volume": 3,
       "detail": {
         "excerpt": "Liang et al. (2024) demuestran en su trabajo sobre \"Role-Playing Language Models\" que los sistemas LLM con roles explícitos y estructuras de escalamiento definidas producen outputs de mayor coherencia"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md",
-      "line": 83,
-      "message": "cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 3,
-      "detail": {
-        "excerpt": "- En Scrum, los roles clarifican responsabilidades; el principio se transfiere matemáticamente a los agentes: N responsabilidades = O(2^N) espacio de decisión; 1 responsabilidad = constante. - Un agen"
       }
     },
     {
@@ -3080,6 +2871,28 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/01_capitulo_1.md",
+      "line": 26,
+      "message": "cifra sin origen declarado: «5×» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 4,
+      "detail": {
+        "excerpt": "2. **Modelo equivocado.** Usar el modelo premium para tareas que el modelo económico resuelve igual de bien. Con los precios vigentes al cierre de edición, la diferencia entre gamas es de 5× por token"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/01_capitulo_1.md",
+      "line": 28,
+      "message": "cifra sin origen declarado: «10 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 4,
+      "detail": {
+        "excerpt": "4. **Sin caché de prompts.** Reenviar el mismo prefijo (sistema, contexto de dominio, herramientas) a precio completo en cada llamada. Las APIs modernas cachean prefijos estables: las lecturas de cach"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/01_capitulo_1.md",
       "line": 31,
       "message": "cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
@@ -3091,11 +2904,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/01_capitulo_1.md",
-      "line": 126,
+      "line": 128,
       "message": "cifra sin origen declarado: «60 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "1. **¿Cuánto gastamos en inferencia el mes pasado, por equipo y por producto?** Sin gateway central (capítulo 3), esta pregunta no tiene respuesta. 2. **¿Cuál es nuestro CIU y cómo evoluciona?** Es la"
+        "excerpt": "3. **¿Qué fracción del gasto es evitable?** Auditar las cinco causas; en organizaciones sin gobernanza previa, encontrar 40–60 % de gasto evitable es lo habitual, dominado por contexto inflado y model"
       }
     },
     {
@@ -3113,11 +2926,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/02_capitulo_2.md",
-      "line": 9,
+      "line": 10,
       "message": "cifra sin origen declarado: «85 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "1. **La incertidumbre en sistemas agénticos es inherente, no corregible.** Un agente puede resolver una tarea en 3 iteraciones o en 30, dependiendo de la ambigüedad del prompt inicial, la calidad del "
+        "excerpt": "2. **Monte Carlo convierte la incertidumbre de enemiga en dato.** En lugar de combatirla con estimaciones falsamente precisas («esto tarda 8 horas»), la cuantifica: «con 85 % de confianza, esto costar"
       }
     },
     {
@@ -3140,6 +2953,17 @@
       "volume": 4,
       "detail": {
         "excerpt": "**Solución comentada.** **C** está más cerca, con un matiz que importa. El error de A y B es el mismo: aplicar un percentil *por ejecución* a un *agregado*. El p85 individual no es el p85 del mes: con"
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/03_capitulo_3.md",
+      "line": 131,
+      "message": "cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 4,
+      "detail": {
+        "excerpt": "- **En lote y a mitad de precio.** Las suites de evals son el caso de uso perfecto de las APIs batch: asíncronas, masivas, con 50 % de descuento."
       }
     },
     {
@@ -3201,22 +3025,22 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/08_capitulo_8.md",
-      "line": 74,
+      "line": 76,
       "message": "cifra sin origen declarado: «10 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "1. **Versionar el compuesto, no solo el código.** Prompts maestros, contextos de dominio, skills, esquemas de herramientas e identificadores de modelo viven en Git y se etiquetan juntos: el despliegue"
+        "excerpt": "3. **Desplegar con canario.** El prompt nuevo atiende el 10 % del tráfico durante una ventana; el CIU y la tasa de evals del canario se comparan con el control antes de promover. En el mundo event-dri"
       }
     },
     {
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/08_capitulo_8.md",
-      "line": 121,
+      "line": 122,
       "message": "cifra sin origen declarado: «50 %» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "1. **Calidad:** tasa de paso de la muestra diaria de evals cae > 10 puntos vs. línea base → dueño del agente (humano nombrado, capítulo 1 (Vol. 3)). Es la alerta reina; las demás suelen explicarla. 2."
+        "excerpt": "2. **Economía:** CIU del pipeline sube > 50 % vs. línea base sostenido 2 horas → mismo dueño; causa típica: contexto inflado por un cambio en el tamaño de los diffs, o caché rota por un prefijo modifi"
       }
     },
     {
@@ -3332,17 +3156,6 @@
     {
       "check": "C3",
       "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md",
-      "line": 557,
-      "message": "cifra sin origen declarado: «$2» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "- El CLAUDE.md no es opcional para trabajo intensivo: es el prefijo que convierte prompts genéricos en código que encaja en tu arquitectura sin retrabajo. - La estrategia de niveles de modelo (Sonnet "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
       "line": 148,
       "message": "cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa",
@@ -3421,17 +3234,6 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 190,
-      "message": "cifra sin origen declarado: «100ms» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Cuándo NIM es tu herramienta:** - Inferencia >100K/día. En ese nivel, la infraestructura propia se paga. - Latencia <100ms es crítico (trading, diagnóstico médico, control de robots). - Compliance: "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
       "line": 200,
       "message": "cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
@@ -3448,28 +3250,6 @@
       "volume": 4,
       "detail": {
         "excerpt": "NIM en RTX PCs (serie 50, Blackwell) cierra esa brecha. Con Podman en WSL2, un ingeniero en una workstation (RTX 6000 Ada, ~$7K) ejecuta:"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 211,
-      "message": "cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Por qué importa:** - Desarrollo offline (sin internet, vuelos, entornos sensibles) - Cost: $0 por iteración (vs. $1-10 por call API durante experimentación) - Unified experience: código que corre lo"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 217,
-      "message": "cifra sin origen declarado: «95%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**El patrón:** 1. Ingeniero escribe pipeline RAG contra NIM local en su RTX PC 2. Tests llegan al 95% de precisión 3. Commit a main 4. CI/CD deploya a NIM Operator en K8s (100 líneas de YAML) 5. Zero "
       }
     },
     {
@@ -3575,17 +3355,6 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 418,
-      "message": "cifra sin origen declarado: «15×» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "- **RAG** resuelve acceso a datos actualizado; es lectura pura. Costo oculto: mantenimiento perpetuo. - **MCP** añade acceso seguro a herramientas. El modelo no maneja credenciales; el protocolo inter"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
       "line": 435,
       "message": "cifra sin origen declarado: «78%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
@@ -3597,55 +3366,44 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 437,
-      "message": "cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Propuesta 1 (Status quo RAG):** - Costo: ~$450 (inferencia Sonnet) + $500 (infraestructura vectorial) = $950 - Tiempo de ciclo: 5 minutos (modelo) + 30 minutos (humano cuando falla) = 35 min promedi"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 442,
-      "message": "cifra sin origen declarado: «$8» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Propuesta 2 (Agente + Evaluador):** - Agente 1: Recupera contexto (MCP → Jira, Slack, docs) - Agente 2: Genera solución candidata - Evaluador: Valida coherencia y SLA compliance - Si falla evaluador"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 451,
-      "message": "cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Propuesta 3 (Orquestación ligera):** - 3 agentes paralelos: (1) Recupera contexto, (2) Analiza patrón de ticket, (3) Genera solución - Event bus los coordina: cuando los tres publican resultados, un"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 460,
+      "line": 463,
       "message": "cifra sin origen declarado: «25%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "**Tu decisión:** 1. ¿Cuál eliges y por qué? (Pista: no es la más barata.) 2. ¿En qué punto cambiarías de Propuesta 1 a Propuesta 2? ¿Cuál es la métrica clave? 3. Propuesta 3 tiene SLA mejor pero costo"
+        "excerpt": "3. Propuesta 3 tiene SLA mejor pero costo 25% más alto. ¿Hay un piso debajo del cual no baja? (Pista: sí, y es el costo de un humano full-time.)"
       }
     },
     {
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
-      "line": 465,
+      "line": 466,
       "message": "cifra sin origen declarado: «22%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "**Solución comentada:** - La respuesta depende de tu SLA. Si es \"cerrado en 2h\", Propuesta 1 deja afuera 22% de tickets. Propuesta 2 deja fuera 5%, pero pagás $250 más. Propuesta 3 sale de lo económic"
+        "excerpt": "- La respuesta depende de tu SLA. Si es \"cerrado en 2h\", Propuesta 1 deja afuera 22% de tickets. Propuesta 2 deja fuera 5%, pero pagás $250 más. Propuesta 3 sale de lo económico solo si tienes >5,000 "
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 467,
+      "message": "cifra sin origen declarado: «22%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 4,
+      "detail": {
+        "excerpt": "- La métrica de cambio: cuando el costo de humanos revisando fallos de RAG (22% × 30 min × salario) supera el costo diferencial de Propuesta 2. En USA, eso ocurre cuando pasás 2,500 tickets/mes."
+      }
+    },
+    {
+      "check": "C3",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 468,
+      "message": "cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa",
+      "volume": 4,
+      "detail": {
+        "excerpt": "- El piso: un humano full-time en soporte cuesta ~$5,000-6,000 USD/mes. Si tu orquestación cuesta eso, ya no añade valor económico. La arquitectura debe generar throughput (más tickets/mes) o calidad "
       }
     },
     {
@@ -3718,17 +3476,6 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 154,
-      "message": "cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**El cálculo económico es transparente**: - Servidor cloud GPU para inferencia: $0.50/hora - Laptop Ryzen AI 300 (~$1,299) amortizada en 36 meses: ~$0.06/día de cómputo"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
       "line": 158,
       "message": "cifra sin origen declarado: «88%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
@@ -3756,39 +3503,6 @@
       "volume": 4,
       "detail": {
         "excerpt": "El enjambre especializado supera en calidad al modelo único grande, a 14× menos costo y 4.5× menos latencia. Esta no es anécdota; es el patrón documentado en múltiples dominios con características sim"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 209,
-      "message": "cifra sin origen declarado: «$0» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Modelo Cloud-First** (OPEX puro): - CAPEX inicial: $0 - OPEX mensual: Variable con uso. Para 1M inferencias/día, ~$12,000–$45,000/mes - Ventajas: sin compromisos de hardware, escalabilidad instantán"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 215,
-      "message": "cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Modelo Híbrido** (CAPEX inicial + OPEX reducido): - CAPEX inicial: $50,000–$200,000 (GPUs on-premise: NVIDIA H100s) - OPEX mensual: $3,000–$8,000 (electricidad, cooling, mantenimiento) + cloud para "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 221,
-      "message": "cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Modelo Edge + Cloud** (para equipos con workstations AI): - CAPEX inicial: $1,000–$7,000/workstation (RTX 6000 Ada o Ryzen AI) - OPEX mensual: ~$0 en inferencia, $200–$500 en electricidad - Ventajas"
       }
     },
     {
@@ -3872,28 +3586,6 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
-      "line": 771,
-      "message": "cifra sin origen declarado: «$1» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Sin DR agéntico (situación pre-implementación)**: - T+8 min: Ingeniero de guardia notificado (alertas CloudWatch) - T+25 min: Runbook iniciado manualmente - T+90 min: Servicios restaurados en AZ alt"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
-      "line": 778,
-      "message": "cifra sin origen declarado: «38%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Con DR agéntico (post-implementación)**: - T+0:30: Health Monitor detecta degradación (error rate: 38%, latency p99: 8,000ms) - T+1:00: DR Orchestrator consulta memoria, patrón similar a incidente d"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
       "line": 803,
       "message": "cifra sin origen declarado: «40%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
@@ -3905,22 +3597,11 @@
       "check": "C3",
       "severity": "aviso",
       "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
-      "line": 805,
-      "message": "cifra sin origen declarado: «$4» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "**Sin DR agéntico**: - RTO real: 6 horas (runbook manual de 120 pasos) - Pérdida de datos: 45 minutos de registros médicos → potencialmente cientos de pacientes afectados - Costo: $4.5M+ (downtime + p"
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
-      "line": 811,
+      "line": 814,
       "message": "cifra sin origen declarado: «85%» — marcar [D] dato, [E] estimación o [I] ilustrativa",
       "volume": 4,
       "detail": {
-        "excerpt": "**Con DR agéntico (arquitectura on-premise mejorada con agentes predictivos)**: - Pre-incidente: sensores de temperatura/humo integrados con Health Monitor - Agentes DR en cada datacenter con checkpoi"
+        "excerpt": "- T+1: DR Orchestrator detecta patrón anómalo de temperatura, memoria histórica indica 85% de probabilidad de fallo total en 15 minutos"
       }
     },
     {
@@ -3943,17 +3624,6 @@
       "volume": 4,
       "detail": {
         "excerpt": "**Coste justificado**: Un sistema DR agéntico bien dimensionado para una organización mediana cuesta $300K–$700K/año (CAPEX amortizado + OPEX). El payback es 3–8 semanas de prevención de un incidente "
-      }
-    },
-    {
-      "check": "C3",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
-      "line": 934,
-      "message": "cifra sin origen declarado: «$5» — marcar [D] dato, [E] estimación o [I] ilustrativa",
-      "volume": 4,
-      "detail": {
-        "excerpt": "- El DR para sistemas multiagente es cualitativamente diferente al DR tradicional: debe recuperar no solo servicios, sino **estado cognitivo distribuido** con consistencia eventual; las herramientas y"
       }
     },
     {
@@ -3992,17 +3662,6 @@
     {
       "check": "C4",
       "severity": "aviso",
-      "file": "vol1-fundamentos/manuscrito/capitulos/04_capitulo_4.md",
-      "line": 40,
-      "message": "marcador pendiente: «TODO»",
-      "volume": 1,
-      "detail": {
-        "snippet": "TODO"
-      }
-    },
-    {
-      "check": "C4",
-      "severity": "aviso",
       "file": "vol2-frontera-y-aplicaciones/front-matter/03_hoja_creditos.md",
       "line": 13,
       "message": "marcador pendiente: «PENDIENTE]»",
@@ -4020,28 +3679,6 @@
       "volume": 2,
       "detail": {
         "snippet": "PENDIENTE]"
-      }
-    },
-    {
-      "check": "C4",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 83,
-      "message": "marcador pendiente: «TODO»",
-      "volume": 2,
-      "detail": {
-        "snippet": "TODO"
-      }
-    },
-    {
-      "check": "C4",
-      "severity": "aviso",
-      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
-      "line": 84,
-      "message": "marcador pendiente: «TODO»",
-      "volume": 2,
-      "detail": {
-        "snippet": "TODO"
       }
     },
     {
@@ -4086,39 +3723,6 @@
       "volume": 4,
       "detail": {
         "snippet": "PENDIENTE]"
-      }
-    },
-    {
-      "check": "C4",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md",
-      "line": 204,
-      "message": "marcador pendiente: «PENDIENTE).build();»",
-      "volume": 4,
-      "detail": {
-        "snippet": "PENDIENTE).build();"
-      }
-    },
-    {
-      "check": "C4",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md",
-      "line": 214,
-      "message": "marcador pendiente: «PENDIENTE);»",
-      "volume": 4,
-      "detail": {
-        "snippet": "PENDIENTE);"
-      }
-    },
-    {
-      "check": "C4",
-      "severity": "aviso",
-      "file": "vol4-patrones-de-escala/manuscrito/capitulos/09_capitulo_9.md",
-      "line": 363,
-      "message": "marcador pendiente: «PENDIENTE' }));»",
-      "volume": 4,
-      "detail": {
-        "snippet": "PENDIENTE' }));"
       }
     },
     {

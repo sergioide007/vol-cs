@@ -13,8 +13,8 @@ Ocho comprobaciones (C1..C8), documentadas en `PLAN_DE_TRABAJO.md`:
       remisión sin etiqueta de volumen cuando el número solo existe en otro.
   C2  Entrada bibliográfica sin verificar («as cited in the manuscript»,
       «no verificado», «not fully verified»).
-  C3  Párrafo con cifras sin marca de origen ([D] dato, [E] estimación,
-      [I] ilustrativa) ni cita a la bibliografía.
+  C3  Unidad de prosa (párrafo, viñeta o cita) con cifras sin marca de origen
+      ([D] dato, [E] estimación, [I] ilustrativa) ni cita a la bibliografía.
   C4  Referencia a un apéndice inexistente o marcador «PENDIENTE».
   C5  Restos de la numeración antigua por partes (Parte IV, «caps. 76–79»).
       Nota: el total de 80 capítulos sí es correcto y no se reporta.
@@ -70,8 +70,12 @@ UNVERIFIED = re.compile(
     r'por verificar', re.I)
 
 # Marcadores de contenido pendiente (C4). «TODO» en mayúsculas: la palabra
-# española «todo» no es un marcador de trabajo.
-PENDING = re.compile(r'\[?\bPENDIENTE\b[^\]\n]{0,12}\]?|PENDIENTE-|\bTODO\b|\bFIXME\b')
+# española «todo» no es un marcador de trabajo, y escribirlo en mayúsculas
+# para enfatizar («Costo si TODO en cloud») tampoco. Por eso «TODO» solo
+# cuenta con forma de marcador —`TODO:`, `[TODO]`— y nunca suelto.
+PENDING = re.compile(
+    r'\[?\bPENDIENTE\b[^\]\n]{0,12}\]?|PENDIENTE-|'
+    r'\[TODO[^\]]*\]|\bTODO\s*:|\bFIXME\b')
 
 # Identificadores de modelo literales (C6).
 MODEL_ID = re.compile(
@@ -137,6 +141,24 @@ VOL_LABEL = re.compile(r'\(\s*Vol\.\s*([1-4])', re.I)
 NESTED_REF = re.compile(
     r'\([^()]*(?:\([^()]*\)[^()]*){1,2}Vol\.\s*[1-4][^()]*\)', re.I)
 
+# Estructura de bloque, para separar unidades de prosa (C3).
+#
+# Una viñeta o una cita abre unidad propia; antes se fundían con el párrafo de
+# encima, de modo que una cifra escrita en una viñeta aparecía atribuida a la
+# prosa anterior (se vio en el cap. 9 del Vol. 2, donde el extracto del informe
+# mezclaba un párrafo con tres viñetas). Las tablas y el código sangrado no son
+# prosa: cortan la unidad en curso.
+HEADING = re.compile(r'^#{1,6}\s')
+NON_PROSE = re.compile(r'^[ \t]*(?:\|| {4}|\t)')
+ITEM = re.compile(r'^ {0,3}(?:[-*+]|\d+[.)])\s+\S')
+QUOTE = re.compile(r'^ {0,3}>\s*\S')
+
+# Un bloque de resumen repite lo que ya dice la prosa del capítulo. Sus viñetas
+# no se miden en C3: contarlas otra vez duplicaría el mismo hallazgo.
+SUMMARY_HEADING = re.compile(
+    r'^#{1,6}\s*(?:\(?\d+[.)]?\s*)?(?:lo esencial|resumen|s[ií]ntesis|puntos '
+    r'clave|conclusiones|cierre|para recordar)\b', re.I)
+
 # Restos de la numeración antigua (C5).
 LEGACY_PART = re.compile(
     r'\bParte\s+(VIII|VII|VI|IV|V|III|II|IX|X|I)\b(?![\w])|'
@@ -166,40 +188,68 @@ def words(text):
     return len(re.sub(r'```.*?```', ' ', text, flags=re.S).split())
 
 
-def paragraphs(text):
-    """Divide en párrafos, conservando la línea de inicio de cada uno.
+def prose_units(text):
+    """Unidades de prosa del texto, con su línea de inicio y su encabezado.
 
-    Se ignoran bloques de código, tablas y sangrados de código, que es donde
-    viven los fragmentos de código de los capítulos: ahí una cifra no es una
-    afirmación editorial.
+    Una unidad es un párrafo, una viñeta o una cita: cada una se mide aparte.
+    Las tablas y el código sangrado no son prosa, así que cortan la unidad en
+    curso sin medirse, y los bloques de código cercados se ignoran por
+    completo. El encabezado que acompaña a cada unidad es el último título
+    visto antes de ella: C3 lo necesita para no medir dos veces lo que ya dijo
+    la prosa (las viñetas de «Lo esencial»).
+
+    Devuelve `(línea, texto, encabezado)`.
     """
-    lines = text.splitlines()
-    out, buffer, start, fenced = [], [], 0, False
-    for number, line in enumerate(lines, 1):
+    out, buffer, start, fenced, heading = [], [], 0, False, ''
+    for number, line in enumerate(text.splitlines(), 1):
         if line.lstrip().startswith(('```', '~~~')):
             fenced = not fenced
             continue
         if fenced:
             continue
+        if HEADING.match(line):
+            # Un encabezado no es una afirmación: cierra la unidad anterior y
+            # pasa a encabezar la siguiente.
+            if buffer:
+                out.append((start, '\n'.join(buffer), heading))
+                buffer = []
+            heading = line.strip()
+            continue
         if not line.strip():
             if buffer:
-                out.append((start, '\n'.join(buffer)))
+                out.append((start, '\n'.join(buffer), heading))
                 buffer = []
             continue
-        if line.startswith(('|', '    ', '\t')) or re.match(r'^\s*(?:>|[-*+]|\d+\.)\s*$', line):
-            # Una viñeta suelta o una cita corta no es una afirmación: corta el
-            # párrafo para no medirla dos veces, pero conserva las largas.
-            if len(buffer) < 2:
-                if buffer:
-                    out.append((start, '\n'.join(buffer)))
-                    buffer = []
-                continue
+        if NON_PROSE.match(line):
+            if buffer:
+                out.append((start, '\n'.join(buffer), heading))
+                buffer = []
+            continue
+        # La continuación de una cita sigue empezando por «>»: no es una cita
+        # nueva, es la misma unidad partida en varias líneas.
+        opens = bool(ITEM.match(line) or QUOTE.match(line))
+        if opens and buffer and QUOTE.match(buffer[0]) and QUOTE.match(line):
+            opens = False
+        if opens and buffer:
+            out.append((start, '\n'.join(buffer), heading))
+            buffer = []
         if not buffer:
             start = number
         buffer.append(line)
     if buffer:
-        out.append((start, '\n'.join(buffer)))
+        out.append((start, '\n'.join(buffer), heading))
     return out
+
+
+def paragraphs(text):
+    """Pares `(línea, párrafo)` de `prose_units`: interfaz histórica."""
+    return [(start, paragraph) for start, paragraph, _ in prose_units(text)]
+
+
+def is_item(paragraph):
+    """¿La unidad abre con viñeta o con cita, en lugar de con prosa?"""
+    return bool(ITEM.match(paragraph.split('\n', 1)[0])
+                or QUOTE.match(paragraph.split('\n', 1)[0]))
 
 
 def mask_code(text):
@@ -430,11 +480,18 @@ def check_c2_references(vols, add):
                     f'cita en ningún capítulo',
                     detail={'anchor': anchor})
 def check_c3_figures(vols, add):
-    """C3: párrafos con cifras y sin marca de origen ([D], [E], [I] o cita)."""
+    """C3: unidades de prosa con cifras y sin origen declarado.
+
+    Se miden párrafos, viñetas y citas por separado. Las viñetas de un bloque
+    de resumen («Lo esencial», «Resumen») repiten lo que ya dice la prosa del
+    capítulo: se excluyen para no contar dos veces el mismo hallazgo.
+    """
     for volume in vols:
         for chapter in volume.chapters:
-            for start, paragraph in paragraphs(chapter.text):
+            for start, paragraph, heading in prose_units(chapter.text):
                 if len(paragraph) < MIN_PROSE_CHARS:
+                    continue
+                if SUMMARY_HEADING.match(heading) and is_item(paragraph):
                     continue
                 match = FIGURE.search(paragraph)
                 if not match:
@@ -462,11 +519,16 @@ def check_c4_placeholders(vols, appendices, add):
                         f'se cita el apéndice {letter}, que no existe en el '
                         f'Vol. {volume.number}',
                         detail={'appendix': letter})
-            for match in PENDING.finditer(text):
-                line = text.count('\n', 0, match.start()) + 1
+            # El código no se inspecciona: `EstadoPago.PENDIENTE` es el valor de
+            # un enum de Java en un ejemplo, no un hueco por rellenar. El
+            # enmascarado conserva los saltos de línea, así que el número de
+            # línea del hallazgo sigue apuntando al archivo.
+            prose = mask_code(text)
+            for match in PENDING.finditer(prose):
+                line = prose.count('\n', 0, match.start()) + 1
                 snippet = match.group(0).strip()
-                if 'Depósito Legal' in text[max(0, match.start() - 40):match.start() + 20]:
-                    # Depósito legal e ISBN los tramita la editorial, no el linter.
+                if 'Depósito Legal' in prose[max(0, match.start() - 40):match.start() + 20]:
+                    # El depósito legal lo tramita la editorial, no el linter.
                     continue
                 add('C4', 'aviso', item, line,
                     f'marcador pendiente: «{snippet}»',

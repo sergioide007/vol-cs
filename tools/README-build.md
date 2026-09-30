@@ -189,6 +189,21 @@ registrado, no un defecto.
 | C12 | Palabra pegada a un identificador, fuera de código y comillas | aviso |
 | C13 | Carácter no representable en las fuentes del libro (CJK) | error |
 | C14 | Mayúscula en medio de palabra, fuera de código y comillas | aviso |
+| C15 | Mención «Apellido (año)» en la prosa sin entrada en la bibliografía del volumen | aviso |
+
+**C15, la comprobación que faltaba.** El libro cita obras clásicas dentro de la
+frase («Cunningham (1992) articuló la metáfora de la deuda técnica») en lugar de
+enlazarlas. Si el apellido no aparece en la bibliografía de ese volumen, el
+lector no puede localizar la obra: la cita es irresoluble. Se busca el apellido
+en el texto de la bibliografía y no en las anclas, porque lo que el lector
+necesita es encontrar la obra, no adivinar el ancla. Se informa una vez por
+apellido y archivo: una sola ficha resuelve todas las menciones.
+
+No cuenta como cita el año que cierra un rótulo en negrita, ni la norma con su
+año («Ley de Seguridad de Datos (2021)»), ni los lugares, herramientas, modelos
+y fenómenos que llevan año sin ser fuentes (`MENTION_OK`). Las instituciones y
+las revistas **sí** se informan: citar «la revisión sistemática de Frontiers
+(2026)» sin autor ni título es una atribución que el lector no puede seguir.
 
 **C6 y el apéndice B.** Los precios y los nombres de modelo viven solo en
 `front-matter/08_apendice_b_precios.md`, con su fecha de corte. `model-allowlist.txt`

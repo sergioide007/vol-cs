@@ -21,15 +21,16 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 | C12 | lenguaje | 0 | 0 |
 | C13 | glifos no representables | 0 | 0 |
 | C14 | mayusculas en medio de palabra | 0 | 0 |
+| C15 | citas en prosa sin entrada | 0 | 117 |
 
 ## Detalle por volumen
 
 | Volumen | Capítulos | Palabras | Errores | Avisos |
 |---|---:|---:|---:|---:|
-| 1 — Fundamentos | 10 | 21.140 | 3 | 21 |
-| 2 — Frontera y Aplicaciones | 32 | 58.230 | 15 | 98 |
-| 3 — Madurez Organizacional | 25 | 52.933 | 6 | 85 |
-| 4 — Patrones de Escala | 13 | 36.457 | 6 | 97 |
+| 1 — Fundamentos | 10 | 21.140 | 3 | 27 |
+| 2 — Frontera y Aplicaciones | 32 | 58.230 | 15 | 156 |
+| 3 — Madurez Organizacional | 25 | 52.933 | 6 | 129 |
+| 4 — Patrones de Escala | 13 | 36.457 | 6 | 106 |
 
 ## C1 · remisiones cruzadas (37)
 
@@ -754,4 +755,268 @@ Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, q
 **`vol4-patrones-de-escala/manuscrito/imagenes/capitulo80`**
 
 - L1 ! `capitulo80` guarda la numeración antigua: lo usa el cap. 13 de este volumen
+
+
+## C15 · citas en prosa sin entrada (117)
+
+**`vol1-fundamentos/estado-del-arte/estado-del-arte.md`**
+
+- L13 ! «Treude (2025)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L33 ! «Kitchenham (2007)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L35 ! «Ferino (2025)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L35 ! «Mohamed (2025)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol1-fundamentos/manuscrito/capitulos/04_capitulo_4.md`**
+
+- L121 ! «Kahneman (2011)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol1-fundamentos/manuscrito/capitulos/08_capitulo_8.md`**
+
+- L466 ! «Kiczales (1997)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/estado-del-arte/estado-del-arte.md`**
+
+- L7 ! «Frontiers (2026)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L11 ! «Ginebra (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/01_capitulo_1.md`**
+
+- L13 ! «Greshake (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L15 ! «Perez (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/02_capitulo_2.md`**
+
+- L74 ! «Peng (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/03_capitulo_3.md`**
+
+- L26 ! «Vaithilingam (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/05_capitulo_5.md`**
+
+- L7 ! «Green (2000)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L15 ! «Lee (2004)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L31 ! «Ribeiro (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/06_capitulo_6.md`**
+
+- L23 ! «Sweller (2011)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L25 ! «Licklider (1960)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/07_capitulo_7.md`**
+
+- L9 ! «Rogers (2003)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L25 ! «Profession (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L219 ! «Venkatesh (2003)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/08_capitulo_8.md`**
+
+- L9 ! «Vygotsky (1978)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md`**
+
+- L9 ! «Holmes (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L21 ! «Vygotsky (1978)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L23 ! «Papert (1980)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L79 ! «Touretzky (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/11_capitulo_11.md`**
+
+- L7 ! «Kitchin (2014)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L9 ! «Mora (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L108 ! «Yigitcanlar (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md`**
+
+- L9 ! «Zhang (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L92 ! «Richardson (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md`**
+
+- L9 ! «Cunningham (1992)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L11 ! «Kruchten (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L27 ! «Lenarduzzi (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L55 ! «Vernon (2013)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L61 ! «Fowler (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/14_capitulo_14.md`**
+
+- L40 ! «Vaswani (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L41 ! «Brown (2020)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/15_capitulo_15.md`**
+
+- L63 ! «Russell (1980)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/18_capitulo_18.md`**
+
+- L35 ! «Code (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md`**
+
+- L12 ! «Feathers (2004)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L24 ! «Adelani (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L25 ! «Muhammad (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L26 ! «Alabi (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L27 ! «Dione (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/23_capitulo_23.md`**
+
+- L7 ! «Association (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/27_capitulo_27.md`**
+
+- L43 ! «Wooldridge (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L92 ! «Capital (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L92 ! «Institute (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md`**
+
+- L7 ! «Wooldridge (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L19 ! «Pappalardo (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L36 ! «Fernández (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L42 ! «Decroos (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L66 ! «Vinyals (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L68 ! «Rashid (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L70 ! «Lowe (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/29_capitulo_29.md`**
+
+- L82 ! «Peng (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/30_capitulo_30.md`**
+
+- L82 ! «Peng (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/31_capitulo_31.md`**
+
+- L123 ! «Kalliamvakou (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md`**
+
+- L229 ! «Amplitude (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L269 ! «Lowe (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L269 ! «Rashid (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L446 ! «Gartner (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L656 ! «Berner (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L656 ! «Vinyals (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/01_capitulo_1.md`**
+
+- L7 ! «Amodei (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L111 ! «Kleinberg (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/03_capitulo_3.md`**
+
+- L15 ! «Rolnick (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L38 ! «Irrgang (2021)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L172 ! «Breiman (1996)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L172 ! «Wooldridge (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/04_capitulo_4.md`**
+
+- L119 ! «Ellsberg (1961)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L119 ! «Peppard (2004)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L121 ! «Dorigo (1999)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md`**
+
+- L9 ! «Fischhoff (1975)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L11 ! «Kochhar (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L27 ! «Wen (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L92 ! «Popper (1934)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L176 ! «Shooman (1983)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/07_capitulo_7.md`**
+
+- L13 ! «Davenport (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L45 ! «Beath (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L115 ! «Bughin (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/08_capitulo_8.md`**
+
+- L72 ! «Ericsson (1993)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/09_capitulo_9.md`**
+
+- L40 ! «Doerr (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/11_capitulo_11.md`**
+
+- L55 ! «Christensen (1997)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/15_capitulo_15.md`**
+
+- L209 ! «Weick (2007)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/17_capitulo_17.md`**
+
+- L15 ! «Brown (2020)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L21 ! «Wenger (1998)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L29 ! «Raji (2020)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L190 ! «Nonaka (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/18_capitulo_18.md`**
+
+- L38 ! «Conway (1968)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L213 ! «Simon (1955)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/19_capitulo_19.md`**
+
+- L9 ! «Christensen (1997)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L56 ! «Porter (1985)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/20_capitulo_20.md`**
+
+- L50 ! «Rababah (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L68 ! «Rahman (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/21_capitulo_21.md`**
+
+- L23 ! «Pearce (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L31 ! «Cunningham (1992)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L57 ! «Kochhar (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/22_capitulo_22.md`**
+
+- L7 ! «Blank (2013)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L63 ! «Menzies (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L74 ! «Gartner (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md`**
+
+- L9 ! «Wooldridge (2009)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L15 ! «Taylor (1911)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L15 ! «Smith (1776)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md`**
+
+- L9 ! «Parnas (1972)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L9 ! «Meyer (1988)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L11 ! «Chidamber (1994)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L79 ! «Lenarduzzi (2021)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol4-patrones-de-escala/estado-del-arte/estado-del-arte.md`**
+
+- L11 ! «Heuvel (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md`**
+
+- L9 ! «Vaswani (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol4-patrones-de-escala/manuscrito/capitulos/11_capitulo_11.md`**
+
+- L220 ! «Kalman (1960)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md`**
+
+- L11 ! «Samsi (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L188 ! «Viguier (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L240 ! «Luccioni (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+
+**`vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md`**
+
+- L52 ! «Ongaro (2014)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L148 ! «Helland (2009)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
+- L443 ! «Park (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase
 

@@ -23,6 +23,8 @@ Ocho comprobaciones (C1..C8), documentadas en `PLAN_DE_TRABAJO.md`:
   C8  Ancla `#ref-` usada sin entrada, o entrada de bibliografía nunca usada.
   C9  Carpeta de imágenes que conserva la numeración global antigua.
   C11 Año de la cita en el texto distinto del año de la entrada.
+  C15 Mención «Apellido (año)» escrita en la prosa sin entrada bibliográfica en
+      ese volumen: una cita que el lector no puede localizar.
 
 Uso:
     python3 tools/lint_manuscript.py                     # informe + exit 1 si hay errores
@@ -120,6 +122,41 @@ GLUED = (r'(?<![A-Za-z`\w\-])[a-z\u00e1\u00e9\u00ed\u00f3\u00fa\u00f1]{3,}'
 # Año declarado en la entrada bibliográfica y año en la cita del texto (C11).
 YEAR = re.compile(r'\b(?:19|20)\d{2}\b')
 CITE = re.compile(r'\[[^\]]*?\((?:#ref-[a-z0-9-]+\)|https?://[^)]*)\]|\[[^\]]*\]\(#ref-[a-z0-9-]+\)')
+
+# Mención bibliográfica escrita dentro de la frase (C15): «Cunningham (1992)»,
+# «Peng et al. (2023, arXiv:2302.06590)». El año tiene que abrir el paréntesis
+# y cerrarlo (o seguirle una coma), de modo que no se confunda con «(2024/1689)»
+# ni con un rango.
+MENTION = re.compile(
+    r'\b([A-ZÁÉÍÓÚÑ][a-záéíóúñ]{2,})'
+    r'(?:\s+(?:et\s+al\.?|y\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+|&\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+))?'
+    r'\s*\((\d{4})[a-z]?[,)]')
+
+# Una norma con su año no es una cita: «Ley de Seguridad de Datos (2021)»,
+# «Convención de Ginebra (1949)». La coma queda fuera de la ventana para no
+# tragarse una cita de verdad que venga tras una enumeración.
+NORM = re.compile(
+    r'\b(?:ley|reglamento|directiva|real\s+decreto|decreto|resolución|norma|'
+    r'acuerdo|convenio|convención|tratado|estándar|acta)\s[^.;,()]{0,40}$', re.I)
+
+# Palabras capitalizadas que llevan año sin ser un autor: van en minúscula
+# porque la comparación se hace sobre el texto sin acentos y en minúsculas.
+MENTION_NOISE = ('vol', 'cap', 'capítulo', 'tabla', 'figura', 'apéndice',
+                 'anexo', 'sección', 'artículo', 'ejemplo', 'caso', 'fase',
+                 'nivel', 'parte', 'versión', 'norma', 'cuadro', 'gráfico',
+                 'trimestre', 'año', 'mes', 'día', 'iso', 'reglamento',
+                 'directiva')
+
+# Nombres propios con año que no son fuentes citables: un lugar, una
+# herramienta, un modelo o un fenómeno meteorológico. Se revisaron uno a uno
+# sobre el manuscrito («AWS Sydney (2012)», «Selenium (2004)», «Chaos Monkey
+# (2011)», «ciclón Freddy (2023)», «Jukebox (2020)»). Están aquí para que el
+# aviso no pierda valor: un check que grita por un nombre de región se acaba
+# ignorando. Las instituciones y las revistas no se admiten —Gartner, Graduate
+# Institute de Ginebra, Frontiers—: citan por colectivo, sin obra localizable,
+# y eso es exactamente lo que el editor debe poder ver.
+MENTION_OK = ('sydney', 'east', 'selenium', 'jukebox', 'udio', 'monkey',
+              'freddy', 'dora')
 
 # Apéndices y anexos citados (C4).
 APPENDIX = re.compile(r'\bap[ée]ndice\s+([A-Z])\b|\banexo\s+([A-Z])\b', re.I)
@@ -753,6 +790,71 @@ def check_c14_caps_in_word(vols, add):
                     detail={'token': match.group(0)})
 
 
+def citable_mention(line, match):
+    """¿La mención «Apellido (año)» es una cita, o solo lleva un año al lado?
+
+    Hay tres formas que llevan año sin ser una referencia y que no deben
+    contarse como cita irresoluble: el año que cierra un rótulo en negrita
+    («… El Puente Desarrollo → Producción (2024)**»), la norma con su año
+    («Ley de Seguridad de Datos (2021)», «Convención de Ginebra (1949)») y el
+    número de expediente («(2024/1689)»), que ni siquiera casa con `MENTION`.
+    """
+    if line[match.end():match.end() + 1] == '*':
+        return False
+    return not NORM.search(line[:match.start()])
+
+
+def check_c15_prose_citations(vols, add):
+    """C15: mención «Apellido (año)» sin entrada en la bibliografía del tomo.
+
+    El libro cita obras clásicas dentro de la frase («Cunningham (1992) articuló
+    la metáfora de la deuda técnica») en lugar de enlazarlas. Si el apellido no
+    aparece por ningún lado en la bibliografía de ese volumen, el lector no
+    puede localizar la obra: la cita es irresoluble. Ninguna comprobación miraba
+    esto, y es el hueco mayor del aparato: un libro que predica la trazabilidad
+    y cita de memoria.
+
+    Dos lecturas del mismo defecto, y las dos las arregla el editor: o falta la
+    entrada, o sobra un año entre paréntesis que simula una cita. Se busca el
+    apellido en el texto de la bibliografía y no en las anclas: lo que el lector
+    necesita es encontrar la obra, no adivinar el ancla. Se informa una vez por
+    apellido y archivo, con todas sus líneas, porque una sola ficha resuelve
+    todas las menciones.
+    """
+    for volume in vols:
+        bibliography = strip_accents(volume.references().lower())
+        if not bibliography:
+            continue
+        for item in volume.manuscript_files():
+            if item.path.name == 'referencias.md':
+                continue
+            text = mask_inline_code(item.text)
+            seen = {}
+            for number, line in enumerate(text.splitlines(), 1):
+                for match in MENTION.finditer(line):
+                    surname = match.group(1)
+                    key = strip_accents(surname.lower())
+                    if key in MENTION_NOISE or key in MENTION_OK:
+                        continue
+                    if key in bibliography:
+                        continue
+                    if not citable_mention(line, match):
+                        continue
+                    seen.setdefault(key, {'name': surname, 'year': match.group(2),
+                                          'lines': [],
+                                          'context': line[max(0, match.start() - 60):match.end()].strip()})
+                    seen[key]['lines'].append(number)
+            for entry in sorted(seen.values(), key=lambda e: e['lines'][0]):
+                lines = entry['lines']
+                add('C15', 'aviso', item, lines[0],
+                    f'«{entry["name"]} ({entry["year"]})» se cita en la prosa y '
+                    f'no tiene entrada en la bibliografía de este volumen: '
+                    f'añadir la ficha o reformular la frase',
+                    detail={'surname': entry['name'], 'year': entry['year'],
+                            'lines': lines, 'count': len(lines),
+                            'context': entry['context']})
+
+
 CHECKS = (
     ('C1', 'remisiones cruzadas', check_c1_crossrefs),
     ('C2', 'bibliografía sin verificar', check_c2_references),
@@ -767,6 +869,7 @@ CHECKS = (
     ('C12', 'lenguaje', check_c12_language),
     ('C13', 'glifos no representables', check_c13_glyphs),
     ('C14', 'mayusculas en medio de palabra', check_c14_caps_in_word),
+    ('C15', 'citas en prosa sin entrada', check_c15_prose_citations),
 )
 
 
@@ -892,6 +995,7 @@ def main():
         'C12': lambda: check_c12_language(vols, add),
         'C13': lambda: check_c13_glyphs(vols, add),
         'C14': lambda: check_c14_caps_in_word(vols, add),
+        'C15': lambda: check_c15_prose_citations(vols, add),
     }
     for code, _, _ in CHECKS:
         if code in selected:

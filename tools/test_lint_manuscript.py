@@ -139,6 +139,35 @@ class PatternTest(unittest.TestCase):
         code = '```java\nvar pago = Pago.builder().estado(EstadoPago.PENDIENTE).build();\n```\n'
         self.assertIsNone(lint.PENDING.search(lint.mask_code(code)))
 
+    def test_mention_reads_surname_and_year(self):
+        found = lint.MENTION.search('como Cunningham (1992) articuló la deuda')
+        self.assertEqual(('Cunningham', '1992'), found.groups())
+        found = lint.MENTION.search('Peng et al. (2023, arXiv:2302.06590)')
+        self.assertEqual(('Peng', '2023'), found.groups())
+        found = lint.MENTION.search('Perez & Ribeiro (2022), en “Ignore Previous”')
+        self.assertEqual(('Perez', '2022'), found.groups())
+
+    def test_mention_ignores_years_that_are_not_citations(self):
+        # «(2024/1689)» es el número del AI Act, no un año de publicación.
+        self.assertIsNone(lint.MENTION.search('el AI Act (2024/1689) lo exige'))
+        self.assertIsNone(lint.MENTION.search('el capítulo 12 explica el patrón'))
+
+    def test_mention_admits_non_sources(self):
+        """Un lugar, una herramienta o un ciclón no son fuentes bibliográficas."""
+        for name in ('Sydney', 'Selenium', 'Monkey', 'Freddy'):
+            self.assertIn(name.lower(), lint.MENTION_OK, name)
+
+    def test_citable_mention_rejects_labels_and_norms(self):
+        def citable(text):
+            match = lint.MENTION.search(text)
+            self.assertIsNotNone(match, text)
+            return lint.citable_mention(text, match)
+
+        self.assertTrue(citable('como Cunningham (1992) articuló la deuda'))
+        self.assertFalse(citable('El Puente Desarrollo → Producción (2024)** Hay'))
+        self.assertFalse(citable('la Ley de Seguridad de Datos (2021) y la Ley'))
+        self.assertFalse(citable('la Convención de Ginebra (1949) lo establece'))
+
     def test_legacy_part_reads_roman_and_range(self):
         match = lint.LEGACY_PART.search('### Parte IV: Patrones de escala (caps. 22–40)')
         self.assertEqual('IV', match.group(1))

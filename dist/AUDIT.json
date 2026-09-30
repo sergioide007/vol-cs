@@ -13,7 +13,8 @@
     "C11": "año de la cita",
     "C12": "lenguaje",
     "C13": "glifos no representables",
-    "C14": "mayusculas en medio de palabra"
+    "C14": "mayusculas en medio de palabra",
+    "C15": "citas en prosa sin entrada"
   },
   "volumes": [
     {
@@ -651,6 +652,2004 @@
         "candidates": [
           2
         ]
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol1-fundamentos/estado-del-arte/estado-del-arte.md",
+      "line": 13,
+      "message": "«Treude (2025)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 1,
+      "detail": {
+        "surname": "Treude",
+        "year": "2025",
+        "lines": [
+          13
+        ],
+        "count": 1,
+        "context": "tiene directamente los capítulos 5 y 8 de este volumen. He, Treude y Lo (2025,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol1-fundamentos/estado-del-arte/estado-del-arte.md",
+      "line": 33,
+      "message": "«Kitchenham (2007)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 1,
+      "detail": {
+        "surname": "Kitchenham",
+        "year": "2007",
+        "lines": [
+          33,
+          33
+        ],
+        "count": 2,
+        "context": "LLM4SE: Hou et al. (2024) sigue explícitamente las guías de Kitchenham y Keele (2007)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol1-fundamentos/estado-del-arte/estado-del-arte.md",
+      "line": 35,
+      "message": "«Ferino (2025)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 1,
+      "detail": {
+        "surname": "Ferino",
+        "year": "2025",
+        "lines": [
+          35
+        ],
+        "count": 1,
+        "context": "tivos de percepción** (entrevistas, encuestas), la línea de Ferino et al. (2025)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol1-fundamentos/estado-del-arte/estado-del-arte.md",
+      "line": 35,
+      "message": "«Mohamed (2025)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 1,
+      "detail": {
+        "surname": "Mohamed",
+        "year": "2025",
+        "lines": [
+          35
+        ],
+        "count": 1,
+        "context": "entrevistas, encuestas), la línea de Ferino et al. (2025) y Mohamed et al. (2025)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol1-fundamentos/manuscrito/capitulos/04_capitulo_4.md",
+      "line": 121,
+      "message": "«Kahneman (2011)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 1,
+      "detail": {
+        "surname": "Kahneman",
+        "year": "2011",
+        "lines": [
+          121
+        ],
+        "count": 1,
+        "context": "deliberativo (conceptualización originalmente avanzada por Kahneman (2011)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol1-fundamentos/manuscrito/capitulos/08_capitulo_8.md",
+      "line": 466,
+      "message": "«Kiczales (1997)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 1,
+      "detail": {
+        "surname": "Kiczales",
+        "year": "1997",
+        "lines": [
+          466
+        ],
+        "count": 1,
+        "context": "La Programación Orientada a Aspectos (AOP), formalizada por Kiczales et al. (1997)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/estado-del-arte/estado-del-arte.md",
+      "line": 7,
+      "message": "«Frontiers (2026)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Frontiers",
+        "year": "2026",
+        "lines": [
+          7
+        ],
+        "count": 1,
+        "context": "ismo como paradigma dominante.** La revisión sistemática de Frontiers (2026)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/estado-del-arte/estado-del-arte.md",
+      "line": 11,
+      "message": "«Ginebra (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Ginebra",
+        "year": "2024",
+        "lines": [
+          11
+        ],
+        "count": 1,
+        "context": "s relevante para IA.** Un estudio del Graduate Institute de Ginebra (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/01_capitulo_1.md",
+      "line": 13,
+      "message": "«Greshake (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Greshake",
+        "year": "2023",
+        "lines": [
+          13
+        ],
+        "count": 1,
+        "context": "Greshake et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/01_capitulo_1.md",
+      "line": 15,
+      "message": "«Perez (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Perez",
+        "year": "2022",
+        "lines": [
+          15
+        ],
+        "count": 1,
+        "context": "Perez & Ribeiro (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/02_capitulo_2.md",
+      "line": 74,
+      "message": "«Peng (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Peng",
+        "year": "2023",
+        "lines": [
+          74
+        ],
+        "count": 1,
+        "context": "mática de patrones agénticos no es trivial ni especulativo. Peng et al. (2023,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/03_capitulo_3.md",
+      "line": 26,
+      "message": "«Vaithilingam (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vaithilingam",
+        "year": "2022",
+        "lines": [
+          26
+        ],
+        "count": 1,
+        "context": "tudios de uso y usabilidad de herramientas de IA como el de Vaithilingam et al. (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 7,
+      "message": "«Green (2000)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Green",
+        "year": "2000",
+        "lines": [
+          7
+        ],
+        "count": 1,
+        "context": "l interés propio. Dicha fórmula (sistematizada por Maister, Green y Galford (2000)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 15,
+      "message": "«Lee (2004)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Lee",
+        "year": "2004",
+        "lines": [
+          15
+        ],
+        "count": 1,
+        "context": "observabilidad de outputs y a la trazabilidad de procesos. Lee y See (2004)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 31,
+      "message": "«Ribeiro (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Ribeiro",
+        "year": "2016",
+        "lines": [
+          31
+        ],
+        "count": 1,
+        "context": "l sistema en cada subdominio, no es estática ni arbitraria. Ribeiro et al. (2016)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/06_capitulo_6.md",
+      "line": 23,
+      "message": "«Sweller (2011)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Sweller",
+        "year": "2011",
+        "lines": [
+          23,
+          187
+        ],
+        "count": 2,
+        "context": "rofia: el músculo cognitivo que no se ejercita se debilita. Sweller (2011)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/06_capitulo_6.md",
+      "line": 25,
+      "message": "«Licklider (1960)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Licklider",
+        "year": "1960",
+        "lines": [
+          25
+        ],
+        "count": 1,
+        "context": "sis interpretativa, la decisión de valor) permanece humano. Licklider (1960)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/07_capitulo_7.md",
+      "line": 9,
+      "message": "«Rogers (2003)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Rogers",
+        "year": "2003",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "Rogers (2003)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/07_capitulo_7.md",
+      "line": 25,
+      "message": "«Profession (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Profession",
+        "year": "2023",
+        "lines": [
+          25
+        ],
+        "count": 1,
+        "context": "e constante de valor latente. Microsoft, en su Pulse of the Profession (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/07_capitulo_7.md",
+      "line": 219,
+      "message": "«Venkatesh (2003)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Venkatesh",
+        "year": "2003",
+        "lines": [
+          219
+        ],
+        "count": 1,
+        "context": "e en la literatura de sistemas de información. El modelo de Venkatesh et al. (2003)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/08_capitulo_8.md",
+      "line": 9,
+      "message": "«Vygotsky (1978)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vygotsky",
+        "year": "1978",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "memoria, objetivos pedagógicos y mecanismos de adaptación. Vygotsky (1978)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 9,
+      "message": "«Holmes (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Holmes",
+        "year": "2023",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "Holmes et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 21,
+      "message": "«Vygotsky (1978)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vygotsky",
+        "year": "1978",
+        "lines": [
+          21
+        ],
+        "count": 1,
+        "context": "ndizaje constructivista.** La Zona de Desarrollo Próximo de Vygotsky (1978)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 23,
+      "message": "«Papert (1980)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Papert",
+        "year": "1980",
+        "lines": [
+          23
+        ],
+        "count": 1,
+        "context": "El precedente histórico de Papert (1980)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 79,
+      "message": "«Touretzky (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Touretzky",
+        "year": "2024",
+        "lines": [
+          79
+        ],
+        "count": 1,
+        "context": "Touretzky et al. (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/11_capitulo_11.md",
+      "line": 7,
+      "message": "«Kitchin (2014)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Kitchin",
+        "year": "2014",
+        "lines": [
+          7
+        ],
+        "count": 1,
+        "context": "** a partir de lo medido, en tiempo real y a escala urbana. Kitchin (2014)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/11_capitulo_11.md",
+      "line": 9,
+      "message": "«Mora (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Mora",
+        "year": "2024",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "coordinación es, intrínsecamente, un problema multiagente. Mora et al. (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/11_capitulo_11.md",
+      "line": 108,
+      "message": "«Yigitcanlar (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Yigitcanlar",
+        "year": "2023",
+        "lines": [
+          108
+        ],
+        "count": 1,
+        "context": "a ciudad existe para sus habitantes, no para su eficiencia. Yigitcanlar et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
+      "line": 9,
+      "message": "«Zhang (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Zhang",
+        "year": "2023",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "Zhang et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/12_capitulo_12.md",
+      "line": 92,
+      "message": "«Richardson (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Richardson",
+        "year": "2018",
+        "lines": [
+          92
+        ],
+        "count": 1,
+        "context": "degradado no es el modo óptimo, pero es el modo disponible. Richardson (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 9,
+      "message": "«Cunningham (1992)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Cunningham",
+        "year": "1992",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "pido al principio y se vuelve imposible de cambiar después. Cunningham (1992)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 11,
+      "message": "«Kruchten (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Kruchten",
+        "year": "2019",
+        "lines": [
+          11
+        ],
+        "count": 1,
+        "context": "mas centrales de la ingeniería de software como disciplina. Kruchten et al. (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 27,
+      "message": "«Lenarduzzi (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Lenarduzzi",
+        "year": "2024",
+        "lines": [
+          27
+        ],
+        "count": 1,
+        "context": "La deuda técnica en enjambres no es monolítica. Lenarduzzi et al. (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 55,
+      "message": "«Vernon (2013)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vernon",
+        "year": "2013",
+        "lines": [
+          55
+        ],
+        "count": 1,
+        "context": "y las herramientas pueden cambiar sin modificar el agente. Vernon (2013)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 61,
+      "message": "«Fowler (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Fowler",
+        "year": "2018",
+        "lines": [
+          61
+        ],
+        "count": 1,
+        "context": "entos existentes, sin modificar los agentes que los emiten. Fowler (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/14_capitulo_14.md",
+      "line": 40,
+      "message": "«Vaswani (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vaswani",
+        "year": "2017",
+        "lines": [
+          40
+        ],
+        "count": 1,
+        "context": "- Vaswani et al. (2017)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/14_capitulo_14.md",
+      "line": 41,
+      "message": "«Brown (2020)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Brown",
+        "year": "2020",
+        "lines": [
+          41
+        ],
+        "count": 1,
+        "context": "- Brown et al. (2020)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/15_capitulo_15.md",
+      "line": 63,
+      "message": "«Russell (1980)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Russell",
+        "year": "1980",
+        "lines": [
+          63
+        ],
+        "count": 1,
+        "context": "al., 2017) en el espacio bidimensional Valencia-Arousal de Russell (1980)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/18_capitulo_18.md",
+      "line": 35,
+      "message": "«Code (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Code",
+        "year": "2024",
+        "lines": [
+          35
+        ],
+        "count": 1,
+        "context": "AAAI) según el análisis de macro-tendencias de Papers With Code (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 12,
+      "message": "«Feathers (2004)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Feathers",
+        "year": "2004",
+        "lines": [
+          12
+        ],
+        "count": 1,
+        "context": "en Medellín no hereda el problema de legado que documentan Feathers (2004)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 24,
+      "message": "«Adelani (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Adelani",
+        "year": "2022",
+        "lines": [
+          24
+        ],
+        "count": 1,
+        "context": "| MasakhaNER 2.0 | NER en 21 lenguas africanas | Adelani et al. (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 25,
+      "message": "«Muhammad (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Muhammad",
+        "year": "2023",
+        "lines": [
+          25
+        ],
+        "count": 1,
+        "context": "| AfriSenti | Análisis de sentimiento en 14 lenguas | Muhammad et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 26,
+      "message": "«Alabi (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Alabi",
+        "year": "2022",
+        "lines": [
+          26
+        ],
+        "count": 1,
+        "context": "-MT | Traducción automática para lenguas de baja dotación | Alabi et al. (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 27,
+      "message": "«Dione (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Dione",
+        "year": "2023",
+        "lines": [
+          27
+        ],
+        "count": 1,
+        "context": "| MasakhaPOS | POS tagging para 20 lenguas | Dione et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/23_capitulo_23.md",
+      "line": 7,
+      "message": "«Association (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Association",
+        "year": "2024",
+        "lines": [
+          7,
+          43
+        ],
+        "count": 2,
+        "context": "0 km². Esa cifra, documentada por el Semiconductor Industry Association (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/27_capitulo_27.md",
+      "line": 43,
+      "message": "«Wooldridge (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Wooldridge",
+        "year": "1995",
+        "lines": [
+          43
+        ],
+        "count": 1,
+        "context": "renderse) antes de que el siguiente nivel sea comprensible. Wooldridge y Jennings (1995)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/27_capitulo_27.md",
+      "line": 92,
+      "message": "«Capital (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Capital",
+        "year": "2023",
+        "lines": [
+          92
+        ],
+        "count": 1,
+        "context": "e incluye los informes de inversión en AI talent de Sequoia Capital (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/27_capitulo_27.md",
+      "line": 92,
+      "message": "«Institute (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Institute",
+        "year": "2023",
+        "lines": [
+          92
+        ],
+        "count": 1,
+        "context": "de Sequoia Capital (2023) y los análisis de McKinsey Global Institute (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 7,
+      "message": "«Wooldridge (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Wooldridge",
+        "year": "1995",
+        "lines": [
+          7
+        ],
+        "count": 1,
+        "context": "tural. Un sistema multiagente, en la definición canónica de Wooldridge y Jennings (1995)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 19,
+      "message": "«Pappalardo (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Pappalardo",
+        "year": "2019",
+        "lines": [
+          19
+        ],
+        "count": 1,
+        "context": "más utilizado en investigación académica, el publicado por Pappalardo et al. (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 36,
+      "message": "«Fernández (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Fernández",
+        "year": "2018",
+        "lines": [
+          36
+        ],
+        "count": 1,
+        "context": "nibles, zonas de cobertura defensiva. El trabajo seminal de Fernández y Bornn (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 42,
+      "message": "«Decroos (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Decroos",
+        "year": "2019",
+        "lines": [
+          42
+        ],
+        "count": 1,
+        "context": "ión individual a la probabilidad de marcar gol. El paper de Decroos et al. (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 66,
+      "message": "«Vinyals (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vinyals",
+        "year": "2019",
+        "lines": [
+          66
+        ],
+        "count": 1,
+        "context": "tivos fue establecido de forma definitiva por el trabajo de Vinyals et al. (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 68,
+      "message": "«Rashid (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Rashid",
+        "year": "2018",
+        "lines": [
+          68
+        ],
+        "count": 1,
+        "context": "El framework QMIX de Rashid et al. (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/28_capitulo_28.md",
+      "line": 70,
+      "message": "«Lowe (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Lowe",
+        "year": "2017",
+        "lines": [
+          70
+        ],
+        "count": 1,
+        "context": "El trabajo de Lowe et al. (2017)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/29_capitulo_29.md",
+      "line": 82,
+      "message": "«Peng (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Peng",
+        "year": "2023",
+        "lines": [
+          82
+        ],
+        "count": 1,
+        "context": "La investigación de Peng et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/30_capitulo_30.md",
+      "line": 82,
+      "message": "«Peng (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Peng",
+        "year": "2023",
+        "lines": [
+          82
+        ],
+        "count": 1,
+        "context": "tareas del equipo, umbral alcanzable según la evidencia de Peng et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/31_capitulo_31.md",
+      "line": 123,
+      "message": "«Kalliamvakou (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Kalliamvakou",
+        "year": "2022",
+        "lines": [
+          123
+        ],
+        "count": 1,
+        "context": "cífico, el protocolo más informativo es el desarrollado por Kalliamvakou (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 229,
+      "message": "«Amplitude (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Amplitude",
+        "year": "2024",
+        "lines": [
+          229
+        ],
+        "count": 1,
+        "context": "de retención a 30 días del orden del 12–18% según datos de Amplitude (2024,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 269,
+      "message": "«Lowe (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Lowe",
+        "year": "2017",
+        "lines": [
+          269
+        ],
+        "count": 1,
+        "context": "ten simular millones de horas de juego en tiempo acelerado. Lowe et al. (2017,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 269,
+      "message": "«Rashid (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Rashid",
+        "year": "2018",
+        "lines": [
+          269
+        ],
+        "count": 1,
+        "context": "tivas y competitivas simultáneamente en entornos de mezcla. Rashid et al. (2018,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 446,
+      "message": "«Gartner (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Gartner",
+        "year": "2024",
+        "lines": [
+          446
+        ],
+        "count": 1,
+        "context": "La métrica más citada en la industria: Gartner (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 656,
+      "message": "«Berner (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Berner",
+        "year": "2019",
+        "lines": [
+          656
+        ],
+        "count": 1,
+        "context": "stemas multiagente entrenados por refuerzo. Los trabajos de Berner et al. (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol2-frontera-y-aplicaciones/manuscrito/capitulos/32_capitulo_32.md",
+      "line": 656,
+      "message": "«Vinyals (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 2,
+      "detail": {
+        "surname": "Vinyals",
+        "year": "2019",
+        "lines": [
+          656
+        ],
+        "count": 1,
+        "context": "enados por refuerzo. Los trabajos de Berner et al. (2019) y Vinyals et al. (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/01_capitulo_1.md",
+      "line": 7,
+      "message": "«Amodei (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Amodei",
+        "year": "2016",
+        "lines": [
+          7
+        ],
+        "count": 1,
+        "context": "agéntica, y su formulación técnica es anterior a los LLMs: Amodei et al. (2016)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/01_capitulo_1.md",
+      "line": 111,
+      "message": "«Kleinberg (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Kleinberg",
+        "year": "2016",
+        "lines": [
+          111
+        ],
+        "count": 1,
+        "context": "encia, y como formalizaran los teoremas de imposibilidad de Kleinberg et al. (2016)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/03_capitulo_3.md",
+      "line": 15,
+      "message": "«Rolnick (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Rolnick",
+        "year": "2022",
+        "lines": [
+          15
+        ],
+        "count": 1,
+        "context": "Rolnick et al. (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/03_capitulo_3.md",
+      "line": 38,
+      "message": "«Irrgang (2021)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Irrgang",
+        "year": "2021",
+        "lines": [
+          38,
+          170
+        ],
+        "count": 2,
+        "context": "Irrgang et al. (2021)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/03_capitulo_3.md",
+      "line": 172,
+      "message": "«Breiman (1996)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Breiman",
+        "year": "1996",
+        "lines": [
+          172
+        ],
+        "count": 1,
+        "context": "tura de *ensemble learning* desde los trabajos seminales de Breiman (1996)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/03_capitulo_3.md",
+      "line": 172,
+      "message": "«Wooldridge (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Wooldridge",
+        "year": "1995",
+        "lines": [
+          172
+        ],
+        "count": 1,
+        "context": "Breiman (1996) y formalizado para sistemas multi-agente por Wooldridge & Jennings (1995)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/04_capitulo_4.md",
+      "line": 119,
+      "message": "«Ellsberg (1961)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Ellsberg",
+        "year": "1961",
+        "lines": [
+          119
+        ],
+        "count": 1,
+        "context": "a de decisiones bajo ambigüedad epistémica, formalizado por Ellsberg (1961)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/04_capitulo_4.md",
+      "line": 119,
+      "message": "«Peppard (2004)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Peppard",
+        "year": "2004",
+        "lines": [
+          119
+        ],
+        "count": 1,
+        "context": "(1961) y aplicado al dominio de sistemas de información por Peppard & Ward (2004)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/04_capitulo_4.md",
+      "line": 121,
+      "message": "«Dorigo (1999)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Dorigo",
+        "year": "1999",
+        "lines": [
+          121
+        ],
+        "count": 1,
+        "context": ", cuya caracterización formal fue establecida por Bonabeau, Dorigo & Theraulaz (1999)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 9,
+      "message": "«Fischhoff (1975)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Fischhoff",
+        "year": "1975",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "nfirmación** y formalizado para contextos de ingeniería por Fischhoff (1975)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 11,
+      "message": "«Kochhar (2016)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Kochhar",
+        "year": "2016",
+        "lines": [
+          11
+        ],
+        "count": 1,
+        "context": "en producción raramente son los más complejos técnicamente. Kochhar et al. (2016)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 27,
+      "message": "«Wen (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Wen",
+        "year": "2024",
+        "lines": [
+          27
+        ],
+        "count": 1,
+        "context": "**Reproducción automática.** Wen et al. (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 92,
+      "message": "«Popper (1934)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Popper",
+        "year": "1934",
+        "lines": [
+          92
+        ],
+        "count": 1,
+        "context": "or un agente complaciente**. Importamos el falsacionismo de Popper (1934,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/05_capitulo_5.md",
+      "line": 176,
+      "message": "«Shooman (1983)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Shooman",
+        "year": "1983",
+        "lines": [
+          176
+        ],
+        "count": 1,
+        "context": "genealogía puede trazarse desde la *adversarial testing* de Shooman (1983)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/07_capitulo_7.md",
+      "line": 13,
+      "message": "«Davenport (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Davenport",
+        "year": "2018",
+        "lines": [
+          13
+        ],
+        "count": 1,
+        "context": "Davenport & Ronanki (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/07_capitulo_7.md",
+      "line": 45,
+      "message": "«Beath (2019)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Beath",
+        "year": "2019",
+        "lines": [
+          45
+        ],
+        "count": 1,
+        "context": "señal de negocio antes de que se formule como ticket. Ross, Beath & Mocker (2019)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/07_capitulo_7.md",
+      "line": 115,
+      "message": "«Bughin (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Bughin",
+        "year": "2018",
+        "lines": [
+          115
+        ],
+        "count": 1,
+        "context": "Bughin et al. (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/08_capitulo_8.md",
+      "line": 72,
+      "message": "«Ericsson (1993)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Ericsson",
+        "year": "1993",
+        "lines": [
+          72,
+          82
+        ],
+        "count": 2,
+        "context": "va se ajusta al modelo de práctica deliberada formulado por Ericsson et al. (1993)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/09_capitulo_9.md",
+      "line": 40,
+      "message": "«Doerr (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Doerr",
+        "year": "2018",
+        "lines": [
+          40
+        ],
+        "count": 1,
+        "context": "co de Objetivos y Resultados Clave (OKRs), popularizado por Doerr (2018)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/11_capitulo_11.md",
+      "line": 55,
+      "message": "«Christensen (1997)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Christensen",
+        "year": "1997",
+        "lines": [
+          55,
+          76,
+          85
+        ],
+        "count": 3,
+        "context": "La investigación de Christensen (1997)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/15_capitulo_15.md",
+      "line": 209,
+      "message": "«Weick (2007)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Weick",
+        "year": "2007",
+        "lines": [
+          209
+        ],
+        "count": 1,
+        "context": "ad (*High Reliability Organization*, HRO), desarrollada por Weick y Sutcliffe (2007)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/17_capitulo_17.md",
+      "line": 15,
+      "message": "«Brown (2020)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Brown",
+        "year": "2020",
+        "lines": [
+          15
+        ],
+        "count": 1,
+        "context": "a calidad de su pensamiento**, no un lujo de transparencia. Brown et al. (2020)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/17_capitulo_17.md",
+      "line": 21,
+      "message": "«Wenger (1998)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Wenger",
+        "year": "1998",
+        "lines": [
+          21
+        ],
+        "count": 1,
+        "context": "uctura de las comunidades de práctica humanas descritas por Wenger (1998)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/17_capitulo_17.md",
+      "line": 29,
+      "message": "«Raji (2020)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Raji",
+        "year": "2020",
+        "lines": [
+          29,
+          190
+        ],
+        "count": 2,
+        "context": "Raji et al. (2020)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/17_capitulo_17.md",
+      "line": 190,
+      "message": "«Nonaka (1995)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Nonaka",
+        "year": "1995",
+        "lines": [
+          190
+        ],
+        "count": 1,
+        "context": "ismos de transferencia de conocimiento tácito descritos por Nonaka y Takeuchi (1995)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/18_capitulo_18.md",
+      "line": 38,
+      "message": "«Conway (1968)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Conway",
+        "year": "1968",
+        "lines": [
+          38
+        ],
+        "count": 1,
+        "context": "Conway (1968)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/18_capitulo_18.md",
+      "line": 213,
+      "message": "«Simon (1955)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Simon",
+        "year": "1955",
+        "lines": [
+          213
+        ],
+        "count": 1,
+        "context": "lizarse a través de la teoría de la racionalidad acotada de Simon (1955)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/19_capitulo_19.md",
+      "line": 9,
+      "message": "«Christensen (1997)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Christensen",
+        "year": "1997",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "cliente, no desde la comodidad de la tecnología disponible. Christensen (1997)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/19_capitulo_19.md",
+      "line": 56,
+      "message": "«Porter (1985)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Porter",
+        "year": "1985",
+        "lines": [
+          56,
+          271
+        ],
+        "count": 2,
+        "context": "Porter (1985)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 50,
+      "message": "«Rababah (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Rababah",
+        "year": "2024",
+        "lines": [
+          50
+        ],
+        "count": 1,
+        "context": "duce la ventana de exposición de semanas o meses a minutos. Rababah et al. (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/20_capitulo_20.md",
+      "line": 68,
+      "message": "«Rahman (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Rahman",
+        "year": "2023",
+        "lines": [
+          68
+        ],
+        "count": 1,
+        "context": "despliegan enjambres en 2024-2025 operan en el nivel 1 o 2. Rahman et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/21_capitulo_21.md",
+      "line": 23,
+      "message": "«Pearce (2022)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Pearce",
+        "year": "2022",
+        "lines": [
+          23
+        ],
+        "count": 1,
+        "context": "Pearce et al. (2022)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/21_capitulo_21.md",
+      "line": 31,
+      "message": "«Cunningham (1992)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Cunningham",
+        "year": "1992",
+        "lines": [
+          31
+        ],
+        "count": 1,
+        "context": "La deuda técnica clásica, formalizada por Ward Cunningham (1992)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/21_capitulo_21.md",
+      "line": 57,
+      "message": "«Kochhar (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Kochhar",
+        "year": "2024",
+        "lines": [
+          57
+        ],
+        "count": 1,
+        "context": "qué, cuándo, con qué instrucciones y qué humano lo integró. Kochhar et al. (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/22_capitulo_22.md",
+      "line": 7,
+      "message": "«Blank (2013)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Blank",
+        "year": "2013",
+        "lines": [
+          7
+        ],
+        "count": 1,
+        "context": "(2011) acuñó el concepto en el contexto de startups; Steve Blank (2013)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/22_capitulo_22.md",
+      "line": 63,
+      "message": "«Menzies (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Menzies",
+        "year": "2024",
+        "lines": [
+          63
+        ],
+        "count": 1,
+        "context": "Menzies y Zimmermann (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/22_capitulo_22.md",
+      "line": 74,
+      "message": "«Gartner (2024)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Gartner",
+        "year": "2024",
+        "lines": [
+          74
+        ],
+        "count": 1,
+        "context": "Gartner (2024)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md",
+      "line": 9,
+      "message": "«Wooldridge (2009)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Wooldridge",
+        "year": "2009",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "e: O(2^N). Con rol único, el espacio es O(2^1) = constante. Wooldridge (2009)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md",
+      "line": 15,
+      "message": "«Taylor (1911)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Taylor",
+        "year": "1911",
+        "lines": [
+          15
+        ],
+        "count": 1,
+        "context": "raíces profundas en la teoría de la organización. Frederick Taylor (1911)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/23_capitulo_23.md",
+      "line": 15,
+      "message": "«Smith (1776)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Smith",
+        "year": "1776",
+        "lines": [
+          15
+        ],
+        "count": 1,
+        "context": "ck Taylor (1911) la aplicó a la producción industrial; Adam Smith (1776)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md",
+      "line": 9,
+      "message": "«Parnas (1972)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Parnas",
+        "year": "1972",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "e SOLID merece una revisión. El principio de modularidad de Parnas (1972)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md",
+      "line": 9,
+      "message": "«Meyer (1988)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Meyer",
+        "year": "1988",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "decisiones de diseño que probablemente cambiarán. Bertrand Meyer (1988)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md",
+      "line": 11,
+      "message": "«Chidamber (1994)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Chidamber",
+        "year": "1994",
+        "lines": [
+          11
+        ],
+        "count": 1,
+        "context": "lve obsoleto en la era agéntica: se vuelve *más necesario*. Chidamber y Kemerer (1994)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol3-madurez-organizacional/manuscrito/capitulos/24_capitulo_24.md",
+      "line": 79,
+      "message": "«Lenarduzzi (2021)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 3,
+      "detail": {
+        "surname": "Lenarduzzi",
+        "year": "2021",
+        "lines": [
+          79
+        ],
+        "count": 1,
+        "context": "solapan, dependencias enredadas, responsabilidades difusas. Lenarduzzi et al. (2021)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/estado-del-arte/estado-del-arte.md",
+      "line": 11,
+      "message": "«Heuvel (2018)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Heuvel",
+        "year": "2018",
+        "lines": [
+          11
+        ],
+        "count": 1,
+        "context": "cita trabajo previo relevante: Soldani, Tamburri y Van Den Heuvel (2018,"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/10_capitulo_10.md",
+      "line": 9,
+      "message": "«Vaswani (2017)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Vaswani",
+        "year": "2017",
+        "lines": [
+          9
+        ],
+        "count": 1,
+        "context": "Vaswani et al. (2017)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/11_capitulo_11.md",
+      "line": 220,
+      "message": "«Kalman (1960)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Kalman",
+        "year": "1960",
+        "lines": [
+          220
+        ],
+        "count": 1,
+        "context": "tría. La observabilidad completa del sistema, en sentido de Kalman (1960)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
+      "line": 11,
+      "message": "«Samsi (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Samsi",
+        "year": "2023",
+        "lines": [
+          11
+        ],
+        "count": 1,
+        "context": "ento es un costo único; la inferencia es un costo continuo. Samsi et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
+      "line": 188,
+      "message": "«Viguier (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Viguier",
+        "year": "2023",
+        "lines": [
+          188
+        ],
+        "count": 1,
+        "context": "Luccioni, Viguier & Ligozat (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/12_capitulo_12.md",
+      "line": 240,
+      "message": "«Luccioni (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Luccioni",
+        "year": "2023",
+        "lines": [
+          240
+        ],
+        "count": 1,
+        "context": "valores de calidad por unidad de energía consumida, lo que Luccioni et al. (2023)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 52,
+      "message": "«Ongaro (2014)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Ongaro",
+        "year": "2014",
+        "lines": [
+          52
+        ],
+        "count": 1,
+        "context": "a transaccional estricta que se aplica a datos financieros. Ongaro y Ousterhout (2014)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 148,
+      "message": "«Helland (2009)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Helland",
+        "year": "2009",
+        "lines": [
+          148
+        ],
+        "count": 1,
+        "context": "a, el datacenter on-premise pierde energía, o el ISP falla. Helland (2009)"
+      }
+    },
+    {
+      "check": "C15",
+      "severity": "aviso",
+      "file": "vol4-patrones-de-escala/manuscrito/capitulos/13_capitulo_13.md",
+      "line": 443,
+      "message": "«Park (2023)» se cita en la prosa y no tiene entrada en la bibliografía de este volumen: añadir la ficha o reformular la frase",
+      "volume": 4,
+      "detail": {
+        "surname": "Park",
+        "year": "2023",
+        "lines": [
+          443
+        ],
+        "count": 1,
+        "context": "Park et al. (2023)"
       }
     },
     {

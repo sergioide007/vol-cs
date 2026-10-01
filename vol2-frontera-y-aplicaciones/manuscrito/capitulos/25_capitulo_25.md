@@ -24,7 +24,7 @@ He aquí por qué Ryzen AI es superior a GPU para orquestación robótica:
 
 **Latencia determinística**: Los 16 TOPS del NPU de Ryzen AI mantienen latencia consistente <5ms incluso bajo carga. Una GPU cloud sufre jitter de red (±50ms). En robótica, varianza de latencia = wobble en servo → defectos. Ryzen AI garantiza el servo loop es predecible.
 
-**On-Device Learning**: Conviene precisar que Japón mantiene datos de fabricación locales (secreto comercial). Con Ryzen AI en la caja de control, puedes entrenar un *agente predictive maintenance* LSTM directamente en datos de vibración en tiempo real. El modelo mejora sin contacto con cloud. Confidencialidad garantizada.
+**On-Device Learning**: Japón mantiene sus datos de fabricación en entornos locales bajo secreto comercial. Con Ryzen AI en la caja de control, es posible entrenar un *agente predictive maintenance* LSTM directamente con datos de vibración en tiempo real. El modelo mejora sin contacto con cloud. Confidencialidad garantizada.
 
 **Fallback Automático**: Si la red cae (evento común en fábricas con interferencia electromagnética), Ryzen AI **continúa ejecutando los 8 agentes de visión localmente**. La línea de montaje no se detiene. Cloud es redundancia, no dependencia.
 

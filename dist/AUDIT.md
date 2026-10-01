@@ -1,6 +1,6 @@
 # Auditoría del manuscrito
 
-Fecha: 2026-09-29 · 4 volúmenes · 80 capítulos · 172.137 palabras de prosa
+Fecha: 2026-09-30 · 4 volúmenes · 80 capítulos · 172.137 palabras de prosa
 
 Generado por `tools/lint_manuscript.py`. Complementa a `validate_editions.py`, que solo comprueba la maquetación. La lista completa de hallazgos está en `dist/AUDIT.json`; este informe se recorta por archivo para que se pueda leer.
 

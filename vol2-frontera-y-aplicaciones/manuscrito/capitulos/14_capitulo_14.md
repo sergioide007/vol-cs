@@ -4,7 +4,7 @@
 
 ## La paradoja del especialista en IA
 
-Existe una paradoja que conviene enunciar sin rodeos: el profesional que *solo* estudia IA queda, tarde o temprano, atrapado en ella. La razón es que sus fundamentos son más antiguos que el campo mismo, no que la IA sea superficial (es inmensamente profunda). Los sistemas multiagente son, en última instancia, sistemas distribuidos complejos. Todo lo que la disciplina aprendió sobre sistemas distribuidos (consistencia, fallos, coordinación, fronteras, deuda técnica) aplica directamente. Quien ignora esa herencia no ve la IA; ve solo su superficie más reciente.
+Una paradoja real amenaza al especialista: el profesional que *solo* estudia IA queda, tarde o temprano, atrapado en ella. La razón es que sus fundamentos son más antiguos que el campo mismo, no que la IA sea superficial (es inmensamente profunda). Los sistemas multiagente son, en última instancia, sistemas distribuidos complejos. Todo lo que la disciplina aprendió sobre sistemas distribuidos (consistencia, fallos, coordinación, fronteras, deuda técnica) aplica directamente. Quien ignora esa herencia no ve la IA; ve solo su superficie más reciente.
 
 Este capítulo cierra los capítulos geopolíticos (62–70) con una reflexión que los trasciende: independientemente de si el lector opera en USA, China, Europa, LATAM o Australia, los fundamentos del criterio son universales. Y esos fundamentos se encuentran en libros, en papers y en el hábito de leer sistemáticamente más allá del horizonte inmediato de la industria.
 

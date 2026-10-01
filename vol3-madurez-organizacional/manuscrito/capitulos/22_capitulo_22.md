@@ -12,7 +12,7 @@ El MVP agéntico, por tanto, no se mide por cuánto código tiene, ni por cuánt
 
 ## Por qué los agentes tientan a saltarse el MVP
 
-Conviene advertir una trampa específica de esta era. Como los agentes hacen que construir sea barato y rápido (un enjambre funcional puede prototipado en días en lugar de meses), la tentación de saltarse el MVP y "construirlo todo de una vez" es mayor que nunca. Sin embargo, esta facilidad es engañosa: es fácil construir, pero sigue siendo igual de difícil construir *lo correcto*. Un enjambre elaborado que resuelve el problema equivocado no es un logro técnico; es deuda sofisticada.
+Existe una trampa específica en este contexto: como los agentes abaratan y aceleran el desarrollo (un enjambre funcional puede ser prototipado en días en lugar de meses), la tentación de saltarse el MVP y «construirlo todo de una vez» es mayor que nunca. Sin embargo, esta facilidad es engañosa: es fácil construir, pero sigue siendo igual de difícil construir *lo correcto*. Un enjambre elaborado que resuelve el problema equivocado no es un logro técnico; es deuda sofisticada.
 
 McKinsey Global Institute (2023) documenta que el 56% de los proyectos de IA generativa fracasan antes de llegar a producción, y entre las causas más frecuentes figuran la falta de validación del problema real y la sobreingeniería prematura. Los proyectos de IA que saltaron el MVP estructurado presentan una tasa de abandono en fase de escalado varias veces mayor que aquellos que validaron en capas *[cifra ilustrativa: la razón concreta depende del estudio, pero el orden de magnitud —entre tres y cuatro veces—es el que se repite en la literatura de proyectos de IA]*.
 

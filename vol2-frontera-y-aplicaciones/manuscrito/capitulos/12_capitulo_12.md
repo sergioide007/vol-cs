@@ -109,7 +109,7 @@ Esta dualidad puede formalizarse como: `Sistema_Crítico = f_determinista(propue
 
 ## El riesgo: la complejidad de la costura
 
-No obstante, lo híbrido tiene un costo que conviene declarar: la **complejidad de las costuras**. Cada frontera entre paradigmas (nube/edge, IA/determinista) es un punto de integración que puede fallar, un lugar donde la observabilidad se rompe y la responsabilidad se difumina. Por ello, optimizar una arquitectura híbrida no consiste en multiplicar paradigmas, sino en **minimizar y fortalecer las costuras**: pocas fronteras, bien definidas, bien instrumentadas.
+Lo híbrido conlleva, sin embargo, un costo arquitectónico concreto: la **complejidad de las costuras**. Cada frontera entre paradigmas (nube/edge, IA/determinista) es un punto de integración que puede fallar, un lugar donde la observabilidad se rompe y la responsabilidad se difumina. Por ello, optimizar una arquitectura híbrida no consiste en multiplicar paradigmas, sino en **minimizar y fortalecer las costuras**: pocas fronteras, bien definidas, bien instrumentadas.
 
 Li et al. (2024) demuestran en NeurIPS que los sistemas híbridos cloud-edge con monitorización centralizada de las costuras (circuit breakers, health checks, distributed tracing) tienen una disponibilidad media del 99.95%, frente al 99.5% de los sistemas sin monitorización de costuras (una diferencia de 43 horas de downtime anuales que en producción puede representar millones en costo de incidente).
 

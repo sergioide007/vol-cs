@@ -56,7 +56,7 @@ Los OKRs habilitadores sin OKRs de impacto producen equipos de ingeniería satis
 
 Las discusiones sobre IA suelen omitir un argumento: el liderazgo técnico débil no solo reduce el beneficio de los enjambres; los convierte activamente en pasivos. Un enjambre sin especificaciones claras produce un 40-60% más de iteraciones de corrección que uno bien especificado (estimación conservadora basada en datos de equipos que han publicado post-mortems de implementaciones agénticas en 2023-2024). Un enjambre sin evals propias tarda, en promedio, tres veces más en detectar regresiones de calidad que uno con evaluaciones automatizadas.
 
-El glosario operacional que el líder no puede ignorar:
+Glosario operacional de referencia para el liderazgo técnico:
 
 | Sigla | Significado | Impacto agéntico específico |
 |-------|-------------|------------------------------|

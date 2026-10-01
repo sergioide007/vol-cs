@@ -82,7 +82,7 @@ El punto de cruce ocurre en feature 4-5: a partir de la quinta funcionalidad, ca
 
 ## La síntesis: estructura como habilitador de velocidad
 
-No obstante, el dilema es en parte falso, y conviene cerrarlo con su superación. Bien entendidas, estructura y funcionalidad no se oponen: la estructura es lo que **permite sostener la velocidad de la funcionalidad** en el tiempo. Como recuerda el segundo lema, agilidad no es rapidez; es la capacidad de seguir cambiando con bajo costo.
+El dilema es, sin embargo, en parte falso. Bien entendidas, estructura y funcionalidad no se oponen: la estructura es lo que **permite sostener la velocidad de la funcionalidad** en el tiempo. Como recuerda el segundo lema, agilidad no es rapidez; es la capacidad de seguir cambiando con bajo costo.
 
 La pregunta madura es "¿cómo invierto en estructura justo lo suficiente para que la funcionalidad siga siendo barata?", no "¿funcionalidad o estructura?". El arquitecto sabio no sacrifica una por la otra: usa la estructura como el cimiento que mantiene veloz al enjambre durante años, no solo durante la primera demo.
 

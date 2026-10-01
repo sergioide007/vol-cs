@@ -4,7 +4,7 @@
 
 ## El plan de 5 años: dónde China pone su peso estratégico
 
-Conviene precisar que la Estrategia Nacional de IA de China (publicada en 2017, revisada en 2023 como *Generative AI Interim Measures*, CACC) no habla explícitamente de "agentes". Habla de "sistemas inteligentes autónomos distribuidos". La traducción arquitectónica es inmediata: multiagentes con capacidad de autoorganización y optimización iterativa sin intervención humana continua.
+La Estrategia Nacional de IA de China (publicada en 2017, revisada en 2023 como *Generative AI Interim Measures*, CACC) no habla explícitamente de "agentes": habla de "sistemas inteligentes autónomos distribuidos". La traducción arquitectónica es inmediata: multiagentes con capacidad de autoorganización y optimización iterativa sin intervención humana continua.
 
 El objetivo declarado es *dominar las aplicaciones antes que los modelos fundacionales*. Esta es una divergencia radical respecto a occidente, donde OpenAI, Anthropic y Google DeepMind invierten en órdenes de magnitud superiores en investigación de modelos de frontera. La apuesta china descansa sobre una hipótesis técnica que los números están empezando a validar: *un enjambre de modelos mediocres, bien orquestado sobre datos propios masivos, supera en precisión de dominio a un modelo brillante sin contexto local*. La industria china de IA ha crecido a un ritmo superior al de la occidental en el período 2020–2024 *[cifras ilustrativas: las tasas de crecimiento varían según quién mida y con qué metodología; sustitúyanse por las de la fuente que se decida citar]*.
 

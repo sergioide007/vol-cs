@@ -6,7 +6,7 @@
 
 En la tradición del software artesanal, una *kata* es un ejercicio repetible diseñado no para producir un resultado útil sino para **perfeccionar la técnica del ejecutante**. Dave Thomas, co-autor del *Pragmatic Programmer*, popularizó el concepto aplicado al código: pequeños problemas bien definidos que se resuelven repetidamente con distintas restricciones, hasta que la solución se vuelve natural e instintiva. La kata no entrena la solución; entrena al solucionador.
 
-Trasladada al dominio de los agentes de IA, la kata adquiere un matiz radicalmente diferente que conviene precisar desde el inicio: **no entrena al agente**: el modelo ya está entrenado; sus pesos no cambian durante la kata, , sino que **revela la arquitectura de su razonamiento bajo restricciones**. Esto es extraordinariamente valioso, porque lo que un agente hace bajo restricción (de tiempo, de herramientas, de formato, de costo) expone el núcleo de su proceso de razonamiento de una forma que las tareas sin restricción no permiten.
+Trasladada al dominio de los agentes de IA, la kata adquiere un sentido radicalmente diferente: **no entrena al agente** (el modelo ya está entrenado y sus pesos no cambian durante la prueba), sino que **revela la arquitectura de su razonamiento bajo restricciones**. Esto es extraordinariamente valioso, porque lo que un agente hace bajo restricción (de tiempo, de herramientas, de formato, de costo) expone el núcleo de su proceso de razonamiento de una forma que las tareas sin restricción no permiten.
 
 Inspirado en encuentros de arquitectura de software como los que el autor menciona (donde figuras como Sam Newman, autor de *Building Microservices*, moderan debates entre arquitectos sobre las mismas decisiones de diseño) puede imaginarse un formato equivalente para agentes: distintos agentes atacan el mismo problema arquitectónico, y un panel mixto de evaluadores humanos y sintéticos juzga no solo el resultado sino el camino, los trade-offs explicitados y la coherencia de la justificación.
 
@@ -90,7 +90,7 @@ La transposición de las katas competitivas al contexto organizacional requiere 
 
 ## Por qué la kata agéntica educa a sus diseñadores
 
-Conviene subrayar el beneficio menos evidente y de mayor impacto de la kata agéntica: no solo evalúa agentes, **educa a los ingenieros y arquitectos que los diseñan**. Este efecto educativo es cualitativamente diferente al de leer un paper o asistir a una conferencia.
+El beneficio menos evidente y de mayor impacto de la kata agéntica radica en su valor formativo: más allá de evaluar agentes, **educa a los ingenieros y arquitectos que los diseñan**. Este efecto educativo es cualitativamente diferente al de leer un paper o asistir a una conferencia.
 
 Observar a cinco agentes atacando el mismo problema arquitectónico (algunos eligiendo consistencia fuerte, otros disponibilidad, otros un híbrido) ilumina los trade-offs con una claridad que ningún tratado teórico iguala. Los trade-offs dejan de ser abstracciones académicas y se convierten en diferencias observables de comportamiento: el agente que eligió consistencia fuerte falla en la tarea de baja latencia; el que eligió disponibilidad produce resultados inconsistentes en el escenario de partición de red. La kata convierte los trade-offs del teorema CAP ([Brewer, 2000](#ref-brewer2000)) en comportamiento observable.
 

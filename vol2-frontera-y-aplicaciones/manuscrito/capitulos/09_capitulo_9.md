@@ -6,9 +6,9 @@
 
 En el desarrollo de sistemas de alta concurrencia, una regla es sagrada y tiene décadas de validación empírica en incidentes de producción: toda conexión que se abre debe cerrarse. La fuga de conexiones (ese descuido aparentemente menor, ese error que en el entorno de desarrollo nunca se manifiesta) ha derribado sistemas enteros bajo carga. Kleppmann (2017), en su análisis de los sistemas de datos distribuidos, identifica la gestión inadecuada de recursos como una de las causas más frecuentes de fallos en producción bajo carga alta.
 
-Lo que el autor reivindica en este capítulo es que **la era agéntica no deroga esta regla, sino que la amplifica en proporción al número de agentes en el enjambre**. Un enjambre de cien agentes que cada uno abre dos conexiones concurrentes a modelos, herramientas, bases de datos y APIs está gestionando potencialmente doscientas conexiones simultáneas. Si el protocolo de cierre no es disciplinado, el problema de fuga que en un servidor monolítico podía tolerarse horas se manifiesta en minutos bajo carga de producción.
+**La era agéntica no deroga esta regla, sino que la amplifica en proporción al número de agentes en el enjambre**. Un enjambre de cien agentes que cada uno abre dos conexiones concurrentes a modelos, herramientas, bases de datos y APIs está gestionando potencialmente doscientas conexiones simultáneas. Si el protocolo de cierre no es disciplinado, el problema de fuga que en un servidor monolítico podía tolerarse horas se manifiesta en minutos bajo carga de producción.
 
-No resulta ocioso señalar que este principio se aplica con igual fuerza a recursos de naturaleza diversa: conexiones de red TCP, sesiones HTTP, handles de archivos, locks de base de datos, canales gRPC, streams de eventos y (lo que es nuevo en el ecosistema agéntico) sesiones de modelo LLM, contextos de razonamiento y conexiones MCP.
+Este principio se aplica con igual fuerza a recursos de diversa naturaleza: conexiones de red TCP, sesiones HTTP, handles de archivos, locks de base de datos, canales gRPC, streams de eventos y (lo que es nuevo en el ecosistema agéntico) sesiones de modelo LLM, contextos de razonamiento y conexiones MCP.
 
 ## El nuevo rostro del problema: cuatro formas específicamente agénticas
 

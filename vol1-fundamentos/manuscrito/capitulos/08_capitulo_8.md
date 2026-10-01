@@ -1,6 +1,6 @@
 # Capítulo 8: Patrones de orquestación multi-agente
 
-> **Antes de empezar: este es el segundo capítulo más denso del volumen y el que más código concentra** (Python, TypeScript y Java). Los cinco patrones canónicos se leen mejor como catálogo que como lectura lineal: si viene de los capítulos anteriores y nota el salto entre la teoría de la coordinación y la implementación, lea primero los encabezados de los cinco patrones, identifique el que su sistema necesita y lea esa sección completa; el resto del código queda como material de referencia. Véase «Cómo leer el código de este volumen», en la *Guía de lectura* de las páginas preliminares.
+> **Nota de orientación: este es el segundo capítulo más denso del volumen y el que más código concentra** (Python, TypeScript y Java). Los cinco patrones canónicos se leen mejor como catálogo que como lectura lineal: si viene de los capítulos anteriores y nota el salto entre la teoría de la coordinación y la implementación, lea primero los encabezados de los cinco patrones, identifique el que su sistema necesita y lea esa sección completa; el resto del código queda como material de referencia. Véase «Cómo leer el código de este volumen», en la *Guía de lectura* de las páginas preliminares.
 
 ## La arquitectura de la inteligencia distribuida
 

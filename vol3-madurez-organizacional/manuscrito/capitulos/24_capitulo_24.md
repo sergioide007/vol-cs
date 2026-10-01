@@ -68,7 +68,7 @@ DIP es, en última instancia, lo que hace posible la arquitectura de puertos y a
 
 ## Por qué SOLID importa MÁS en enjambres
 
-Conviene subrayar una tesis fuerte: SOLID no es solo aplicable a los agentes, es **más necesario** en ellos que en el código tradicional. La razón es la naturaleza probabilística del enjambre.
+La tesis central es taxativa: SOLID no solo resulta aplicable a los agentes, sino **más necesario** en ellos que en el código tradicional. La razón estriba en la naturaleza probabilística del enjambre.
 
 En código determinista, una violación de SOLID produce un sistema rígido pero predecible: el mismo input siempre produce el mismo output. En un enjambre, donde cada agente ya introduce incertidumbre de comportamiento (el mismo prompt puede producir outputs ligeramente distintos en distintas ejecuciones), la falta de fronteras claras entre responsabilidades multiplica el caos. Las responsabilidades difusas, tolerables en un programa determinista, son letales en un sistema de actores autónomos: cada punto de ambigüedad es un punto donde la incertidumbre del agente se suma a la incertidumbre de la responsabilidad.
 

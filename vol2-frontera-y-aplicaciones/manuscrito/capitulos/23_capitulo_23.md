@@ -23,7 +23,7 @@ El proceso fotolitográfico de TSMC a 3 nm (nodo N3E, introducido en 2023) permi
 
 A este respecto, el packaging avanzado resulta tan determinante como la litografía. La tecnología CoWoS (*Chip-on-Wafer-on-Substrate*) de TSMC, que apila chips lógicos con memoria HBM3e en un único substrato, es la razón por la cual un H100 SXM5 puede mover 3,35 terabytes de datos por segundo entre sus núcleos de cómputo y su memoria. Sin CoWoS, el cuello de botella de memoria limitaría la longitud de contexto procesable a una fracción de los 128 k tokens que hoy soportan modelos como Gemini 1.5 Pro ([Google DeepMind, 2024](#ref-googledeepmind2024)).
 
-Dicho esto, Taiwan no fabrica solo para NVIDIA. El segundo actor fundamental es MediaTek, cuyo chip Dimensity 9300 incorpora la unidad de procesamiento neuronal (NPU) de mayor throughput del segmento móvil (87 TOPS, 2024). Estos chips son los nodos de inferencia local que permitirán que enjambres livianos ejecuten agentes de bajo coste directamente en dispositivos del borde, el escenario que el capítulo 12 denominó arquitectura híbrida.
+La capacidad de Taiwán no se agota en NVIDIA: El segundo actor fundamental es MediaTek, cuyo chip Dimensity 9300 incorpora la unidad de procesamiento neuronal (NPU) de mayor throughput del segmento móvil (87 TOPS, 2024). Estos chips son los nodos de inferencia local que permitirán que enjambres livianos ejecuten agentes de bajo coste directamente en dispositivos del borde, el escenario que el capítulo 12 denominó arquitectura híbrida.
 
 ## ITRI y la investigación aplicada: el ecosistema invisible
 

@@ -10,7 +10,7 @@ Tenía cuatro días y medio.
 
 Este capítulo es el diario de esa semana: todos los comandos, todos los prompts, lo que funcionó y lo que no, y cuánto costó en tokens. Al final del viernes, el coverage estaba en 82.3 % y el issues tracker en cero. Lo que sigue es exactamente cómo llegamos ahí.
 
-> **Una nota sobre costos antes de empezar:** los precios de la API son los del apéndice B, con su fecha de corte. Este capítulo no los repite: los lee de allí, y un solo lugar donde actualizar precios es lo que evita que este capítulo y el apéndice se contradigan en la tercera edición. Los cálculos de esta semana también aplican a la suscripción de consumo, que ofrece un techo mensual en lugar de un coste por llamada: conveniente para el trabajo diario, pero sin la granularidad de saber qué gastaste en qué. Esa granularidad es la que exige la métrica CIU del capítulo 1.
+> **Nota de costos:** los precios de la API son los del apéndice B, con su fecha de corte. Este capítulo no los repite: los lee de allí, y un solo lugar donde actualizar precios es lo que evita que este capítulo y el apéndice se contradigan en la tercera edición. Los cálculos de esta semana también aplican a la suscripción de consumo, que ofrece un techo mensual en lugar de un coste por llamada: conveniente para el trabajo diario, pero sin la granularidad de saber qué gastaste en qué. Esa granularidad es la que exige la métrica CIU del capítulo 1.
 
 ## 9.1 Antes de generar un solo test: leer el terreno
 

@@ -42,7 +42,7 @@ Un giro inesperado en la narrativa de la competencia tecnológica USA-China es q
 
 La relevancia para enjambres es directa. Un agente que toma decisiones de crédito, triaje médico o moderación de contenido no puede depender de supervisión humana en cada ciclo de inferencia: los volúmenes son incompatibles con esa escala. CAI, combinado con RLHF (*Reinforcement Learning from Human Feedback*, Ouyang et al., InstructGPT, NeurIPS 2022), produce agentes que internalizan restricciones éticas como parámetros del modelo, no como capas de post-procesamiento que pueden ser evadidas.
 
-El impacto en la arquitectura de enjambres: en lugar de un *guardrail agent* externo que filtra cada output (patrón frágil que añade latencia y puede ser bypasseado) se diseñan agentes cuyo modelo base ya ha sido alineado vía CAI+RLHF. El compliance es endógeno, no exógeno. Esta distinción es fundamental para el equipo de QA del enjambre: los tests de comportamiento deben verificar propiedades emergentes del modelo, no solo la presencia de filtros de capa.
+El impacto en la arquitectura de enjambres: en lugar de un *guardrail agent* externo que filtra cada output (patrón frágil que añade latencia y puede ser bypasseado) se diseñan agentes cuyo modelo base ya ha sido alineado vía CAI+RLHF. El compliance es endógeno, no exógeno. Esta distinción rige el trabajo de QA del enjambre: los tests de comportamiento deben verificar propiedades emergentes del modelo, no solo la presencia de filtros de capa.
 
 ## La dimensión ejecutiva: regulación, inversión y el NIST AI RMF
 

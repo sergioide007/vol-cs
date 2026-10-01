@@ -1,6 +1,6 @@
 # Capítulo 4: Fundamentos técnicos del agente moderno
 
-> **Antes de empezar, este es el capítulo más denso del volumen.** Reúne el modelo cognitivo del agente, los patrones de razonamiento (ReAct y variantes), el manejo de contexto, el diseño del arnés de producción y la traducción de Clean Code y SOLID al código sintético. Véase la Guía de lectura en las páginas preliminares.
+> **Nota de orientación: este es el capítulo más denso del volumen.** Reúne el modelo cognitivo del agente, los patrones de razonamiento (ReAct y variantes), el manejo de contexto, el diseño del arnés de producción y la traducción de Clean Code y SOLID al código sintético. Véase la Guía de lectura en las páginas preliminares.
 
 ## De la cadena de texto al sistema cognitivo
 

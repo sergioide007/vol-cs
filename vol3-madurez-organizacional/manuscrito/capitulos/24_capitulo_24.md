@@ -88,6 +88,30 @@ El proceso de refactoring de un enjambre comprende cuatro pasos:
 
 4. **Separación progresiva**: fragmentar los agentes-dios en agentes especializados usando el patrón Strangler Fig (el nuevo agente especializado coexiste con el viejo durante la transición, asumiendo responsabilidades progresivamente hasta que el viejo puede ser eliminado). Este patrón mantiene el sistema en verde durante toda la refactorización.
 
+## Casos de estudio contemporáneos: Jev y OpenAI Dots bajo la disciplina de SOLID
+
+La validez de los principios SOLID para salvaguardar la alta cohesión y el bajo acoplamiento encuentra en las arquitecturas agénticas de 2026 sus pruebas empíricas más contundentes. Dos casos representativos ilustran cómo estos principios operan tanto en el nivel micro del arnés de control como en el nivel macro del ecosistema multiagente:
+
+### 1. Jev (TypeSafe AI): SOLID en el micro-diseño del arnés de control
+
+Los primeros bucles agénticos basados en ReAct incurrían en una violación sistemática del principio de responsabilidad única: forzaban a un único modelo de lenguaje a razonar sobre la intención del usuario, generar prosa explicativa, elegir la herramienta correcta, formatear parámetros JSON, auto-evaluar la seguridad y dictaminar la terminación del bucle. El resultado en entornos productivos fue una tasa inaceptable de errores sintácticos de parseo, latencias acumuladas y un acoplamiento vicioso entre el texto generado y los efectos secundarios en la infraestructura.
+
+La arquitectura de **Jev** ([TypeSafe AI, 2026](#ref-typesafe2026)) aborda este colapso mediante una estricta aplicación de SOLID:
+
+- **Responsabilidad única (SRP):** Jev separa las tres decisiones críticas del ciclo de control (`SELECT`, `GATE`, `JUDGE`) de la generación de lenguaje natural. Emplea un modelo clasificador System One no generativo que no redacta texto libre ni produce JSON: evalúa distribuciones de probabilidad calibradas sobre preguntas estrictamente tipadas. La política de umbrales numéricos se aísla como funciones puras en `policy.ts`, los efectos colaterales y la contención residen en `sandbox.ts`, y el bucle en `agent.ts` se limita a tareas de orquestación de I/O.
+- **Segregación de interfaces (ISP):** En lugar de sobrecargar la ventana de contexto con esquemas sobredimensionados en cada paso, Jev formula consultas acotadas sobre tres primitivas tipadas: `Choice` (selección discreta de herramienta), `Score` (clasificación sobre una rúbrica de riesgo) y `Noul` (probabilidad booleana calibrada). Cada pregunta evalúa una única dimensión y las consultas del *gate* se ejecutan en paralelo en un único viaje de red.
+- **Inversión de dependencias (DIP):** El arnés no se acopla directamente a los detalles de implementación o red del SDK de inferencia; depende de una abstracción formal `Decider`. Esta costura arquitectónica permite alternar sin fricción entre `JevDecider` (producción) y `FakeDecider` (un doble de pruebas determinista). Gracias a esto, la suite completa de pruebas unitarias, políticas de seguridad y límites de bucle se ejecuta de manera determinista en entornos de CI sin consumir tokens, sin credenciales y en milisegundos.
+
+### 2. OpenAI Dots: Alta cohesión y bajo acoplamiento en enjambres persistentes
+
+En el plano organizacional, los **Dots** ([OpenAI, 2026](#ref-openaidots2026)) materializan la transición de las sesiones agénticas efímeras a compañeros de trabajo digitales persistentes (*persistent digital coworkers*):
+
+- **Alta cohesión mediante Bounded Contexts y SRP:** Cada Dot se despliega con un propósito funcional delimitado y herramientas específicas dentro de su propio entorno cloud aislado (sandboxes dedicados). Se erradica la figura del agente corporativo omnisciente en favor de agentes altamente cohesivos que dominan un dominio operativo concreto.
+- **Bajo acoplamiento a través de Planos de Control Gobernados y DIP:** La interacción entre Dots no se confía a canales de texto libre no estructurados (que propagan alucinaciones en cascada), sino a un plano de control gobernado (*governed control plane*). Este plano administra la identidad, los permisos de acceso corporativo, los límites presupuestarios y las pistas de auditoría mediante eventos asíncronos y contratos tipados.
+- **Sustitución de Liskov (LSP) y Abierto/Cerrado (OCP):** Nuevos Dots especializados pueden incorporarse a los flujos de trabajo organizacionales sin requerir la modificación de los agentes existentes (OCP). A su vez, los modelos fundacionales que impulsan a un Dot pueden sustituirse conforme evolucionan las capacidades de los proveedores sin quebrar los contratos de interfaz ni las políticas de seguridad impuestas por el plano de control (LSP).
+
+Ambos paradigmas confirman que el código limpio y los principios SOLID constituyen la defensa más eficaz frente a la degradación caótica en sistemas agénticos complejos.
+
 ## Perspectiva ejecutiva: SOLID como inversión en mantenibilidad
 
 **■ PISTA EJECUTIVA**
@@ -101,6 +125,7 @@ Esta inversión en estructura temprana (estimada en 1-2 semanas de diseño adici
 
 - SOLID es una filosofía de gestión de la complejidad, no una sintaxis OO; por eso aplica a los agentes con mayor urgencia que a las clases.
 - Los cinco principios reescritos para enjambres: responsabilidad única por agente, ampliar con nuevos agentes (no modificar existentes), contratos sustituibles (LSP → independencia del modelo), interfaces estrechas (ISP → eficiencia de tokens), dependencia de abstracciones (DIP → puertos MCP).
+- Implementaciones como Jev (TypeSafe AI, 2026) en el arnés de control y Dots (OpenAI, 2026) en enjambres persistentes validan que SRP, ISP y DIP son esenciales para desacoplar el control determinista de la inferencia probabilística.
 - SOLID importa MÁS en enjambres porque la incertidumbre probabilística amplifica el caos de las fronteras difusas: el factor de degradación se estima en 4-6x vs. 2,3x en OO.
 - El refactoring de enjambres comprende 4 pasos: audit de responsabilidades, detección de acoplamiento, extracción de interfaces, separación progresiva con Strangler Fig.
 - El ROI de SOLID temprano en enjambres es de 4x en mes 1 y 10x en mes 3.

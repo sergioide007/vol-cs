@@ -256,6 +256,24 @@ Un comité ejecutivo que adopta agentes sin definir previamente estas cuatro dim
 
 **Mejora:** identificada la categoría problemática, la solución raramente es «más ciclos»; es una herramienta especializada (preprocesador de tablas, normalizador de formato) que reduce los ciclos a 2–3. La lección central: los problemas de rendimiento de los agentes casi siempre son problemas de diseño de herramientas, no de presupuesto de tokens.
 
+## El desacoplamiento del arnés: Capas de control tipadas (System One) y agentes persistentes
+
+La evolución de los arneses de producción en 2026 ha consolidado un cambio de paradigma frente al bucle ReAct clásico: **desacoplar el control determinista de la inferencia generativa**. En los arneses tempranos, se confiaba a un modelo generativo deliberativo (System Two) la totalidad de las tareas: comprender la semántica, redactar la prosa, seleccionar la herramienta en un catálogo JSON, evaluar la seguridad de la llamada y juzgar cuándo detener el bucle. Este enfoque sufre de tres deficiencias en producción:
+1. **Fricción sintáctica**: obligar al LLM a emitir texto libre mezclado con bloques JSON introduce fallos de formato que consumen tokens en bucles de reintento.
+2. **Latencia acumulada**: invocar un modelo de razonamiento pesado para decidir si una herramienta de lectura es segura introduce segundos de retraso por ciclo.
+3. **Acoplamiento vicioso**: el estado del entorno y las instrucciones del sistema viajan juntos en la ventana de contexto, facilitando la inyección de instrucciones hostiles desde datos no confiables.
+
+Para resolver este dilema, la arquitectura de **Jev** ([TypeSafe AI, 2026](#ref-typesafe2026)) ejemplifica la separación estricta entre deliberación y control mediante un modelo System One:
+- **Inferencia sin generación de texto**: Jev no redacta prosa ni esquemas JSON. Responde exclusivamente a preguntas tipadas con distribuciones de probabilidad calibradas (`Choice` para selección de herramientas, `Score` para niveles de riesgo, y `Noul` para confirmaciones booleanas).
+- **El ciclo de cuatro etapas**:
+  - `SELECT`: determina qué herramienta del catálogo responde al objetivo mediante la primitiva `Choice`.
+  - `GATE`: evalúa en paralelo si la acción es destructiva, su radio de impacto (*blast radius*) y su reversibilidad. La regla arquitectónica es tajante: *el gate asesora, el runtime impone*. Si una llamada es destructiva sobre un entorno externo o del sistema, el runtime la deniega (`deny`) automáticamente sin fatigar al humano.
+  - `EXECUTE`: ejecución en un sandbox determinista (`sandbox.ts`) donde los argumentos se extraen por código (`arguments.ts`), manteniendo el texto no confiable estrictamente como dato.
+  - `JUDGE`: evalúa completitud y estancamiento, supervisado por un límite duro de pasos inmutable.
+- **Inversión de dependencias (DIP) para pruebas offline**: el arnés se apoya en una interfaz abstracta `Decider`. Esto permite sustituir el modelo real por un `FakeDecider` determinista en CI, probando todas las ramas de control y sandboxing al 100% sin credenciales, sin costo y de forma inmediata.
+
+A nivel de orquestación organizacional, este principio de aislamiento y control estricto se replica en los **Dots** ([OpenAI, 2026](#ref-openaidots2026)): compañeros de trabajo digitales persistentes (*persistent digital coworkers*) que operan en entornos cloud aislados bajo un plano de control gobernado. En lugar de agentes monolíticos conectados de forma caótica, los Dots imponen *bounded contexts* rigurosos y se comunican a través de eventos asíncronos tipados, asegurando que las políticas de seguridad y observabilidad residan en la infraestructura y no en la fragilidad de un prompt.
+
 ## El Código Limpio Sintético: los principios que perduran
 
 Las tecnologías de esta industria caducan; los principios, no. *Clean Code* enseñó a una generación que el código se escribe para personas y que la legibilidad es una decisión económica, no estética [Martin, 2009](#ref-martin2009); *Refactoring* enseñó que mejorar el diseño sin cambiar el comportamiento es una disciplina con catálogo propio [Fowler, 2018](#ref-fowler2018). Ninguno de los dos libros menciona modelos de lenguaje y, sin embargo, ambos describen con precisión cómo se construyen buenos sistemas agénticos, porque los artefactos centrales de la era agéntica (prompts, herramientas, skills, orquestadores) son **texto que será leído por un intérprete falible**. Eso es lo que siempre fue el código.
@@ -359,6 +377,7 @@ En el bucle, el resultado se reenvía con la marca de error: `{"type": "tool_res
 - ReAct intercala razonamiento y acción [Yao, Zhao, et al., 2023](#ref-yaoreact2023); cada ciclo cuesta; el bucle SIEMPRE se acota.
 - CoT por defecto; Self-Refine con criterio automático; Reflexion con señal verificable; ToT solo si el espacio de búsqueda lo exige.
 - La ventana de contexto no es memoria: posición importa, menos es más, la memoria larga se externaliza ([Liu et al., 2024](#ref-liu2024); [Packer et al., 2024](#ref-packer2024)).
+- El desacoplamiento del arnés (System One / Jev [TypeSafe AI, 2026](#ref-typesafe2026)) y la persistencia gobernada (Dots [OpenAI, 2026](#ref-openaidots2026)) trasladan las decisiones críticas de control a contratos tipados fuera de la prosa generativa.
 - Los principios del Código Limpio Sintético (nombres, SRP, errores accionables, DRY, fronteras, tests, Boy Scout) gobiernan el resto de este volumen.
 
 ---

@@ -147,13 +147,12 @@
 
 ### {#ref-ziegler2024}
 
-
 **Ziegler, Albert; Kalliamvakou, Eirini; Li, X. Alice; Rice, Andrew; Rifkin, Devon; Simister, Shawn; Sittampalam, Ganesh; Aftandilian, Edward** (2024). *Measuring GitHub Copilot's Impact on Productivity*. _Communications of the ACM, 67_(3), 54-63._ _Estudio de campo con Metric, el equipo de análisis de GitHub._
 
+### {#ref-typesafe2026}
 
+**TypeSafe AI** (2026). *Jev: A System One Control Layer for Autonomous Agents*. Architecture and Technical Specification.
 
+### {#ref-openaidots2026}
 
-
-
-
-
+**OpenAI** (2026). *Introducing Dots: Persistent Digital Coworkers with Isolated Cloud Environments and Governed Control Planes*. OpenAI DevDay 2026.

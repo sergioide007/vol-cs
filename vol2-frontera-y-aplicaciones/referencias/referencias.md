@@ -262,6 +262,14 @@
 
 **Yao, Shunyu; Zhao, Jeffrey; Yu, Dian; Du, Nan; Shafran, Izhak; Narasimhan, Karthik; Cao, Yuan** (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. International Conference on Learning Representations (ICLR).
 
+### {#ref-typesafe2026}
+
+**TypeSafe AI** (2026). *Jev: A System One Control Layer for Autonomous Agents*. Architecture and Technical Specification.
+
+### {#ref-openaidots2026}
+
+**OpenAI** (2026). *Introducing Dots: Persistent Digital Coworkers with Isolated Cloud Environments and Governed Control Planes*. OpenAI DevDay 2026.
+
 
 
 

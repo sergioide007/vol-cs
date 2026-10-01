@@ -35,6 +35,8 @@ En los sistemas multiagentes opera la emergencia, no la coordinación programada
 | 2024-2025 | NVIDIA NIM Operator (Kubernetes) | Orquestación declarativa de pipelines multi-servicio | Auto-escalado por GPU metrics, rolling upgrades sin downtime, GitOps-friendly |
 | 2025 | Orquestaciones (Kafka + Agentes) | Múltiples agentes coordinados por eventos | Desacoplamiento temporal; escalabilidad a cientos de agentes |
 | 2025-2026 | Sistemas multiagentes | Emergencia sin programación explícita | Adaptabilidad, anticipación, aprendizaje colectivo |
+| 2026 | Capas de control tipadas (Jev / System One) | Desacoplamiento de control y generación; decisiones probabilísticas tipadas (Select, Gate, Judge) | Alta cohesión en arneses; eliminación de alucinaciones en llamadas a herramientas; testing determinista offline |
+| 2026 | Agentes persistentes gobernados (OpenAI Dots) | Entornos cloud aislados y planos de control empresarial para agentes digitales permanentes | Bounded contexts operativos en enjambres; mitigación de acoplamiento espagueti; observabilidad continua |
 | 2027+ | Sistemas urbanos adaptativos, AI plataformas | Gobernanza de ciudades y economías digitales | IA como infraestructura crítica, no herramienta |
 
 ---
@@ -327,6 +329,31 @@ Aquí viene el giro. Los equipos construyen sistemas donde "el modelo es un serv
 La respuesta: **capas de IA como infraestructura de primer orden**. Harvard ([Grupo de Systems Security, 2025](#ref-syssec2025)) ha documentado patrones: la capa de IA no habita donde la lógica de negocio crítica. Habita en una frontera (como en Capítulo 6, el anillo exterior). Entre esa capa de IA y el núcleo, van evaluadores, validadores, guardianes. El modelo genera; el evaluador valida; si falla, el sistema degrada gracefully (vuelve a un comportamiento conocido, no cae).
 
 En orquestaciones, esto se intensifica. Cincuenta agentes, cada uno llamando modelos, cada uno posiblemente alucinando. Sin capas de aislamiento explícitas, una alucinación en un agente propaga como incendio (otras agentes leen su evento, lo asumen correcto, construyen sobre él). Con capas: cada evento publicado por un agente tiene un sello de "confidence" y "audited flag". Los agentes consumidores pueden decidir "confío en este evento solo si fue auditado."
+
+**Capas de control desacoplado y agentes persistentes: Jev y OpenAI Dots (2026)**
+
+El despliegue industrial de agentes autónomos durante 2025 y 2026 evidenció una falla de diseño estructural en los bucles agénticos convencionales: **la sobrecarga del modelo generativo**. En los primeros esquemas inspirados en ReAct, un único LLM deliberativo asumía todas las funciones en cada iteración del bucle: razonar sobre el objetivo, redactar la prosa conversacional, seleccionar la herramienta adecuada, serializar los argumentos en esquemas JSON, juzgar la seguridad de la acción y decidir si la tarea había concluido. 
+
+Este diseño monolítico viola frontalmente el **Principio de Responsabilidad Única (SRP)** y genera un **acoplamiento estrecho** entre la generación lingüística y el control del sistema operativo. La consecuencia operativa es predecible: fragilidad sintáctica (errores de parseo JSON que exigen bucles de reintento con consumo innecesario de tokens), latencias de varios segundos por paso y alucinaciones en la derivación de argumentos con consecuencias potencialmente destructivas.
+
+Para resolver esta crisis de diseño emergen dos innovaciones arquitectónicas clave en 2026 que redefinen cómo la solidez del software gobierna la IA agéntica:
+
+1. **Jev (TypeSafe AI): El desacoplamiento del control mediante modelos System One**  
+   Frente al costo y la lentitud de invocar un modelo deliberativo (System Two) para decisiones de ruteo de bajo nivel, **Jev** ([TypeSafe AI, 2026](#ref-typesafe2026)) introduce una capa de control agéntico basada en un modelo clasificador de inferencia rápida y no generativo. Jev no emite texto libre ni fragmentos JSON; responde exclusivamente a preguntas tipadas con distribuciones de probabilidad calibradas. Su arnés descompone el ciclo en cuatro fases desacopladas:
+   - **SELECT**: Selección de herramienta sobre el catálogo completo mediante la primitiva `Choice` (retorna etiqueta, distribución de probabilidades y nivel de confianza). Si la confianza cae por debajo del umbral (e.g., 0.60), escala la consulta en lugar de adivinar.
+   - **GATE**: Evaluación de seguridad previa a la ejecución. Ejecuta en paralelo preguntas cerradas (`Score` y `Noul`, probabilidad booleana) que cuantifican si la acción es destructiva, su radio de impacto (*blast radius*) y su reversibilidad. La regla arquitectónica cardinal es explícita: *la puerta asesora, el runtime impone*. Si una acción destructiva supera el umbral sobre un entorno del sistema o externo, el runtime ejecuta una denegación terminante (`deny`) sin intervención humana, eliminando la fatiga de alertas.
+   - **EXECUTE**: Ejecución dentro de un sandbox riguroso (`sandbox.ts`) con rutas canónicas y aislamiento de procesos. Los argumentos se derivan de forma determinista (`arguments.ts`), tratando cualquier texto externo u hostil estrictamente como dato, jamás como instrucción.
+   - **JUDGE**: Evaluación del estado del bucle (completitud, bucles infinitos, progreso). Un límite duro de pasos (*hard step limit*) se evalúa como primera línea de defensa antes de contrastar las probabilidades del modelo, garantizando que el agente siempre se detenga.
+
+   La lección para la ingeniería de software es directa: Jev alcanza **alta cohesión** (la política reside en funciones puras en `policy.ts`, los efectos en herramientas aisladas y la orquestación en `agent.ts`) y **bajo acoplamiento** mediante la inversión de dependencias: el arnés depende de una interfaz abstracta `Decider`. Esto habilita la sustitución por un `FakeDecider` determinista en CI, permitiendo probar toda la lógica de branches y contención de seguridad de manera offline, reproducible y a costo cero.
+
+2. **OpenAI Dots (2026): Agentes persistentes y planos de control gobernados**  
+   En la escala de la persistencia y la colaboración empresarial, **OpenAI Dots** ([OpenAI, 2026](#ref-openaidots2026)) formaliza el paso de las sesiones agénticas efímeras a compañeros de trabajo digitales persistentes (*always-on digital coworkers*). Arquitectónicamente, Dots introduce dos componentes defensivos esenciales:
+   - **Aislamiento de ejecución en entornos cloud dedicados**: Cada agente opera dentro de una infraestructura sandbox independiente (máquinas virtuales ligeras o contenedores efímeros). Los artefactos y el estado se confinan a su entorno, impidiendo la contaminación cruzada entre agentes.
+   - **Plano de control gobernado (*governed control plane*)**: La gestión de identidad, los permisos de acceso a herramientas externas, las restricciones de presupuesto y las pistas forenses de auditoría no residen en el contexto del agente, sino en una capa de infraestructura intermedia gobernada.
+   - **Bounded Contexts y contratos asíncronos**: Los agentes no se comunican mediante flujos de texto ambiguos, sino a través de eventos estructurados y contratos tipados. Cada Dot mantiene una alta cohesión con respecto a su rol de dominio especializado, evitando que el enjambre degenere en una red espagueti de dependencias mutuas.
+
+La convergencia de Jev y Dots ratifica la tesis de esta obra: la arquitectura de software no es un accesorio ornamental para la IA, sino su salvaguarda indispensable. Sin fronteras modulares, tipado estricto, inversión de dependencias y segregación de interfaces, los sistemas agénticos colapsan bajo su propia entropía probabilística.
 
 **Computación Cuántica: De la Teoría a la Producción (2025-2030)**
 

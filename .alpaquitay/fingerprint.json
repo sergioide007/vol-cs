@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "roots": [
+    "."
+  ],
+  "sourceDirs": [
+    "tools",
+    "vol2-frontera-y-aplicaciones"
+  ],
+  "languages": [
+    {
+      "name": "Python",
+      "pct": 100
+    }
+  ],
+  "frameworks": [
+    "Python (detectado)"
+  ],
+  "entryPoints": [],
+  "pkgManager": "unknown",
+  "hasSpec": false,
+  "monorepo": false,
+  "scannedAt": "2026-09-27T06:37:32.995Z"
+}

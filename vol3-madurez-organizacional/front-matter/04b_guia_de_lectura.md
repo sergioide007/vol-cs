@@ -40,4 +40,4 @@ _Este volumen cambia de sujeto: no trata del sistema, sino de la organización q
 
 ## 4. Qué capítulos puede dejar para después
 
-En una primera lectura orientada a resolver un problema concreto, los capítulos 3, 5, 14 y 17 (casos aplicados) se pueden posponer: son excelentes para estudiar un caso completo, pero no son prerrequisito de nada. El capítulo 25 cierra el argumento del volumen y conviene leerlo aunque no lea nada más: es la tesis de que la agilidad fue capturada por el ritual y que los agentes permiten recuperar los principios.
+En una primera lectura orientada a resolver un problema concreto, los capítulos 3, 5, 14 y 17 (casos aplicados) se pueden posponer: son excelentes para estudiar un caso completo, pero no son prerrequisito de nada. El capítulo 25 cierra el argumento del volumen; aporta una síntesis valiosa incluso si no se lee el resto: expone la tesis de que la agilidad fue capturada por el ritual y que los agentes permiten recuperar los principios.

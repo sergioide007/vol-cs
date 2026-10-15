@@ -10,4 +10,4 @@ Gobernanza, roles y RACI, medición de autonomía, auditorías agnósticas, proc
 
 **Volumen 3 de 4, Serie Código Sintético**
 
-**Sergio Perez Ruiz y Henry Fuentes**
+**Sergio Perez Ruiz**

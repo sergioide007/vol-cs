@@ -1,0 +1,34 @@
+---
+title: "Synthetic Code"
+subtitle: "Foundations — Architecture, Economics, and Ethics of Multi-Agent Systems in Production"
+author:
+  - "Sergio Perez Ruiz"
+lang: "en-US"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. All rights reserved."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "urn:uuid:08f0a901-dcdc-5bed-9534-42cf25dc6b20"
+description: >
+  Volume 1 of the Synthetic Code series: the core foundations—agents,
+  architecture, inter-agent communication, memory, tools, and design principles—with
+  production-grade code: AI Gateway, typed ReAct loops, risk-aware orchestrators,
+  and auditable MCP servers. Written for backend engineers, tech leads, and software architects.
+subject:
+  - Artificial Intelligence
+  - Software Engineering
+  - Multi-Agent Systems
+keywords:
+  - "artificial intelligence"
+  - "AI agents"
+  - "software architecture"
+  - "multi-agent systems"
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

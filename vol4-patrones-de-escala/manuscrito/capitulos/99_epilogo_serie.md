@@ -329,5 +329,5 @@ necesita uno que escuche.
 
 ---
 
-*Código Sintético: El Arte de Orquestar Agentes de IA*, Sergio Perez Ruiz y Henry Fuentes, 2026.
+*Código Sintético: El Arte de Orquestar Agentes de IA*, Sergio Perez Ruiz, 2026.
 *Todos los derechos reservados. Prohibida la reproducción sin autorización del autor.*

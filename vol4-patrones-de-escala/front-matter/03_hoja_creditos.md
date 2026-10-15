@@ -4,7 +4,7 @@ Título: Código sintético, Patrones de Escala: Orquestación, resiliencia y co
 
 Serie: Código Sintético (Volumen 4 de 4).
 
-Autores: Sergio Perez Ruiz y Henry Fuentes.
+Autor: Sergio Perez Ruiz.
 
 Editor: Sergio Perez Ruiz.
 Jr. Juan Guillermo Moore 357, Santa Anita - Lima, Perú.

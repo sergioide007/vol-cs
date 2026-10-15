@@ -1,0 +1,34 @@
+---
+title: "Synthetic Code"
+subtitle: "Frontiers and Applications — Geopolitics, Critical Industries, and the IDE and Tooling Ecosystem"
+author:
+  - "Sergio Perez Ruiz"
+lang: "en-US"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. All rights reserved."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "urn:uuid:e7c28b83-f5d6-519e-8810-30b41e246627"
+description: >
+  Volume 2 of the Synthetic Code series: agentic security, deployments across critical
+  industries, the geopolitics of artificial intelligence, and the ecosystem of IDEs and
+  developer tools (Cline, Continue, Cursor, Windsurf, Zed, Cody, Amazon Q), structured
+  for a triple technical, executive, and academic readership.
+subject:
+  - Artificial Intelligence
+  - Technological Geopolitics
+  - Software Engineering
+keywords:
+  - "agentic AI"
+  - "developer tools"
+  - "software engineering"
+  - "AI security"
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

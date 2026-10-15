@@ -10,5 +10,5 @@ Las herramientas de desarrollo citadas son un ejemplo de un mercado cambiante, n
 
 La obra invita a contrastar sus recomendaciones con las capacidades y obligaciones de la organización que la leerá. La seguridad no es un añadido al diseño; es una condición para que el sistema pueda seguir operando.
 
-**Sergio Perez Ruiz y Henry Fuentes**
+**Sergio Perez Ruiz**
 *Lima, 2026*

@@ -14,7 +14,7 @@ Greshake et al. (2023), en "Not What You've Signed Up For: Compromising Real-Wor
 
 Perez & Ribeiro (2022), en "Ignore Previous Prompt: Attack Techniques for Language Models" presentado en el NeurIPS ML Safety Workshop, sistematizaron las técnicas de jailbreak y prompt injection, categorizándolas en tres familias: inyección directa (el usuario final malicioso), inyección indirecta (contenido externo procesado por el agente), y inyección multi-salto (cadenas de agentes donde el primer agente comprometido contamina a los siguientes).
 
-A tenor de lo expuesto, la conclusión para el arquitecto es inequívoca: **el modelo de amenaza para sistemas agénticos debe incluir al propio agente como actor de riesgo**, no como activo de confianza absoluta.
+Para el arquitecto de sistemas, la conclusión es operativa e inmediata: **el modelo de amenaza agéntico debe incluir al propio agente como actor de riesgo**, nunca como un activo de confianza perimetral.
 
 ---
 

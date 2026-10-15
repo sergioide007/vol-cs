@@ -16,7 +16,7 @@ Este estado del arte no sustituye una revisión sistemática formal con protocol
 
 **Línea 4: Productividad, adopción y percepción del desarrollador.** Dos SLR de 2025 abordan el lado humano: Ferino, Hoda, Grundy y Treude estudian la perspectiva de desarrolladores novatos ante la adopción de LLMs; Mohamed, Assi y Guizani revisan sistemáticamente el impacto de los asistentes LLM en la productividad del desarrollador. Esta línea sostiene el capítulo 2 (El AI Engineer) y se conecta con hallazgos organizacionales más recientes de literatura gris de alta credibilidad (Bell, 2026, *Scaling AI Adoption in Engineering*, O'Reilly: no es literatura académica indexada, pero sí una síntesis de cientos de entrevistas con CTOs, citada aquí como antecedente práctico, no como evidencia científica).
 
-**Línea 5 (Costo, eficiencia energética y sostenibilidad de LLMs en producción.** Shi, Yang y Lo (2025, *ACM TOSEM* 34(5)) revisan la literatura sobre LLMs eficientes y "verdes" en ingeniería de software) antecedente directo del capítulo 12 del Vol. 4 de esta serie, mencionado aquí porque ya empieza a emerger como preocupación en la literatura de 2024–2025, no solo como intuición de practicante.
+**Línea 5: Costo, eficiencia energética y sostenibilidad de LLMs en producción.** Shi, Yang y Lo (2025, *ACM TOSEM* 34(5)) revisan la literatura sobre LLMs eficientes y «verdes» en ingeniería de software; antecedente directo de (Vol. 4, cap. 12), mencionado aquí porque ya empieza a emerger como preocupación en la literatura de 2024–2025, no solo como intuición de practicante.
 
 ## 3. Marcos teóricos utilizados en la literatura
 
@@ -48,7 +48,7 @@ La discrepancia más señalable no es de datos, sino de encuadre: una parte de l
 
 ## 7. Limitaciones metodológicas de la literatura revisada
 
-- **Sesgo hacia código abierto y tareas verificables automáticamente.** La mayoría de los estudios primarios de las SLR citadas evalúan generación o reparación de código en repositorios públicos con pruebas automatizadas (el mismo sesgo que afecta a SWE-bench). Los sistemas agénticos en dominios de misión crítica o con datos privados, el foco del "caso sectorial" del capítulo 5 (Vol. 4) de esta serie, están sistemáticamente subrepresentados en la literatura académica indexada.
+- **Sesgo hacia código abierto y tareas verificables automáticamente.** La mayoría de los estudios primarios de las SLR citadas evalúan generación o reparación de código en repositorios públicos con pruebas automatizadas (el mismo sesgo que afecta a SWE-bench). Los sistemas agénticos en dominios de misión crítica o con datos privados, el foco del «caso sectorial» de (Vol. 4, cap. 5), están sistemáticamente subrepresentados en la literatura académica indexada.
 - **Ventana temporal corta.** Toda la literatura sobre LMA4SE es posterior a 2023; no existe todavía perspectiva longitudinal sobre mantenibilidad o deuda técnica de sistemas agénticos a varios años de operación, una brecha que este libro solo puede señalar, no resolver, dado que la industria misma no tiene ese historial todavía.
 - **Escasa reproducibilidad.** Varias de las revisiones citadas señalan que un porcentaje significativo de los estudios primarios no publica código ni datos de forma reproducible, una limitación estructural del campo, no de esta síntesis en particular.
 

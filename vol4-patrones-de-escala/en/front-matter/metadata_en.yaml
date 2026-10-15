@@ -1,0 +1,34 @@
+---
+title: "Synthetic Code"
+subtitle: "Scale Patterns — Orchestration, Resilience, and Cost in Production Multi-Agent Systems"
+author:
+  - "Sergio Perez Ruiz"
+lang: "en-US"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. All rights reserved."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "urn:uuid:9f44d007-da83-514c-a3ff-33769d087e65"
+description: >
+  Volume 4 and series finale of Synthetic Code: Token-Burn mitigation and the CIU metric,
+  agentic testing pyramids, orchestrator playbooks, Clean Architecture and event-driven backbones,
+  deep observability, disaster recovery, and the true field chronicle of "the week of coverage,"
+  plus the Series Epilogue.
+subject:
+  - Artificial Intelligence
+  - Distributed Systems Architecture
+  - Software Engineering
+keywords:
+  - "distributed architecture"
+  - "agent orchestration"
+  - "system resilience"
+  - "token economics"
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

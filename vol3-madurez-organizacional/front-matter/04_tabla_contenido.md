@@ -77,6 +77,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Sección 5: Del POI al ROI: El Cuadro que los Ejecutivos Esperan
   - Lo esencial del capítulo 6
   - Ejercicio resuelto 6.1: Diseña el Quarterly Closing del enjambre
+  - Q1 2025: Quarterly Closing: Resumen Ejecutivo
 
 **Capítulo 7: El Ecosistema del Desarrollo Moderno Equiparado con el del Negocio: y Cómo Atenderlo en el Preciso Momento, Aplicado a los Multiagentes**
   - Sección 1: La Brecha de Velocidades: Un Problema Estructural, No de Actitud
@@ -196,7 +197,6 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - El mapa de capas como antídoto al vértigo
   - La disciplina de no adoptar: el filtro más valioso
   - Perspectiva técnica avanzada
-  - Plantilla de ADR aplicada al ecosistema agéntico (estado, contexto, opciones, decisión y consecuencias)
   - Perspectiva ejecutiva
   - Versión académica alternativa (mayor densidad formal)
   - Lo esencial del capítulo 18
@@ -258,6 +258,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Los cinco principios SOLID reescritos para agentes
   - Por qué SOLID importa MÁS en enjambres
   - El refactoring del enjambre: una metodología
+  - Casos de estudio contemporáneos: Jev y OpenAI Dots bajo la disciplina de SOLID
   - Perspectiva ejecutiva: SOLID como inversión en mantenibilidad
   - Lo esencial del capítulo 24
 

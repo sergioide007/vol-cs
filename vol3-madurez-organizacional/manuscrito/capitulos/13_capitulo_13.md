@@ -4,9 +4,9 @@
 
 ## El síntoma humano: cuando la ejecución sobrevive al juicio
 
-El autor describe con exactitud clínica un fenómeno que todo desarrollador con experiencia reconoce en sí mismo: el síntoma del programador cansado. Es la **erosión progresiva del juicio crítico** bajo la acción acumulada de la fatiga cognitiva, no la incapacidad de seguir escribiendo código (eso continúa). El programador exhausto sigue produciendo: el compilador sigue aceptando su código, los tests superficiales siguen pasando, la pull request sigue siendo enviada. Pero dejó de cuestionar la solución que eligió, dejó de considerar el caso límite que habría visto por la mañana, dejó de verificar la suposición que su cerebro descansado habría interrogado.
+Todo desarrollador con experiencia reconoce en sí mismo el síntoma del programador cansado: la **erosión progresiva del juicio crítico** bajo la acción acumulada de la fatiga cognitiva, no la incapacidad física de seguir tecleando. El programador exhausto sigue produciendo: el compilador sigue aceptando su código, los tests superficiales continúan en verde y los pull requests siguen enviándose. Pero ha dejado de cuestionar la solución elegida, de evaluar los casos límite que un criterio fresco habría advertido y de verificar las suposiciones que su cerebro despejado habría interrogado.
 
-La fatiga no detiene la ejecución; degrada la deliberación. Esta distinción (entre la capacidad de ejecutar y la capacidad de juzgar) es precisamente la que convierte al síntoma del programador cansado en algo peligroso: su presencia no es observable desde afuera porque el código sigue fluyendo, la conversación sigue siendo fluida, el resultado superficial es indistinguible del resultado descansado. El daño es latente, no inmediato.
+La fatiga no detiene la ejecución; degrada la deliberación. Esta distinción (entre la capacidad de ejecutar y la capacidad de juzgar) convierte al síntoma del programador cansado en un riesgo latente: su presencia no resulta observable desde el exterior porque el código sigue fluyendo, la conversación mantiene su fluidez y el resultado superficial parece indistinguible del generado con lucidez. El daño es latente, no inmediato.
 
 ## La neurociencia del juicio degradado: por qué la fatiga ataca primero lo más valioso
 
@@ -74,16 +74,16 @@ El costo operacional del watchdog es marginal: opera con modelo pequeño, en par
 
 Independientemente del patrón técnico específico que se adopte, el principio subyacente es invariante: **la contramedida universal contra el síntoma del programador cansado (humano o agéntico) es la introducción de una perspectiva epistémicamente independiente**. En el humano, es el colega que revisa el código con ojos descansados, sin el peso del contexto acumulado. En el enjambre, es el agente evaluador que no comparte el historial de contexto del agente principal y por eso puede cuestionar sus supuestos sin sesgo de confirmación acumulado.
 
-Esta es la razón por la que el patrón de debate entre agentes (cf. cap. 31, Reflexion) produce calidad superior al agente solitario: no porque los agentes sean más inteligentes individualmente, sino porque la diversidad epistémica entre ellos rompe los ciclos de auto-confirmación que la fatiga contextual produce inevitablemente.
+Esta es la razón por la que el patrón de debate entre agentes (cf. Vol. 2, cap. 31, Reflexion) produce calidad superior al agente solitario: no porque los agentes sean más inteligentes individualmente, sino porque la diversidad epistémica entre ellos rompe los ciclos de auto-confirmación que la fatiga contextual produce inevitablemente.
 
 ## Perspectiva ejecutiva: la carga cognitiva del equipo como variable de diseño
 
 **■ PISTA EJECUTIVA**
 
 
-La conexión entre el síntoma del programador cansado y la gestión de equipos tiene una dimensión ejecutiva que frecuentemente se omite. Si los agentes de IA exhiben degradación contextual como consecuencia de la acumulación de contexto, los humanos que trabajan con esos agentes exhiben su propia versión: la **saturación cognitiva por gestión de sistemas complejos**. Gestionar un enjambre de múltiples agentes, cada uno con su historia de contexto, sus fallos y sus salidas parciales, impone una carga cognitiva que puede superar la de escribir el código directamente.
+La gestión de equipos y enjambres posee una dimensión ejecutiva crítica que con frecuencia se omite. Si los agentes de IA exhiben degradación contextual por acumulación de contexto, los humanos que trabajan con ellos experimentan su propia versión: la **saturación cognitiva por gestión de sistemas complejos**. Gestionar un enjambre de múltiples agentes, cada uno con su historial de contexto, sus fallos y sus salidas parciales, impone una carga cognitiva que puede superar la de escribir el código directamente.
 
-El diseño de interfaces de observabilidad para enjambres (cf. cap. 27) debe tener en cuenta la carga cognitiva del operador humano: qué información necesita ver, en qué formato, con qué frecuencia. Un enjambre que produce más datos de los que el operador puede procesar no es un sistema más poderoso; es un sistema más opaco. La carga cognitiva del equipo es una variable de diseño del sistema agéntico, no una consecuencia operacional a gestionar después.
+El diseño de interfaces de observabilidad para enjambres (cf. Vol. 2, cap. 27) debe ponderar la carga cognitiva del operador humano: qué información necesita ver, en qué formato y con qué cadencia. Un enjambre que produce más datos de los que el operador puede procesar no es un sistema más potente; es un sistema más opaco. La carga cognitiva del equipo es una variable de diseño del sistema agéntico, no una consecuencia operacional para resolver a posteriori.
 
 **Versión alternativa (mayor densidad académica):**
 

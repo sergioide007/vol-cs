@@ -1,0 +1,34 @@
+---
+title: "Synthetic Code"
+subtitle: "Organizational Maturity — Governance, Autonomy, and Quality in Agent Teams"
+author:
+  - "Sergio Perez Ruiz"
+lang: "en-US"
+date: "2026"
+rights: "© 2026 Sergio Perez Ruiz. All rights reserved."
+publisher: "Sergio Perez Ruiz"
+identifier:
+  - scheme: UUID
+    text: "urn:uuid:007736ae-c001-5e12-8c54-add3ee090c0e"
+description: >
+  Volume 3 of the Synthetic Code series: enterprise governance, agentic roles and RACI,
+  measuring autonomy levels, model-agnostic audits, DevSecOps, and organizational culture.
+  Includes production-tested templates—sprints for multi-agent swarms, agentic ADRs,
+  and critical agent scorecards—for engineering organizations scaling with autonomous agents.
+subject:
+  - Artificial Intelligence
+  - IT Governance
+  - Project Management
+keywords:
+  - "agent governance"
+  - "multi-agent systems"
+  - "software engineering"
+  - "IT management"
+toc: true
+toc-depth: 2
+number-sections: false
+colorlinks: true
+linkcolor: "NavyBlue"
+urlcolor: "NavyBlue"
+citecolor: "NavyBlue"
+---

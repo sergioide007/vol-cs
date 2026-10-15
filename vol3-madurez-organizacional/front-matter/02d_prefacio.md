@@ -10,5 +10,5 @@ La propuesta del libro es compatible con una organización que todavía está ap
 
 Este tercer volumen ofrece un marco para gobernar la IA. Forzar la autonomía sin responsabilidad, o impedirla sin examinar los riesgos, conduce al mismo resultado: un sistema que nadie puede explicar ni mejorar.
 
-**Sergio Perez Ruiz y Henry Fuentes**
+**Sergio Perez Ruiz**
 *Lima, 2026*

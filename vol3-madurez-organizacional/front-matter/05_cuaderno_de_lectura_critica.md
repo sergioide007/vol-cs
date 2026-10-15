@@ -14,7 +14,7 @@ _Para qué sirve este cuaderno: este volumen hace afirmaciones sobre organizacio
 | Vigencia normativa | ¿Sé qué parte depende de una regulación que puede cambiar? | Se cita la norma sin versión ni fecha |
 | Utilidad como manual | ¿Puedo volver al capítulo por rol o por problema y encontrar la plantilla? | Falta la plantilla o la tabla de decisión |
 
-**Advertencia que el propio volumen hace y conviene aplicar aquí.** Una práctica organizativa no se copia: se adapta. Al reseñar un capítulo de este tipo, la pregunta central no es «¿es verdad?» sino «¿en qué organización es verdad y en cuál produce el efecto contrario?».
+**Advertencia que el propio volumen formula y que procede aplicar aquí.** Una práctica organizativa no se copia: se adapta. Al reseñar un capítulo de este tipo, la pregunta central no es «¿es verdad?» sino «¿en qué organización es verdad y en cuál produce el efecto contrario?».
 
 ## 2. Plantilla para redactar una crítica
 
@@ -99,7 +99,7 @@ _Para qué sirve este cuaderno: este volumen hace afirmaciones sobre organizacio
 2. Aplique el método ATAM al caso: ¿qué *trade-off* crítico no había escrito antes de leer el capítulo?
 
 **Capítulo 11. Un llamado a reinventarse.**
-1. ¿Qué supuesto cognitivo suyo (o de su equipo) conviene inventariar antes de reiniciar un proyecto?
+1. ¿Qué supuesto cognitivo de su equipo es preciso inventariar antes de reiniciar un proyecto?
 2. Crítica: ¿«optimizar no es reinventar» es una afirmación falsable o una máxima sin consecuencia operativa?
 
 **Capítulo 12. La lucha entre agentes: el sistema vence al modelo.**

@@ -10,4 +10,4 @@ Casos en industrias críticas, geopolítica de la IA agéntica, regulación y el
 
 **Volumen 2 de 4, Serie Código Sintético**
 
-**Sergio Perez Ruiz y Henry Fuentes**
+**Sergio Perez Ruiz**

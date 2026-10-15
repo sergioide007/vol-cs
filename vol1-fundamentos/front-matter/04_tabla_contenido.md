@@ -52,6 +52,7 @@ _Nota editorial: los números de página se asignarán en la maquetación final 
   - Razonamiento extendido: la nueva frontera del agente deliberativo
   - Resiliencia en agentes de producción: el arnés como sistema de control
   - Ejercicio resuelto 4.1: diseñe el arnés de producción
+  - El desacoplamiento del arnés: Capas de control tipadas (System One) y agentes persistentes
   - El Código Limpio Sintético: los principios que perduran
   - SOLID como interrogatorio: las preguntas que refactorizan
   - Ejercicio resuelto 4.2: dos herramientas, un presupuesto y un error bien diseñado

@@ -10,4 +10,4 @@ Los cimientos: agentes, arquitectura, comunicación, memoria, herramientas y pri
 
 **Volumen 1 de 4, Serie Código Sintético**
 
-**Sergio Perez Ruiz y Henry Fuentes**
+**Sergio Perez Ruiz**

@@ -1,0 +1,29 @@
+# Registro de identificadores legales. ÚNICA fuente de ISBN y Depósito Legal.
+# tools/render_legal.py rellena con esto content/<lang>/<volN>/front-matter/03_hoja_creditos.md.
+# Deja PENDIENTE hasta tener el dato; con --strict (releases) el build falla si queda alguno.
+#
+# Notas (BNP, Perú):
+#  · Depósito Legal: se solicita ANTES de publicar, en SIRNADEL (gratuito); da un nº de registro
+#    y, tras entregar la publicación, un certificado. Un nº por obra/edición registrada.
+#  · ISBN: lo asigna la Agencia Peruana del ISBN (BNP) al editor. Cada formato/edición
+#    (EPUB, PDF, impreso, cada idioma) necesita su propio ISBN. La web no lleva ISBN.
+publisher: "Sergio Perez Ruiz"
+publisher_address: "PENDIENTE (domicilio legal del editor, o dirección postal pública que prefieras)"
+publisher_contact: "PENDIENTE_EMAIL"
+edition_year: "2026"
+site: "codigosintetico.specsolid.com"
+license_name: "CC BY-NC-SA 4.0"
+license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+volumes:
+  vol1:
+    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+  vol2:
+    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+  vol3:
+    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+  vol4:
+    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }

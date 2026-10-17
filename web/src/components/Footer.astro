@@ -1,0 +1,24 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import { LEGAL } from '../legal.mjs';
+import { SITE, buyEnabled } from '../site.mjs';
+
+const locale = Astro.locals.starlightRoute?.locale ?? 'es';
+const t = LEGAL[locale === 'en' ? 'en' : 'es'];
+---
+<Default><slot /></Default>
+<aside class="cs-legal" aria-label={t.heading}>
+  <strong>{t.heading}.</strong>
+  <span set:html={t.body} />
+  {buyEnabled && <a class="cs-support" href={SITE.buyUrl} rel="noopener">{t.support} →</a>}
+  <p>{t.marks}</p>
+  <p>{t.disclaimer}</p>
+  <p>{t.rights}</p>
+</aside>
+
+<style>
+  .cs-legal { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--sl-color-hairline);
+    font-size: var(--sl-text-xs); color: var(--sl-color-gray-3); line-height: 1.5; }
+  .cs-legal p { margin: .4rem 0 0; }
+  .cs-support { display: inline-block; margin-left: .25rem; font-weight: 600; }
+</style>

@@ -37,12 +37,16 @@ Solo biblioteca estándar. No modifica el manuscrito: informa.
 import argparse
 import json
 import re
+import os
 import sys
 import unicodedata
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+# Idioma auditado: content/<lang>/volN/. Por defecto español (fuente canónica).
+LANG = os.environ.get('CS_LANG', 'es')
+CONTENT = ROOT / 'content' / LANG
 ALLOWLIST = ROOT / 'tools' / 'model-allowlist.txt'
 
 # Presupuesto editorial de palabras por capítulo (C7).
@@ -399,7 +403,7 @@ class Volume:
 
     @property
     def title(self):
-        meta = self.directory / 'front-matter' / 'metadata_es.yaml'
+        meta = self.directory / 'front-matter' / f'metadata_{LANG}.yaml'
         if meta.exists():
             line = re.search(r'^subtitle:\s*"?([^"\n]+)', meta.read_text(encoding='utf-8'), re.M)
             if line:
@@ -427,7 +431,7 @@ class Volume:
 
 
 def volumes():
-    return [Volume(d) for d in sorted(ROOT.glob('vol[1-4]-*')) if d.is_dir()]
+    return [Volume(d) for d in sorted(CONTENT.glob('vol[1-4]')) if d.is_dir()]
 # --------------------------------------------------------------------------- #
 # Comprobaciones
 # --------------------------------------------------------------------------- #
@@ -938,9 +942,16 @@ def render(vols, findings, selected):
 
 def v_chapters(volume):
     return [c for c in volume.chapters if not c.unnumbered]
+def set_language(lang):
+    global LANG, CONTENT
+    LANG, CONTENT = lang, ROOT / 'content' / lang
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--lang', choices=['es', 'en'], default=LANG,
+                        help='idioma a auditar (content/<lang>/); por defecto %(default)s')
     parser.add_argument('--vol', action='append', default=[],
                         help='restringe la auditoría a un volumen (repetible)')
     parser.add_argument('--only', nargs='+', default=None, metavar='CID',
@@ -950,6 +961,7 @@ def main():
     parser.add_argument('--quiet', action='store_true',
                         help='no imprimir el informe por stdout')
     args = parser.parse_args()
+    set_language(args.lang)
 
     vols = volumes()
     if args.vol:
@@ -1004,8 +1016,8 @@ def main():
     findings.sort(key=lambda f: (f['check'], f['file'], f['line']))
     report = render(vols, findings, selected)
 
-    target = ROOT / 'dist'
-    target.mkdir(exist_ok=True)
+    target = ROOT / 'dist' / LANG
+    target.mkdir(parents=True, exist_ok=True)
     (target / 'AUDIT.md').write_text(report, encoding='utf-8')
     if not args.no_json:
         (target / 'AUDIT.json').write_text(json.dumps({
@@ -1018,7 +1030,7 @@ def main():
 
     if not args.quiet:
         print(report)
-        print('Informe: dist/AUDIT.md', file=sys.stderr)
+        print(f'Informe: dist/{LANG}/AUDIT.md', file=sys.stderr)
 
     errors = sum(1 for f in findings if f['severity'] == 'error')
     warnings = len(findings) - errors

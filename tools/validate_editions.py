@@ -50,11 +50,15 @@ def inspect_pdf(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--epubcheck', default='/usr/share/java/epubcheck.jar')
-    parser.add_argument('--work', type=Path, default=Path('/tmp/codigo-sintetico-build'))
-    parser.add_argument('--vol', choices=[p.name for p in sorted((ROOT / 'dist').glob('vol[1-4]-*'))])
+    parser.add_argument('--lang', choices=['es', 'en'], default='es')
+    parser.add_argument('--work', type=Path, default=None)
+    parser.add_argument('--vol', help='slug largo del volumen (p. ej. vol1-fundamentos)')
     args = parser.parse_args()
+    dist = ROOT / 'dist' / args.lang
+    if args.work is None:
+        args.work = Path('/tmp/codigo-sintetico-build') / args.lang
     report = {}
-    directories = sorted((ROOT / 'dist').glob('vol[1-4]-*'))
+    directories = sorted(dist.glob('vol[1-4]-*'))
     if args.vol:
         directories = [p for p in directories if p.name == args.vol]
     if not directories:
@@ -62,7 +66,7 @@ def main():
     for directory in directories:
         print('Validando', directory.name, flush=True)
         slug = directory.name
-        row = inspect_pdf(directory / f'{slug}--interior-6x9--sin-caratula.pdf')
+        row = inspect_pdf(directory / f'{slug}--{args.lang}--interior-6x9--sin-caratula.pdf')
         logpath = args.work / slug / 'main.log'
         if logpath.exists():
             log = logpath.read_text(errors='replace')
@@ -77,7 +81,7 @@ def main():
             (directory / (epub.stem + '--epubcheck.log')).write_text(check.stdout)
             row['epubs'][epub.name] = {'exit': check.returncode, 'output': check.stdout}
         report[slug] = row
-    target = ROOT / 'dist' / (f'PREFLIGHT-{args.vol}.json' if args.vol else 'PREFLIGHT.json')
+    target = dist / (f'PREFLIGHT-{args.vol}.json' if args.vol else 'PREFLIGHT.json')
     target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     for slug, row in report.items():
         print(slug, 'pages=', row['pages'], 'overfull=', row.get('overfull_hbox'),

@@ -60,7 +60,7 @@ class ReferenceAnchorsTest(unittest.TestCase):
                 self.assertIn('Referencias', output)
 
     def test_all_bibliographies(self):
-        for path in sorted(ROOT.glob('vol[1-4]-*/referencias/referencias.md')):
+        for path in sorted(ROOT.glob('content/*/vol[1-4]/referencias/referencias.md')):
             with self.subTest(volume=path.parts[-3]):
                 source = path.read_text()
                 original = json.loads(convert(source, 'json', False))['blocks']

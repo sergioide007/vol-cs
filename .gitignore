@@ -1,2 +1,13 @@
+# Artefactos de build: los genera el CI, no se versionan
+dist/
+**/output/
+web/node_modules/
+web/dist/
+web/.astro/
+# El sitio se genera desde content/ (tools/web_sync.py): no editar ni versionar
+web/src/content/docs/
+web/public/img/
 __pycache__/
 *.pyc
+.alpaquitay/
+.DS_Store

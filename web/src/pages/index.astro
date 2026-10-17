@@ -1,0 +1,18 @@
+---
+// Raíz del dominio: redirige según el idioma del navegador (ES por defecto).
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Código Sintético · Synthetic Code</title>
+    <meta http-equiv="refresh" content="0; url=/es/" />
+    <link rel="canonical" href="https://codigosintetico.specsolid.com/es/" />
+    <link rel="alternate" hreflang="es" href="https://codigosintetico.specsolid.com/es/" />
+    <link rel="alternate" hreflang="en" href="https://codigosintetico.specsolid.com/en/" />
+    <script is:inline>
+      if ((navigator.language || '').toLowerCase().startsWith('en')) location.replace('/en/');
+    </script>
+  </head>
+  <body><p><a href="/es/">Español</a> · <a href="/en/">English</a></p></body>
+</html>

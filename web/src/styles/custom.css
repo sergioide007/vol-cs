@@ -1,0 +1,8 @@
+:root { --cs-accent: #1d4ed8; }
+:root[data-theme='dark'] { --cs-accent: #7aa2ff; }
+.cs-btn { display: inline-block; padding: .55rem 1.1rem; border-radius: .5rem; font-weight: 600;
+  background: var(--sl-color-accent); color: var(--sl-color-black) !important; text-decoration: none !important; }
+.cs-btn-alt { background: transparent; border: 1px solid var(--sl-color-accent); color: var(--sl-color-text-accent) !important; }
+.cs-vols { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.cs-vols li { border: 1px solid var(--sl-color-hairline); border-radius: .6rem; padding: 1rem; }
+.sl-markdown-content img { max-width: 100%; height: auto; }

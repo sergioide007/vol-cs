@@ -36,14 +36,14 @@ if [ -z "$OUT" ]; then
   exit 2
 fi
 if [ "${#SLUGS[@]}" -eq 0 ]; then
-  mapfile -t SLUGS < <(find "$ROOT" -mindepth 1 -maxdepth 1 -type d \
-    -name 'vol[1-4]-*' -printf '%f\n' | LC_ALL=C sort)
+  mapfile -t SLUGS < <(python3 -c 'import json,sys; print(*json.load(open(sys.argv[1]))["slugs"].values(), sep="\n")' "$ROOT/tools/vols.json")
 fi
 
 mkdir -p "$OUT"
 fail=0
 for slug in "${SLUGS[@]}"; do
-  art="$ROOT/$slug/front-matter/01_cubierta_delantera.png"
+  short="${slug%%-*}"   # vol1-fundamentos -> vol1 (el arte vive en content/es/<volN>/)
+  art="$ROOT/content/es/$short/front-matter/01_cubierta_delantera.png"
   style="$ROOT/tools/latex/covers/$slug"
   work="$OUT/$slug"
   if [ ! -f "$art" ]; then

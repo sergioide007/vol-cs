@@ -444,11 +444,11 @@ def main() -> int:
     args = ap.parse_args()
 
     dirs = args.vol or sorted(
-        d.name for d in ROOT.iterdir() if d.is_dir() and d.name.startswith("vol")
+        d.name for d in (ROOT / "content" / "es").iterdir() if d.is_dir() and d.name.startswith("vol")
     )
     data = []
     for name in dirs:
-        cover = ROOT / name / COVER_REL
+        cover = ROOT / "content" / "es" / name.split("-")[0] / COVER_REL
         if not cover.is_file():
             print(f"! sin cubierta: {cover}", file=sys.stderr)
             continue

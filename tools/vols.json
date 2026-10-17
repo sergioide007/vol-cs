@@ -1,0 +1,23 @@
+{
+  "slugs": {
+    "vol1": "vol1-fundamentos",
+    "vol2": "vol2-frontera-y-aplicaciones",
+    "vol3": "vol3-madurez-organizacional",
+    "vol4": "vol4-patrones-de-escala"
+  },
+  "titles": {
+    "es": {
+      "vol1": "Fundamentos",
+      "vol2": "Frontera y Aplicaciones",
+      "vol3": "Madurez Organizacional",
+      "vol4": "Patrones de Escala"
+    },
+    "en": {
+      "vol1": "Foundations",
+      "vol2": "Frontiers and Applications",
+      "vol3": "Organizational Maturity",
+      "vol4": "Scale Patterns"
+    }
+  },
+  "series": { "es": "Código Sintético", "en": "Synthetic Code" }
+}

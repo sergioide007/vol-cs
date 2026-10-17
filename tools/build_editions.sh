@@ -24,17 +24,21 @@
 #     · Lulu: mínimo 0,5" en todos los lados; interior recomendado >= 0,75".
 #   Con estos valores el mismo PDF sirve para KDP y Lulu, tapa blanda y dura.
 #
-# Uso:
-#   bash tools/build_editions.sh                 # todos los volúmenes
-#   bash tools/build_editions.sh vol1-fundamentos
+# Uso (idioma por LANG_CODE: es | en; por defecto es):
+#   bash tools/build_editions.sh                 # los cuatro volúmenes en ES
+#   LANG_CODE=en bash tools/build_editions.sh vol1   # un volumen en inglés
+#   Salida: dist/<lang>/<volN-slug>/...
 # ===========================================================================
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TOOLS="$ROOT/tools"
-DIST="$ROOT/dist"
-COVERS="$DIST/covers"
-WORK="${TMPDIR:-/tmp}/codigo-sintetico-build"
+LANG_CODE="${LANG_CODE:-es}"
+case "$LANG_CODE" in es|en) ;; *) echo "LANG_CODE debe ser es|en" >&2; exit 2 ;; esac
+CONTENT="$ROOT/content/$LANG_CODE"
+DIST="$ROOT/dist/$LANG_CODE"
+COVERS="$ROOT/dist/covers"          # las cubiertas no dependen del idioma
+WORK="${TMPDIR:-/tmp}/codigo-sintetico-build/$LANG_CODE"
 mkdir -p "$DIST" "$WORK"
 
 PANDOC="${PANDOC:-pandoc}"
@@ -70,8 +74,8 @@ require_tools() {
   fi
 }
 
-# Lee un campo escalar de metadata_es.yaml (title, subtitle, author, date...)
-meta_field() {
+# Lee un campo escalar de metadata_${LANG_CODE}.yaml (title, subtitle, author, date...)
+meta_field() {  # (sin uso interno; se conserva por compatibilidad)
   local file="$1" key="$2"
   awk -v k="$key" '
     $0 ~ "^" k ":" {
@@ -83,21 +87,19 @@ meta_field() {
 }
 
 # Título de la serie/volumen que corre en las páginas pares (verso)
-running_title() {
-  case "$1" in
-    vol1-fundamentos)             echo "Código Sintético · Fundamentos" ;;
-    vol2-frontera-y-aplicaciones) echo "Código Sintético · Frontera y Aplicaciones" ;;
-    vol3-madurez-organizacional)  echo "Código Sintético · Madurez Organizacional" ;;
-    vol4-patrones-de-escala)      echo "Código Sintético · Patrones de Escala" ;;
-    *)                            echo "Código Sintético" ;;
-  esac
+vols_json() {  # vols_json <expresión python sobre d, lang, short>
+  python3 -c 'import json,sys
+d = json.load(open(sys.argv[1], encoding="utf-8")); lang, short = sys.argv[2], sys.argv[3]
+print(eval(sys.argv[4]))' "$TOOLS/vols.json" "$LANG_CODE" "$1" "$2"
 }
+long_slug()     { vols_json "$1" 'd["slugs"][short]'; }          # vol1 -> vol1-fundamentos
+running_title() { vols_json "$1" 'd["series"][lang] + " · " + d["titles"][lang][short]'; }
 
 volumes() {
   if [ "$#" -gt 0 ]; then
     printf '%s\n' "$@"
   else
-    find "$ROOT" -mindepth 1 -maxdepth 1 -type d -name 'vol[1-4]-*' -printf '%f\n' | LC_ALL=C sort
+    find "$CONTENT" -mindepth 1 -maxdepth 1 -type d -name 'vol[1-4]' -printf '%f\n' | LC_ALL=C sort
   fi
 }
 
@@ -165,7 +167,7 @@ build_interior_pdf() {
     --from=markdown+smart+pipe_tables \
     --to=latex --standalone \
     --output="$tmp/main.tex" \
-    --metadata-file="$d/front-matter/metadata_es.yaml" \
+    --metadata-file="$d/front-matter/metadata_${LANG_CODE}.yaml" \
     --toc --toc-depth=2 \
     --include-in-header="$hdr" \
     --include-before-body="$tmp/creditos.tex" \
@@ -184,7 +186,7 @@ build_interior_pdf() {
     -V geometry:outer="${M_OUTSIDE}in" \
     -V geometry:top="${M_TOP}in" \
     -V geometry:bottom="${M_BOTTOM}in" \
-    -V toc-title="Índice" \
+    -V toc-title="$([ "$LANG_CODE" = en ] && echo Contents || echo Índice)" \
     2> "$tmp/pandoc-latex.log" \
     || { tail -30 "$tmp/pandoc-latex.log"; die "pandoc falló al generar el LaTeX de $d"; }
 
@@ -207,14 +209,14 @@ build_epub() {
     --from=markdown+smart+pipe_tables
     --to=epub3
     --output="$out"
-    --metadata-file="$d/front-matter/metadata_es.yaml"
+    --metadata-file="$d/front-matter/metadata_${LANG_CODE}.yaml"
     --toc --toc-depth=2
     --css="$TOOLS/epub.css"
     --lua-filter="$TOOLS/lua/table-widths.lua"
     --lua-filter="$TOOLS/lua/reference-anchors.lua"
     --resource-path="$d/manuscrito:$d/manuscrito/capitulos:$d"
     --split-level=1
-    -V lang=es )
+    -V lang="$LANG_CODE" )
 
   if [ -n "$cover" ]; then
     # La cubierta es la compuesta por tools/covers/render_covers.sh (arte
@@ -259,6 +261,7 @@ make_cover_pdf() {
   local slug="$1" out="$2"
   local cover="$COVERS/$slug.pdf"
   [ -f "$cover" ] || die "No hay cubierta compuesta para $slug: $cover"
+  [ "$LANG_CODE" = es ] || warn "$slug: la cubierta EN reutiliza el arte ES (título en español) hasta que exista arte propio."
   cp "$cover" "$out"
 }
 
@@ -310,7 +313,7 @@ mapfile -t slugs < <(volumes "$@")
 # lectura las necesitan. Solo se procesan los volúmenes que existen en disco.
 cover_slugs=()
 for slug in "${slugs[@]}"; do
-  [ -d "$ROOT/$slug" ] && cover_slugs+=("$slug")
+  [ -d "$CONTENT/$slug" ] && cover_slugs+=("$(long_slug "$slug")")
 done
 if [ "${#cover_slugs[@]}" -gt 0 ]; then
   log "Componiendo cubiertas (arte original + leyenda de autoría) …"
@@ -318,19 +321,20 @@ if [ "${#cover_slugs[@]}" -gt 0 ]; then
   ok "cubiertas 6x9 y para EPUB en $COVERS"
 fi
 
-for slug in "${slugs[@]}"; do
-  d="$ROOT/$slug"
-  [ -d "$d" ] || { warn "Directorio no encontrado: $slug (se omite)"; continue; }
+for short in "${slugs[@]}"; do
+  d="$CONTENT/$short"
+  [ -d "$d" ] || { warn "Directorio no encontrado: $short (se omite)"; continue; }
+  slug="$(long_slug "$short")"          # nombre largo para archivos y cubiertas
 
   log "Componiendo $slug …"
   tmp="$WORK/$slug"
   rm -rf "$tmp"; mkdir -p "$tmp"
   out="$DIST/$slug"; mkdir -p "$out"
 
-  interior="$out/${slug}--interior-6x9--sin-caratula.pdf"
-  epub_cover="$out/${slug}--epub--con-portada.epub"
-  epub_plain="$out/${slug}--epub--sin-portada.epub"
-  reading="$out/${slug}--lectura-6x9--con-portada.pdf"
+  interior="$out/${slug}--${LANG_CODE}--interior-6x9--sin-caratula.pdf"
+  epub_cover="$out/${slug}--${LANG_CODE}--epub--con-portada.epub"
+  epub_plain="$out/${slug}--${LANG_CODE}--epub--sin-portada.epub"
+  reading="$out/${slug}--${LANG_CODE}--lectura-6x9--con-portada.pdf"
 
   # 1) PDF interior (el archivo que se sube a KDP y Lulu)
   inside_used="$M_INSIDE"
@@ -394,7 +398,7 @@ for slug in "${slugs[@]}"; do
     done
   } >> "$REPORT"
 
-  ok "$slug completado → dist/$slug/"
+  ok "$slug completado → dist/$LANG_CODE/$slug/"
 done
 
 echo

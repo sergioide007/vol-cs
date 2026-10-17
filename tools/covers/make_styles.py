@@ -209,7 +209,7 @@ def main() -> int:
     print(f"{'volumen':<32}{'cap':>4}{'cuerpo':>9}{'LetterSp.':>10}"
           f"{'ancho':>8}{'factor':>8}{'margen':>8}")
     for slug in slugs:
-        cover = ROOT / slug / "front-matter" / "01_cubierta_delantera.png"
+        cover = ROOT / "content" / "es" / slug.split("-")[0] / "front-matter" / "01_cubierta_delantera.png"
         if not cover.is_file():
             print(f"! sin cubierta: {cover}", file=sys.stderr)
             continue

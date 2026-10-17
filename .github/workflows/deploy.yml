@@ -1,0 +1,173 @@
+name: deploy
+
+# · push a main        → audita y publica el SITIO en codigosintetico.specsolid.com
+# · pull request       → audita y compila el sitio (sin publicar)
+# · tag vX.Y.Z         → además compila PDF/EPUB de los 4 volúmenes en ES y EN y crea el Release
+# · workflow_dispatch  → compilar ediciones a demanda (sin Release)
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      strict_legal:
+        description: 'Fallar si quedan ISBN / Depósito Legal en PENDIENTE'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # En tags, ISBN y Depósito Legal deben estar rellenos (legal/registry.yaml).
+  STRICT_LEGAL: ${{ startsWith(github.ref, 'refs/tags/v') || inputs.strict_legal == true }}
+
+jobs:
+  # ------------------------------------------------------------------ calidad
+  qa:
+    name: Auditoría del manuscrito
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Regresión de las herramientas
+        run: python3 -m unittest discover -s tools -p 'test_lint*.py' -v
+      - name: Auditoría ES (fuente canónica)
+        # Pon la variable de repo LINT_BLOCKING=true cuando la deuda de avisos/errores esté a cero.
+        continue-on-error: ${{ vars.LINT_BLOCKING != 'true' }}
+        run: python3 tools/lint_manuscript.py --lang es --quiet
+      - name: Auditoría EN (informativa)
+        continue-on-error: true
+        run: python3 tools/lint_manuscript.py --lang en --quiet
+      - name: Resumen
+        if: always()
+        run: |
+          for l in es en; do
+            echo "### Auditoría $l" >> "$GITHUB_STEP_SUMMARY"
+            sed -n '1,25p' "dist/$l/AUDIT.md" >> "$GITHUB_STEP_SUMMARY" || true
+          done
+
+  # --------------------------------------------------------------------- sitio
+  web:
+    name: Compilar sitio (Astro Starlight)
+    needs: qa
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Ficha técnica desde legal/registry.yaml
+        run: python3 tools/render_legal.py ${{ env.STRICT_LEGAL == 'true' && '--strict' || '' }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Instalar dependencias
+        working-directory: web
+        run: npm ci
+      - name: Sincronizar Markdown y compilar
+        working-directory: web
+        run: npm run build
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: web/dist
+
+  deploy-web:
+    name: Publicar en GitHub Pages
+    needs: web
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # ---------------------------------------------------------------- ediciones
+  editions:
+    name: PDF y EPUB (${{ matrix.lang }})
+    needs: qa
+    if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        lang: [es, en]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Ficha técnica desde legal/registry.yaml
+        run: python3 tools/render_legal.py ${{ env.STRICT_LEGAL == 'true' && '--strict' || '' }}
+      - name: Herramientas de composición
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-latex-recommended \
+            texlive-latex-extra texlive-lang-spanish texlive-lang-english \
+            texlive-fonts-recommended lmodern fonts-texgyre fonts-dejavu fonts-liberation \
+            poppler-utils python3-pil default-jre-headless epubcheck
+      - name: Compilar los cuatro volúmenes (${{ matrix.lang }})
+        env:
+          LANG_CODE: ${{ matrix.lang }}
+        run: bash tools/build_editions.sh
+      - name: Validación de maquetación y EPUB
+        run: python3 tools/validate_editions.py --lang ${{ matrix.lang }}
+      - name: Regresión de las anclas bibliográficas
+        run: python3 tools/test_reference_anchors.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ediciones-${{ matrix.lang }}
+          path: dist/${{ matrix.lang }}/
+          retention-days: 30
+
+  # ------------------------------------------------------------------ release
+  release:
+    name: Release de GitHub
+    needs: editions
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: ediciones-*
+          path: artifacts
+      - name: Reunir archivos
+        run: |
+          mkdir -p release
+          # Públicos: PDF de lectura (con portada) y EPUB con portada, por volumen e idioma.
+          find artifacts -type f \( -name '*--lectura-6x9--con-portada.pdf' -o -name '*--epub--con-portada.epub' \) \
+            -exec cp {} release/ \;
+          (cd release && sha256sum * > SHA256SUMS.txt)
+          ls -la release
+      - name: Crear o actualizar el Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          # Por defecto el Release queda en BORRADOR para que lo revises. Con la variable de
+          # repo RELEASE_PUBLIC=true se publica directamente.
+          PUBLIC: ${{ vars.RELEASE_PUBLIC }}
+        run: |
+          notes="Ediciones empaquetadas de *Código Sintético* (ES/EN, 4 volúmenes). Lectura gratuita en https://codigosintetico.specsolid.com — Packaged editions of *Synthetic Code*; free online reading at the same URL. Verifica con SHA256SUMS.txt."
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" release/* --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            draft=--draft; [ "$PUBLIC" = "true" ] && draft=
+            gh release create "$TAG" release/* $draft --title "$TAG" --notes "$notes" --repo "$GITHUB_REPOSITORY"
+          fi

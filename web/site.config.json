@@ -7,5 +7,6 @@
   "licenseName": "CC BY-NC-SA 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
   "author": "Sergio Perez Ruiz",
-  "downloadsFromReleases": false
+  "downloadsFromReleases": false,
+  "hookBookUrl": "https://codigosintetico.specsolid.com/"
 }

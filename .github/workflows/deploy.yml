@@ -64,6 +64,8 @@ jobs:
         with: { python-version: '3.12' }
       - name: Ficha técnica desde legal/registry.yaml
         run: python3 tools/render_legal.py ${{ env.STRICT_LEGAL == 'true' && '--strict' || '' }}
+      - name: Pillow (miniaturas WebP de las portadas)
+        run: python3 -m pip install --quiet pillow
       - uses: actions/setup-node@v4
         with:
           node-version: 22

@@ -6,3 +6,8 @@
 .cs-vols { list-style: none; padding: 0; display: grid; gap: 1rem; }
 .cs-vols li { border: 1px solid var(--sl-color-hairline); border-radius: .6rem; padding: 1rem; }
 .sl-markdown-content img { max-width: 100%; height: auto; }
+
+.cs-vols { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.cs-vol-link { display: flex; gap: 1rem; align-items: center; text-decoration: none; }
+.cs-vol-link img { width: 72px; height: auto; aspect-ratio: 2/3; border-radius: 4px; flex: none; }
+.cs-hook { margin-top: 1.5rem; padding: .9rem 1rem; border-left: 3px solid var(--sl-color-accent); }

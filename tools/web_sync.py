@@ -53,10 +53,12 @@ UI = {
     'es': dict(read='Empezar a leer', home_h='Volúmenes', toc='Contenido', dl='Descargas',
                dl_pdf='PDF de lectura', dl_epub='EPUB', buy='Apoyar el proyecto / ediciones empaquetadas',
                tagline='Arte de orquestar agentes de IA · acceso abierto',
+               hook='¿Primera vez aquí? Empieza por el libro de entrada, con 3 capítulos gratis.', hook_link='Código Sintético, el libro',
                front='Preliminares', chapters='Capítulos', back='Apéndices y referencias'),
     'en': dict(read='Start reading', home_h='Volumes', toc='Contents', dl='Downloads',
                dl_pdf='Reading PDF', dl_epub='EPUB', buy='Support the project / packaged editions',
                tagline='The art of orchestrating AI agents · open access',
+               hook='New here? Start with the companion book — 3 free chapters (Spanish edition).', hook_link='Código Sintético, the book',
                front='Front matter', chapters='Chapters', back='Appendices & references',),
 }
 warnings = []
@@ -76,12 +78,22 @@ def meta(path, key):
     return m.group(1).strip() if m else ''
 
 
-def split_h1(text, fallback):
+# Títulos en español que quedaron sin traducir en los fuentes EN (se corrige también en el .md).
+TITLE_FIX = {('en', 'Referencias'): 'References'}
+
+
+def clean_title(t, lang):
+    """Quita atributos de Pandoc («{.unnumbered}», «{#id}») del título."""
+    t = re.sub(r'\s*\{[^}]*\}\s*$', '', t).strip()
+    return TITLE_FIX.get((lang, t), t)
+
+
+def split_h1(text, fallback, lang='es'):
     """(título, cuerpo sin el primer H1)."""
     lines = text.lstrip('\ufeff').splitlines()
     for i, line in enumerate(lines):
         if line.startswith('# '):
-            return line[2:].strip(), '\n'.join(lines[:i] + lines[i + 1:]).lstrip('\n')
+            return clean_title(line[2:], lang), '\n'.join(lines[:i] + lines[i + 1:]).lstrip('\n')
         if line.strip():
             break
     return fallback, text
@@ -122,7 +134,7 @@ def sync_volume(lang, vol):
     for n, (stem, *slugs) in enumerate(FRONT):
         f = src / 'front-matter' / f'{stem}.md'
         if f.exists():
-            title, body = split_h1(f.read_text(encoding='utf-8'), stem)
+            title, body = split_h1(f.read_text(encoding='utf-8'), stem, lang)
             write(out / 'front' / f'{slugs[i]}.md', title, adapt(body, lang, vol, refs_slug), n)
     known = {s for s, *_ in FRONT} | SKIP | {'08_apendice_b_precios'}
     for f in sorted((src / 'front-matter').glob('*.md')):
@@ -131,14 +143,14 @@ def sync_volume(lang, vol):
 
     for f in sorted((src / 'manuscrito' / 'capitulos').glob('*.md')):
         num = f.stem.split('_')[0]
-        title, body = split_h1(f.read_text(encoding='utf-8'), f.stem)
+        title, body = split_h1(f.read_text(encoding='utf-8'), f.stem, lang)
         write(out / 'chapters' / f'{num}.md', title, adapt(body, lang, vol, refs_slug), int(num))
         first_chapter = first_chapter or f'/{lang}/{vol}/chapters/{num}/'
 
     for n, (rel, *slugs) in enumerate(BACK):
         f = src / rel
         if f.exists():
-            title, body = split_h1(f.read_text(encoding='utf-8'), rel)
+            title, body = split_h1(f.read_text(encoding='utf-8'), rel, lang)
             write(out / 'back' / f'{slugs[i]}.md', title, adapt(body, lang, vol, refs_slug), n)
 
     # Imágenes (y portada; la EN reutiliza el arte ES hasta tener el propio)
@@ -148,9 +160,19 @@ def sync_volume(lang, vol):
     cover = next((p for p in (src / 'front-matter' / '01_cubierta_delantera.png',
                               ROOT / 'content' / 'es' / vol / 'front-matter' / '01_cubierta_delantera.png')
                   if p.exists()), None)
+    cover_url = f'/img/{lang}/{vol}/cover.png'
+    thumb_url = cover_url
     if cover:
         (IMG / lang / vol).mkdir(parents=True, exist_ok=True)
-        shutil.copy(cover, IMG / lang / vol / 'cover.png')
+        try:  # variantes ligeras (Core Web Vitals); sin Pillow se usa el PNG original
+            from PIL import Image
+            im = Image.open(cover).convert('RGB')
+            for name, size in (('cover.webp', (600, 900)), ('cover-thumb.webp', (240, 360))):
+                v = im.copy(); v.thumbnail(size, Image.LANCZOS)
+                v.save(IMG / lang / vol / name, 'WEBP', quality=82, method=6)
+            cover_url, thumb_url = f'/img/{lang}/{vol}/cover.webp', f'/img/{lang}/{vol}/cover-thumb.webp'
+        except ImportError:
+            shutil.copy(cover, IMG / lang / vol / 'cover.png')
 
     # Portada del volumen
     md = src / 'front-matter' / f'metadata_{lang}.yaml'
@@ -158,7 +180,7 @@ def sync_volume(lang, vol):
     subtitle = meta(md, 'subtitle') if md.exists() else ''
     slug = VOLS['slugs'][vol]
     rel = f"{SITE['repo']}/releases/latest/download"
-    parts = [f'![{title}](/img/{lang}/{vol}/cover.png)\n', f'*{subtitle}*\n' if subtitle else '']
+    parts = [f'![{title}]({cover_url})\n', f'*{subtitle}*\n' if subtitle else '']
     if first_chapter:
         parts.append(f'<p><a class="cs-btn" href="{first_chapter}">{ui["read"]} →</a></p>\n')
     if SITE.get('downloadsFromReleases'):
@@ -168,14 +190,18 @@ def sync_volume(lang, vol):
         parts.append(f'<p><a class="cs-btn cs-btn-alt" href="{SITE["buyUrl"]}" rel="noopener">{ui["buy"]}</a></p>\n')
     write(out / 'index.md', title, '\n'.join(parts), 0,
           extra='description: ' + yq(subtitle or title))
-    return title, subtitle, f'/{lang}/{vol}/'
+    return title, subtitle, f'/{lang}/{vol}/', thumb_url
 
 
 def sync_lang_home(lang, cards):
     ui = UI[lang]
-    lis = '\n'.join(f'<li><a href="{url}"><strong>{t}</strong></a><br/><small>{s}</small></li>'
-                    for t, s, url in cards)
-    body = f'<ul class="cs-vols">\n{lis}\n</ul>\n'
+    lis = '\n'.join(
+        f'<li><a class="cs-vol-link" href="{url}"><img src="{img}" width="240" height="360" loading="lazy" '
+        f'decoding="async" alt="{t}"/><span><strong>{t}</strong><br/><small>{s}</small></span></a></li>'
+        for t, s, url, img in cards)
+    hook = SITE.get('hookBookUrl', '')
+    hook_html = (f'\n<p class="cs-hook">{ui["hook"]} <a href="{hook}">{ui["hook_link"]} →</a></p>\n' if hook else '')
+    body = f'<ul class="cs-vols">\n{lis}\n</ul>\n{hook_html}'
     write(DOCS / lang / 'index.md', VOLS['series'][lang], f'{ui["tagline"]}\n\n## {ui["home_h"]}\n\n{body}',
           extra='template: doc\ndescription: ' + yq(ui['tagline']))
 

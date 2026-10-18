@@ -11,6 +11,7 @@ const t = LEGAL[locale === 'en' ? 'en' : 'es'];
   <strong>{t.heading}.</strong>
   <span set:html={t.body} />
   {buyEnabled && <a class="cs-support" href={SITE.buyUrl} rel="noopener">{t.support} →</a>}
+  {SITE.hookBookUrl && <p><a href={SITE.hookBookUrl}>{locale === 'en' ? 'Companion book: Código Sintético (Spanish edition, 3 free chapters)' : 'Libro de entrada: Código Sintético (3 capítulos gratis)'} →</a> · <a href="https://www.specsolid.com/">SpecSolid</a></p>}
   <p>{t.marks}</p>
   <p>{t.disclaimer}</p>
   <p>{t.rights}</p>

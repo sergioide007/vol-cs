@@ -1,0 +1,117 @@
+@startuml
+title Diagram 7.2: Evolved Hybrid Architecture — VPC Cloud + Isolated Sensitive Data Enclave
+skinparam backgroundColor #F3F6FB
+skinparam defaultFontName "Liberation Sans"
+skinparam dpi 170
+skinparam shadowing false
+skinparam ArrowColor #1F3A5F
+skinparam ArrowFontColor #1F3A5F
+skinparam ArrowFontSize 11
+skinparam ArrowThickness 1.6
+skinparam titleFontSize 18
+skinparam RoundCorner 6
+skinparam componentBackgroundColor #FFFFFF
+skinparam componentBorderColor #1F3A5F
+skinparam componentFontColor #1F3A5F
+skinparam componentFontStyle bold
+skinparam nodeBackgroundColor #EAF0F8
+skinparam nodeBorderColor #1F3A5F
+skinparam nodeFontColor #1F3A5F
+skinparam nodeFontStyle bold
+skinparam databaseBackgroundColor #FFFFFF
+skinparam databaseBorderColor #1F3A5F
+skinparam packageBackgroundColor #F3F6FB
+skinparam packageBorderColor #000000
+skinparam packageBorderThickness 2
+skinparam packageFontSize 15
+skinparam packageFontStyle bold
+skinparam cloudBackgroundColor #F3F6FB
+skinparam cloudBorderColor #1F3A5F
+skinparam noteBackgroundColor #FFFFFF
+skinparam noteBorderColor #1F3A5F
+skinparam noteFontName "Liberation Mono"
+skinparam noteFontSize 11
+skinparam noteFontColor #5A6B85
+skinparam fileBackgroundColor #FFFFFF
+skinparam fileBorderColor #1F3A5F
+
+package "<&key> Corporate On-Premises Environment" as onprem {
+  node "AWS Nitro Enclave / Intel SGX\n(Strict Perimeter Firewall)" as enclave {
+    database "PII Storage\n(AES-GCM-256 Encrypted)" as pii
+    component "Sync Agent\n(Unidirectional Controller)" as sync
+  }
+}
+note top of pii
+**Sensitive Data Enclave:**
+• Physical isolation of cryptographic keys.
+• Zero-trust ingestion: strictly inbound flow.
+• Real-time auditing connected to the corporate SIEM.
+• Strict compliance: GDPR, HIPAA, PCI-DSS.
+end note
+
+file "<&lock-locked> IPSec / WireGuard Tunnel\n(mTLS with SPIFFE/SPIRE)\nIntegrity: HMAC-SHA256\nKey Rotation: Ephemeral (PFS)" as tunnel
+note bottom of tunnel
+**Cryptographic Transport Layer:**
+• End-to-end channel encryption (E2EE).
+• Zero-Trust: continuous cryptographic identity verification.
+• Native support for Perfect Forward Secrecy (PFS).
+end note
+
+package "<&cloud> Corporate Public Cloud (VPC)" as cloud {
+  node "VPC (Virtual Private Cloud)\nCIDR Block: 10.0.0.0/16" as vpc {
+    package "<&lock-locked> Private Subnet 1: Agent Compute" as s1 {
+      component "Autonomous Agent Pod #1\n(Isolated via NetworkPolicy)" as pod1
+      component "Autonomous Agent Pod #2\n(Pod IAM Identity)" as pod2
+    }
+    package "<&lock-locked> Private Subnet 2: Orchestration" as s2 {
+      component "Event Bus\n(Apache Kafka Cluster)" as bus
+      component "Stream Processor\n(Kafka Streams/Flink Engine)" as proc
+    }
+    node "NAT Gateway\n(Egress with Fixed Static IP)" as nat
+    package "<&lock-locked> Private Subnet 3: Transient Data" as s3 {
+      database "Distributed Cache\n(Redis Cluster Sharded)" as cache
+      database "Immutable Data Lake\n(Apache Iceberg + Parquet)" as lake
+    }
+  }
+}
+note left of pod1
+**Zero-Trust Network Policies:**
+• Inbound traffic denied by default (Deny-All).
+• Dynamic secrets injection via HashiCorp Vault.
+• Logical isolation of execution threads in real time.
+end note
+note right of bus
+**Event Bus Topology:**
+• Strict delivery guarantee: At-least-once.
+• Log compaction enabled for historical audits.
+• Partitioning by Aggregate Key for ordering.
+end note
+note right of lake
+**Data Lake Governance:**
+• Open and structured format (Apache Iceberg).
+• Integrated time-travel query support.
+• Automated lifecycle: cold storage after 30 days.
+end note
+
+cloud "External Edge Services" as edge {
+  component "Observability Platform\n(Metrics Ingestion / OpenTelemetry)" as obs
+  component "External LLM Provider\n(Dedicated Endpoint / PrivateLink)" as llm
+  component "Code Repository\n(Secured CI/CD Git)" as repo
+}
+
+lake -[hidden]left-> cache
+pii --> tunnel : Encrypted Queries\n(Dynamic Tokenization)
+sync --> tunnel : Delta Change Pull\n(CRON Interval: 5 min)
+tunnel --> pod1 : Synchronized Data\n(Decrypted in Memory)
+tunnel --> pod2 : Asynchronous Replication\n(Eventual Consistency)
+pod1 --> bus : evt:AgentReady\n(uuidv4_correlation_id)
+pod2 --> bus : evt:TaskStart\n(ISO 8601 UTC Standard)
+pod1 --> nat : Secure HTTPS Egress\n(Rate Limit: 100 req/s)
+pod2 --> nat : Infrastructure Tracing\n(Statistical Sampling: 10%)
+bus --> proc : Continuous Stream Consumption\n(Controlled Offset Commits)
+proc --> cache : Write-Through Operations\n(TTL Monitoring / LRU Eviction)
+proc --> lake : Append-Only\n(Daily Partitioning by Schema)
+proc ..> obs : Anonymized Telemetry\n(Data Masking / OTel)
+nat --> llm : Outbound Traffic\n(Strict IP/FQDN Filtering)
+obs ..> repo : Webhook Trigger\n(Metric Drift Alerts)
+@enduml

@@ -10,10 +10,12 @@
 % (adjustbox aporta la clave "max width", que actúa únicamente si la imagen
 %  excede la medida; evita ampliar diagramas pequeños.)
 \usepackage[export]{adjustbox}
+% CORRECCIÓN: antes se envolvía \includegraphics en \adjustbox{max width=...}; con las
+% opciones por defecto de Pandoc (width=\maxwidth) eso encogía TODAS las figuras a ~0,15 in
+% (puntos ilegibles). Ahora los límites se pasan como claves del propio \includegraphics.
 \let\interiorincludegraphics\includegraphics
 \renewcommand{\includegraphics}[2][]{%
-  \adjustbox{max width=\linewidth,max totalheight=0.88\textheight}{%
-    \interiorincludegraphics[#1]{#2}}}
+  \interiorincludegraphics[#1,max width=\linewidth,max totalheight=0.88\textheight,keepaspectratio]{#2}}
 
 % --- Raíz de los recursos gráficos del manuscrito --------------------------
 % Los capítulos referencian las imágenes como "imagenes/..."; se declara la

@@ -235,7 +235,7 @@ Spotify's background agent removes the human from the synchronous loop for low-r
 
 The nine previous cases are horizontal: they apply to almost any software organization. The chapter closes with a *vertical* case (a mission-critical system in a regulated, high-risk domain) because it teaches a lesson the horizontal ones can't: in these systems, the right question is "where should there *not* be one, and how narrow must it be where there is?", not "where do I put an agent?" The example, based on an architecture the author designed and published (see "Author's Public Work"), is a platform for reporting extortion complaints that integrates citizens, police, prosecutors, and even data capture by IoT and drones.
 
-![Diagram 5.2: Architecture of an extortion complaint system, the overwhelming majority is conventional engineering (PCI environment with MFA, microservices by domain, integration with State APIs, distributed security with anonymity, encryption, and audit); the agentic contribution is deliberately narrow (figure published by the author).](imagenes/capitulo14/denuncias_extorsion_es.png)
+![Diagram 5.2: Architecture of an extortion complaint system, the overwhelming majority is conventional engineering (PCI environment with MFA, microservices by domain, integration with State APIs, distributed security with anonymity, encryption, and audit); the agentic contribution is deliberately narrow (figure published by the author).](imagenes/capitulo14/denuncias_extorsion_en.png)
 
 ### The First Thing the Diagram Teaches Is How Much Is *Not* AI
 

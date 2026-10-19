@@ -6,7 +6,7 @@ Agentic architecture introduces attack vectors that didn't exist in traditional 
 
 The standard taxonomy distinguishes two variants. **Direct injection**, where the attacker is the user themselves, trying to overwrite the system instructions with their message. And **indirect injection**, demonstrated experimentally by Greshake et al. (2023) against real LLM-integrated applications: the attacker never talks to the agent; they plant instructions in the data the agent *will read*: a web page, an email, a ticket, a README, a tool's output. When the agent processes that content, the injected instructions compete with the legitimate ones. The boundary between "data" and "instructions," which all classic computer security takes for granted, doesn't exist natively inside a language model, and that is the root of the problem.
 
-![Diagram 4.1: Anatomy of a prompt injection](imagenes/capitulo13/diagrama13_1_es.png)
+![Diagram 4.1: Anatomy of a prompt injection](imagenes/capitulo13/diagrama13_1_en.png)
 
 The community has consolidated the risk map in the **OWASP Top 10 for LLM applications** ([OWASP Foundation, 2025](#ref-owasp2025)), whose current version is headed by prompt injection, sensitive information disclosure, and supply chain risks; for agentic systems, **excessive agency** (the agent has more permissions than its function requires) and unbounded consumption (the adversarial version of Chapter 11's Token-Burn) are added with weight of their own. That document is the minimum checklist for any agentic security review; this chapter develops the design principles that satisfy it.
 

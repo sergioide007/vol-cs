@@ -14,7 +14,7 @@ The translation to the agentic era is immediate and, for many teams, uncomfortab
 >
 > The class diagram reappears in this book in **Chapter 5** (The Synthetic Enterprise), in **Chapter 6** (DDD and aggregates), where we again use classes to show structural relationships that govern the system.
 
-![Diagram 6.1: Clean Architecture (class diagram with concentric rings)](imagenes/capitulo15/diagrama15_1_es.png)
+![Diagram 6.1: Clean Architecture (class diagram with concentric rings)](imagenes/capitulo15/diagrama15_1_en.png)
 
 Note what ended up in the center: the master prompts and the domain contexts are **business rules expressed in prose**: they belong to the core, are versioned with it, and don't know which model will execute them. The attentive reader will recognize that the AIGateway from Chapter 3 was already this idea in miniature: a port with three adapters. This chapter formalizes it.
 

@@ -1,0 +1,81 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName "DejaVu Serif"
+skinparam dpi 170
+skinparam shadowing false
+skinparam sequenceArrowColor #1F1F5C
+skinparam sequenceLifeLineBorderColor #9A9AB0
+skinparam sequenceParticipantBorderColor #333333
+skinparam sequenceParticipantBackgroundColor #FFFFFF
+skinparam sequenceActorBorderColor #333333
+skinparam sequenceBoxBorderColor #AAAAAA
+skinparam sequenceGroupBorderColor #BBBBBB
+skinparam sequenceGroupHeaderFontColor #1F1F5C
+skinparam noteBackgroundColor #FAFAFA
+skinparam noteBorderColor #888888
+skinparam noteFontName "Liberation Mono"
+skinparam noteFontColor #6A6A99
+skinparam noteFontSize 12
+skinparam ParticipantPadding 18
+skinparam BoxPadding 10
+skinparam maxMessageSize 400
+
+
+actor "Source\nSystem" as SRC
+participant "Change Data\nCapture (CDC)" as CDC
+box "Streaming Platform (Kafka)" #FFFFFF
+  participant "Raw Topic\n(cdc.events.raw)" as RAW
+  participant "Enriched Topic\n(cdc.events.enriched)" as ENR
+end box
+participant "Enrichment\nAgent" as AGT
+participant "Business\nConsumers" as BIZ
+
+note over CDC, BIZ
+[ ARCHITECTURE NOTE ]
+Asynchronous Event-Driven Processing (Kappa Architecture Pattern).
+The agent manages its own backpressure through the native Kafka Consumer Poll loop.
+end note
+
+SRC -> CDC : 1. Data Operation (INSERT / UPDATE / DELETE)
+activate CDC
+CDC -> RAW : 2. Stream Mutation Record\n{headers: [trace_id], payload: raw_record}
+deactivate CDC
+
+group Async Consumption Loop [Poll Loop Active]
+  AGT -> RAW : 3. poll(long_timeout) / Request Event Batch
+  activate AGT
+  RAW --> AGT : 4. Return Consumer Records (ConsumerRecords)
+  note right of AGT
+  **Agent Relevance Evaluation**
+  Initial deterministic filter (Business Rules/Schema).
+  Avoids invoking the LLM unnecessarily to optimize FinOps.
+  end note
+  AGT -> AGT : 5. Validate event relevance and lineage
+  alt Event Requires Semantic Enrichment
+    AGT -> AGT : 6. LLM Inference (RAG / Semantic Context)
+    AGT -> ENR : 7. Publish Processed Event\n{id, metadata: [ai_model, tokens], enriched_payload}
+  else Event Is Irrelevant or Ignorable
+    AGT -> AGT : 8. Commit Offset without mutation
+  end
+  AGT -> RAW : 9. Confirm Offset (Acknowledge / Commit Offsets)
+  deactivate AGT
+end
+
+ENR -> BIZ : 10. Event Distribution (Pub/Sub Event Delivery)
+activate BIZ
+BIZ -> BIZ : 11. Process at own pace (Decoupled Architecture)
+deactivate BIZ
+
+note over RAW, ENR
+[ BACKPRESSURE POLICY ]
+If the agent slows down (e.g., LLM API latency), events accumulate
+safely in Kafka partitions. Business consumers suffer no memory degradation.
+end note
+note over BIZ
+[ DOWNSTREAM CONSUMER CHANNELS ]
+The immutable enriched event feeds multiple workloads:
+- Advanced Analytics (Data Lakehouse / Silver-Gold Layer)
+- Executable Automation (Action Microservices)
+- Monitoring and Alerts (Business Observability)
+end note
+@enduml

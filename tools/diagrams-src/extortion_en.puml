@@ -1,0 +1,162 @@
+@startuml
+title Architecture of the System for Reporting Extortion Complaints
+skinparam backgroundColor #EFEFEF
+skinparam defaultFontName "DejaVu Sans"
+skinparam dpi 150
+skinparam shadowing false
+skinparam titleFontColor #3498DB
+skinparam titleFontSize 20
+skinparam titleBorderColor #BBBBBB
+skinparam titleBorderThickness 1
+skinparam titleBorderRoundCorner 4
+skinparam ArrowColor #0B5C99
+skinparam ArrowThickness 2.2
+skinparam ArrowFontSize 11
+skinparam ArrowFontColor #333333
+skinparam packageBackgroundColor #EFEFEF
+skinparam packageBorderColor #3498DB
+skinparam packageFontColor #3498DB
+skinparam packageFontStyle bold
+skinparam packageFontSize 12
+skinparam packageBorderThickness 1.5
+skinparam componentBackgroundColor #DCF5FA
+skinparam componentBorderColor #5DADE2
+skinparam componentFontColor #3498DB
+skinparam actorBorderColor #5DADE2
+skinparam actorFontColor #3498DB
+skinparam databaseBorderColor #5DADE2
+skinparam databaseBackgroundColor #EFEFEF
+skinparam databaseFontColor #3498DB
+skinparam noteBackgroundColor #FFFFFF
+skinparam noteBorderColor #0B5C99
+skinparam noteFontColor #0B5C99
+skinparam noteFontSize 11
+skinparam rectangleFontStyle bold
+skinparam rectangleBorderColor #0B5C99
+skinparam rectangleBorderThickness 1.8
+skinparam rectangleFontColor #222222
+
+actor "Citizen" as Citizen
+actor "Police" as Police
+actor "Drones" as Drones
+note right of Citizen : Interaction with citizens to report\n extortion and manage information
+
+json "JSON" as J {
+  "userId": "12345",
+  "complaintType": "Extortion",
+  "description": "Detailed description of the incident.",
+  "location": {"latitude": "12.345678", "longitude": "-76.543210"},
+  "date": "2024-10-10T12:00:00Z",
+  "evidence": [
+    {"type": "image", "url": "http://example.com/evidence1.jpg"},
+    {"type": "video", "url": "http://example.com/evidence2.mp4"}
+  ]
+}
+note top of J : Register a Complaint
+
+package "User Interface" as UI {
+  rectangle "**User Authentication**\n**(MFA)**" as MFA #FFD700
+  note right of MFA
+  Includes authentication
+  via SMS, email,
+  or authenticator apps.
+  end note
+  rectangle "Mobile App" as App #A9D0E0
+  rectangle "Management Portal" as Portal #A9D0E0
+  rectangle "Control Panel" as Panel #A9D0E0
+  rectangle "**Data Encryption**\n**(In Transit)**" as Enc #FFD700
+}
+
+component "LoadBalancer" as LB #FFF2B3
+note "API Versioning" as NV
+
+package "Backend Services" as BE {
+  package "API Gateway Layer" as GWP {
+    rectangle "API Gateway" as GW #D6E6FA
+  }
+  package "IoT & Drones" as IOT {
+    component "Drone Unit" as DU
+    component "Data Capture Service" as DCS
+  }
+  package "State Integration" as STI {
+    rectangle "State APIs" as SA #B3FFCC
+    rectangle "**Complaint Registration API**\n**(REST)**\n**Agency: Ministry of the Interior**" as A1 #B3FFCC
+    rectangle "**History Query API**\n**(REST)**\n**Agency: National Police**" as A2 #B3FFCC
+    rectangle "**Complaint Analysis API**\n**(REST)**\n**Agency: Ministry of Justice**" as A3 #B3FFCC
+  }
+  package "Microservices" as MS {
+    package "Containerization" as CT {
+      rectangle "Docker/Kubernetes" as Dk #FFC999
+    }
+    rectangle "Synchronization Module" as Sy #FFC999
+    rectangle "Backup & Recovery" as Bk #FFC999
+    rectangle "Automated Testing" as At #FFC999
+    component "Service Discovery" as SD #FFC999
+    package "Complaints Domain" as CD {
+      database "Complaints Database" as CDB
+      rectangle "Registration Microservice" as Reg #FFC999
+      rectangle "Analysis Microservice" as Ana #FFC999
+      rectangle "Query Microservice" as Qry #FFC999
+    }
+    package "Cases Domain" as CSD {
+      database "Cases Database" as CaDB
+      rectangle "Case Management Microservice" as Cm #FFC999
+      rectangle "Notification Microservice" as Nt #FFC999
+    }
+    package "Distributed Security" as DS {
+      package "Services" as DSS {
+        rectangle "Anonymization Module" as Anon #FF9999
+        rectangle "Data Encryption" as DEnc #FF9999
+        rectangle "Authentication & Authorization" as Auth #FF9999
+        rectangle "Access Logging" as Alog #FF9999
+        rectangle "Incident Management" as Inc #FF9999
+        rectangle "Audit & Monitoring" as Aud #FF9999
+      }
+    }
+  }
+}
+
+Citizen --> App
+Citizen --> Portal
+Police --> Panel
+App --> LB : Access API
+Portal --> LB : Report **Extortion**
+Panel --> LB : View **Cases**
+LB --> GW : Distribute Requests
+NV ..> GW
+GW --> SD : Query Endpoints
+GW --> SA : Integrate with the State
+SA --> A1 : REST Calls
+SA --> A2 : REST Calls
+SA --> A3 : REST Calls
+Drones --> DU
+DU --> DCS : Data Capture
+DCS --> Ana : Send Data for Analysis
+DU .[#blue].> Portal : Show Drone Locations
+SD .[#green].> Reg : Calls to Microservices
+SD .[#green].> Ana : Calls to Microservices
+SD .[#green].> Qry : Calls to Microservices
+SD .[#green].> Cm : Calls to Microservices
+Reg .[#green].> Qry : Data Queries
+Cm .[#green].> Nt : Notify Changes
+CDB -[#E6B0AA]-> DEnc : Data Encryption
+CaDB -[#E6B0AA]-> DEnc : Data Encryption
+Reg -[#B0B0C8]-> Anon : Provide Anonymity
+Reg -[#B0B0C8]-> Auth : User Validation
+Ana -[#B0B0C8]-> Auth : User Validation
+Qry -[#B0B0C8]-> Auth : User Validation
+CaDB -[#B0B0C8]-> Alog : Log Activity
+Cm -[#B0B0C8]-> Inc : Log Incidents
+
+legend left
+|= Legend |= Explanation |
+|<#A9D0E0> | User Interface: Tools for citizens. |
+|<#FFF2B3> | Load Balancer: Load balancing. |
+|<#FF9999> | Data Security: Protection of information. |
+|<#FFC999> | Microservices: Processing of complaints and cases. |
+|<#B3FFCC> | State APIs: Connections with state entities. |
+|<#D6E6FA> | API Gateway: Access point to microservices. |
+|<#FFD700> | UI Security: Protective measures in the interface. |
+|<#DCF5FA> | IoT & Drones: Real-time monitoring and data capture. |
+endlegend
+@enduml

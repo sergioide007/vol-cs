@@ -6,7 +6,7 @@ In the traditional accounting of software projects, costs are visible: person-ho
 
 It is silent because each individual call looks trivial: a few cents, maybe a dollar. The problem emerges at scale. A team of ten engineers using agents without governance can rack up tens of thousands of dollars a month in tokens without anyone in leadership knowing, not because anyone is hiding it, but because no system adds it up. The exact accounting analogy is Boehm's technical debt: the cost of fixing a defect grows nonlinearly with the time it takes to detect it ([Boehm, 1981](#ref-boehm1981)). Token-Burn is economic debt with the same structure: the later governance is installed, the more expensive the period without it.
 
-![Diagram 1.1: Token-Burn without governance vs. with governance](imagenes/capitulo10/diagrama10_1_es.png)
+![Diagram 1.1: Token-Burn without governance vs. with governance](imagenes/capitulo10/diagrama10_1_en.png)
 
 ## The CIU Metric: Cost per Useful Iteration
 

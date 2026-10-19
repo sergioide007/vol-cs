@@ -23,7 +23,7 @@ Event-driven architecture draws a clear sequence in time: changes occur in sourc
 >
 > The sequence diagram reappears in this book in **Chapter 3** (the AI Gateway, which is also a temporal flow), where time and accumulated cost are the central message.
 
-![Diagram 7.1: CDC → Enriching Agent → Consumers flow: event-driven architecture over time](imagenes/uml/diagrama17_secuencia_es.png)
+![Diagram 7.1: CDC → Enriching Agent → Consumers flow: event-driven architecture over time](imagenes/uml/diagrama17_secuencia_en.png)
 
 Note the fundamental property the diagram reveals: the agent does NOT block the source system. A change occurs, is published, and the normal business flow continues. For example, if the agent takes two minutes, hundreds of other changes will already have happened in the log. Temporal decoupling is what makes it an architecture of scale.
 
@@ -137,7 +137,7 @@ When agents must orchestrate flows involving both cloud systems (modern, scalabl
 
 First, the guiding principle is **perimeter Zero-Trust**: no component trusts that another is "inside" or "outside" simply by its physical location. Every boundary (between the cloud and on-premise, between microservices) demands authentication, authorization, and encryption. For agents, this means that access to on-premise systems doesn't travel through the model but through a VPN (Virtual Private Network) gateway that intercepts, validates, and logs every request before allowing it.
 
-![Diagram 7.2: Evolved Hybrid Architecture: Cloud VPC with private subnets, isolated agents, encrypted VPN tunnels to sensitive data, and an Event Bus for decoupling in time](imagenes/capitulo17/diagrama17_2_arquitectura_hibrida_es.png)
+![Diagram 7.2: Evolved Hybrid Architecture: Cloud VPC with private subnets, isolated agents, encrypted VPN tunnels to sensitive data, and an Event Bus for decoupling in time](imagenes/capitulo17/diagrama17_2_arquitectura_hibrida_en.png)
 
 The topology the diagram encodes solves four challenges at once:
 

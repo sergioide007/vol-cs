@@ -1,22 +1,26 @@
+
 # Hoja de créditos
 
 **{{series}}** — Volumen {{n}} de 4
 
 **Título:** {{title}}: {{subtitle}}
 
-**Autor y editor:** {{publisher}}\
-{{publisher_address}}\
-Contacto: {{publisher_contact}}
+**{{author_label}}:** {{authors}}
 
-**Edición:** Primera edición digital, {{edition_year}}
+**Editor:** {{publisher}} ({{publisher_kind}}){{publisher_id_line}}\
+**Domicilio legal del editor:** {{publisher_address}}\
+**Contacto y licencias:** {{publisher_contact}}\
+**Lugar de edición:** {{place}}
+
+**Edición:** {{edition_line}}
 
 | Formato | ISBN |
 |---|---|
-| EPUB | {{isbn_epub}} |
-| PDF | {{isbn_pdf}} |
-| Impreso (bajo demanda) | {{isbn_print}} |
+{{isbn_rows}}
 
-**Depósito Legal N.º:** {{deposito_legal}} — Biblioteca Nacional del Perú (SIRNADEL)
+**Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º {{deposito_legal}}**
+
+{{print_block}}**Formato y distribución.** Esta obra se publica en formato digital (EPUB y PDF){{print_note}} a través de las siguientes plataformas: {{distribution}}.
 
 **Licencia.** Esta obra se publica en acceso abierto. Salvo indicación contraria, el texto
 se distribuye bajo [{{license_name}}]({{license_url}}): puedes copiar, redistribuir y adaptar
@@ -27,5 +31,5 @@ nombre «Código Sintético» ni el nombre «SpecSolid», que son marcas del aut
 **Edición en línea (gratuita):** {{site}}. Las ediciones empaquetadas (PDF compilado, EPUB,
 Kindle e impresión bajo demanda) son opcionales y apoyan la continuidad del proyecto.
 
-**Cómo citar:** {{publisher}} ({{edition_year}}). *{{title}}: {{subtitle}}* (Vol. {{n}}).
+**Cómo citar:** {{authors_cite}} ({{edition_year}}). *{{title}}: {{subtitle}}* (Vol. {{n}}).
 https://{{site}}/es/{{vol}}/

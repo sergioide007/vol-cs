@@ -25,6 +25,8 @@ Ocho comprobaciones (C1..C8), documentadas en `PLAN_DE_TRABAJO.md`:
   C11 Año de la cita en el texto distinto del año de la entrada.
   C15 Mención «Apellido (año)» escrita en la prosa sin entrada bibliográfica en
       ese volumen: una cita que el lector no puede localizar.
+  C16 Encabezado que contiene un párrafo entero (título y texto fundidos en una
+      línea `###`): el párrafo acaba en el índice del PDF y en el EPUB (error).
 
 Uso:
     python3 tools/lint_manuscript.py                     # informe + exit 1 si hay errores
@@ -859,6 +861,37 @@ def check_c15_prose_citations(vols, add):
                             'context': entry['context']})
 
 
+# C16: un encabezado es un título, no un párrafo. Los capítulos llevan títulos
+# largos (hasta ~160 car.); los apartados (h2-h6) no pasan de ~110.
+H_MAX_CHAPTER = 200
+H_MAX_SECTION = 150
+HEADING_RE = re.compile(r'^(#{1,6})\s+(.*?)\s*$')
+
+
+def long_headings(text):
+    """Genera (n.º de línea, nivel, longitud) de los encabezados desmesurados."""
+    for number, line in enumerate(mask_code(text).splitlines(), 1):
+        match = HEADING_RE.match(line)
+        if not match:
+            continue
+        level = len(match.group(1))
+        title = re.sub(r'\{#[^}]*\}', '', match.group(2)).strip()
+        limit = H_MAX_CHAPTER if level == 1 else H_MAX_SECTION
+        if len(title) > limit:
+            yield number, level, len(title)
+
+
+def check_c16_long_headings(vols, add):
+    """C16: encabezado con un párrafo dentro (título + texto en la misma línea)."""
+    for volume in vols:
+        for item in volume.manuscript_files():
+            for number, level, size in long_headings(item.text):
+                add('C16', 'error', item, number,
+                    f'encabezado de nivel {level} de {size} caracteres: parece un '
+                    f'párrafo fundido con su título. Sepárelos con una línea en blanco.',
+                    detail={'level': level, 'chars': size})
+
+
 CHECKS = (
     ('C1', 'remisiones cruzadas', check_c1_crossrefs),
     ('C2', 'bibliografía sin verificar', check_c2_references),
@@ -874,6 +907,7 @@ CHECKS = (
     ('C13', 'glifos no representables', check_c13_glyphs),
     ('C14', 'mayusculas en medio de palabra', check_c14_caps_in_word),
     ('C15', 'citas en prosa sin entrada', check_c15_prose_citations),
+    ('C16', 'encabezados con párrafo', check_c16_long_headings),
 )
 
 
@@ -1008,6 +1042,7 @@ def main():
         'C13': lambda: check_c13_glyphs(vols, add),
         'C14': lambda: check_c14_caps_in_word(vols, add),
         'C15': lambda: check_c15_prose_citations(vols, add),
+        'C16': lambda: check_c16_long_headings(vols, add),
     }
     for code, _, _ in CHECKS:
         if code in selected:

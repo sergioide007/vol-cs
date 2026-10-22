@@ -235,3 +235,15 @@ El aplicador es **idempotente**: si la versión nueva ya está en el archivo,
 cuenta la sustitución como hecha en lugar de fallar. Si una frase no se
 encuentra ni en su forma antigua ni en la nueva, la reporta y aborta para que
 el editor la revise a mano.
+
+
+## Novedades del build (ES/EN, caché y legal)
+- `LANG_CODE=es|en bash tools/build_editions.sh [volN …]` → `dist/<lang>/<vol>/` y `dist/<lang>/covers/`
+  (cada idioma usa su propio arte de cubierta). `python3 tools/check_parity.py` exige los mismos 4 documentos
+  por volumen en ambos idiomas y escribe `dist/MANIFEST.{json,md}`.
+- **Caché**: cada volumen guarda `.build-hash`; si contenido, herramientas y parámetros no cambian, no se
+  recompone (≈1 s frente a ≈1 min). `FORCE=1` la ignora. En CI se restaura `dist/<lang>` con `actions/cache`.
+- La hoja de créditos y los metadatos (ISBN, autores, derechos, `toc-title`) salen de `legal/registry.yaml`.
+  Ver `docs/DEPOSITO-LEGAL.md`.
+- Instalar `lmodern` (y `texlive-lang-spanish`) o XeLaTeX falla en la primera pasada.
+- `lint_manuscript.py` (C16) y `validate_editions.py` detectan títulos con un párrafo dentro.

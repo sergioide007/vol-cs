@@ -36,7 +36,7 @@ vol-cs/
 ├─ docs/                       ← PLAN.md, INFORME_EDITORIAL.md, README-build.md
 ├─ .github/workflows/deploy.yml
 ├─ LICENSE (texto, CC) · LICENSE-CODE (MIT: tools/, web/, ejemplos de código)
-└─ dist/ (ignorado)            ← dist/<lang>/<volN-slug>/…  y  dist/covers/
+└─ dist/ (ignorado)            ← dist/<lang>/<volN-slug>/…  y  dist/<lang>/covers/
 ```
 
 Decisiones: (a) **se mueve, no se reescribe**: dentro de cada volumen se conserva `manuscrito/capitulos|imagenes`,

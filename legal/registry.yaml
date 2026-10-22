@@ -1,29 +1,51 @@
-# Registro de identificadores legales. ÚNICA fuente de ISBN y Depósito Legal.
-# tools/render_legal.py rellena con esto content/<lang>/<volN>/front-matter/03_hoja_creditos.md.
-# Deja PENDIENTE hasta tener el dato; con --strict (releases) el build falla si queda alguno.
+# Registro de identificadores legales. ÚNICA fuente de ISBN, Depósito Legal, autores y edición.
+# tools/render_legal.py lo usa para: (1) la hoja de créditos de cada volumen/idioma,
+# (2) los metadatos de EPUB/PDF (ISBN, autores, derechos) y (3) la página de volúmenes.
+# Deja PENDIENTE hasta tener el dato; con --strict (releases) el build falla si queda alguno,
+# si un ISBN no es válido (dígito de control) o si autores y cubierta no coinciden.
 #
-# Notas (BNP, Perú):
-#  · Depósito Legal: se solicita ANTES de publicar, en SIRNADEL (gratuito); da un nº de registro
-#    y, tras entregar la publicación, un certificado. Un nº por obra/edición registrada.
-#  · ISBN: lo asigna la Agencia Peruana del ISBN (BNP) al editor. Cada formato/edición
-#    (EPUB, PDF, impreso, cada idioma) necesita su propio ISBN. La web no lleva ISBN.
+# REQUISITOS BNP (Ley 31253 y gob.pe «Solicitar la constancia de depósito legal»), 2026:
+#  · Depósito Legal: se pide ANTES de publicar en SIRNADEL (gratuito, inmediato) → nº de registro.
+#    Luego, para libros electrónicos, se entrega UNA versión final por SIRNADEL en 90 días hábiles
+#    desde el último día hábil del mes y año de la edición. Un nº por obra/edición (cada idioma
+#    y cada volumen es una obra distinta).
+#  · La hoja de créditos debe llevar: título, nº de edición, mes y año de edición, autor(es),
+#    razón social y domicilio legal del editor, y el nº de Depósito Legal. En e-books NO es
+#    obligatorio consignar impresor ni tiraje; en la edición IMPRESA sí (ver `printer`).
+#  · ISBN: lo asigna la Agencia Peruana del ISBN (BNP) a editores/autores-editores. Cada formato
+#    (EPUB, PDF, impreso) y cada idioma necesita su propio ISBN. La web no lleva ISBN.
+#  · El DNI NO figura entre los datos obligatorios: déjalo vacío salvo que quieras imprimirlo.
 publisher: "Sergio Perez Ruiz"
-publisher_address: "PENDIENTE (domicilio legal del editor, o dirección postal pública que prefieras)"
-publisher_contact: "PENDIENTE_EMAIL"
-edition_year: "2026"
-site: "codigosintetico.specsolid.com"
+publisher_kind: "autor-editor, persona natural"
+publisher_id: ""            # opcional (DNI/RUC). Vacío = no se imprime.
+publisher_address: "PENDIENTE (domicilio legal del editor: es dato obligatorio y público en el libro)"
+publisher_contact: "sergio@specsolid.com"
+place: "Lima, Perú"
+# Debe coincidir con la leyenda de cubierta (tools/covers/cover-design.json). Separa con «;».
+authors: "Sergio Perez Ruiz; Henry Fuentes"
+distribution: "Amazon Kindle Direct Publishing (KDP); Google Play Books; Lulu"
+# Datos del impresor: solo se imprimen si algún volumen tiene isbn_print distinto de NO.
+printer: "PENDIENTE (razón social y domicilio legal del impresor)"
 license_name: "CC BY-NC-SA 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+# `site` sale de web/site.config.json (url): no se repite aquí.
+#
+# Por volumen e idioma:
+#   edition       nº de edición (1 = primera)
+#   edition_date  AAAA-MM, mes y año de la edición (exigido por la BNP)
+#   isbn_*        978-612-… o NO si ese formato no existe
+#   deposito_legal  AAAA-NNNNN (ej. 2026-09631)
+#   kdp / google_play / lulu   enlace de compra; vacío = «próximamente»
 volumes:
   vol1:
-    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
-    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
   vol2:
-    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
-    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
   vol3:
-    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
-    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
   vol4:
-    es: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
-    en: { isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: PENDIENTE, deposito_legal: PENDIENTE }
+    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }

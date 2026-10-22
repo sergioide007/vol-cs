@@ -249,6 +249,30 @@ class CapsInWordTest(unittest.TestCase):
         self.assertIsNone(self.pat.search('los turnos de palabra se organizan bien'))
 
 
+class LongHeadingsTest(unittest.TestCase):
+    """C16: el título y el párrafo siguiente no pueden quedar en la misma línea."""
+
+    def test_flags_paragraph_fused_into_heading(self):
+        fused = '### Arquitectura comun ' + 'Los cuatro convergen en el mismo patron. ' * 6
+        self.assertEqual([(1, 3)], [(n, lv) for n, lv, _ in lint.long_headings(fused)])
+
+    def test_normal_and_long_chapter_titles_pass(self):
+        title = '# Capitulo 7: ' + 'El Ecosistema del Desarrollo Moderno ' * 4  # ~150 car.
+        self.assertEqual([], list(lint.long_headings(title + '\n\n### Un apartado normal\n')))
+
+    def test_heading_comment_inside_code_is_ignored(self):
+        code = '```bash\n### ' + 'x ' * 200 + '\n```\n'
+        self.assertEqual([], list(lint.long_headings(code)))
+
+    def test_manuscript_has_no_fused_headings(self):
+        """Regresión del cap. 5 del Vol. 4 (ES): 13 párrafos acabaron en el índice."""
+        found = []
+        for volume in lint.volumes():
+            for item in volume.manuscript_files():
+                found += [(item.path.name, n) for n, _, _ in lint.long_headings(item.text)]
+        self.assertEqual([], found)
+
+
 class ManuscriptInvariantsTest(unittest.TestCase):
     """Propiedades que deben cumplirse siempre, passen o no los checks."""
 

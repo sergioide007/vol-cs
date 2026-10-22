@@ -30,6 +30,8 @@
 #   Salida: dist/<lang>/<volN-slug>/...
 # ===========================================================================
 set -euo pipefail
+# Forzar UTF-8: con otra locale Pandoc decodifica mal los argumentos con tilde (salía «��ndice»).
+export LC_ALL=C.UTF-8 LANG=C.UTF-8
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TOOLS="$ROOT/tools"
@@ -37,7 +39,8 @@ LANG_CODE="${LANG_CODE:-es}"
 case "$LANG_CODE" in es|en) ;; *) echo "LANG_CODE debe ser es|en" >&2; exit 2 ;; esac
 CONTENT="$ROOT/content/$LANG_CODE"
 DIST="$ROOT/dist/$LANG_CODE"
-COVERS="$ROOT/dist/covers"          # las cubiertas no dependen del idioma
+COVERS="$ROOT/dist/$LANG_CODE/covers"   # cada idioma tiene su propio arte de cubierta
+FORCE="${FORCE:-0}"                       # FORCE=1 ignora la caché y recompone todo
 WORK="${TMPDIR:-/tmp}/codigo-sintetico-build/$LANG_CODE"
 mkdir -p "$DIST" "$WORK"
 
@@ -168,6 +171,7 @@ build_interior_pdf() {
     --to=latex --standalone \
     --output="$tmp/main.tex" \
     --metadata-file="$d/front-matter/metadata_${LANG_CODE}.yaml" \
+    --metadata-file="$tmp/legal-pdf.yaml" \
     --toc --toc-depth=2 \
     --include-in-header="$hdr" \
     --include-before-body="$tmp/creditos.tex" \
@@ -186,7 +190,6 @@ build_interior_pdf() {
     -V geometry:outer="${M_OUTSIDE}in" \
     -V geometry:top="${M_TOP}in" \
     -V geometry:bottom="${M_BOTTOM}in" \
-    -V toc-title="$([ "$LANG_CODE" = en ] && echo Contents || echo Índice)" \
     2> "$tmp/pandoc-latex.log" \
     || { tail -30 "$tmp/pandoc-latex.log"; die "pandoc falló al generar el LaTeX de $d"; }
 
@@ -210,6 +213,7 @@ build_epub() {
     --to=epub3
     --output="$out"
     --metadata-file="$d/front-matter/metadata_${LANG_CODE}.yaml"
+    --metadata-file="$tmp/legal-epub.yaml"
     --toc --toc-depth=2
     --css="$TOOLS/epub.css"
     --lua-filter="$TOOLS/lua/table-widths.lua"
@@ -237,14 +241,14 @@ build_epub() {
 # (altura de mayúscula, línea base, espaciado, color de acento, franja limpia)
 # y compone una leyenda vectorial con los dos coautores sobre un parche de la
 # propia ilustración. Por cada volumen produce:
-#   dist/covers/<vol>.pdf                   cubierta 6x9 (432 x 648 bp)
-#   dist/covers/<vol>-cover-300ppp.jpg      la misma, para el EPUB
+#   dist/<lang>/covers/<vol>.pdf            cubierta 6x9 (432 x 648 bp)
+#   dist/<lang>/covers/<vol>-cover-300ppp.jpg  la misma, para el EPUB
 build_covers() {
   local work="$WORK/covers"
   mkdir -p "$work" "$COVERS"
-  python3 "$TOOLS/covers/make_styles.py" >"$work/styles.log" 2>&1 \
+  python3 "$TOOLS/covers/make_styles.py" --lang "$LANG_CODE" >"$work/styles.log" 2>&1 \
     || { tail -20 "$work/styles.log"; die "Falló la medición del arte de cubiertas"; }
-  bash "$TOOLS/covers/render_covers.sh" --out "$COVERS" --dpi "$COVER_DPI" "$@" \
+  bash "$TOOLS/covers/render_covers.sh" --lang "$LANG_CODE" --out "$COVERS" --dpi "$COVER_DPI" "$@" \
     >"$work/render.log" 2>&1 \
     || { tail -30 "$work/render.log"; die "Falló la composición de cubiertas"; }
 }
@@ -253,7 +257,7 @@ build_covers() {
 legend_of() {
   python3 -c 'import json,sys
 d = json.load(open(sys.argv[1], encoding="utf-8"))["volumenes"]
-print(d[sys.argv[2]]["legend"])' "$TOOLS/covers/cover-styles.json" "$1"
+print(d[sys.argv[2]]["legend"])' "$TOOLS/covers/cover-styles$([ "$LANG_CODE" = es ] || echo ".$LANG_CODE").json" "$1"
 }
 
 # --- Portada suelta (6x9) para el PDF de lectura ----------------------------
@@ -261,7 +265,6 @@ make_cover_pdf() {
   local slug="$1" out="$2"
   local cover="$COVERS/$slug.pdf"
   [ -f "$cover" ] || die "No hay cubierta compuesta para $slug: $cover"
-  [ "$LANG_CODE" = es ] || warn "$slug: la cubierta EN reutiliza el arte ES (título en español) hasta que exista arte propio."
   cp "$cover" "$out"
 }
 
@@ -274,8 +277,35 @@ verify_pdf() {
   PDF_EMB_OK=$(pdffonts "$pdf" | tail -n +3 | awk 'NF>=6 && $(NF-4)=="yes" {n++} END {print n+0}')
 }
 
+# --- Caché ------------------------------------------------------------------
+# Huella de todo lo que influye en los cuatro archivos de un volumen/idioma. Si no
+# cambió y los archivos existen, no se recompone (un volumen ≈ 1 min de XeLaTeX).
+# En CI se restaura dist/ con actions/cache y solo se recompone lo que cambió.
+hash_inputs() {  # hash_inputs <volN> <slug>
+  {
+    find "$CONTENT/$1" -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+    find "$TOOLS/latex" "$TOOLS/lua" -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+    sha256sum "$TOOLS/epub.css" "$TOOLS/vols.json" "${BASH_SOURCE[0]}" \
+      "$WORK/$2/legal-epub.yaml" "$WORK/$2/legal-pdf.yaml"
+    [ -f "$COVERS/$2-cover-${COVER_DPI}ppp.jpg" ] && sha256sum "$COVERS/$2.pdf" "$COVERS/$2-cover-${COVER_DPI}ppp.jpg"
+    printf '%s\n' "$TRIM_W_IN" "$TRIM_H_IN" "$M_INSIDE" "$M_OUTSIDE" "$M_TOP" "$M_BOTTOM" \
+      "$FONTSIZE" "$MAINFONT" "$MONOFONT" "$LINESTRETCH" "$COVER_DPI" "$LANG_CODE"
+  } | sha256sum | cut -d' ' -f1
+}
+
+# Las cubiertas se recomponen solo si cambió su arte, su diseño o su plantilla.
+covers_hash() {
+  { find "$CONTENT" -name '01_cubierta_delantera.png' -print0 | LC_ALL=C sort -z | xargs -0 sha256sum
+    find "$TOOLS/covers" "$TOOLS/latex" -type f \( -name '*.json' -o -name '*.py' -o -name '*.sh' -o -name '*.tex' \) -print0 \
+      | LC_ALL=C sort -z | xargs -0 sha256sum
+    printf '%s\n' "$COVER_DPI" "$LANG_CODE" "$@"
+  } | sha256sum | cut -d' ' -f1
+}
+
 # --- Programa principal -----------------------------------------------------
 require_tools
+# La hoja de créditos sale siempre del registro legal (en local y en CI son la misma).
+python3 "$TOOLS/render_legal.py" $([ "${STRICT_LEGAL:-false}" = true ] && echo --strict)
 
 {
   echo "# Informe de construcción — Serie «Código Sintético»"
@@ -316,9 +346,16 @@ for slug in "${slugs[@]}"; do
   [ -d "$CONTENT/$slug" ] && cover_slugs+=("$(long_slug "$slug")")
 done
 if [ "${#cover_slugs[@]}" -gt 0 ]; then
-  log "Componiendo cubiertas (arte original + leyenda de autoría) …"
-  build_covers "${cover_slugs[@]}"
-  ok "cubiertas 6x9 y para EPUB en $COVERS"
+  chash="$(covers_hash "${cover_slugs[@]}")"
+  if [ "$FORCE" != 1 ] && [ -f "$COVERS/.hash" ] && [ "$(cat "$COVERS/.hash")" = "$chash" ] \
+     && [ "$(ls "$COVERS"/*.pdf 2>/dev/null | wc -l)" -ge "${#cover_slugs[@]}" ]; then
+    ok "cubiertas ($LANG_CODE) sin cambios (caché)"
+  else
+    log "Componiendo cubiertas $LANG_CODE (arte original + leyenda de autoría) …"
+    build_covers "${cover_slugs[@]}"
+    echo "$chash" > "$COVERS/.hash"
+    ok "cubiertas 6x9 y para EPUB en $COVERS"
+  fi
 fi
 
 for short in "${slugs[@]}"; do
@@ -326,10 +363,22 @@ for short in "${slugs[@]}"; do
   [ -d "$d" ] || { warn "Directorio no encontrado: $short (se omite)"; continue; }
   slug="$(long_slug "$short")"          # nombre largo para archivos y cubiertas
 
-  log "Componiendo $slug …"
   tmp="$WORK/$slug"
-  rm -rf "$tmp"; mkdir -p "$tmp"
-  out="$DIST/$slug"; mkdir -p "$out"
+  mkdir -p "$tmp" "$DIST/$slug"
+  out="$DIST/$slug"
+  python3 "$TOOLS/render_legal.py" --meta "$LANG_CODE" "$short" epub "$tmp/legal-epub.yaml"
+  python3 "$TOOLS/render_legal.py" --meta "$LANG_CODE" "$short" pdf  "$tmp/legal-pdf.yaml"
+  vhash="$(hash_inputs "$short" "$slug")"
+  if [ "$FORCE" != 1 ] && [ -f "$out/.build-hash" ] && [ "$(cat "$out/.build-hash")" = "$vhash" ] \
+     && [ -f "$out/.report.md" ] && [ "$(ls "$out"/*.pdf "$out"/*.epub 2>/dev/null | wc -l)" -ge 4 ]; then
+    ok "$slug ($LANG_CODE) sin cambios (caché) → dist/$LANG_CODE/$slug/"
+    cat "$out/.report.md" >> "$REPORT"
+    continue
+  fi
+  log "Componiendo $slug ($LANG_CODE) …"
+  keep_legal="$(mktemp -d)"; cp "$tmp"/legal-*.yaml "$keep_legal"/
+  rm -rf "$tmp"; mkdir -p "$tmp"; cp "$keep_legal"/legal-*.yaml "$tmp"/; rm -rf "$keep_legal"
+  rm -f "$out"/*.pdf "$out"/*.epub "$out"/*.log "$out/.build-hash" "$out/.report.md"
 
   interior="$out/${slug}--${LANG_CODE}--interior-6x9--sin-caratula.pdf"
   epub_cover="$out/${slug}--${LANG_CODE}--epub--con-portada.epub"
@@ -360,6 +409,7 @@ for short in "${slugs[@]}"; do
   pdfunite "$tmp/cover-6x9.pdf" "$interior" "$reading"
 
   # --- Métricas y avisos ----------------------------------------------------
+  cp "$tmp/main.log" "$out/.main.log"   # el validador lo lee de aquí aunque /tmp se limpie (caché de CI)
   overfull=$(grep -c 'Overfull \\hbox' "$tmp/main.log" 2>/dev/null || true)
   misses=$(grep -ci 'could not fetch\|no such file' "$tmp/pandoc-latex.log" 2>/dev/null || true)
   kdp_min=$(kdp_gutter_min "$pages")
@@ -373,7 +423,7 @@ for short in "${slugs[@]}"; do
 
   {
     echo
-    printf '### %s\n\n' "$slug"
+    printf '### %s (%s)\n\n' "$slug" "$LANG_CODE"
     echo "| Dato | Valor |"
     echo "|---|---|"
     printf '| Páginas del interior | %s |\n' "$pages"
@@ -385,8 +435,8 @@ for short in "${slugs[@]}"; do
     printf '| Elegible para tapa dura KDP (75–550 págs.) | %s |\n' "$hc_ok"
     printf '| Lomo de cubierta (papel blanco / crema) | %s in / %s in |\n' "$(spine_width "$pages")" "$(spine_width_cream "$pages")"
     printf '| Fuentes incrustadas | %s/%s |\n' "$PDF_EMB_OK" "$PDF_EMB_TOTAL"
-    printf '| Cubierta compuesta | `dist/covers/%s.pdf` + `%s-cover-%sppp.jpg` |\n' \
-      "$slug" "$slug" "$COVER_DPI"
+    printf '| Cubierta compuesta | `dist/%s/covers/%s.pdf` + `%s-cover-%sppp.jpg` |\n' \
+      "$LANG_CODE" "$slug" "$slug" "$COVER_DPI"
     printf '| Leyenda de autoría de la cubierta | %s |\n' "$(legend_of "$slug")"
     printf '| Líneas desbordadas (Overfull hbox) | %s |\n' "$overfull"
     printf '| Recursos no encontrados | %s |\n' "$misses"
@@ -396,11 +446,13 @@ for short in "${slugs[@]}"; do
     for f in "$out"/*; do
       printf -- '- `%s` (%s)\n' "$(basename "$f")" "$(du -h "$f" | cut -f1)"
     done
-  } >> "$REPORT"
+  } > "$out/.report.md"
+  cat "$out/.report.md" >> "$REPORT"
+  echo "$vhash" > "$out/.build-hash"
 
   ok "$slug completado → dist/$LANG_CODE/$slug/"
 done
 
 echo
-ok "Informe: dist/BUILD-REPORT.md"
+ok "Informe: dist/$LANG_CODE/BUILD-REPORT.md"
 

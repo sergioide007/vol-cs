@@ -21,11 +21,13 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 OUT=""
 SLUGS=()
 EPUB_DPI="${EPUB_DPI:-300}"
+LANG_CODE="${LANG_CODE:-es}"   # idioma del arte: content/<lang>/<volN>/
 
 while [ $# -gt 0 ]; do
   case "$1" in
     --out) OUT="$2"; shift 2 ;;
     --dpi) EPUB_DPI="$2"; shift 2 ;;
+    --lang) LANG_CODE="$2"; shift 2 ;;
     -h|--help) sed -n '2,20p' "${BASH_SOURCE[0]}"; exit 0 ;;
     *) SLUGS+=("$1"); shift ;;
   esac
@@ -42,9 +44,10 @@ fi
 mkdir -p "$OUT"
 fail=0
 for slug in "${SLUGS[@]}"; do
-  short="${slug%%-*}"   # vol1-fundamentos -> vol1 (el arte vive en content/es/<volN>/)
-  art="$ROOT/content/es/$short/front-matter/01_cubierta_delantera.png"
-  style="$ROOT/tools/latex/covers/$slug"
+  short="${slug%%-*}"   # vol1-fundamentos -> vol1 (el arte vive en content/<lang>/<volN>/)
+  art="$ROOT/content/$LANG_CODE/$short/front-matter/01_cubierta_delantera.png"
+  styledir="$ROOT/tools/latex/covers"; [ "$LANG_CODE" = es ] || styledir="$styledir/$LANG_CODE"
+  style="$styledir/$slug"
   work="$OUT/$slug"
   if [ ! -f "$art" ]; then
     echo "! $slug: falta el arte $art" >&2

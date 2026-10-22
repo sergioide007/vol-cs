@@ -199,7 +199,14 @@ def tex_for(slug: str, st: dict, art_h: int) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser(description="Genera los estilos de cubierta.")
     ap.add_argument("--vol", nargs="*", help="volúmenes (por defecto, todos)")
+    ap.add_argument("--lang", choices=("es", "en"), default="es",
+                    help="idioma del arte (cada idioma tiene su propia cubierta)")
     args = ap.parse_args()
+    # ES conserva las rutas históricas; EN usa su propio JSON y su subcarpeta.
+    global STYLES_JSON, LATEX_DIR
+    if args.lang != "es":
+        STYLES_JSON = STYLES_JSON.with_name(f"cover-styles.{args.lang}.json")
+        LATEX_DIR = LATEX_DIR / args.lang
 
     design = json.loads(DESIGN.read_text(encoding="utf-8"))["legends"]
     slugs = args.vol or sorted(design)
@@ -209,7 +216,7 @@ def main() -> int:
     print(f"{'volumen':<32}{'cap':>4}{'cuerpo':>9}{'LetterSp.':>10}"
           f"{'ancho':>8}{'factor':>8}{'margen':>8}")
     for slug in slugs:
-        cover = ROOT / "content" / "es" / slug.split("-")[0] / "front-matter" / "01_cubierta_delantera.png"
+        cover = ROOT / "content" / args.lang / slug.split("-")[0] / "front-matter" / "01_cubierta_delantera.png"
         if not cover.is_file():
             print(f"! sin cubierta: {cover}", file=sys.stderr)
             continue

@@ -1,22 +1,27 @@
+
 # Copyright & Publishing Details
 
 **{{series}}** — Volume {{n}} of 4
 
 **Title:** {{title}}: {{subtitle}}
 
-**Author and publisher:** {{publisher}}\
-{{publisher_address}}\
-Contact: {{publisher_contact}}
+**{{author_label}}:** {{authors}}
 
-**Edition:** First digital edition, {{edition_year}}
+**Publisher:** {{publisher}} ({{publisher_kind}}){{publisher_id_line}}\
+**Publisher’s legal address:** {{publisher_address}}\
+**Contact and licensing:** {{publisher_contact}}\
+**Place of publication:** {{place}}
+
+**Edition:** {{edition_line}}
 
 | Format | ISBN |
 |---|---|
-| EPUB | {{isbn_epub}} |
-| PDF | {{isbn_pdf}} |
-| Print (on demand) | {{isbn_print}} |
+{{isbn_rows}}
 
-**Legal Deposit No.:** {{deposito_legal}} — National Library of Peru (SIRNADEL)
+**Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º {{deposito_legal}}**\
+(Legal deposit made at the National Library of Peru, No. {{deposito_legal}}.)
+
+{{print_block}}**Format and distribution.** This work is published in digital format (EPUB and PDF){{print_note}} through the following platforms: {{distribution}}.
 
 **License.** This work is published as open access. Unless otherwise noted, the text is
 released under [{{license_name}}]({{license_url}}): you may copy, redistribute and adapt the
@@ -27,5 +32,5 @@ the names “Synthetic Code” and “SpecSolid”, which are trademarks of the 
 **Free online edition:** {{site}}. Packaged editions (compiled PDF, EPUB, Kindle and
 print-on-demand) are optional and support the project’s continuity.
 
-**How to cite:** {{publisher}} ({{edition_year}}). *{{title}}: {{subtitle}}* (Vol. {{n}}).
+**How to cite:** {{authors_cite}} ({{edition_year}}). *{{title}}: {{subtitle}}* (Vol. {{n}}).
 https://{{site}}/en/{{vol}}/

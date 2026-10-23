@@ -5,7 +5,7 @@
 
 **Title:** Synthetic Code: Scale Patterns — Orchestration, Resilience, and Cost in Production Multi-Agent Systems
 
-**Authors:** Sergio Perez Ruiz, Henry Fuentes
+**Author:** Sergio Perez Ruiz
 
 **Publisher:** Sergio Perez Ruiz (autor-editor, persona natural)\
 **Publisher’s legal address:** PENDIENTE (domicilio legal del editor: es dato obligatorio y público en el libro)\
@@ -33,5 +33,5 @@ the names “Synthetic Code” and “SpecSolid”, which are trademarks of the 
 **Free online edition:** books.specsolid.com. Packaged editions (compiled PDF, EPUB, Kindle and
 print-on-demand) are optional and support the project’s continuity.
 
-**How to cite:** Sergio Perez Ruiz & Henry Fuentes (PENDIENTE (month and year)). *Synthetic Code: Scale Patterns — Orchestration, Resilience, and Cost in Production Multi-Agent Systems* (Vol. 4).
+**How to cite:** Sergio Perez Ruiz (PENDIENTE (month and year)). *Synthetic Code: Scale Patterns — Orchestration, Resilience, and Cost in Production Multi-Agent Systems* (Vol. 4).
 https://books.specsolid.com/en/vol4/

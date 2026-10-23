@@ -14,25 +14,25 @@
   ],
   "legends": {
     "vol1-fundamentos": {
-      "legend": "SERGIO PEREZ RUIZ · HENRY FUENTES",
+      "legend": "SERGIO PEREZ RUIZ",
       "case": "upper",
       "source_word": "SERGIO",
       "rules": false
     },
     "vol2-frontera-y-aplicaciones": {
-      "legend": "SERGIO PEREZ RUIZ · HENRY FUENTES",
+      "legend": "SERGIO PEREZ RUIZ",
       "case": "upper",
       "source_word": "SERGIO",
       "rules": true
     },
     "vol3-madurez-organizacional": {
-      "legend": "Sergio Perez Ruiz · Henry Fuentes",
+      "legend": "Sergio Perez Ruiz",
       "case": "title",
       "source_word": "Sergio",
       "rules": false
     },
     "vol4-patrones-de-escala": {
-      "legend": "SERGIO PEREZ RUIZ · HENRY FUENTES",
+      "legend": "SERGIO PEREZ RUIZ",
       "case": "upper",
       "source_word": "SERGIO",
       "rules": false

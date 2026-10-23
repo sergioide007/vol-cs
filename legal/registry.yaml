@@ -22,7 +22,7 @@ publisher_address: "PENDIENTE (domicilio legal del editor: es dato obligatorio y
 publisher_contact: "sergio@specsolid.com"
 place: "Lima, Perú"
 # Debe coincidir con la leyenda de cubierta (tools/covers/cover-design.json). Separa con «;».
-authors: "Sergio Perez Ruiz; Henry Fuentes"
+authors: "Sergio Perez Ruiz"
 distribution: "Amazon Kindle Direct Publishing (KDP); Google Play Books; Lulu"
 # Datos del impresor: solo se imprimen si algún volumen tiene isbn_print distinto de NO.
 printer: "PENDIENTE (razón social y domicilio legal del impresor)"

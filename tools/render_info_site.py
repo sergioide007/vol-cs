@@ -28,7 +28,7 @@ T = {
                read='Leer en línea (gratis)', soon='En trámite de registro', open_vol='Ver el volumen', ficha='Ficha técnica editorial',
                title='Título', authors='Autores', publisher='Autor-editor', place='Lugar de edición', edition='Edición', contact='Contacto y licencias',
                dl='Depósito Legal', dl_pending='en trámite en la Biblioteca Nacional del Perú (SIRNADEL)', isbn='ISBN', isbn_pending='en trámite (Agencia Peruana del ISBN)',
-               lic='Licencia', buy='Ediciones empaquetadas', buy_none='Las ediciones empaquetadas estarán disponibles al completar el registro legal.',
+               lic='Licencia', review_nav='Documentos para revisión', read_h='Leer el libro', read_lead='Obra completa en PDF, incrustada en esta página. También puedes descargarla.', open_tab='Abrir en pestaña nueva', dl_pdf='Descargar PDF', dl_epub='Descargar EPUB', mobile='Si el visor no carga en tu dispositivo móvil, abre el archivo directamente.', no_pdf='Tu navegador no puede mostrar el PDF incrustado.', buy='Ediciones empaquetadas', buy_none='Las ediciones empaquetadas estarán disponibles al completar el registro legal.',
                other='English edition', other_url='en/', book1='El libro de entrada (volumen único, 2026)', back='Todos los volúmenes',
                fmt={'epub': 'EPUB', 'pdf': 'PDF', 'print': 'Impreso'}, store={'kdp': 'Amazon KDP', 'google_play': 'Google Play Books', 'lulu': 'Lulu'},
                ed_word='Edición {n} · {when}', legal_note='Este sitio informa la edición digital; la lectura en línea es gratuita.'),
@@ -36,12 +36,16 @@ T = {
                read='Read online (free)', soon='Legal registration in progress', open_vol='View volume', ficha='Publishing details',
                title='Title', authors='Authors', publisher='Author-publisher', place='Place of publication', edition='Edition', contact='Contact and licensing',
                dl='Legal deposit', dl_pending='in progress at the National Library of Peru (SIRNADEL)', isbn='ISBN', isbn_pending='in progress (Peruvian ISBN Agency)',
-               lic='License', buy='Packaged editions', buy_none='Packaged editions will be available once legal registration is complete.',
+               lic='License', review_nav='Review documents', read_h='Read the book', read_lead='Full book as PDF, embedded on this page. You can also download it.', open_tab='Open in new tab', dl_pdf='Download PDF', dl_epub='Download EPUB', mobile='If the viewer does not load on your mobile device, open the file directly.', no_pdf='Your browser cannot display the embedded PDF.', buy='Packaged editions', buy_none='Packaged editions will be available once legal registration is complete.',
                other='Edición en español', other_url='../', book1='The companion book (single volume, 2026, Spanish)', back='All volumes',
                fmt={'epub': 'EPUB', 'pdf': 'PDF', 'print': 'Print'}, store={'kdp': 'Amazon KDP', 'google_play': 'Google Play Books', 'lulu': 'Lulu'},
                ed_word='Edition {n} · {when}', legal_note='This site describes the digital edition; online reading is free.'),
 }
 e = html.escape
+
+# Libro de enganche (volumen único): datos tal como figuran en su página legal ya aceptada.
+BOOK1 = {'title': 'Código Sintético: el arte de orquestar agentes de IA', 'isbn': '978-612-03-2931-3 (PDF) · 978-612-03-2914-6 (EPUB)',
+         'dl': '2026-09631', 'pdf': '/assets/codigo-sintetico-es.pdf', 'page': '/libro-1/#leer'}
 
 
 def head(t, title, desc, url, css, extra=''):
@@ -54,7 +58,7 @@ def head(t, title, desc, url, css, extra=''):
 
 def top(t, prefix, other):
     return (f'<header class="top"><div class="wrap"><a class="brand" href="{prefix}">Código <span>Sintético</span></a>'
-            f'<nav><a href="{other}">{t["other"]}</a></nav></div></header>\n<main>\n')
+            f'<nav><a href="/revision/">{t["review_nav"]}</a> · <a href="{other}">{t["other"]}</a></nav></div></header>\n<main>\n')
 
 
 FOOT = '</main>\n<footer><div class="wrap"><p>{p} · {a} · Lima, Perú</p><p>{n}</p></div></footer>\n</body>\n</html>\n'
@@ -65,7 +69,7 @@ def when_text(lang, d):
         if d['edition_date'] else None
 
 
-def vol_page(t, lang, vol, d, pub, base, site, css):
+def vol_page(t, lang, vol, d, pub, base, site, css, files):
     lang_prefix = '' if lang == 'es' else 'en/'
     url = f'{base}/{lang_prefix}{vol}/'
     names = ', '.join(pub['authors'])
@@ -101,8 +105,52 @@ def vol_page(t, lang, vol, d, pub, base, site, css):
             f'<div class="card"><dl>{isbn_rows}<div><dt>{t["dl"]}</dt><dd>{e(dl)}</dd></div>'
             f'<div><dt>{t["lic"]}</dt><dd><a href="{pub["license"]["url"]}">{e(pub["license"]["name"])}</a></dd></div></dl></div></div>'
             f'<p class="note">{t["legal_note"]}</p></div></section>\n'
+            f'{reader_html(t, lang, vol, d, sub, files)}'
             f'<section id="comprar"><div class="wrap"><h2>{t["buy"]}</h2>{buy}</div></section>\n')
     return out + FOOT.format(p=e(rl.VOLS['series'][lang]), a=e(pub['publisher']), n=t['legal_note'])
+
+
+def reader_html(t, lang, vol, d, sub, files):
+    f = files.get((lang, vol))
+    if not f:
+        return ''
+    pdf, epub = f'/assets/libros/{f["pdf"]}', f'/assets/libros/{f["epub"]}'
+    return (f'<section id="leer"><div class="wrap"><h2>{t["read_h"]}</h2><p class="lead">{t["read_lead"]}</p>'
+            f'<div class="reader"><iframe src="{pdf}#view=FitH" title="{e(sub)}" loading="lazy">'
+            f'<p>{t["no_pdf"]} <a href="{pdf}">PDF</a></p></iframe>'
+            f'<div class="bar"><span>{t["mobile"]}</span><span><a href="{pdf}" target="_blank" rel="noopener">{t["open_tab"]}</a> · '
+            f'<a href="{pdf}" download>{t["dl_pdf"]} ({f["pdf_mb"]} MB)</a> · '
+            f'<a href="{epub}" download>{t["dl_epub"]} ({f["epub_mb"]} MB)</a></span></div></div></div></section>\n')
+
+
+def review_page(pub, files, base, css):
+    def mb(path):
+        f = Path(path)
+        return f'{f.stat().st_size / 1e6:.0f} MB' if f.is_file() else ''
+    rows = (f'<tr><td><strong>Libro 1 · enganche</strong><br>{e(BOOK1["title"])}</td><td>ES</td><td>{BOOK1["isbn"]}<br>DL {BOOK1["dl"]}</td>'
+            f'<td><a class="btn primary" href="{BOOK1["page"]}">Ver / View</a> <a href="{BOOK1["pdf"]}" download>PDF</a></td></tr>')
+    for vol, langs in pub['volumes'].items():
+        for lang in ('es', 'en'):
+            d, f = langs[lang], files.get((lang, vol))
+            if not f:
+                continue
+            isbn = ' · '.join(f'{v} ({k.upper()})' for k, v in d['isbn'].items()) or 'ISBN: en trámite / in progress'
+            dl = d['deposito_legal'] or 'DL: en trámite / in progress'
+            pre = '' if lang == 'es' else '/en'
+            rows += (f'<tr><td><strong>{vol.upper().replace("VOL", "Vol. ")}</strong><br>{e(d["title"])}</td><td>{lang.upper()}</td>'
+                     f'<td>{e(isbn)}<br>{e(dl)}</td><td><a class="btn primary" href="{pre}/{vol}/#leer">Ver / View</a> '
+                     f'<a href="/assets/libros/{f["pdf"]}" download>PDF ({f["pdf_mb"]} MB)</a> · '
+                     f'<a href="/assets/libros/{f["epub"]}" download>EPUB ({f["epub_mb"]} MB)</a></td></tr>')
+    t = T['es']
+    out = head(t, 'Documentos para revisión · Código Sintético', 'Todos los libros de la serie en PDF y EPUB, con visor.', f'{base}/revision/', css)
+    out += top(t, '/', '/en/')
+    out += ('<div class="hero"><div class="wrap"><div><div class="eyebrow">Revisión editorial / Editorial review</div>'
+            '<h1>Documentos para revisión</h1><p class="sub">Todos los libros (el de enganche y los 4 volúmenes en español e inglés) '
+            'con visor de PDF y descarga. Autor-editor: ' + e(pub['publisher']) + '.</p></div></div></div>\n'
+            '<section><div class="wrap"><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.95rem">'
+            '<thead><tr><th align="left">Obra / Work</th><th align="left">Idioma</th><th align="left">Registro / Registration</th><th align="left">Documentos</th></tr></thead>'
+            f'<tbody>{rows}</tbody></table></div></div></section>\n')
+    return out + FOOT.format(p=e(rl.VOLS['series']['es']), a=e(pub['publisher']), n=t['legal_note'])
 
 
 def hub_page(t, lang, pub, base, site, css):
@@ -163,6 +211,17 @@ def main():
             dst = out / 'assets/covers' / f'{lang}-{vol}.jpg'
             if jpg.is_file() and Image:
                 Image.open(jpg).convert('RGB').resize((600, 900)).save(dst, 'JPEG', quality=84, optimize=True)
+    files = {}
+    (out / 'assets/libros').mkdir(exist_ok=True)
+    for lang in ('es', 'en'):
+        for vol, slug in rl.VOLS['slugs'].items():
+            d = Path(args.covers) / lang / slug
+            pdf, epub = d / f'{slug}--{lang}--lectura-6x9--con-portada.pdf', d / f'{slug}--{lang}--epub--con-portada.epub'
+            if pdf.is_file() and epub.is_file():
+                for f in (pdf, epub):
+                    shutil.copy(f, out / 'assets/libros' / f.name)
+                files[(lang, vol)] = {'pdf': pdf.name, 'epub': epub.name,
+                                      'pdf_mb': round(pdf.stat().st_size / 1e6, 1), 'epub_mb': round(epub.stat().st_size / 1e6, 1)}
     n = 0
     for lang in ('es', 'en'):
         t, root = T[lang], out if lang == 'es' else out / 'en'
@@ -170,13 +229,15 @@ def main():
         (root / 'index.html').write_text(hub_page(t, lang, pub, base, site, css), encoding='utf-8')
         for vol, langs in pub['volumes'].items():
             (root / vol).mkdir(exist_ok=True)
-            (root / vol / 'index.html').write_text(vol_page(t, lang, vol, langs[lang], pub, base, site, css), encoding='utf-8')
+            (root / vol / 'index.html').write_text(vol_page(t, lang, vol, langs[lang], pub, base, site, css, files), encoding='utf-8')
             n += 1
+    (out / 'revision').mkdir(exist_ok=True)
+    (out / 'revision/index.html').write_text(review_page(pub, files, base, css), encoding='utf-8')
     (out / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n', encoding='utf-8')
-    urls = [f'{base}/', f'{base}/en/', f'{base}/libro-1/'] + [f'{base}/{p}{v}/' for p in ('', 'en/') for v in pub['volumes']]
+    urls = [f'{base}/', f'{base}/en/', f'{base}/libro-1/', f'{base}/revision/'] + [f'{base}/{p}{v}/' for p in ('', 'en/') for v in pub['volumes']]
     (out / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                      + ''.join(f'<url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n', encoding='utf-8')
-    print(f'{n} páginas de volumen + 2 hubs + libro-1 → {out}')
+    print(f'{len(files)} libros incrustados · {n} páginas de volumen + 2 hubs + libro-1 → {out}')
 
 
 if __name__ == '__main__':

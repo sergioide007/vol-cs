@@ -5,7 +5,7 @@
 
 **Título:** Código Sintético: Madurez Organizacional — Gobernanza, autonomía y calidad en equipos de agentes
 
-**Autores:** Sergio Perez Ruiz, Henry Fuentes
+**Autor:** Sergio Perez Ruiz
 
 **Editor:** Sergio Perez Ruiz (autor-editor, persona natural)\
 **Domicilio legal del editor:** PENDIENTE (domicilio legal del editor: es dato obligatorio y público en el libro)\
@@ -32,5 +32,5 @@ nombre «Código Sintético» ni el nombre «SpecSolid», que son marcas del aut
 **Edición en línea (gratuita):** books.specsolid.com. Las ediciones empaquetadas (PDF compilado, EPUB,
 Kindle e impresión bajo demanda) son opcionales y apoyan la continuidad del proyecto.
 
-**Cómo citar:** Sergio Perez Ruiz y Henry Fuentes (PENDIENTE (mes y año)). *Código Sintético: Madurez Organizacional — Gobernanza, autonomía y calidad en equipos de agentes* (Vol. 3).
+**Cómo citar:** Sergio Perez Ruiz (PENDIENTE (mes y año)). *Código Sintético: Madurez Organizacional — Gobernanza, autonomía y calidad en equipos de agentes* (Vol. 3).
 https://books.specsolid.com/es/vol3/

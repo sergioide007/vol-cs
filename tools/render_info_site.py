@@ -7,7 +7,7 @@ Fuente única: legal/registry.yaml (vía render_legal.public_json). Nada se escr
  · ISBN y Depósito Legal aparecen solo cuando ya están en el registro (si no, «en trámite»);
  · los botones de compra aparecen solo cuando hay enlace (kdp / google_play / lulu);
  · el CSS es el del libro 1 (se extrae de su index.html) para que el diseño sea el mismo;
- · el libro 1 se conserva intacto en /libro-1/ (solo se ajustan rutas y URL canónica).
+ · el libro 1 se conserva intacto en /libro-1/ (solo se ajustan rutas y URL canónica);\n · la portada (ES) muestra el libro 1 primero y la serie de 4 volúmenes debajo.
 Salida: index.html (ES), en/index.html, vol1..4/, en/vol1..4/, libro-1/, assets/.
 """
 import argparse
@@ -41,6 +41,16 @@ T = {
                fmt={'epub': 'EPUB', 'pdf': 'PDF', 'print': 'Print'}, store={'kdp': 'Amazon KDP', 'google_play': 'Google Play Books', 'lulu': 'Lulu'},
                ed_word='Edition {n} · {when}', legal_note='This site describes the digital edition; online reading is free.'),
 }
+T['es'].update(addr='Domicilio legal del editor', dl_short='Depósito Legal', lic_full='Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional',
+                support_h='Apoyo voluntario', kofi='Donación puntual (Ko-fi)', patreon='Membresía y mecenazgo (Patreon)',
+                support_lead='Este proyecto se enmarca en la filosofía de Acceso Abierto. Si esta obra ha sido de utilidad para tu formación o investigación y deseas colaborar con el autor en el desarrollo de futuras publicaciones libres, puedes hacer un aporte voluntario.',
+                support_thanks='¡Gracias por apoyar la difusión libre del conocimiento!', serie_link='La serie', nav_rev='Revisión', nav_other='English',
+                see_serie='Ver la serie completa', nav_work='La obra', nav_ficha='Datos editoriales', nav_read='Leer',
+                support_note='Apoyo voluntario a la serie (acceso abierto, CC BY-NC-SA 4.0)')
+T['en'].update(addr='Publisher’s legal address', dl_short='Legal deposit', lic_full='Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International',
+                support_h='Voluntary support', kofi='One-time donation (Ko-fi)', patreon='Membership and patronage (Patreon)',
+                support_lead='This project follows the Open Access philosophy. If this work has been useful for your training or research and you wish to help the author develop future free publications, you may make a voluntary contribution.',
+                support_thanks='Thank you for supporting the free dissemination of knowledge!')
 e = html.escape
 
 # Libro de enganche (volumen único): datos tal como figuran en su página legal ya aceptada.
@@ -73,14 +83,18 @@ def vol_page(t, lang, vol, d, pub, base, site, css, files):
     lang_prefix = '' if lang == 'es' else 'en/'
     url = f'{base}/{lang_prefix}{vol}/'
     names = ', '.join(pub['authors'])
-    isbn_rows = ''.join(f'<div><dt>{t["isbn"]} ({t["fmt"][k]})</dt><dd>{e(v)}</dd></div>' for k, v in d['isbn'].items()) \
-        or f'<div><dt>{t["isbn"]}</dt><dd>{t["isbn_pending"]}</dd></div>'
+    isbn_rows = ''.join(f'<div><dt>{t["isbn"]} ({t["fmt"][k]})</dt><dd>{e(v)}</dd></div>' for k, v in d['isbn'].items())  # sin ISBN: no se muestra la fila
     dl = (f'Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º {d["deposito_legal"]}'
           if d['deposito_legal'] else t['dl_pending'])
-    when = when_text(lang, d)
-    ed = t['ed_word'].format(n=d['edition'], when=when) if when else t['soon']
+    ed = rl.edition_line(lang, {'edition': str(d['edition']), 'edition_date': d['edition_date']}) if d['edition_date'] else t['soon']
     stores = ''.join(f'<a class="btn primary" href="{e(u)}" rel="noopener">{t["store"][k]}</a>' for k, u in d['links'].items())
-    buy = f'<div class="btns">{stores}</div>' if stores else f'<p class="note">{t["buy_none"]}</p>'
+    buy = f'<section id="comprar"><div class="wrap"><h2>{t["buy"]}</h2><div class="btns">{stores}</div></div></section>\n' if stores else ''
+    sup = pub.get('support', {})
+    support = (f'<section id="apoyo"><div class="wrap"><h2>{t["support_h"]}</h2><p class="lead">{t["support_lead"]}</p><div class="btns">'
+               f'<a class="btn primary" href="{e(sup.get("kofi", ""))}" target="_blank" rel="noopener">{t["kofi"]}</a>'
+               f'<a class="btn ghost" href="{e(sup.get("patreon", ""))}" target="_blank" rel="noopener">{t["patreon"]}</a></div>'
+               f'<p class="note">{t["support_thanks"]}</p></div></section>\n') if sup.get('kofi') else ''
+    addr_row = f'<div><dt>{t["addr"]}</dt><dd>{e(pub["address"])}</dd></div>' if pub.get('address') else ''
     reader = f'{site}/{lang}/{vol}/'
     sub = d['title']
     ld = {'@context': 'https://schema.org', '@type': 'Book', 'name': f'{rl.VOLS["series"][lang]}: {sub}', 'inLanguage': lang,
@@ -101,12 +115,12 @@ def vol_page(t, lang, vol, d, pub, base, site, css, files):
             f'<section id="ficha" class="alt"><div class="wrap"><h2>{t["ficha"]}</h2><div class="data"><div class="card"><dl>'
             f'<div><dt>{t["title"]}</dt><dd>{e(rl.VOLS["series"][lang])}: {e(sub)}</dd></div>'
             f'<div><dt>{t["authors"]}</dt><dd>{e(names)}</dd></div><div><dt>{t["publisher"]}</dt><dd>{e(pub["publisher"])}</dd></div>'
-            f'<div><dt>{t["place"]}</dt><dd>Lima, Perú</dd></div><div><dt>{t["edition"]}</dt><dd>{e(ed)}</dd></div></dl></div>'
+            f'<div><dt>{t["place"]}</dt><dd>Lima, Perú</dd></div>{addr_row}<div><dt>{t["edition"]}</dt><dd>{e(ed)}</dd></div></dl></div>'
             f'<div class="card"><dl>{isbn_rows}<div><dt>{t["dl"]}</dt><dd>{e(dl)}</dd></div>'
-            f'<div><dt>{t["lic"]}</dt><dd><a href="{pub["license"]["url"]}">{e(pub["license"]["name"])}</a></dd></div></dl></div></div>'
+            f'<div><dt>{t["lic"]}</dt><dd>{t["lic_full"]} (<a href="{pub["license"]["url"]}">{e(pub["license"]["name"])}</a>)</dd></div></dl></div></div>'
             f'<p class="note">{t["legal_note"]}</p></div></section>\n'
             f'{reader_html(t, lang, vol, d, sub, files)}'
-            f'<section id="comprar"><div class="wrap"><h2>{t["buy"]}</h2>{buy}</div></section>\n')
+            f'{buy}{support}')
     return out + FOOT.format(p=e(rl.VOLS['series'][lang]), a=e(pub['publisher']), n=t['legal_note'])
 
 
@@ -134,11 +148,11 @@ def review_page(pub, files, base, css):
             d, f = langs[lang], files.get((lang, vol))
             if not f:
                 continue
-            isbn = ' · '.join(f'{v} ({k.upper()})' for k, v in d['isbn'].items()) or 'ISBN: en trámite / in progress'
-            dl = d['deposito_legal'] or 'DL: en trámite / in progress'
+            isbn = ' · '.join(f'{v} ({k.upper()})' for k, v in d['isbn'].items())
+            dl = f"DL {d['deposito_legal']}" if d['deposito_legal'] else 'DL: en trámite / in progress'
             pre = '' if lang == 'es' else '/en'
             rows += (f'<tr><td><strong>{vol.upper().replace("VOL", "Vol. ")}</strong><br>{e(d["title"])}</td><td>{lang.upper()}</td>'
-                     f'<td>{e(isbn)}<br>{e(dl)}</td><td><a class="btn primary" href="{pre}/{vol}/#leer">Ver / View</a> '
+                     f'<td>{e(isbn)}{"<br>" if isbn else ""}{e(dl)}</td><td><a class="btn primary" href="{pre}/{vol}/#leer">Ver / View</a> '
                      f'<a href="/assets/libros/{f["pdf"]}" download>PDF ({f["pdf_mb"]} MB)</a> · '
                      f'<a href="/assets/libros/{f["epub"]}" download>EPUB ({f["epub_mb"]} MB)</a></td></tr>')
     t = T['es']
@@ -153,14 +167,19 @@ def review_page(pub, files, base, css):
     return out + FOOT.format(p=e(rl.VOLS['series']['es']), a=e(pub['publisher']), n=t['legal_note'])
 
 
-def hub_page(t, lang, pub, base, site, css):
+def cards_html(t, lang, pub):
     cards = ''
     for vol, langs in pub['volumes'].items():
         d = langs[lang]
         cards += (f'<div class="card"><img src="/assets/covers/{lang}-{vol}.jpg" alt="" width="300" height="450" style="width:100%;height:auto;border-radius:10px">'
                   f'<h3>{vol.upper().replace("VOL", "Vol. ")} · {e(d["title"])}</h3>'
-                  f'<p>{"ISBN: " + ", ".join(d["isbn"].values()) if d["isbn"] else t["soon"]}</p>'
+                  f'<p>{(t["dl_short"] + " " + d["deposito_legal"]) if d["deposito_legal"] else ("ISBN: " + ", ".join(d["isbn"].values()) if d["isbn"] else t["soon"])}</p>'
                   f'<p><a href="{vol}/">{t["open_vol"]} →</a></p></div>')
+    return cards
+
+
+def hub_page(t, lang, pub, base, site, css):
+    cards = cards_html(t, lang, pub)
     book1 = f'<p class="note"><a href="/libro-1/">{t["book1"]}</a> · <a href="{site}/{lang}/">{t["read"]}</a></p>'
     url = f'{base}/' + ('' if lang == 'es' else 'en/')
     out = head(t, t['hub_h'], t['hub_sub'], url, css)
@@ -169,6 +188,31 @@ def hub_page(t, lang, pub, base, site, css):
             f'<p class="sub">{t["hub_sub"]}</p></div></div></div>\n<section><div class="wrap"><h2>{t["back"]}</h2>'
             f'<div class="grid">{cards}</div>{book1}</div></section>\n')
     return out + FOOT.format(p=e(rl.VOLS['series'][lang]), a=e(pub['publisher']), n=t['legal_note'])
+
+
+def home_page(src, t, pub, site):
+    """Portada ES: el libro 1 (el que revisa la BNP) primero y la serie de 4 volúmenes debajo."""
+    page = src.replace('href="assets/', 'href="/assets/').replace('src="assets/', 'src="/assets/')
+    page = re.sub(r'<nav>.*?</nav>', f'''<nav>
+      <a href="#obra" class="hide-s">{t["nav_work"]}</a>
+      <a href="#ficha">{t["nav_ficha"]}</a>
+      <a href="#leer">{t["nav_read"]}</a>
+      <a href="#serie">{t["serie_link"]}</a>
+      <a href="/revision/" class="hide-s">{t["nav_rev"]}</a>
+      <a href="/en/" class="hide-s">{t["nav_other"]}</a>
+    </nav>''', page, count=1, flags=re.S)
+    page = page.replace('<a class="brand" href="#inicio">', '<a class="brand" href="/">')
+    page = page.replace('<a class="btn ghost" href="#leer">Leer en línea</a>',
+                        f'<a class="btn ghost" href="#leer">Leer en línea</a>\n        <a class="btn ghost" href="#serie">{t["see_serie"]}</a>', 1)
+    page = page.replace('</style>', '.card h3{margin:.8em 0 6px}\n.card p+p{margin-top:8px}\n</style>', 1)
+    sup = pub.get('support', {})
+    support = (f'<p class="note">{t["support_note"]}: <a href="{e(sup["kofi"])}" target="_blank" rel="noopener">Ko-fi</a> · '
+               f'<a href="{e(sup["patreon"])}" target="_blank" rel="noopener">Patreon</a></p>') if sup.get('kofi') else ''
+    serie = (f'\n<section id="serie" class="alt">\n  <div class="wrap">\n    <h2>{t["hub_h"]}</h2>\n    <p class="lead">{t["hub_sub"]}</p>\n'
+             f'    <div class="grid">{cards_html(t, "es", pub)}</div>\n'
+             f'    <p class="note"><a href="{site}/es/">{t["read"]}</a> · <a href="/en/">English edition</a> · <a href="/revision/">{t["review_nav"]}</a></p>\n'
+             f'    {support}\n  </div>\n</section>\n')
+    return page.replace('</main>', serie + '</main>', 1)
 
 
 def main():
@@ -226,7 +270,8 @@ def main():
     for lang in ('es', 'en'):
         t, root = T[lang], out if lang == 'es' else out / 'en'
         root.mkdir(exist_ok=True)
-        (root / 'index.html').write_text(hub_page(t, lang, pub, base, site, css), encoding='utf-8')
+        (root / 'index.html').write_text(home_page(src, t, pub, site) if lang == 'es' else hub_page(t, lang, pub, base, site, css),
+                                         encoding='utf-8')
         for vol, langs in pub['volumes'].items():
             (root / vol).mkdir(exist_ok=True)
             (root / vol / 'index.html').write_text(vol_page(t, lang, vol, langs[lang], pub, base, site, css, files), encoding='utf-8')

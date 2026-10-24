@@ -12,18 +12,24 @@
 #  · La hoja de créditos debe llevar: título, nº de edición, mes y año de edición, autor(es),
 #    razón social y domicilio legal del editor, y el nº de Depósito Legal. En e-books NO es
 #    obligatorio consignar impresor ni tiraje; en la edición IMPRESA sí (ver `printer`).
-#  · ISBN: lo asigna la Agencia Peruana del ISBN (BNP) a editores/autores-editores. Cada formato
-#    (EPUB, PDF, impreso) y cada idioma necesita su propio ISBN. La web no lleva ISBN.
+#  · ISBN: los 8 volúmenes de la serie NO llevan ISBN (decisión: publicación en acceso abierto con
+#    licencia CC BY-NC-SA 4.0; solo Depósito Legal). Por eso isbn_* = NO. Si algún día se pide ISBN
+#    (Agencia Peruana del ISBN, BNP), uno por formato e idioma, basta con rellenar isbn_* y la
+#    hoja de créditos vuelve a mostrar la tabla de ISBN. El libro 1 (aparte) sí tiene ISBN propio.
 #  · El DNI NO figura entre los datos obligatorios: déjalo vacío salvo que quieras imprimirlo.
 publisher: "Sergio Perez Ruiz"
 publisher_kind: "autor-editor, persona natural"
 publisher_id: ""            # opcional (DNI/RUC). Vacío = no se imprime.
-publisher_address: "PENDIENTE (domicilio legal del editor: es dato obligatorio y público en el libro)"
+publisher_address: "Jr. Los Pinos 611, Asent. H. Jesús María, Mz. F, Lt. 10, distrito de Manantay, provincia de Coronel Portillo, Ucayali – Perú. Código Postal: 25002"   # igual que en SIRNADEL (domicilio de RENIEC)
 publisher_contact: "sergio@specsolid.com"
 place: "Lima, Perú"
 # Debe coincidir con la leyenda de cubierta (tools/covers/cover-design.json). Separa con «;».
 authors: "Sergio Perez Ruiz"
-distribution: "Amazon Kindle Direct Publishing (KDP); Google Play Books; Lulu"
+# Dominio de la web de publicación por volúmenes (la lectura en línea sale de web/site.config.json).
+info_site: "info-codigo-sintetico.specsolid.com"
+# Apoyo voluntario (acceso abierto): se imprime en la hoja de créditos y en la web.
+donate_kofi: "https://ko-fi.com/sergioperezruiz"
+donate_patreon: "https://www.patreon.com/SergioPerezRuiz"
 # Datos del impresor: solo se imprimen si algún volumen tiene isbn_print distinto de NO.
 printer: "PENDIENTE (razón social y domicilio legal del impresor)"
 license_name: "CC BY-NC-SA 4.0"
@@ -38,14 +44,14 @@ license_url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 #   kdp / google_play / lulu   enlace de compra; vacío = «próximamente»
 volumes:
   vol1:
-    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
-    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    es: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13608, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13635, kdp: "", google_play: "", lulu: "" }
   vol2:
-    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
-    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    es: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13630, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13636, kdp: "", google_play: "", lulu: "" }
   vol3:
-    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
-    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    es: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13632, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13637, kdp: "", google_play: "", lulu: "" }
   vol4:
-    es: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
-    en: { edition: 1, edition_date: PENDIENTE, isbn_epub: PENDIENTE, isbn_pdf: PENDIENTE, isbn_print: NO, deposito_legal: PENDIENTE, kdp: "", google_play: "", lulu: "" }
+    es: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13633, kdp: "", google_play: "", lulu: "" }
+    en: { edition: 1, edition_date: 2026-10, isbn_epub: NO, isbn_pdf: NO, isbn_print: NO, deposito_legal: 2026-13638, kdp: "", google_play: "", lulu: "" }

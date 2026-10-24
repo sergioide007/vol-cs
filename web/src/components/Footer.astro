@@ -10,6 +10,7 @@ const t = LEGAL[locale === 'en' ? 'en' : 'es'];
 <aside class="cs-legal" aria-label={t.heading}>
   <strong>{t.heading}.</strong>
   <span set:html={t.body} />
+  {SITE.donateKofi && <span class="cs-donate"><strong>{t.support}:</strong> <a href={SITE.donateKofi} rel="noopener">{t.donate}</a> · <a href={SITE.donatePatreon} rel="noopener">{t.patron}</a></span>}
   {buyEnabled && <a class="cs-support" href={SITE.buyUrl} rel="noopener">{t.support} →</a>}
   {SITE.hookBookUrl && <p><a href={SITE.hookBookUrl}>{locale === 'en' ? 'Companion book: Código Sintético (Spanish edition, 3 free chapters)' : 'Libro de entrada: Código Sintético (3 capítulos gratis)'} →</a> · <a href="https://www.specsolid.com/">SpecSolid</a></p>}
   <p>{t.marks}</p>
@@ -21,5 +22,6 @@ const t = LEGAL[locale === 'en' ? 'en' : 'es'];
   .cs-legal { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--sl-color-hairline);
     font-size: var(--sl-text-xs); color: var(--sl-color-gray-3); line-height: 1.5; }
   .cs-legal p { margin: .4rem 0 0; }
+  .cs-donate { display: block; margin-top: .4rem; }
   .cs-support { display: inline-block; margin-left: .25rem; font-weight: 600; }
 </style>

@@ -8,29 +8,28 @@
 **Autor:** Sergio Perez Ruiz
 
 **Editor:** Sergio Perez Ruiz (autor-editor, persona natural)\
-**Domicilio legal del editor:** PENDIENTE (domicilio legal del editor: es dato obligatorio y público en el libro)\
+**Domicilio legal del editor:** Jr. Los Pinos 611, Asent. H. Jesús María, Mz. F, Lt. 10, distrito de Manantay, provincia de Coronel Portillo, Ucayali – Perú. Código Postal: 25002\
 **Contacto y licencias:** sergio@specsolid.com\
 **Lugar de edición:** Lima, Perú
 
-**Edición:** Primera edición digital · PENDIENTE (mes y año)
+**Edición:** Primera edición digital · octubre de 2026
 
-| Formato | ISBN |
-|---|---|
-| EPUB | PENDIENTE |
-| PDF | PENDIENTE |
+**Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º 2026-13630**
 
-**Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º PENDIENTE**
+**Formato y distribución.** Edición digital en acceso abierto (EPUB y PDF), disponible en [books.specsolid.com](https://books.specsolid.com) y en [info-codigo-sintetico.specsolid.com](https://info-codigo-sintetico.specsolid.com).
 
-**Formato y distribución.** Esta obra se publica en formato digital (EPUB y PDF) a través de las siguientes plataformas: Amazon Kindle Direct Publishing (KDP); Google Play Books; Lulu.
+**Licencia y derechos de autor.** Esta obra se distribuye bajo una Licencia Creative Commons
+Atribución-NoComercial-CompartirIgual 4.0 Internacional ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)).
+Usted es libre de compartir, copiar, distribuir y adaptar el material para fines educativos,
+científicos y no comerciales, siempre que otorgue el crédito correspondiente. Los fragmentos de
+código de ejemplo se ofrecen bajo licencia MIT. La licencia no cubre las cubiertas, el nombre
+«Código Sintético» ni el nombre «SpecSolid», que son marcas del autor.
 
-**Licencia.** Esta obra se publica en acceso abierto. Salvo indicación contraria, el texto
-se distribuye bajo [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/): puedes copiar, redistribuir y adaptar
-el material citando la autoría, sin fines comerciales y bajo la misma licencia. Los fragmentos
-de código de ejemplo se ofrecen bajo licencia MIT. La licencia no cubre las cubiertas, el
-nombre «Código Sintético» ni el nombre «SpecSolid», que son marcas del autor.
+**Apoyo voluntario.** Este proyecto se enmarca en la filosofía de Acceso Abierto. Si esta obra ha
+sido de utilidad para tu formación o investigación y deseas colaborar con el autor en el desarrollo
+de futuras publicaciones libres, puedes hacer un aporte voluntario: donaciones puntuales en Ko-fi
+(<https://ko-fi.com/sergioperezruiz>) o membresías y mecenazgo en Patreon (<https://www.patreon.com/SergioPerezRuiz>). ¡Gracias por apoyar
+la difusión libre del conocimiento!
 
-**Edición en línea (gratuita):** books.specsolid.com. Las ediciones empaquetadas (PDF compilado, EPUB,
-Kindle e impresión bajo demanda) son opcionales y apoyan la continuidad del proyecto.
-
-**Cómo citar:** Sergio Perez Ruiz (PENDIENTE (mes y año)). *Código Sintético: Frontera y Aplicaciones — Geopolítica, industrias y el ecosistema de IDEs y herramientas* (Vol. 2).
+**Cómo citar:** Sergio Perez Ruiz (2026). *Código Sintético: Frontera y Aplicaciones — Geopolítica, industrias y el ecosistema de IDEs y herramientas* (Vol. 2).
 https://books.specsolid.com/es/vol2/

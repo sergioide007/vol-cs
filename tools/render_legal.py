@@ -138,8 +138,11 @@ def context(reg, site, vol, lang, ids):
                              else {'es': 'Autor', 'en': 'Author'})[lang],
                publisher_id_line=(f' — {id_label}: {pid}' if pid else ''),
                edition_line=edition_line(lang, ids), isbn_rows='\n'.join(rows),
+               isbn_block=((f"| {'Formato' if lang == 'es' else 'Format'} | ISBN |\n|---|---|\n" + '\n'.join(rows) + '\n\n') if rows else ''),
                edition_year=(ids.get('edition_date', '')[:4] if is_set(ids.get('edition_date', ''))
                              else 'PENDIENTE (mes y año)' if lang == 'es' else 'PENDIENTE (month and year)'))
+    if lang == 'en' and reg.get('publisher_kind') == 'autor-editor, persona natural':
+        ctx['publisher_kind'] = 'author-publisher, natural person'
     if ids.get('isbn_print', 'NO') != 'NO':
         ctx['print_block'] = ({'es': '**Impresor:** ', 'en': '**Printer:** '}[lang] + reg.get('printer', 'PENDIENTE') +
                               {'es': '\\\n**Tiraje:** impresión bajo demanda (según pedidos).\n\n',
@@ -223,8 +226,11 @@ def write_meta(reg, lang, vol, fmt, out):
 
 
 def public_json(reg, site):
-    """Solo datos que ya son públicos en el libro: sin DNI ni domicilio."""
+    """Solo datos que ya son públicos en el libro (la hoja de créditos incluye el domicilio legal del editor, que
+    exige la BNP): sin DNI."""
     out = {'publisher': reg['publisher'], 'site': site['url'], 'authors': authors_of(reg),
+           'address': reg.get('publisher_address', ''), 'info_site': reg.get('info_site', ''),
+           'support': {'kofi': reg.get('donate_kofi', ''), 'patreon': reg.get('donate_patreon', '')},
            'license': {'name': reg['license_name'], 'url': reg['license_url']}, 'volumes': {}}
     for vol, langs in reg['volumes'].items():
         out['volumes'][vol] = {}

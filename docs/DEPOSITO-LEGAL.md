@@ -1,4 +1,8 @@
-# Depósito Legal e ISBN por volumen (Perú, BNP)
+# Depósito Legal por volumen (Perú, BNP)
+
+> **Estado (oct. 2026):** los 8 volúmenes tienen Depósito Legal (2026-13608 … 13638, ver `legal/registry.yaml`) y
+> **no llevan ISBN**: se publican en acceso abierto (CC BY-NC-SA 4.0) con apoyo voluntario (Ko-fi / Patreon).
+> Lo de ISBN/KDP/Lulu de abajo solo aplica si algún día se decide pedir ISBN o vender ediciones.
 
 Cada volumen × idioma es una **obra/edición distinta**: 4 volúmenes × 2 idiomas = 8 Depósitos Legales,
 y un ISBN por cada formato (EPUB, PDF y, si existe, impreso) = 16 ISBN mínimo. Un ISBN no se reutiliza.

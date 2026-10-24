@@ -85,6 +85,23 @@ class EditionTest(unittest.TestCase):
         self.assertNotIn('Impresor', text)          # e-book: impresor y tiraje no son obligatorios
         self.assertEqual([], re.findall(r'\{\{\w+\}\}', text))
 
+    def test_open_access_credits_without_isbn(self):
+        """Los volúmenes van sin ISBN: ni tabla ni rastro de ISBN, pero sí depósito, licencia y apoyo."""
+        import re
+        reg, site = rl.load()
+        for lang in ('es', 'en'):
+            ids = reg['volumes']['vol1'][lang]
+            self.assertEqual('NO', ids['isbn_epub'])
+            ctx = rl.context(reg, site, 'vol1', lang, ids)
+            text = (ROOT / f'legal/ficha-tecnica.{lang}.md.tpl').read_text(encoding='utf-8')
+            text = re.sub(r'\{\{(\w+)\}\}', lambda m: str(ctx.get(m.group(1), m.group(0))), text)
+            self.assertNotIn('ISBN', text)
+            self.assertNotIn('PENDIENTE', text)
+            for needle in ('2026-13608' if lang == 'es' else '2026-13635', 'Coronel Portillo',
+                           'ko-fi.com/sergioperezruiz', 'patreon.com/SergioPerezRuiz', 'CC BY-NC-SA 4.0'):
+                self.assertIn(needle, text)
+            self.assertEqual([], re.findall(r'\{\{\w+\}\}', text))
+
 
 if __name__ == '__main__':
     unittest.main()

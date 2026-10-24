@@ -14,22 +14,22 @@
 
 **Edición:** {{edition_line}}
 
-| Formato | ISBN |
-|---|---|
-{{isbn_rows}}
+{{isbn_block}}**Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º {{deposito_legal}}**
 
-**Hecho el Depósito Legal en la Biblioteca Nacional del Perú N.º {{deposito_legal}}**
+{{print_block}}**Formato y distribución.** Edición digital en acceso abierto (EPUB y PDF){{print_note}}, disponible en [{{site}}](https://{{site}}) y en [{{info_site}}](https://{{info_site}}).
 
-{{print_block}}**Formato y distribución.** Esta obra se publica en formato digital (EPUB y PDF){{print_note}} a través de las siguientes plataformas: {{distribution}}.
+**Licencia y derechos de autor.** Esta obra se distribuye bajo una Licencia Creative Commons
+Atribución-NoComercial-CompartirIgual 4.0 Internacional ([{{license_name}}]({{license_url}})).
+Usted es libre de compartir, copiar, distribuir y adaptar el material para fines educativos,
+científicos y no comerciales, siempre que otorgue el crédito correspondiente. Los fragmentos de
+código de ejemplo se ofrecen bajo licencia MIT. La licencia no cubre las cubiertas, el nombre
+«Código Sintético» ni el nombre «SpecSolid», que son marcas del autor.
 
-**Licencia.** Esta obra se publica en acceso abierto. Salvo indicación contraria, el texto
-se distribuye bajo [{{license_name}}]({{license_url}}): puedes copiar, redistribuir y adaptar
-el material citando la autoría, sin fines comerciales y bajo la misma licencia. Los fragmentos
-de código de ejemplo se ofrecen bajo licencia MIT. La licencia no cubre las cubiertas, el
-nombre «Código Sintético» ni el nombre «SpecSolid», que son marcas del autor.
-
-**Edición en línea (gratuita):** {{site}}. Las ediciones empaquetadas (PDF compilado, EPUB,
-Kindle e impresión bajo demanda) son opcionales y apoyan la continuidad del proyecto.
+**Apoyo voluntario.** Este proyecto se enmarca en la filosofía de Acceso Abierto. Si esta obra ha
+sido de utilidad para tu formación o investigación y deseas colaborar con el autor en el desarrollo
+de futuras publicaciones libres, puedes hacer un aporte voluntario: donaciones puntuales en Ko-fi
+(<{{donate_kofi}}>) o membresías y mecenazgo en Patreon (<{{donate_patreon}}>). ¡Gracias por apoyar
+la difusión libre del conocimiento!
 
 **Cómo citar:** {{authors_cite}} ({{edition_year}}). *{{title}}: {{subtitle}}* (Vol. {{n}}).
 https://{{site}}/es/{{vol}}/
